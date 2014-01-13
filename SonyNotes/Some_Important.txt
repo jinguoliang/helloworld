@@ -1,0 +1,28 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-12-16T11:30:57+08:00
+
+====== Some Important ======
+Created Monday 16 December 2013
+
+XP013796
+oM!6!9WcJ!
+make 
+XP010718
+ASdf!2345678
+
+http://alm.sonyericsson.net/   test case 
+Username：xp013447	PWD：Beijing000
+
+
+Project share dir in windows
+\\semcw21685\Big_share\Eagle TMO\
+\\semcw24948\tina_share
+
+DON’T patch for below gits.
+* platform/vendor/semc/overlay
+* platform/frameworks/base/core/res
+* platform/vendor/semc/packages/resource/uxp
+
+
+

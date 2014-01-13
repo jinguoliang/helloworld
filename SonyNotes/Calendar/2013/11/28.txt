@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-11-28T14:49:51+08:00
+
+====== Thursday 28 Nov 2013 ======
+
+study gerrit: setup and use gerrit 
+learn porting patch

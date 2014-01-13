@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-11-29T09:13:10+08:00
+
+====== Wednesday 27 Nov 2013 ======
+
+study how to porting apk and jar

@@ -1,0 +1,1376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0084)http://gurkulindia.com/main/2011/11/linux-understand-device-mapper-and-dm-multipath/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><head profile="http://gmpg.org/xfn/11"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script id="LR1" type="text/javascript" async="" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/client.js"></script><link rel="stylesheet" type="text/css" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/buttons3.css">
+
+
+
+<script src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/quant.js" async="" type="text/javascript"></script><script src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/cb=gapi.loaded_3" async=""></script><script type="text/javascript" async="" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/plusone.js" gapi_processed="true"></script><script id="twitter-wjs" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/widgets.js"></script><script src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/cb=gapi.loaded_2" async=""></script><script src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/cb=gapi.loaded_1" async=""></script><script type="text/javascript" async="" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/plusone.js" gapi_processed="true"></script><script id="facebook-jssdk" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/all.js"></script><script src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/buttons.js"></script><script type="text/javascript" async="" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/ga.js"></script><script type="text/javascript">
+window.google_analytics_uacct = "UA-20304638-1";
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-20304638-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<title>
+
+
+unixadminschool.com » Linux – Understand Device Mapper   and DM-Multipath</title>
+
+<link rel="stylesheet" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="unixadminschool.com RSS Feed" href="http://gurkulindia.com/main/feed/">
+<link rel="pingback" href="http://gurkulindia.com/main/xmlrpc.php">
+
+<link rel="shortcut icon" href="http://gurkulindia.com/main/wp-content/themes/amazing/favicon.ico">
+
+<script src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/heightMatch.js" type="text/javascript"></script>
+<script src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/topmenudynamic.js" type="text/javascript"></script>
+<script src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/dropdown.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+(function() {
+	var s = document.createElement('SCRIPT'), s1 = document.getElementsByTagName('SCRIPT')[0];
+	s.type = 'text/javascript';
+	s.async = true;
+	s.src = 'http://widgets.digg.com/buttons.js';
+	s1.parentNode.insertBefore(s, s1);
+})();
+</script>
+<link rel="alternate" type="application/rss+xml" title="unixadminschool.com » Linux – Understand Device Mapper   and DM-Multipath Comments Feed" href="http://gurkulindia.com/main/2011/11/linux-understand-device-mapper-and-dm-multipath/feed/">
+<link rel="stylesheet" id="mtq_CoreStyleSheets-css" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/mtq_core_style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="mtq_ThemeStyleSheets-css" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/mtq_theme_style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_likes-css" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/style(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="dcwp_plugin_admin_dcscf_css-css" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/admin.css" type="text/css" media="all">
+<link rel="stylesheet" id="spu-css-css" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/spu.css" type="text/css" media="all">
+<link rel="stylesheet" id="fb_data_style-css" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/fbstyle.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack-widgets-css" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/widgets.css" type="text/css" media="all">
+<link rel="stylesheet" id="video-js-css-css" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/video-js.css" type="text/css" media="all">
+<link rel="stylesheet" id="video-js-kg-skin-css" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/kg-video-js-skin.css" type="text/css" media="all">
+<link rel="stylesheet" id="kgvid_video_styles-css" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/kgvid_styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="sharedaddy-css" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/sharing.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-pagenavi-css" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/pagenavi-css.css" type="text/css" media="all">
+<!-- Cool Video Gallery Script starts here --><!-- Cool Video Gallery Script ends here --><script type="text/javascript">if(!window["FCChatConfig"]){window["FCChatConfig"] = {}}(function(){var a = window["FCChatConfig"];a.title="Gurkulindia hang-out";a.chat_id="1696_ctk7nay44hn";a.host="96.9.135.53";a.small_logo="http://gurkulindia.com/main/wp-content/themes/amazing/images/gurkullogo.jpg";a.big_logo="";a.widget_title="ChatCenter";a.branding_bar_title="Unixadminschool Chat";a.branding_bar_width=140;a.startText="Click here to join our chat.";a.loginText="Please sign in to join our chat.";a.autoGreet="Wellcome!! ";a.full_page_loading="Yourdomain chat will load momentarily.";a.full_page_login="Welcome to Yourdomain chat. Sign in to enter.";a.require_login=false;a.guests_can_chat=false;a.guests_can_video_chat=false;a.videoconerence_only_in_designated_rooms=false;a.user_integration_bridge="";a.alignment="auto";a.language_template="english.js";a.templates={alldomains:{
+	widget:'widget_default_sidebar.js',
+	toolbar:'toolbar_default.js',
+	application_window:'chatcenter_light_gray.js'
+}};a.quickstyling={alldomains:{
+	widget:{
+		background_css:'',
+		width_prop_offsets:'0:0:0', /*title : buttons : info box*/
+		height_offset:0, 
+		text_top_offset:0, 
+		height_prop_offsets:'0:0:0', /*title : buttons : info box*/
+		width_offset:0, 
+		logo_top_offset:0,
+		logo_left_offset:0,
+		logo_css:'',
+		title_css:'',
+		full_page_button_css:'',
+		off_button_css:'',
+		infobox_css:'',
+		base_font_css:'',
+		title_font_css:'',
+		alert_css:'',
+		link_css:'',
+		link_hover_css:'',
+		link_disabled_css:'',
+		info_css:''
+	},
+	toolbar:{
+		background_css:'',
+		divider_css:'',
+		width_prop_offsets:'0:0:0', /*info box : buttons : minimized*/
+		text_top_offset:0, 
+		off_button_left_offset:0,
+		base_font_css:'',
+		alert_css:'',
+		link_css:'',
+		link_hover_css:'',
+		link_disabled_css:'',
+		info_css:''
+	},
+	dialog:{
+		border_css:'',
+		title_background_css:'',
+		title_css:'',
+		link_css:''
+	},
+	application_window:{
+		frame_color:'',
+		title_css:''
+	},
+	full_page_css_obj:{
+	}
+}};a.absolute_positioning=false;a.control_visible=true;a.control_padding="0px";a.toolbar_mode=2;a.toolbar_default_display=1;a.toolbar_position="bottomright";a.toolbar_items=['friendscenter','social_media'];a.custom_buttons={};a.toolbar_banner_mode=false;a.toolbar_banner_height=35;a.toolbar_banner_left_offset=50;a.toolbar_banner_top_offset=0;a.toolbar_mobile_hidden=/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i;a.chatcenter_layout=0;a.open_chatcenter_in_new_tab=false;a.allow_split_screen_mode=true;a.window_width=853;a.window_height_offset=-160;a.chat_room_height_offset=105;a.disabled_rooms=[];a.disabled_room_msg="You must be a member to enter this room.";a.hidden_rooms=[];a.room_message_limit=300;a.min_room_messages=50;a.max_chat_size=2000;a.full_page_url="";a.default_on=true;a.set_tab=true;a.no_chat_history=false;a.showTyping=true;a.display_timestamp=false;a.sounds_on=true;a.prompt_user=true;a.prompt_nickname=true;a.facebook_connect=true;a.fb_connection_url="http://chat.fastcatsoftware.com:8080";a.show_country_flags=true;a.ipinfodb_api_key="";a.import_profiles="";a.upload_images_enabled=false;a.allow_crossdomain_images=true;a.current_domain="fastcatsoftware.com";a.import_default_avatar=true;a.script_type="php";a.avatars_dir="";a.images_dir="";a.smileys_dir="";a.avatar_sz=18;a.show_avatar_in_chats=true;a.allow_games=true;a.game_ids=[2,1,256,325,86,6,254,1822,607,1723,225,4,1607,102,327,274,3,26,6346,562,1840,557,29,255,272,2227,5286,567,15,1658,64,3177,330,329,273,11,1661,12];a.smileys=[['sm1.gif', ':-)','18',],['sm2.gif',':-)0','24'],['sm3.gif',':-)1','15'],['sm4.gif',':-)2','20'],['sm5.gif',':-)3','16'],['sm6.gif',':-)4','18'],['sm7.gif',':-)5','26'],['sm8.gif',':-)6','23'],['sm9.gif',':-)7','23'],['sm10.gif',':-)8','28'],['sm11.gif',':-)9','22'],['sm12.gif',':-)10','36'],['sm13.gif',':-)11','30'],['sm14.gif',':-)12','15'],['sm15.gif',':-)13','18'],['sm16.gif',':-)14','21'],['sm17.gif',':-)15','28'],['sm18.gif',':-)16','15']];a.video_enabled=false;a.video_access_level=3;a.max_video_streams=100;a.capture_width=160;a.capture_height=120;a.hd_capture_width=320;a.hd_capture_height=240;a.fps=8;a.quality=95;a.show_a_v_icon=false;a.trans_enabled=true;a.trans_default_on=false;a.trans_default_language_code="en";a.trans_url="http://api.microsofttranslator.com/V2/Ajax.svc/";a.trans_appid="4690BC25149C7E7E98E4A356B8C807D6A7132424";a.transliteration_enabled=true;a.cookie_expires=1;a.user_cookie="fc_UID";a.session_cookie="fc_ChatToken";a.mod_cookie="fc_ChatToken";a.data_cookie="fc_data";a.allow_links=true;a.help_link="http://www.fastcatsoftware.com/chat/manual2.2.html";a.show_help_button=true;a.show_user_list=true;a.show_settings_on_open=false;a.pin_windows=true;a.pinned_by_default=true;a.preload_images=false;a.noshow=false;a.flashEnabled="test";a.websocketEnabled="test";a.userbox_mode=0;a.zindex_base=20477;})();</script><script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/script.min.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/postmessage.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.inview.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.jetpack-resize.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/all(1).js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/widgets(1).js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/plusone(1).js" gapi_processed="true"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/spu.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/import.google.loader.js"></script><script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jsapi"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/import.config.alt.php"></script><script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/config.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/import.libs.js"></script><script src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.min.js" type="text/javascript"></script><link type="text/css" rel="stylesheet" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jGo.min.css" media="screen"><script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jGo.min.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/import.includes.js"></script><script type="text/javaScript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jGo.browser.min.js"></script><script type="text/javaScript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jGo.DefaultToolbar.min.js"></script><script type="text/javaScript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jGo.DefaultMenu.min.js"></script><script type="text/javaScript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jGo.InfoBox.min.js"></script><script type="text/javaScript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jGo.postMessage.min.js"></script><script language="JavaScript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/english.js"></script><script language="JavaScript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/chatcenter_light_gray.js"></script><script language="JavaScript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/toolbar_default.js"></script><script language="JavaScript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/widget_default_sidebar.js"></script><script language="JavaScript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/template_overrides.js"></script><script language="JavaScript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/social_media.js"></script><script language="JavaScript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/prompt.js"></script><script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/flash.tag.min.js"></script><script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.sound.min.js"></script><script language="JavaScript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/css.vars.js"></script><script language="JavaScript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/page.init.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.slick.contact.1.3.2.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/swfobject.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/video.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ajax_object = {"ajaxurl":"http:\/\/gurkulindia.com\/main\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/kgvid_video_embed.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.slideshow.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.stripslashes.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://gurkulindia.com/main/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://gurkulindia.com/main/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Solaris Troubleshooting : Sendmail Troubleshooting – 2" href="http://gurkulindia.com/main/2011/11/sendmail-troubleshooting-2/">
+<link rel="next" title="Solaris – Identify the product used for Storage Multipathing" href="http://gurkulindia.com/main/2011/11/solaris-identify-the-product-used-for-storage-multipathing/">
+<meta name="generator" content="WordPress 3.7.1">
+<link rel="canonical" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath.html">
+<link rel="shortlink" href="http://wp.me/p1EO9J-1qg">
+<!-- Cool Video Gallery Script starts here -->			<script type="text/javascript">
+				jQuery(document).ready(function(){
+					if(jQuery('.slideContent').length != 0) {
+						jQuery('.slideContent').each(function() {
+							jQuery(this.id).s3Slider({
+						      timeOut: 7000,
+							  item_id: this.id 
+						   });
+						}); 
+					}	   
+				});
+
+			</script>
+			<!-- Cool Video Gallery Script ends here -->
+			<link rel="stylesheet" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/video-js(1).css" type="text/css">
+<link rel="stylesheet" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/tube.css" type="text/css">
+<script src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/video(1).js" type="text/javascript"></script>
+<script type="text/javascript"> VideoJS.setupAllWhenReady(); </script>
+				
+					<style type="text/css">
+					.spu-button {
+		margin-left:15px;
+		margin-left: 15px;
+		display: inline-table;
+		margin-top: 12px;
+		vertical-align: middle;
+}
+#spu-msg-cont {
+	border-bottom:1px solid#ccc;
+	border-top:1px solid#ccc;
+	background-image:linear-gradient(bottom,#D8E7FC 0%,#EBF2FC 65%);
+	background-image:-o-linear-gradient(bottom,#D8E7FC 0%,#EBF2FC 65%);
+	background-image:-moz-linear-gradient(bottom,#D8E7FC 0%,#EBF2FC 65%);
+	background-image:-webkit-linear-gradient(bottom,#D8E7FC 0%,#EBF2FC 65%);
+	background-image:-ms-linear-gradient(bottom,#D8E7FC 0%,#EBF2FC 65%);
+	background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0,#D8E7FC),color-stop(0.85,#EBF2FC));
+	padding:16px;
+}
+#spu-msg {
+	margin:0 0 22px;
+}
+.step-clear {
+	clear:both!important;
+}
+#spu-title {
+	font-family:'Lucida Sans Unicode,Lucida Grande,sans-serif!important;
+	font-size:12px;
+	padding:12px 0 9px 10px;
+	font-size:16px;
+}					</style>			
+					<script type="text/javascript">
+						jQuery(document).ready(function($){
+								
+						setTimeout( 
+						function(){				
+							socialPopUP({
+								// Configure display of popup
+								advancedClose: true,
+								opacity: "0.65",
+								s_to_close: "0",
+								days_no_click: "1",
+								segundos : "seconds",
+								esperar : "Wait",
+								thanks_msg : "Thanks for supporting our site!!!",
+								thanks_sec : "3",
+							})
+						}
+							,60000								);
+						});	
+						
+						
+					</script>
+					
+	<script type="text/javascript">videojs.options.flash.swf = "http://gurkulindia.com/main/wp-content/plugins/video-embed-thumbnail-generator/video-js/video-js.swf?4.1.0"</script>
+<link rel="Shortcut Icon" type="image/x-icon" href="http://gurkulindia.com/main/wp-content/uploads/2013/04/Logo-tn.png">
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux - Understand Device Mapper   and DM-Multipath">
+<meta property="og:url" content="http://gurkulindia.com/main/2011/11/linux-understand-device-mapper-and-dm-multipath/">
+<meta property="og:description" content="Device-mapper is a very important component of Linux 2.6 kernel. It is used for many critical storage related applications, such as LVM2, Linux native multipath tool device-mapper-multipath, device...">
+<meta property="og:site_name" content="unixadminschool.com">
+<meta property="og:image" content="data:image/png;base64,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">
+<meta name="twitter:site" content="@jetpack">
+<meta name="twitter:image" content="data:image/png;base64,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">
+<meta name="twitter:card" content="photo">
+
+<script src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/nonSecureAnonymousFramework"></script><style type="text/css">* html #li_ui_li_gen_1385788857664_0 a#li_ui_li_gen_1385788857664_0-link{height:1% !important;}#li_ui_li_gen_1385788857664_0{position:relative !important;overflow:visible !important;display:block !important;}#li_ui_li_gen_1385788857664_0 a#li_ui_li_gen_1385788857664_0-link{border:0 !important;height:20px !important;text-decoration:none !important;padding:0 !important;margin:0 !important;display:inline-block !important;}#li_ui_li_gen_1385788857664_0 a#li_ui_li_gen_1385788857664_0-link:link, #li_ui_li_gen_1385788857664_0 a#li_ui_li_gen_1385788857664_0-link:visited, #li_ui_li_gen_1385788857664_0 a#li_ui_li_gen_1385788857664_0-link:hover, #li_ui_li_gen_1385788857664_0 a#li_ui_li_gen_1385788857664_0-link:active{border:0 !important;text-decoration:none !important;}#li_ui_li_gen_1385788857664_0 a#li_ui_li_gen_1385788857664_0-link:after{content:"." !important;display:block !important;clear:both !important;visibility:hidden !important;line-height:0 !important;height:0 !important;}#li_ui_li_gen_1385788857664_0 #li_ui_li_gen_1385788857664_0-logo{background:url(http://s.c.lnkd.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) 0px -276px no-repeat !important;cursor:pointer !important;border:0 !important;text-indent:-9999em !important;overflow:hidden !important;padding:0 !important;margin:0 !important;position:absolute !important;left:0px !important;top:0px !important;display:block !important;width:20px !important;height:20px !important;float:right !important;}#li_ui_li_gen_1385788857664_0.hovered #li_ui_li_gen_1385788857664_0-logo{background-position:-20px -276px !important;}#li_ui_li_gen_1385788857664_0.clicked #li_ui_li_gen_1385788857664_0-logo, #li_ui_li_gen_1385788857664_0.down #li_ui_li_gen_1385788857664_0-logo{background-position:-40px -276px !important;}.IN-shadowed #li_ui_li_gen_1385788857664_0 #li_ui_li_gen_1385788857664_0-logo{}#li_ui_li_gen_1385788857664_0 #li_ui_li_gen_1385788857664_0-title{color:#333 !important;cursor:pointer !important;display:block !important;white-space:nowrap !important;float:left !important;margin-left:1px !important;vertical-align:top !important;overflow:hidden !important;text-align:center !important;height:18px !important;padding:0 4px 0 23px !important;border:1px solid #000 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;border-left:0 !important;text-shadow:#FFFFFF -1px 1px 0 !important;line-height:20px !important;border-radius:0 !important;-webkit-border-radius:0 !important;border-top-right-radius:2px !important;border-bottom-right-radius:2px !important;-webkit-border-top-right-radius:2px !important;-webkit-border-bottom-right-radius:2px !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}#li_ui_li_gen_1385788857664_0.hovered #li_ui_li_gen_1385788857664_0-title{border:1px solid #000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;border-left:0 !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}#li_ui_li_gen_1385788857664_0.clicked #li_ui_li_gen_1385788857664_0-title, #li_ui_li_gen_1385788857664_0.down #li_ui_li_gen_1385788857664_0-title{color:#666 !important;border:1px solid #000 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;border-left:0 !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.IN-shadowed #li_ui_li_gen_1385788857664_0 #li_ui_li_gen_1385788857664_0-title{}.IN-shadowed #li_ui_li_gen_1385788857664_0.hovered #li_ui_li_gen_1385788857664_0-title{}.IN-shadowed #li_ui_li_gen_1385788857664_0.clicked #li_ui_li_gen_1385788857664_0-title, .IN-shadowed #li_ui_li_gen_1385788857664_0.down #li_ui_li_gen_1385788857664_0-title{}#li_ui_li_gen_1385788857664_0 #li_ui_li_gen_1385788857664_0-title-text, #li_ui_li_gen_1385788857664_0 #li_ui_li_gen_1385788857664_0-title-text *{color:#333 !important;font-size:11px !important;font-family:Arial, sans-serif !important;font-weight:bold !important;font-style:normal !important;display:inline-block !important;background:transparent none !important;vertical-align:top !important;height:18px !important;line-height:20px !important;float:none !important;}#li_ui_li_gen_1385788857664_0 #li_ui_li_gen_1385788857664_0-title-text strong{font-weight:bold !important;}#li_ui_li_gen_1385788857664_0 #li_ui_li_gen_1385788857664_0-title-text em{font-style:italic !important;}#li_ui_li_gen_1385788857664_0.hovered #li_ui_li_gen_1385788857664_0-title-text, #li_ui_li_gen_1385788857664_0.hovered #li_ui_li_gen_1385788857664_0-title-text *{color:#000 !important;}#li_ui_li_gen_1385788857664_0.clicked #li_ui_li_gen_1385788857664_0-title-text, #li_ui_li_gen_1385788857664_0.down #li_ui_li_gen_1385788857664_0-title-text, #li_ui_li_gen_1385788857664_0.clicked #li_ui_li_gen_1385788857664_0-title-text *, #li_ui_li_gen_1385788857664_0.down #li_ui_li_gen_1385788857664_0-title-text *{color:#666 !important;}#li_ui_li_gen_1385788857664_0 #li_ui_li_gen_1385788857664_0-title #li_ui_li_gen_1385788857664_0-mark{display:inline-block !important;width:0px !important;overflow:hidden !important;}.success #li_ui_li_gen_1385788857664_0 #li_ui_li_gen_1385788857664_0-title{color:#333 !important;border-top-color:#E2E2E2 !important;border-right-color:#BFBFBF !important;border-bottom-color:#B9B9B9 !important;border-left-color:#E2E2E2 !important;background-color:#ECECEC !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#FEFEFE), color-stop(100%,#ECECEC)) !important; background-image: -webkit-linear-gradient(top, #FEFEFE 0%, #ECECEC 100%) !important;}.success #li_ui_li_gen_1385788857664_0 #li_ui_li_gen_1385788857664_0-title-text, .success #li_ui_li_gen_1385788857664_0 #li_ui_li_gen_1385788857664_0-title-text *{color:#333 !important;}.IN-shadowed .success #li_ui_li_gen_1385788857664_0 #li_ui_li_gen_1385788857664_0-title{}.success #li_ui_li_gen_1385788857664_0.hovered #li_ui_li_gen_1385788857664_0-title{color:#000 !important;border-top-color:#ABABAB !important;border-right-color:#9A9A9A !important;border-bottom-color:#787878 !important;border-left-color:#04568B !important;background-color:#EDEDED !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#EDEDED), color-stop(100%,#DEDEDE)) !important; background-image: -webkit-linear-gradient(top, #EDEDED 0%, #DEDEDE 100%) !important;}.success #li_ui_li_gen_1385788857664_0.hovered #li_ui_li_gen_1385788857664_0-title-text, .success #li_ui_li_gen_1385788857664_0.hovered #li_ui_li_gen_1385788857664_0-title-text *{color:#000 !important;}.success #li_ui_li_gen_1385788857664_0.clicked #li_ui_li_gen_1385788857664_0-title, .success #li_ui_li_gen_1385788857664_0.down #li_ui_li_gen_1385788857664_0-title{color:#666 !important;border-top-color:#B6B6B6 !important;border-right-color:#B3B3B3 !important;border-bottom-color:#9D9D9D !important;border-left-color:#49627B !important;background-color:#DEDEDE !important;background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#E3E3E3), color-stop(100%,#EDEDED)) !important; background-image: -webkit-linear-gradient(top, #E3E3E3 0%, #EDEDED 100%) !important;}.success #li_ui_li_gen_1385788857664_0.clicked #li_ui_li_gen_1385788857664_0-title-text, .success #li_ui_li_gen_1385788857664_0.down #li_ui_li_gen_1385788857664_0-title-text, .success #li_ui_li_gen_1385788857664_0.clicked #li_ui_li_gen_1385788857664_0-title-text *, .success #li_ui_li_gen_1385788857664_0.down #li_ui_li_gen_1385788857664_0-title-text *{color:#666 !important;}.IN-shadowed .success #li_ui_li_gen_1385788857664_0.clicked #li_ui_li_gen_1385788857664_0-title, .IN-shadowed .success #li_ui_li_gen_1385788857664_0.down #li_ui_li_gen_1385788857664_0-title{}#li_ui_li_gen_1385788857677_1-container.IN-right {display:inline-block !important;float:left !important;overflow:visible !important;position:relative !important;height:18px !important;padding-left:2px !important;line-height:1px !important;cursor:pointer !important;}#li_ui_li_gen_1385788857677_1.IN-right {display:block !important;float:left !important;height:18px !important;margin-right:4px !important;padding-right:4px !important;background:url(http://s.c.lnkd.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) right -100px no-repeat !important;}#li_ui_li_gen_1385788857677_1-inner.IN-right {display:block !important;float:left !important;padding-left:8px !important;text-align:center !important;background:url(http://s.c.lnkd.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) 0px -60px no-repeat !important;}#li_ui_li_gen_1385788857677_1-content.IN-right {display:inline !important;font-size:11px !important;color:#04558B !important;font-weight:bold !important;font-family:Arial, sans-serif !important;line-height:18px !important;padding:0 5px 0 5px !important;}#li_ui_li_gen_1385788857677_1-container.IN-hovered #li_ui_li_gen_1385788857677_1.IN-right, #li_ui_li_gen_1385788857677_1-container.IN-clicked #li_ui_li_gen_1385788857677_1.IN-right, #li_ui_li_gen_1385788857677_1-container.IN-down #li_ui_li_gen_1385788857677_1.IN-right {background-position-y:-120px !important;}#li_ui_li_gen_1385788857677_1-container.IN-hovered #li_ui_li_gen_1385788857677_1-inner.IN-right, #li_ui_li_gen_1385788857677_1-container.IN-clicked #li_ui_li_gen_1385788857677_1-inner.IN-right, #li_ui_li_gen_1385788857677_1-container.IN-down #li_ui_li_gen_1385788857677_1-inner.IN-right {background-position-y:-80px !important;}#li_ui_li_gen_1385788857677_1-container.IN-empty {display:none !important;}#li_ui_li_gen_1385788857677_1-container.IN-hidden #li_ui_li_gen_1385788857677_1 {display:none !important;}.li-connect-widget .li-connect-mark {background:url(http://s.c.lnkd.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) -92px -42px no-repeat !important;display:inline-block !important;height:16px !important;text-decoration:none !important;width:16px !important;vertical-align:middle !important;*margin:0 3px !important;*vertical-align:bottom !important;}.IN-widget .hovered .li-connect-mark {cursor:pointer !important;}.li-connect-widget.pending .li-connect-mark {background:url(data:image/gif;base64,R0lGODlhEAAQAKIAAP///+bm5s7OzpycnGNjYwAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgAAACwAAAAADgAQAAADNAi6MMNQOReBEG0CQta92cZ11seMZBlxClh55lu6Mi23GBQEsL3vOBDwx8MBiMei7ndLQhIAIfkEBQoAAAAsAgAAAA4ADgAAAyUIqiL7rzUIpRuDsouzVp33AdgIEYQJoKjJpi4cBOo8mzaN62MCACH5BAUKAAAALAAAAgAQAAwAAAMmCLoMIi2q92Sj0LK6QtDAMACeZ4li+UnoaGoiqBCEPNO1jOc6nwAAIfkEBQoAAAAsAgACAA4ADgAAAyUIEdD+ajH45KRu4Y2F4I3ngeJHmtswgICqYgTRulQcz7DN3lQCACH5BAUKAAAALAIAAAAMABAAAAMmCKoR+6w5GBtd9urNu/8XQVCCAIjiU5boOAzAaqbvG5tPDWv2kwAAIfkEBQoAAAAsAAACAA4ADgAAAyUIugwRLb4X2YR1UUBIXl33ceFImsswmKo6tqsgZK4sj/aM60sCACH5BAUKAAAALAAAAgAQAAwAAAMmCEqk/o8xSIFsFc7sxuBAEACel4li+VXoaHLiIwigM881cNM5DiYAIfkECQoAAAAsAAAAABAAEAAAAygIukDEkDkX1xhtVnBv3lwHMt4ICIKpoKjKpi6sjkEw17WK2zo//5EEADs=) no-repeat !important;*background:url(http://s.c.lnkd.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) -92px -42px no-repeat !important;cursor:wait !important;}.li-connect-widget .li-connect-mark {background:url(http://s.c.lnkd.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) -92px -42px no-repeat !important;display:inline-block !important;height:16px !important;text-decoration:none !important;width:16px !important;vertical-align:middle !important;*margin:0 3px !important;*vertical-align:bottom !important;}.IN-widget .hovered .li-connect-mark {cursor:pointer !important;}.li-connect-widget.pending .li-connect-mark {background:url(data:image/gif;base64,R0lGODlhEAAQAKIAAP///+bm5s7OzpycnGNjYwAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgAAACwAAAAADgAQAAADNAi6MMNQOReBEG0CQta92cZ11seMZBlxClh55lu6Mi23GBQEsL3vOBDwx8MBiMei7ndLQhIAIfkEBQoAAAAsAgAAAA4ADgAAAyUIqiL7rzUIpRuDsouzVp33AdgIEYQJoKjJpi4cBOo8mzaN62MCACH5BAUKAAAALAAAAgAQAAwAAAMmCLoMIi2q92Sj0LK6QtDAMACeZ4li+UnoaGoiqBCEPNO1jOc6nwAAIfkEBQoAAAAsAgACAA4ADgAAAyUIEdD+ajH45KRu4Y2F4I3ngeJHmtswgICqYgTRulQcz7DN3lQCACH5BAUKAAAALAIAAAAMABAAAAMmCKoR+6w5GBtd9urNu/8XQVCCAIjiU5boOAzAaqbvG5tPDWv2kwAAIfkEBQoAAAAsAAACAA4ADgAAAyUIugwRLb4X2YR1UUBIXl33ceFImsswmKo6tqsgZK4sj/aM60sCACH5BAUKAAAALAAAAgAQAAwAAAMmCEqk/o8xSIFsFc7sxuBAEACel4li+VXoaHLiIwigM881cNM5DiYAIfkECQoAAAAsAAAAABAAEAAAAygIukDEkDkX1xhtVnBv3lwHMt4ICIKpoKjKpi6sjkEw17WK2zo//5EEADs=) no-repeat !important;*background:url(http://s.c.lnkd.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) -92px -42px no-repeat !important;cursor:wait !important;}.li-connect-widget .li-connect-mark {background:url(http://s.c.lnkd.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) -92px -42px no-repeat !important;display:inline-block !important;height:16px !important;text-decoration:none !important;width:16px !important;vertical-align:middle !important;*margin:0 3px !important;*vertical-align:bottom !important;}.IN-widget .hovered .li-connect-mark {cursor:pointer !important;}.li-connect-widget.pending .li-connect-mark {background:url(data:image/gif;base64,R0lGODlhEAAQAKIAAP///+bm5s7OzpycnGNjYwAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFCgAAACwAAAAADgAQAAADNAi6MMNQOReBEG0CQta92cZ11seMZBlxClh55lu6Mi23GBQEsL3vOBDwx8MBiMei7ndLQhIAIfkEBQoAAAAsAgAAAA4ADgAAAyUIqiL7rzUIpRuDsouzVp33AdgIEYQJoKjJpi4cBOo8mzaN62MCACH5BAUKAAAALAAAAgAQAAwAAAMmCLoMIi2q92Sj0LK6QtDAMACeZ4li+UnoaGoiqBCEPNO1jOc6nwAAIfkEBQoAAAAsAgACAA4ADgAAAyUIEdD+ajH45KRu4Y2F4I3ngeJHmtswgICqYgTRulQcz7DN3lQCACH5BAUKAAAALAIAAAAMABAAAAMmCKoR+6w5GBtd9urNu/8XQVCCAIjiU5boOAzAaqbvG5tPDWv2kwAAIfkEBQoAAAAsAAACAA4ADgAAAyUIugwRLb4X2YR1UUBIXl33ceFImsswmKo6tqsgZK4sj/aM60sCACH5BAUKAAAALAAAAgAQAAwAAAMmCEqk/o8xSIFsFc7sxuBAEACel4li+VXoaHLiIwigM881cNM5DiYAIfkECQoAAAAsAAAAABAAEAAAAygIukDEkDkX1xhtVnBv3lwHMt4ICIKpoKjKpi6sjkEw17WK2zo//5EEADs=) no-repeat !important;*background:url(http://s.c.lnkd.licdn.com/scds/common/u/img/sprite/sprite_connect_v13.png) -92px -42px no-repeat !important;cursor:wait !important;}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_reset > div{overflow:hidden}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+/* @noflip */
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+/* @noflip */
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+/* @noflip */
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;left:-10000px;overflow:visible;position:absolute;top:-10000px;width:100%
+}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0 0, 0 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0 0, 0 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+/* @noflip */
+.fbpluginrecommendationsbarleft{left:10px}
+/* @noflip */
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+
+
+<!-- FB like start -->
+
+<body data-twttr-rendered="true" style=""><iframe id="twttrHubFrameSecure" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrameSecure" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/hub(1).html" style="position: absolute; top: -9999em; width: 10px; height: 10px;"></iframe><iframe id="twttrHubFrame" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" name="twttrHubFrame" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/hub.html" style="position: absolute; top: -9999em; width: 10px; height: 10px;"></iframe><div id="fc_install"></div><div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=150228441779919";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+<div id="container">
+
+<!-- page menu and search -->
+<div id="top">
+
+	<ul id="pagemenu">
+	<!-- <li class="page_item page-item-34 page_item_has_children"><a href="http://gurkulindia.com/main/ramumar-ramadevu/">Team Gurkulindia</a>
+<ul class='children'>
+	<li class="page_item page-item-6229"><a href="http://gurkulindia.com/main/ramumar-ramadevu/site-policies/">Site Policies</a></li>
+</ul>
+</li>
+<li class="page_item page-item-6626 page_item_has_children"><a href="http://gurkulindia.com/main/learning-map/">Unix Administration Learning Map</a>
+<ul class='children'>
+	<li class="page_item page-item-7615"><a href="http://gurkulindia.com/main/learning-map/solaris-quiz-session-1-posted-at-unixadminschool-com/">Solaris Quiz Session -1</a></li>
+	<li class="page_item page-item-7641"><a href="http://gurkulindia.com/main/learning-map/solaris-quiz-session-2/">Solaris Quiz Session &#8211; 2</a></li>
+	<li class="page_item page-item-7662"><a href="http://gurkulindia.com/main/learning-map/linux-quiz-session-1/">Linux Quiz Session &#8211; 1</a></li>
+	<li class="page_item page-item-8291"><a href="http://gurkulindia.com/main/learning-map/solaris-quiz-5/">Solaris Quiz &#8211; Solaris Startup and Shutdown</a></li>
+	<li class="page_item page-item-8287"><a href="http://gurkulindia.com/main/learning-map/solaris-quiz-4/">Solaris QUIZ  &#8211; Package and Patch Management</a></li>
+	<li class="page_item page-item-8326"><a href="http://gurkulindia.com/main/learning-map/linux-quiz-redhat-enterprise-linux-basic-administration/">Linux Quiz &#8211; Redhat Enterprise Linux &#8211; Basic Administration</a></li>
+	<li class="page_item page-item-8330"><a href="http://gurkulindia.com/main/learning-map/linux-quiz-redhat-enterprise-linux-6-intermediate-administration/">Linux Quiz &#8211; Redhat Enterprise Linux 6 &#8211;  Intermediate Administration</a></li>
+	<li class="page_item page-item-8335"><a href="http://gurkulindia.com/main/learning-map/linux-quiz-redhat-enterprise-linux-6-network-administration/">Linux Quiz &#8211; Redhat Enterprise Linux 6 &#8211; Network Administration</a></li>
+	<li class="page_item page-item-8355"><a href="http://gurkulindia.com/main/learning-map/solaris-quiz-9/">Solaris Quiz &#8211; Managing File systems and Disk Devices</a></li>
+	<li class="page_item page-item-8493"><a href="http://gurkulindia.com/main/learning-map/solaris-quiz-solaris-user-administration-and-basic-security/">Solaris Quiz – Solaris User Administration and Basic Security</a></li>
+	<li class="page_item page-item-8743"><a href="http://gurkulindia.com/main/learning-map/solaris-quiz-system-backups-and-restore/">Solaris Quiz &#8211; System Backups and Restore</a></li>
+	<li class="page_item page-item-8780"><a href="http://gurkulindia.com/main/learning-map/solaris-quiz-managing-virtual-file-systems-and-core-dumps/">Solaris Quiz &#8211; Managing Virtual File Systems and Core Dumps</a></li>
+</ul>
+</li>
+<li class="page_item page-item-8881"><a href="http://gurkulindia.com/main/we-are-still-working-on-this-page/">We are still working on this page!!!</a></li>
+ -->
+        <li class="page_item page-item-6626"><a href="http://gurkulindia.com/">Learning Map</a></li>  
+ 	<li class="page_item page-item-6626"><a href="http://unixmagazine.com/">Unix Magazine</a></li>  
+	<li class="page_item page-item-6626"><a href="http://www.linkedin.com/groups/Enterprise-Unix-System-Administration-Security-4006428?gid=4006428&trk=hb_side_g">Unix Professional Network</a></li>  
+	<li class="page_item page-item-6626"><a href="https://www.facebook.com/groups/Just.unix.no.noise/">Just-Unix-No-Noise FB Group</a></li>  
+	<!-- <li class="page_item page-item-5784"><a href="http://middleware.gurkulindia.com/">Middleware Administration</a></li> -->
+         <!-- <li class="page_item page-item-6229"><a href="http://gurkulindia.com/storage">Storage Administration</a></li>  -->
+	</ul>
+	
+	
+	
+	<div id="searchbar">
+	<form method="get" action="http://gurkulindia.com/main/" class="searchform">
+	<fieldset>
+	<label class="searchlabel">Search Blog</label>
+	<input type="text" value="" name="s" class="searchterm">
+	<input type="submit" value="Search" class="searchbutton">
+	</fieldset>
+	</form>
+	
+	
+	
+        </div>
+
+<div class="clear"></div>
+       
+</div>
+<!-- end -->
+
+<div class="clear"></div>
+
+<!-- header -->
+<div id="header">
+
+	<table>
+	<tbody><tr>
+	<td>
+	<div id="header_logo">
+
+	<h1 class="blogtitle"><a href="http://gurkulindia.com/main/" title="unixadminschool.com">unixadminschool.com</a></h1>
+	<div class="description"></div>
+
+	</div>
+	<div class="clear"></div>
+	
+</td>
+<td align="right">
+
+
+</td>
+</tr>
+</tbody></table>
+	
+
+	
+
+<!-- end -->
+
+<!-- category menu -->
+<div id="bar">
+
+	<ul id="catmenu">
+        
+	<li class="current-cat"><a href="http://gurkulindia.com/main/">Home</a></li>
+		<li class="cat-item cat-item-443"><a href="http://gurkulindia.com/main/category/announcements/" title="View all posts filed under Announcements">Announcements</a>
+<ul class="children">
+	<li class="cat-item cat-item-578"><a href="http://gurkulindia.com/main/category/announcements/post-it-to-feed/" title="View all posts filed under Feed">Feed</a>
+</li>
+	<li class="cat-item cat-item-474"><a href="http://gurkulindia.com/main/category/announcements/misc/" title="View all posts filed under MISC">MISC</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-573"><a href="http://gurkulindia.com/main/category/quiz-center/" title="View all posts filed under QUIZ Center">QUIZ Center</a>
+<ul class="children">
+	<li class="cat-item cat-item-642"><a href="http://gurkulindia.com/main/category/quiz-center/linux-quizzes/" title="View all posts filed under Linux Quizzes">Linux Quizzes</a>
+</li>
+	<li class="cat-item cat-item-641"><a href="http://gurkulindia.com/main/category/quiz-center/solaris-quizzes/" title="View all posts filed under Solaris Quizzes">Solaris Quizzes</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-450"><a href="http://gurkulindia.com/main/category/system-admin-learners/" title="View all posts filed under Unix Beginners">Unix Beginners</a>
+<ul class="children">
+	<li class="cat-item cat-item-449"><a href="http://gurkulindia.com/main/category/system-admin-learners/beginners-lessons/" title="View all posts filed under Beginners Lessons">Beginners Lessons</a>
+	<ul class="children">
+	<li class="cat-item cat-item-645"><a href="http://gurkulindia.com/main/category/system-admin-learners/beginners-lessons/aix-beginners-guides/" title="View all posts filed under AIX Beginners Guides">AIX Beginners Guides</a>
+</li>
+	<li class="cat-item cat-item-644"><a href="http://gurkulindia.com/main/category/system-admin-learners/beginners-lessons/linux-beginners-guides/" title="View all posts filed under Linux Beginners Guides">Linux Beginners Guides</a>
+</li>
+	<li class="cat-item cat-item-649"><a href="http://gurkulindia.com/main/category/system-admin-learners/beginners-lessons/san-basics-for-unix-admin/" title="View all posts filed under SAN Basics for Unix Admin">SAN Basics for Unix Admin</a>
+</li>
+	<li class="cat-item cat-item-643"><a href="http://gurkulindia.com/main/category/system-admin-learners/beginners-lessons/solaris-beginners-guides/" title="View all posts filed under Solaris Beginners Guides">Solaris Beginners Guides</a>
+</li>
+	<li class="cat-item cat-item-647"><a href="http://gurkulindia.com/main/category/system-admin-learners/beginners-lessons/vcs-beginners-guides/" title="View all posts filed under VCS Beginners Guides">VCS Beginners Guides</a>
+</li>
+	<li class="cat-item cat-item-646"><a href="http://gurkulindia.com/main/category/system-admin-learners/beginners-lessons/vxvm-beginners-guides/" title="View all posts filed under VxVM Beginners Guides">VxVM Beginners Guides</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-26"><a href="http://gurkulindia.com/main/category/system-admin-learners/system-admin-career-guidance/" title="View all posts filed under Career Guidance">Career Guidance</a>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-452"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/" title="View all posts filed under Unix Experts">Unix Experts</a>
+<ul class="children">
+	<li class="cat-item cat-item-419"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/cloud_computing/" title="View all posts filed under Cloud Computing">Cloud Computing</a>
+	<ul class="children">
+	<li class="cat-item cat-item-593"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/cloud_computing/hadoop-bigdata/" title="View all posts filed under Hadoop &amp; Bigdata">Hadoop &amp; Bigdata</a>
+</li>
+	<li class="cat-item cat-item-465"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/cloud_computing/virtualisation-kvm/" title="View all posts filed under KVM">KVM</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-445"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/sun-clusters/" title="View all posts filed under Oracle CLUSTER Services">Oracle CLUSTER Services</a>
+	<ul class="children">
+	<li class="cat-item cat-item-608"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/sun-clusters/oracle-cluster-fundamentals/" title="View all posts filed under Oracle cluster Fundamentals">Oracle cluster Fundamentals</a>
+</li>
+	<li class="cat-item cat-item-609"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/sun-clusters/oracle-cluster-maintenance/" title="View all posts filed under Oracle Cluster Maintenance">Oracle Cluster Maintenance</a>
+</li>
+	<li class="cat-item cat-item-611"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/sun-clusters/oracle-cluster-migration/" title="View all posts filed under Oracle Cluster Migration">Oracle Cluster Migration</a>
+</li>
+	<li class="cat-item cat-item-612"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/sun-clusters/oracle-cluster-troubleshooting/" title="View all posts filed under Oracle Cluster Troubleshooting">Oracle Cluster Troubleshooting</a>
+</li>
+	<li class="cat-item cat-item-610"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/sun-clusters/oracle-cluster-upgrades/" title="View all posts filed under Oracle Cluster Upgrades">Oracle Cluster Upgrades</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-613"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/redhat-cluster-services/" title="View all posts filed under Redhat Cluster Services">Redhat Cluster Services</a>
+	<ul class="children">
+	<li class="cat-item cat-item-638"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/redhat-cluster-services/rhcs-configurations/" title="View all posts filed under RHCS Configurations">RHCS Configurations</a>
+</li>
+	<li class="cat-item cat-item-614"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/redhat-cluster-services/rhcs-fundamentals/" title="View all posts filed under RHCS Fundamentals">RHCS Fundamentals</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-580"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/storage-admin/" title="complete Storage administration">Storage</a>
+	<ul class="children">
+	<li class="cat-item cat-item-586"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/storage-admin/emc-administration/" title="View all posts filed under EMC Administration">EMC Administration</a>
+</li>
+	<li class="cat-item cat-item-587"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/storage-admin/netapp-administration/" title="View all posts filed under Netapp Administration">Netapp Administration</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/san-configuration-for-solaris-linux/" title="View all posts filed under Storage Configs for Unixadmin">Storage Configs for Unixadmin</a>
+	<ul class="children">
+	<li class="cat-item cat-item-455"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/san-configuration-for-solaris-linux/migrations/" title="View all posts filed under Storage Migrations">Storage Migrations</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-619"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/unix-scripting-migrations-and-security/" title="View all posts filed under Unix Automation and Security">Unix Automation and Security</a>
+	<ul class="children">
+	<li class="cat-item cat-item-432"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/unix-scripting-migrations-and-security/network-design-system-admin/" title="View all posts filed under Network Design">Network Design</a>
+</li>
+	<li class="cat-item cat-item-447"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/unix-scripting-migrations-and-security/scripting/" title="View all posts filed under Scripting">Scripting</a>
+</li>
+	<li class="cat-item cat-item-421"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/unix-scripting-migrations-and-security/solaris_security/" title="View all posts filed under Server Security">Server Security</a>
+</li>
+	<li class="cat-item cat-item-564"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/unix-scripting-migrations-and-security/tools-applications/" title="View all posts filed under Tools &amp; Applications">Tools &amp; Applications</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-602"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/veritas-cluster-services-veritas/" title="View all posts filed under Veritas Cluster Services">Veritas Cluster Services</a>
+	<ul class="children">
+	<li class="cat-item cat-item-639"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/veritas-cluster-services-veritas/vcs-configurations/" title="View all posts filed under VCS Configurations">VCS Configurations</a>
+</li>
+	<li class="cat-item cat-item-603"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/veritas-cluster-services-veritas/vcs-fundamentals/" title="View all posts filed under VCS Fundamentals">VCS Fundamentals</a>
+</li>
+	<li class="cat-item cat-item-604"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/veritas-cluster-services-veritas/vcs-maintenance/" title="View all posts filed under VCS Maintenance">VCS Maintenance</a>
+</li>
+	<li class="cat-item cat-item-606"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/veritas-cluster-services-veritas/vcs-migrations/" title="View all posts filed under VCS Migrations">VCS Migrations</a>
+</li>
+	<li class="cat-item cat-item-607"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/veritas-cluster-services-veritas/vcs-troubleshooting/" title="View all posts filed under VCS Troubleshooting">VCS Troubleshooting</a>
+</li>
+	<li class="cat-item cat-item-605"><a href="http://gurkulindia.com/main/category/unix-expert-adminstration/veritas-cluster-services-veritas/vcs-upgrades/" title="View all posts filed under VCS Upgrades">VCS Upgrades</a>
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-451"><a href="http://gurkulindia.com/main/category/unix-administration/" title="View all posts filed under Unix Intermediate">Unix Intermediate</a>
+<ul class="children">
+	<li class="cat-item cat-item-467"><a href="http://gurkulindia.com/main/category/unix-administration/ibm-aix/" title="View all posts filed under IBM AIX">IBM AIX</a>
+	<ul class="children">
+	<li class="cat-item cat-item-468"><a href="http://gurkulindia.com/main/category/unix-administration/ibm-aix/ibm-lpar/" title="View all posts filed under IBM LPAR">IBM LPAR</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-36"><a href="http://gurkulindia.com/main/category/unix-administration/linux/" title="View all posts filed under Linux Admin">Linux Admin</a>
+	<ul class="children">
+	<li class="cat-item cat-item-422"><a href="http://gurkulindia.com/main/category/unix-administration/linux/linux_booting/" title="View all posts filed under Linux Booting">Linux Booting</a>
+</li>
+	<li class="cat-item cat-item-426"><a href="http://gurkulindia.com/main/category/unix-administration/linux/linux-diskmanagement/" title="View all posts filed under Linux Disk Management">Linux Disk Management</a>
+</li>
+	<li class="cat-item cat-item-427"><a href="http://gurkulindia.com/main/category/unix-administration/linux/linux-volume-manager/" title="View all posts filed under Linux LVM">Linux LVM</a>
+</li>
+	<li class="cat-item cat-item-424"><a href="http://gurkulindia.com/main/category/unix-administration/linux/linux_networking/" title="View all posts filed under Linux Networking">Linux Networking</a>
+</li>
+	<li class="cat-item cat-item-428"><a href="http://gurkulindia.com/main/category/unix-administration/linux/linux-performance/" title="View all posts filed under Linux Performance">Linux Performance</a>
+</li>
+	<li class="cat-item cat-item-425"><a href="http://gurkulindia.com/main/category/unix-administration/linux/linux_troubleshooting/" title="View all posts filed under Linux Troubleshooting">Linux Troubleshooting</a>
+</li>
+	<li class="cat-item cat-item-563"><a href="http://gurkulindia.com/main/category/unix-administration/linux/linux-yumrpm/" title="View all posts filed under Linux YUM/RPM">Linux YUM/RPM</a>
+</li>
+	<li class="cat-item cat-item-566"><a href="http://gurkulindia.com/main/category/unix-administration/linux/performance-analysis/" title="View all posts filed under Performance Analysis">Performance Analysis</a>
+</li>
+	<li class="cat-item cat-item-433"><a href="http://gurkulindia.com/main/category/unix-administration/linux/linux-kernel/" title="View all posts filed under Redhat Linux Kernel">Redhat Linux Kernel</a>
+</li>
+	<li class="cat-item cat-item-472"><a href="http://gurkulindia.com/main/category/unix-administration/linux/web-servers/" title="View all posts filed under Web Servers">Web Servers</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-570"><a href="http://gurkulindia.com/main/category/unix-administration/rhel-6/" title="View all posts filed under Redhat Enterprise Linux 6">Redhat Enterprise Linux 6</a>
+	<ul class="children">
+	<li class="cat-item cat-item-571"><a href="http://gurkulindia.com/main/category/unix-administration/rhel-6/rhel-ldap/" title="View all posts filed under RHEL LDAP">RHEL LDAP</a>
+</li>
+	<li class="cat-item cat-item-572"><a href="http://gurkulindia.com/main/category/unix-administration/rhel-6/rhel6-storage/" title="View all posts filed under Rhel6 Storage">Rhel6 Storage</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-4"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/" title="View all posts filed under Solaris Admin">Solaris Admin</a>
+	<ul class="children">
+	<li class="cat-item cat-item-3"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/system-admin/" title="View all posts filed under Blog for Unix Admin">Blog for Unix Admin</a>
+		<ul class="children">
+	<li class="cat-item cat-item-440"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/system-admin/san-emc-hitachi/" title="View all posts filed under Storage Administration – SAN">Storage Administration – SAN</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-460"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/oracle-hardware/" title="View all posts filed under Oracle Hardware">Oracle Hardware</a>
+		<ul class="children">
+	<li class="cat-item cat-item-9"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/oracle-hardware/solaris-hardware/" title="View all posts filed under SUN Hardware">SUN Hardware</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-437"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/reference-docs/" title="View all posts filed under Reference Docs">Reference Docs</a>
+</li>
+	<li class="cat-item cat-item-418"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/soalris10_zone_smf/" title="View all posts filed under Solaris 10 Zones &amp; LDOMs">Solaris 10 Zones &amp; LDOMs</a>
+		<ul class="children">
+	<li class="cat-item cat-item-454"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/soalris10_zone_smf/sun-ldoms/" title="View all posts filed under SUN LDOMS">SUN LDOMS</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-28"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/access-control/" title="View all posts filed under Solaris Access Control">Solaris Access Control</a>
+		<ul class="children">
+	<li class="cat-item cat-item-436"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/access-control/user-authentication/" title="View all posts filed under Solaris User Authentication">Solaris User Authentication</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-25"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-booting/" title="View all posts filed under Solaris Booting">Solaris Booting</a>
+</li>
+	<li class="cat-item cat-item-651"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-commands-reference-docs/" title="View all posts filed under Solaris Commands">Solaris Commands</a>
+</li>
+	<li class="cat-item cat-item-7"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-volume-management/" title="View all posts filed under Solaris Disk Management">Solaris Disk Management</a>
+</li>
+	<li class="cat-item cat-item-576"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-man/" title="Solaris Manual Pages">Solaris Files</a>
+</li>
+	<li class="cat-item cat-item-17"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-howto/" title="View all posts filed under Solaris How-to">Solaris How-to</a>
+		<ul class="children">
+	<li class="cat-item cat-item-19"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-howto/solaris-best-practices/" title="View all posts filed under Solaris Best Practices">Solaris Best Practices</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-howto/solaris-tips/" title="View all posts filed under Solaris Tips">Solaris Tips</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-429"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-installation/" title="View all posts filed under Solaris Installation">Solaris Installation</a>
+</li>
+	<li class="cat-item cat-item-16"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-kernel/" title="View all posts filed under Solaris Kernel">Solaris Kernel</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-networking/" title="View all posts filed under Solaris Networking">Solaris Networking</a>
+		<ul class="children">
+	<li class="cat-item cat-item-15"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-networking/solaris-dns/" title="View all posts filed under Solaris DNS">Solaris DNS</a>
+</li>
+	<li class="cat-item cat-item-14"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-networking/solaris-nfs/" title="View all posts filed under Solaris NFS">Solaris NFS</a>
+</li>
+	<li class="cat-item cat-item-13"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-networking/solaris-nis/" title="View all posts filed under Solaris NIS">Solaris NIS</a>
+</li>
+		</ul>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-packages/" title="View all posts filed under Solaris Packages &amp; Patching">Solaris Packages &amp; Patching</a>
+</li>
+	<li class="cat-item cat-item-12"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-performance/" title="View all posts filed under Solaris Performance Monitoring">Solaris Performance Monitoring</a>
+</li>
+	<li class="cat-item cat-item-653"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-printer-configurations/" title="View all posts filed under Solaris Printer Configurations">Solaris Printer Configurations</a>
+</li>
+	<li class="cat-item cat-item-11"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-troubleshootin/" title="View all posts filed under Solaris Troubleshooting">Solaris Troubleshooting</a>
+</li>
+	<li class="cat-item cat-item-434"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-x86-solaris-admin/" title="View all posts filed under solaris X86">solaris X86</a>
+</li>
+	<li class="cat-item cat-item-453"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/solaris-storage/" title="View all posts filed under Solaris ZFS and Boot Environment">Solaris ZFS and Boot Environment</a>
+</li>
+	<li class="cat-item cat-item-435"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-admin/flow-charts/" title="View all posts filed under Troubleshooting Flow charts">Troubleshooting Flow charts</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-470"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-11/" title="View all posts filed under Solaris11 Admin">Solaris11 Admin</a>
+	<ul class="children">
+	<li class="cat-item cat-item-652"><a href="http://gurkulindia.com/main/category/unix-administration/solaris-11/solaris11-howto/" title="View all posts filed under solaris11-Howto">solaris11-Howto</a>
+</li>
+	</ul>
+</li>
+	<li class="cat-item cat-item-20"><a href="http://gurkulindia.com/main/category/unix-administration/veritas/" title="View all posts filed under Veritas Admin">Veritas Admin</a>
+	<ul class="children">
+	<li class="cat-item cat-item-458"><a href="http://gurkulindia.com/main/category/unix-administration/veritas/veritas-netbackup/" title="View all posts filed under Veritas Netbackup">Veritas Netbackup</a>
+</li>
+	<li class="cat-item cat-item-21"><a href="http://gurkulindia.com/main/category/unix-administration/veritas/veritas-volume-manager/" title="View all posts filed under VxVM Learning">VxVM Learning</a>
+		<ul class="children">
+	<li class="cat-item cat-item-598"><a href="http://gurkulindia.com/main/category/unix-administration/veritas/veritas-volume-manager/vxvm-fundamentals/" title="View all posts filed under VxVM Fundamentals">VxVM Fundamentals</a>
+</li>
+	<li class="cat-item cat-item-599"><a href="http://gurkulindia.com/main/category/unix-administration/veritas/veritas-volume-manager/vxvm-maintenance/" title="View all posts filed under VxVM Maintenance">VxVM Maintenance</a>
+</li>
+	<li class="cat-item cat-item-601"><a href="http://gurkulindia.com/main/category/unix-administration/veritas/veritas-volume-manager/vxvm-migrations/" title="View all posts filed under VxVM Migrations">VxVM Migrations</a>
+</li>
+	<li class="cat-item cat-item-22"><a href="http://gurkulindia.com/main/category/unix-administration/veritas/veritas-volume-manager/veritas-volume-manager-troubleshooting/" title="View all posts filed under VxVM Troubleshooting">VxVM Troubleshooting</a>
+</li>
+	<li class="cat-item cat-item-600"><a href="http://gurkulindia.com/main/category/unix-administration/veritas/veritas-volume-manager/vxvm-upgrades/" title="View all posts filed under VxVM Upgrades">VxVM Upgrades</a>
+</li>
+		</ul>
+</li>
+	</ul>
+</li>
+</ul>
+</li>
+      <!--  <li class="page_item page-item-5784"><a href="http://gurkulindia.com/main/unix-magazine/">Unix Magazine</a></li>  -->
+	</ul>
+	 
+	<div id="toprss">
+	
+        <p><a onclick="window.open(&#39;http://feeds.feedburner.com/Gurkulindia&#39;, &#39;popupwindow&#39;, &#39;scrollbars=yes,width=900,height=900&#39;);return true" href="http://feeds.feedburner.com/Gurkulindia" target="popupwindow">Subscribe</a></p>
+     
+       
+	</div>
+
+
+<div class="clear"></div>
+</div>
+<!-- end -->
+<!-- blog information -->
+<div id="bloginfo">
+<div id="bloginfobox">
+<ul>
+
+
+
+
+
+
+<table>
+<tbody><tr>
+<td>
+<!-- <p style="text-align: center;"><a onclick="window.open('http://forms.aweber.com/form/77/1493755877.htm','Subscribe to  Posts','resizable=yes,width=500,height=700,left='+(screen.availWidth/2-250)+',top='+(screen.availHeight/2-250)+'');return false;" href="http://forms.aweber.com/form/77/1493755877.htm"><img class="aligncenter  wp-image-7325" title="Subscribe Email Posts" src="http://unixadminschool.com/unixmagazine/wp-content/uploads/2013/08/subscribe-email-rc.png" alt="" width="300" height="280" /></a></p>  -->
+
+<!-- Place this tag where you want the widget to render. -->
+<div id="___person_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 300px; height: 259px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 300px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 259px;" tabindex="0" vspace="0" width="100%" id="I0_1385788856157" name="I0_1385788856157" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/person.html" data-gapiattached="true" title="Badge v2"></iframe></div>
+
+<!-- Place this tag after the last widget tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+
+
+</td>
+
+<td>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8188623755985007";
+/* frontpage */
+google_ad_slot = "1514866739";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</td>
+<td>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8188623755985007";
+/* Front Page */
+google_ad_slot = "7766051612";
+google_ad_width = 300;
+google_ad_height = 250;
+//-->
+</script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</td>
+
+<td>
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8188623755985007";
+/* page-sep-2012 */
+google_ad_slot = "0536993294";
+google_ad_width = 336;
+google_ad_height = 280;
+//-->
+</script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/show_ads.js">
+</script><ins style="display:inline-table;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:280px;margin:0;padding:0;position:relative;visibility:visible;width:336px;background-color:transparent"><iframe width="336" height="280" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;"></iframe></ins></ins>
+</td>
+</tr>
+</tbody></table>
+<p><a href="http://gurkulindia.com/main/wp-content/uploads/2013/10/line2.jpg"><img class="aligncenter size-large wp-image-9365" alt="line2" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/line2-1024x15.jpg" width="1150" height="15"></a></p>
+
+
+
+
+
+
+
+
+
+
+</ul>
+
+<div class="clear"></div>
+</div><div class="clear"></div>
+</div>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=118164601610047";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!-- end -->
+
+
+<div id="contentPost">
+
+	<div id="column">
+
+
+		<div class="post" id="post-5472">
+
+		<h1>Linux – Understand Device Mapper   and DM-Multipath   </h1>
+
+<table>
+<tbody><tr>
+<td>
+<center>
+<p><a href="http://feeds.feedburner.com/gurkulindia"><img src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/gurkulindia" height="26" width="100" style="border:0" alt=""></a></p>
+</center>
+
+</td>
+<td>
+
+<!-- <p style="text-align: center;"><a onclick="window.open('http://forms.aweber.com/form/77/1493755877.htm','Unix AdminSchool Daily Knowledge','width=400,height=700,left='+(screen.availWidth/2-200)+',top='+(screen.availHeight/2-350)+'');return false;" href="http://forms.aweber.com/form/77/1493755877.htm" target="_blank"><img class="aligncenter size-full wp-image-8955" alt="feedburner-subscribe" src="http://gurkulindia.com/main/wp-content/uploads/2013/09/subscribe-san.jpg" width="600" height="200" /></a></p>  -->
+
+<p style="text-align: center;"><a onclick="window.open(&#39;http://feedburner.google.com/fb/a/mailverify?uri=Gurkulindia&#39;,&#39;Unix AdminSchool Daily Knowledge&#39;,&#39;width=600,height=500,left=&#39;+(screen.availWidth/2-200)+&#39;,top=&#39;+(screen.availHeight/2-350)+&#39;&#39;);return false;" href="http://feedburner.google.com/fb/a/mailverify?uri=Gurkulindia" target="_blank"><img class="aligncenter size-full wp-image-8955" alt="feedburner-subscribe" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/subscribe-san.jpg" width="600" height="200"></a></p>
+
+
+</td><td>
+
+</td></tr>
+</tbody></table>
+
+                   <div class="entry" style="”word-wrap:" break-word"="">
+
+		<p style="text-align: justify;"><span style="font-family: comic sans ms,sans-serif;">Device-mapper is a very important component of Linux 2.6 kernel. It is used for many critical storage related applications, such as LVM2, Linux native multipath tool device-mapper-multipath, device-mapper software RAID, etc. A solid understanding of device-mapper helps system administrators to investigate various kinds of issues with these applications. </span></p>
+<p style="text-align: justify;"><span style="font-family: comic sans ms,sans-serif;">In the Linux kernel, the device-mapper is a generic framework to map one block device into another. It is not just for LVM2. By using device-mapper, the kernel provides general services to dm-multipath, LVM2 and EVMS, device-mapper software RAIDs, dm-crypt disk encryption and offers additional features such as file system snapshots.<span id="more-5472"></span></span></p>
+<p style="text-align: justify;">In device-mapper architecture there are three important concepts to be familiarized</p>
+<blockquote>
+<p>1. Mapped Device</p>
+<p>2. Mapping Table</p>
+<p>3. Target Device</p>
+</blockquote>
+<h4 style="text-align: justify;">Mapped Device</h4>
+<p style="text-align: justify;">Mapped device is a logical device provided by device-mapper driver. It provides an interface to operate on. The logical volumes in LVM2 and pseudo disks in dm-multipath are good examples of mapped devices.</p>
+<h4 style="text-align: justify;">Mapping Table</h4>
+<p style="text-align: justify;">Mapping table represents a mappi</p>
+<p style="text-align: justify;">ng from a mapped device to target devices. One table can be seen as an group of variables including mapped device’s starting address, length and target device’s physical device, starting address, length. The unit used here is a sector (512 bytes). The command “dmsetup create” will create such a table with parameters provided.</p>
+<p style="text-align: justify;"><img src="data:image/png;base64,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" alt=""></p>
+<p style="text-align: justify;">&nbsp;</p>
+<h4 style="text-align: justify;">Target Device</h4>
+<p style="text-align: justify;">Target device is a modularized plugin. The device-mapper filters and redirects I/O requests with it. some good examples for target devices</p>
+<ul style="text-align: justify;">
+<li>linear for LVM2</li>
+<li>mirror for RAID</li>
+<li>stripped for LVM2</li>
+<li>snapshot for LVM2</li>
+<li>multipath for dm-multipath</li>
+</ul>
+<p style="text-align: justify;"><strong>How application deals with device mapper</strong></p>
+<p style="text-align: justify;">Device-mapper works by processing data passed in from a virtual block device, that it itself provides, and then passing it on to another block device.</p>
+<p>Applications (like dm_multipath and LVM2) that want to create new mapped devices talk to the Device-mapper via the libdevmapper.so shared library, which in turn issues ioctls to the /dev/mapper/control device node.</p>
+<p style="text-align: justify;">&nbsp;</p>
+<h2 style="text-align: justify;"><strong>What is DM-Multipath</strong></h2>
+<p style="text-align: justify;">Device-Mapper Multipath (DM-Multipath) is a Linux native multipath tool, which allows you to configure multiple I/O paths between server nodes and storage arrays into a single device. These I/O paths are physical SAN connections that can include separate cables, switches, and controllers. Multipathing aggregates the I/O paths, creating a new device that consists of the aggregated paths.&nbsp;</p>
+<p style="text-align: justify;"><strong>Create partitions and file system on DM-Multipath devices</strong></p>
+<p style="text-align: justify;">The DM-Multipath devices will be created as <strong>/dev/mapper/mpath<em>N</em></strong>, where <em>N</em> is the multipath group number. Use command <strong>fdisk</strong>&nbsp; to create partitions on <strong>/dev/mapper/mpath<em>N</em></strong>:</p>
+<blockquote>
+<p><span style="font-family: courier new,courier;">#&nbsp;fdisk&nbsp;/dev/mapper/mpath0</span></p>
+<p><span style="font-family: courier new,courier;"> Command&nbsp;(m&nbsp;for&nbsp;help):&nbsp;n&nbsp;&nbsp;&nbsp;</span><br><span style="font-family: courier new,courier;"> Command&nbsp;action</span><br><span style="font-family: courier new,courier;"> &nbsp;&nbsp;&nbsp;e&nbsp;&nbsp;&nbsp;extended</span><br><span style="font-family: courier new,courier;"> &nbsp;&nbsp;&nbsp;p&nbsp;&nbsp;&nbsp;primary&nbsp;partition&nbsp;(1-4)</span><br><span style="font-family: courier new,courier;"> p</span><br><span style="font-family: courier new,courier;"> Partition&nbsp;number&nbsp;(1-4):&nbsp;1</span><br><span style="font-family: courier new,courier;"> First&nbsp;cylinder&nbsp;(1-1017,&nbsp;default&nbsp;1):</span><br><span style="font-family: courier new,courier;"> Using&nbsp;default&nbsp;value&nbsp;1</span><br><span style="font-family: courier new,courier;"> Last&nbsp;cylinder&nbsp;or&nbsp;+size&nbsp;or&nbsp;+sizeM&nbsp;or&nbsp;+sizeK&nbsp;(1-1017,&nbsp;default&nbsp;1017):</span><br><span style="font-family: courier new,courier;"> Using&nbsp;default&nbsp;value&nbsp;1017</span></p>
+<p><span style="font-family: courier new,courier;"> Command&nbsp;(m&nbsp;for&nbsp;help):&nbsp;w</span><br><span style="font-family: courier new,courier;"> The&nbsp;partition&nbsp;table&nbsp;has&nbsp;been&nbsp;altered!</span></p>
+<p><span style="font-family: courier new,courier;"> Calling&nbsp;ioctl()&nbsp;to&nbsp;re-read&nbsp;partition&nbsp;table.</span></p>
+</blockquote>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="text-decoration: underline;"><strong>Important Notes to use DM-Multipath devices in your storage configurations:</strong></span></p>
+<p style="text-align: justify;"><strong></strong><br> The DM-Multipath tool uses three different sets of file names:</p>
+<p>NEVER use <strong>/dev/dm-<em>N</em></strong> devices, as they are only intended to be used by the DM-Multipath tool.</p>
+<p>NEVER use<strong> /dev/mpath/mpath<em>N</em></strong><em> </em>devices, because when multipath devices are mounted at boot time , the UDEV subsystem may not create the device nodes soon enough.</p>
+<p>ALWAYS use <strong>/dev/mapper/mpath<em>N</em></strong> devices, as they are persistent and they are automatically created by device-mapper early in the boot process. Therefore these are the device names that should be used to access the multipathed devices. But in a RAC (Real Application Clustrer) configuration, although <strong>/dev/mapper/mpath<em>N</em></strong> names may be persistent across reboots on a single machine, there is no guarantee that other cluster nodes will use the same name for this disk. If this is desired, then we should use the UDEV facility to get cluster-wide persistent names.&nbsp;</p>
+<p style="text-align: justify;">&nbsp;<br> Register multipath partitions in <strong>/dev/mapper</strong>:</p>
+<blockquote>
+<p># kpartx -a /dev/mapper/mpath0</p>
+</blockquote>
+<p style="text-align: justify;">List all partitions on this device:</p>
+<blockquote>
+<p># kpartx -l /dev/mapper/mpath0<br> mpath0p1 : 0 2295308 /dev/mapper/mpath0 61</p>
+</blockquote>
+<p style="text-align: justify;">Create a file system on partitions:</p>
+<blockquote>
+<p><span style="font-family: courier new,courier;"># mkfs -t ext3 /dev/mapper/mpath0p1</span><br><span style="font-family: courier new,courier;"> mke2fs 1.35 (28-Feb-2004)</span><br><span style="font-family: courier new,courier;"> Filesystem label=</span><br><span style="font-family: courier new,courier;"> OS type: Linux</span><br><span style="font-family: courier new,courier;"> Block size=4096 (log=2)</span><br><span style="font-family: courier new,courier;"> Fragment size=4096 (log=2)</span><br><span style="font-family: courier new,courier;"> 143712 inodes, 286913 blocks</span><br><span style="font-family: courier new,courier;"> 14345 blocks (5.00%) reserved for the super user</span><br><span style="font-family: courier new,courier;"> First data block=0</span><br><span style="font-family: courier new,courier;"> Maximum filesystem blocks=297795584</span><br><span style="font-family: courier new,courier;"> 9 block groups</span><br><span style="font-family: courier new,courier;"> 32768 blocks per group, 32768 fragments per group</span><br><span style="font-family: courier new,courier;"> 15968 inodes per group</span><br><span style="font-family: courier new,courier;"> Superblock backups stored on blocks:</span><br><span style="font-family: courier new,courier;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 32768, 98304, 163840, 229376</span></p>
+<p><span style="font-family: courier new,courier;"> Writing inode tables: done</span><br><span style="font-family: courier new,courier;"> Creating journal (8192 blocks): done</span><br><span style="font-family: courier new,courier;"> Writing superblocks and filesystem accounting information: done</span></p>
+<p><span style="font-family: courier new,courier;"> This filesystem will be automatically checked every 27 mounts or</span><br><span style="font-family: courier new,courier;"> 180 days, whichever comes first.&nbsp; Use tune2fs -c or -i to override.</span></p>
+</blockquote>
+<p style="text-align: justify;">Mount the partition on the mount point:</p>
+<blockquote>
+<p># mkdir /datafile<br> # mount /dev/mapper/mpath0p1 /datafile</p>
+</blockquote>
+<p style="text-align: justify;">&nbsp;</p>
+<div class="bawmrp"><h3>You might be interested to read below :</h3><ul><li class="bawmrp_auto"><a href="http://gurkulindia.com/main/2013/10/redhat-enterprise-linux-network-bonding-quick-reference-rhel5-rhel6/">Redhat Enterprise Linux – Network Bonding – Quick Reference ( RHEL5 / RHEL6)</a></li>
+<li class="bawmrp_auto"><a href="http://gurkulindia.com/main/2013/10/rhel-6-controlling-cache-memory-page-cache-size/">RHEL 6 –  Controlling Cache Memory / Page Cache Size</a></li>
+<li class="bawmrp_auto"><a href="http://gurkulindia.com/main/2013/09/redhat-enterprise-linux-troubleshooting-kernel-panic-issues-part-2/">Redhat Enterprise Linux –  Troubleshooting Kernel Panic issues – Part 2</a></li>
+<li class="bawmrp_auto"><a href="http://gurkulindia.com/main/2013/09/redhat-enterprise-linux-6-kernel-panic-and-system-crash-troubleshooting-quick-reference/">Redhat Enterprise Linux 6 – Kernel Panic and System Crash – Troubleshooting Quick Reference</a></li>
+<li class="bawmrp_auto"><a href="http://gurkulindia.com/main/2013/09/rhel6-kvm-administration-cookbook-part-1/">RHEL6 – KVM Administration CookBook – Part 1</a></li>
+<li class="bawmrp_auto"><a href="http://gurkulindia.com/main/2013/06/unable-to-get-emc-storage-luns-visible-under-veritas-control-in-linux/">Unable to get EMC storage Lun’s visible under veritas control in Linux.</a></li>
+<li class="bawmrp_auto"><a href="http://gurkulindia.com/main/2013/04/test-your-understanding-about-linux-fundamentals/">Test Your Understanding about Linux Fundamentals</a></li>
+<li class="bawmrp_auto"><a href="http://gurkulindia.com/main/2013/04/rhel-6-iscsi-administration-series-iscsi-lun-resize/">RHEL 6 – ISCSI Administration Series – ISCSI Lun resize</a></li>
+<li class="bawmrp_auto"><a href="http://gurkulindia.com/main/2013/04/rhel-6-iscsi-administration-series-configuring-iscsi-server-and-client/">RHEL 6 – ISCSI Administration Series –   Configuring ISCSI Server and Client</a></li>
+<li class="bawmrp_auto"><a href="http://gurkulindia.com/main/2013/04/rhel-6-3-ldap-series-part-4-troubleshooting/">RHEL 6.3  – LDAP Series – Part  4 :  Troubleshooting</a></li></ul></div><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-official sd-sharing"><div class="sd-content"><ul><li class="share-email share-service-visible"><a rel="nofollow" class="share-email sd-button" href="http://gurkulindia.com/main/2011/11/linux-understand-device-mapper-and-dm-multipath/?share=email&nb=1" target="_blank" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-facebook"><div class="like_button"><iframe src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/like.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:96px; height:21px;" allowtransparency="true"></iframe></div></li><li class="share-twitter"><div class="twitter_button"><iframe allowtransparency="true" frameborder="0" scrolling="no" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/tweet_button.html" style="width:101px; height:20px;"></iframe></div></li><li class="share-linkedin"><div class="linkedin_button"><span class="IN-widget" style="line-height: 1; vertical-align: baseline; display: inline-block; text-align: center;"><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1385788857664_0"><a id="li_ui_li_gen_1385788857664_0-link" href="javascript:void(0);"><span id="li_ui_li_gen_1385788857664_0-logo">in</span><span id="li_ui_li_gen_1385788857664_0-title"><span id="li_ui_li_gen_1385788857664_0-mark"></span><span id="li_ui_li_gen_1385788857664_0-title-text">Share</span></span></a></span></span><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important; font-size: 1px !important;"><span id="li_ui_li_gen_1385788857677_1-container" class="IN-right IN-hidden"><span id="li_ui_li_gen_1385788857677_1" class="IN-right"><span id="li_ui_li_gen_1385788857677_1-inner" class="IN-right"><span id="li_ui_li_gen_1385788857677_1-content" class="IN-right">0</span></span></span></span></span></span><script type="in/share+init" data-url="http://gurkulindia.com/main/2011/11/linux-understand-device-mapper-and-dm-multipath/" data-counter="right"></script></div></li><li class="share-google-plus-1"><div class="googleplus1_button"><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I1_1385788856161" name="I1_1385788856161" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/fastbutton.html" data-gapiattached="true" title="+1"></iframe></div></div></li><li><a href="http://gurkulindia.com/main/2011/11/linux-understand-device-mapper-and-dm-multipath/#" class="sharing-anchor sd-button share-more"><span>More</span></a></li><li class="share-end"></li></ul><div class="sharing-hidden"><div class="inner" style="display: none;"><ul><li class="share-stumbleupon"><div class="stumbleupon_button"><iframe src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/saved_resource.html" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:74px; height: 18px;" allowtransparency="true"></iframe></div></li><li class="share-print"><a rel="nofollow" class="share-print sd-button" href="http://gurkulindia.com/main/2011/11/linux-understand-device-mapper-and-dm-multipath/#print" target="_blank" title="Click to print"><span>Print</span></a></li><li class="share-end"></li><li class="share-reddit"><div class="reddit_button"><iframe src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/button1.html" height="22" width="120" scrolling="no" frameborder="0"></iframe></div></li><li class="share-digg"><div class="digg_button"><a rel="nofollow" class="DiggThisButton DiggCompact share-digg sd-button" href="http://digg.com/submit?url=http%3A%2F%2Fgurkulindia.com%2Fmain%2F2011%2F11%2Flinux-understand-device-mapper-and-dm-multipath%2F&title=Linux%20-%20Understand%20Device%20Mapper%20%20%20and%20DM-Multipath" target="_blank" title="Click to Digg this post"><span>Digg</span></a></div></li><li class="share-end"></li><li class="share-end"></li></ul></div></div></div></div></div><div class="clear"></div>
+
+
+
+
+<!-- added bottom table here -->
+
+<right>
+<div class="fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/unixschool" data-width="800" data-height="100" data-show-faces="true" data-border-color="#ffffff" data-stream="false" data-header="false" fb-xfbml-state="rendered"><span style="vertical-align: bottom; width: 800px; height: 100px;"><iframe name="f143ce95e8" width="800px" height="100px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/like_box(1).html" style="border: none; visibility: visible; width: 800px; height: 100px;" class=""></iframe></span></div>
+</right>
+
+				                <div class="postinfo">
+		<div class="info">Posted by <a href="http://gurkulindia.com/main/author/ramdevram/" title="Posts by Ramdev" rel="author">Ramdev</a></div>
+		<div class="commentnum">3 Comments</div><div class="clear"></div>
+		</div>
+						
+		</div>
+		
+			</div>
+        
+        
+<!-- Post Navigation -->
+	<div class="nav">
+	<div class="wp-pagenavi">
+<span class="pages">Pages</span><span class="current">1  </span>
+</div>	<div class="clear"></div>
+	</div>	
+
+	<div class="post_follow">
+		You can follow any responses to this entry through the <a href="http://gurkulindia.com/main/2011/11/linux-understand-device-mapper-and-dm-multipath/feed/">RSS 2.0</a> feed.
+
+
+
+
+				You can <a href="http://gurkulindia.com/main/2011/11/linux-understand-device-mapper-and-dm-multipath/#respond">leave a response</a>, or <a href="http://gurkulindia.com/main/2011/11/linux-understand-device-mapper-and-dm-multipath/trackback/" rel="trackback">trackback</a> from your own site.
+			</div>
+
+
+	
+<!-- Begin Comments List -->
+<div class="commentlistdiv">
+<h1 id="comments">3 Comments on “Linux – Understand Device Mapper   and DM-Multipath”</h1>
+
+
+<ul class="commentlist">
+<li class="alt" id="comment-9100">
+
+<div class="pane_l">
+<div class="c_author">pvprasanna</div>
+<div class="c_avatar"></div>
+<div class="c_date">18 August, 2013, 4:37</div>
+<div class="c_approved"></div>
+</div>
+
+<div class="pane_r">
+<p>i want to join with u</p>
+</div>
+<div class="clear"></div>
+
+</li>
+<li id="comment-39067">
+
+<div class="pane_l">
+<div class="c_author"><a href="http://lissafgutkine5071.blog.com/2013/10/09/garcinia-cambogia-extract-the-load-reduction-supplement-with-a-few-different-amazing-benefits/" rel="external nofollow" class="url">Jerri</a></div>
+<div class="c_avatar"></div>
+<div class="c_date">5 November, 2013, 16:42</div>
+<div class="c_approved"></div>
+</div>
+
+<div class="pane_r">
+<p>I am actually delighted to glance at this webpage posts<br>
+which contains plenty of helpful data, thanks for providing these<br>
+kinds of information.</p>
+</div>
+<div class="clear"></div>
+
+</li>
+<li class="alt" id="comment-39124">
+
+<div class="pane_l">
+<div class="c_author">Ramdev</div>
+<div class="c_avatar"></div>
+<div class="c_date">12 November, 2013, 6:38</div>
+<div class="c_approved"></div>
+</div>
+
+<div class="pane_r">
+<p>Hi Jerri, Thanks for dropping the comment</p>
+</div>
+<div class="clear"></div>
+
+</li>
+</ul>
+</div>
+<!-- End Comments List -->
+
+<!-- Setup Trackbacks box -->
+<!-- End Trackbacks display -->
+
+<!-- Leave a Reply Box -->
+
+
+<div class="reply">
+
+<center>
+<table border="0" align="center">
+<tbody><tr>
+<td>
+
+<!--  --- nester table for site information ---->
+<p></p>
+<p></p>
+<p></p>
+<table border="0" align="center">
+<tbody>
+<tr>
+
+
+
+</tr>
+</tbody>
+</table>
+
+<!--  --- nester table for site information ---->
+
+</td>
+<td>
+
+
+</td>
+</tr>
+</tbody></table>
+
+
+
+
+</center>
+
+
+
+
+<h1 id="respond">Leave a Comment</h1>
+
+<div style="text-align: right" ;font-family:="" comic="" sans="" ms,sans-serif;="" font-size:="" small"="">
+<p>
+<b>Join to our Professional Network (of 2500+ unixadmins ) to receive Unix Administration and Job Updates <b>   -  
+<script src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/in.js" type="text/javascript"></script>
+<span class="IN-widget" style="line-height: 1; vertical-align: baseline; display: inline-block;"><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important;"><span id="li_ui_li_gen_1385788857685_2" class="li-connect-widget"><a id="li_ui_li_gen_1385788857685_2-link" class="li-connect-link" href="javascript:void(0);"><span id="li_ui_li_gen_1385788857685_2-mark" class="li-connect-mark"></span></a> <a class="li-connect-link" href="javascript:void(0);"><span id="li_ui_li_gen_1385788857685_2-text" class="li-connect-text"> unixadminschool.com</span></a></span></span></span><script type="IN/MemberProfile+init" data-id="http://www.linkedin.com/in/gurkulindia" data-format="click" data-text=" unixadminschool.com" data-related="false"></script>
+<script src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/in.js" type="text/javascript"></script>
+<span class="IN-widget" style="line-height: 1; vertical-align: baseline; display: inline-block;"><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important;"><span id="li_ui_li_gen_1385788857692_3" class="li-connect-widget"><a id="li_ui_li_gen_1385788857692_3-link" class="li-connect-link" href="javascript:void(0);"><span id="li_ui_li_gen_1385788857692_3-mark" class="li-connect-mark"></span></a> <a class="li-connect-link" href="javascript:void(0);"><span id="li_ui_li_gen_1385788857692_3-text" class="li-connect-text">Ramkumar Ramadevu</span></a></span></span></span><script type="IN/MemberProfile+init" data-id="http://www.linkedin.com/in/ramkumarramadevu" data-format="click" data-text="Ramkumar Ramadevu" data-related="false"></script>
+</b></b></p></div><b><b>
+
+
+<form action="http://gurkulindia.com/main/wp-comments-post.php" method="post" id="commentform">
+<fieldset>
+
+
+<p><input type="text" name="author" id="author" value="" tabindex="1" class="replytext" aria-required="true">
+<label for="author">Name (required)</label></p>
+
+<p><input type="text" name="email" id="email" value="" tabindex="2" class="replytext" aria-required="true">
+<label for="email">Mail (required)</label></p>
+
+<p><input type="text" name="url" id="url" value="" tabindex="3" class="replytext">
+<label for="url">Website</label></p>
+
+
+<p><textarea name="comment" id="comment" tabindex="4" class="replyarea"></textarea></p>
+
+<p><input name="submit" type="submit" id="submit" tabindex="5" value="Send Comment" class="replybutton">
+<input type="hidden" name="comment_post_ID" value="5472">
+</p>
+<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="47d59f9aab"></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments" style="display: inline;">Notify me of follow-up comments by email.</label></p>
+</fieldset>
+</form>
+</b></b></div><b><b>
+<!-- End Leave a Reply Box -->
+
+
+
+
+
+
+	<!--
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://gurkulindia.com/main/2011/11/linux-understand-device-mapper-and-dm-multipath/"
+    dc:identifier="http://gurkulindia.com/main/2011/11/linux-understand-device-mapper-and-dm-multipath/"
+    dc:title="Linux &#8211; Understand Device Mapper   and DM-Multipath"
+    trackback:ping="http://gurkulindia.com/main/2011/11/linux-understand-device-mapper-and-dm-multipath/trackback/" />
+</rdf:RDF>	-->
+
+		
+	
+	<!-- End -->
+	
+		
+	</b></b></div><b><b>
+
+
+<div id="sidebar">
+
+	<div class="sidebar2">
+<ul>
+
+
+<!--	    -->
+<!--	   -->
+
+
+</ul>
+</div>	<div class="clear"></div>
+	<ul>
+	</ul>
+  
+</div>
+
+
+
+
+<div id="addbar">
+
+
+
+
+
+
+<table class="alignleft" style="width: 180px; border-color: #00000; border: 1px" border="1" cellspacing="3" cellpadding="3">
+<tbody>
+<tr>
+<td style="border: 0px solid #fbfbfb; background-color: #ff0000; width: 180px; height: 30px;" scope="col" align="right" valign="middle"><a title="Linux Administration" href="http://gurkulindia.com/main/category/unix-administration/linux//"><span style="font-size: 14px;"><span style="color: #ffffff;">Redhat Linux Popular Troubleshooting Quick Reference</span></span></a></td>
+</tr>
+<tr>
+<td style="border: 0px solid #fbfbfb; background-color: #0080ff; width: 180px; height: 30px;" scope="col" align="right" valign="middle"><span style="font-family: &#39;comic sans ms&#39;, sans-serif; font-size: 12px;"><a href="http://gurkulindia.com/main/2012/11/redhat-enterprise-linux-yum-quick-reference/"><span style="color: #ffffff;">Redhat Linux </span><span style="color: #ffffff;">YUM</span><span style="color: #ffffff;"> Troubleshooting Quick Reference</span></a></span></td>
+</tr>
+<tr>
+<td style="border: 0px solid #fbfbfb; background-color: #0080ff; width: 180px; height: 30px;" scope="col" align="right" valign="middle"><span style="font-family: &#39;comic sans ms&#39;, sans-serif; font-size: 12px;"><a href="http://gurkulindia.com/main/2012/11/redhat-linux-kernel-faq-and-quick-reference/" target="_blank"><span style="color: #ffffff;">Redhat Linux Kernel Troubleshooting Quick Reference</span></a></span></td>
+</tr>
+<tr>
+<td style="border: 0px solid #fbfbfb; background-color: #0080ff; width: 180px; height: 30px;" scope="col" align="right" valign="middle"><span style="font-family: &#39;comic sans ms&#39;, sans-serif; font-size: 12px;"><a href="http://gurkulindia.com/main/2012/11/redhat-enterprise-linux-networking-troubleshooting-quick-reference/"><span style="color: #ffffff;">Redhat Linux Networking Troubleshooting Quick Reference</span></a></span></td>
+</tr>
+<tr>
+<td style="border: 0px solid #fbfbfb; background-color: #0080ff; width: 180px; height: 30px;" scope="col" align="right" valign="middle"><span style="font-family: &#39;comic sans ms&#39;, sans-serif; font-size: 12px;"><a href="http://gurkulindia.com/main/2013/09/redhat-enterprise-linux-6-kernel-panic-and-system-crash-troubleshooting-quick-reference/"><span style="color: #ffffff;">Redhat Linux Kernel Panic Troubleshooting Quick Reference </span></a></span></td>
+</tr>
+<tr>
+<td style="border: 0px solid #fbfbfb; background-color: #0080ff; width: 180px; height: 30px;" scope="col" align="right" valign="middle"><span style="font-family: &#39;comic sans ms&#39;, sans-serif; font-size: 12px;"><a href="http://gurkulindia.com/main/2012/11/redhat-linux-grub-loader-faq-and-quick-reference/"><span style="color: #ffffff;">Redhat Grub Troubleshooting Quick Reference</span></a></span></td>
+</tr>
+<tr>
+<td style="border: 0px solid #fbfbfb; background-color: #0080ff; width: 180px; height: 30px;" scope="col" align="right" valign="middle"><span style="font-family: &#39;comic sans ms&#39;, sans-serif; font-size: 12px;"><a href="http://gurkulindia.com/main/2012/11/redhat-linux-lvm-troubleshooting-reference/"><span style="color: #ffffff;">Redhat Linux LVM Quick Reference</span></a></span></td>
+</tr>
+<tr>
+<td style="border: 0px solid #fbfbfb; background-color: #0080ff; width: 180px; height: 30px;" scope="col" align="right" valign="middle"><span style="font-family: &#39;comic sans ms&#39;, sans-serif; font-size: 12px;"><a title="Unix Dairy" href="http://gurkulindia.com/main/2013/10/redhat-enterprise-linux-network-bonding-quick-reference-rhel5-rhel6/"><span style="color: #ffffff;">Redhat Linux Network Bonding Troubleshooting Quick Reference</span></a></span></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+<table class="alignleft" style="height: 700px; width: 160px; background-image: url(&#39;http://gurkulindia.com/main/wp-admin/initial&#39;); background-color: #f8f8f8; border: 2px solid #ffffff; background-position: initial initial; background-repeat: initial initial;" border="2" frame="border" rules="all" cellspacing="5" align="left">
+<tbody>
+<tr><td>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><a title="just unix no noist - Face book Group" href="https://www.facebook.com/groups/Just.unix.no.noise/" target="_blank"><img class="aligncenter size-medium wp-image-8988" alt="FB-Group" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/FB-Group-261x300.jpg" width="180" height="200"></a></p>
+</td></tr>
+
+<tr><td>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><a href="http://sg.linkedin.com/in/gurkulindia/" target="_blank"><img class="aligncenter size-medium wp-image-8989" alt="linkedin-gurkulindia" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/linkedin-gurkulindia-250x300.jpg" width="180" height="200"></a></p>
+</td></tr>
+
+<!-- <tr><td>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><a title="Subscribe to Our You Tube Channel" href="https://www.youtube.com/channel/UC2h_ldr_cGuLIeifsgLreOg" target="_blank"><img class="aligncenter size-full wp-image-8987" alt="youtube-channel" src="http://gurkulindia.com/main/wp-content/uploads/2013/09/youtube-channel.jpg" width="180" height="200" /></a></p>
+</td></tr>  -->
+
+<tr><td data-twttr-id="twttr-sandbox-0">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-timeline twitter-timeline-rendered" style="border: none; max-width: 100%; min-width: 180px;" title="Twitter Timeline" width="180" height="2000"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</td></tr>
+
+
+</tbody>
+</table>
+
+
+
+
+
+<div class="clear">
+</div>
+
+</div>
+
+
+<p><iframe src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/unixshelf.html" height="1800" width="750"></iframe></p> 
+
+
+
+
+
+<!-- footer -->
+
+
+
+
+
+<!--  <p style="text-align: center;"><a onclick="window.open('http://forms.aweber.com/form/77/1493755877.htm','Subscribe to  Posts','resizable=yes,width=500,height=700,left='+(screen.availWidth/2-250)+',top='+(screen.availHeight/2-250)+'');return false;" href="http://forms.aweber.com/form/77/1493755877.htm"><img class="aligncenter  wp-image-7325" title="Subscribe Email Posts" src="http://gurkulindia.com/main/wp-content/uploads/2012/10/header-new2.png" alt="" width="900" height="250" /></a></p>   
+
+ -->
+
+<div id="footer">
+	<script>
+		var getElementsByClassName=function(a,b,c){if(document.getElementsByClassName){getElementsByClassName=function(a,b,c){c=c||document;var d=c.getElementsByClassName(a),e=b?new RegExp("\\b"+b+"\\b","i"):null,f=[],g;for(var h=0,i=d.length;h<i;h+=1){g=d[h];if(!e||e.test(g.nodeName)){f.push(g)}}return f}}else if(document.evaluate){getElementsByClassName=function(a,b,c){b=b||"*";c=c||document;var d=a.split(" "),e="",f="http://www.w3.org/1999/xhtml",g=document.documentElement.namespaceURI===f?f:null,h=[],i,j;for(var k=0,l=d.length;k<l;k+=1){e+="[contains(concat(' ', @class, ' '), ' "+d[k]+" ')]"}try{i=document.evaluate(".//"+b+e,c,g,0,null)}catch(m){i=document.evaluate(".//"+b+e,c,null,0,null)}while(j=i.iterateNext()){h.push(j)}return h}}else{getElementsByClassName=function(a,b,c){b=b||"*";c=c||document;var d=a.split(" "),e=[],f=b==="*"&&c.all?c.all:c.getElementsByTagName(b),g,h=[],i;for(var j=0,k=d.length;j<k;j+=1){e.push(new RegExp("(^|\\s)"+d[j]+"(\\s|$)"))}for(var l=0,m=f.length;l<m;l+=1){g=f[l];i=false;for(var n=0,o=e.length;n<o;n+=1){i=e[n].test(g.className);if(!i){break}}if(i){h.push(g)}}return h}}return getElementsByClassName(a,b,c)},
+			dropdowns = document.getElementsByTagName( 'select' );
+		for ( i=0; i<dropdowns.length; i++ )
+			if ( dropdowns[i].className.match( 'dropdown-menu' ) ) dropdowns[i].onchange = function(){ if ( this.value != '' ) window.location.href = this.value; }
+	</script>
+	<script type="text/javascript">document.write("</div>" + (true?FCChatConfig.load_standalone:FCChatConfig.load_integrated));</script></div><script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jGo.DefaultWindow.init.min.js"></script><script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/fcchat.standalone.min.js"></script><div id="spu-bg" style="height: 967px; opacity: 0.65; display: none;"></div>
+				<div id="spu-main" style="position: fixed; top: 265px; left: 583px; display: none;"><table border="0" cellspacing="20" cellpadding="20" align="center">
+<tbody>
+<tr>
+<td align="left" valign="top"><!-- Place this tag where you want the widget to render. -->
+<div id="___page_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 314px; height: 382px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 314px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 382px;" tabindex="0" vspace="0" width="100%" id="I0_1385788857739" name="I0_1385788857739" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/page.html" data-gapiattached="true" title="Badge v2"></iframe></div>
+
+<!-- Place this tag after the last widget tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+</td>
+<td align="center" valign="top">
+<div class="fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/unixschool" data-width="300" data-height="340" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="true" fb-xfbml-state="rendered"><span style="vertical-align: bottom; width: 300px; height: 340px;"><iframe name="f17963cbd4" width="300px" height="340px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/like_box.html" style="border: none; visibility: visible; width: 300px; height: 340px;" class=""></iframe></span></div>
+<p>&nbsp;</p>
+</td>
+</tr>
+</tbody>
+</table>
+<span id="spu-timer"></span></div>	<div style="display:none">
+	</div>
+	<div id="sharing_email" style="display: none;">
+		<form action="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath.html" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input type="text" name="target_email" id="target_email" value="">
+
+			
+				<label for="source_name">Your Name</label>
+				<input type="text" name="source_name" id="source_name" value="">
+
+				<label for="source_email">Your Email Address</label>
+				<input type="text" name="source_email" id="source_email" value="">
+
+			
+			
+			<img style="float: right; display: none" class="loading" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/loading.gif" alt="loading" width="16" height="16">
+			<input type="submit" value="Send Email" class="sharing_send">
+			<a href="http://gurkulindia.com/main/2011/11/linux-understand-device-mapper-and-dm-multipath/#cancel" class="sharing_cancel">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div>
+		<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+		<script type="text/javascript">
+			jQuery( document ).ready( function() {
+			    jQuery.getScript( 'http://platform.linkedin.com/in.js?async=true', function success() {
+			        IN.init();
+			    });
+			});
+			jQuery( document.body ).on( 'post-load', function() {
+				if ( typeof IN != 'undefined' )
+					IN.parse();
+			});
+			</script>			<script type="text/javascript">
+				function sharing_plusone( obj ) {
+					jQuery.ajax( {
+						url: 'http://gurkulindia.com/main/2011/11/linux-understand-device-mapper-and-dm-multipath/?share=google-plus-1',
+						type: 'POST',
+						data: obj
+					} );
+				}
+				jQuery( document.body ).on( 'post-load', function() {
+					gapi.plusone.go();
+				});
+			</script>
+			<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/plusone(2).js" gapi_processed="true"></script> <link rel="stylesheet" id="cvg-styles-css" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/cvg-styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="jquery.fancybox-css" href="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.fancybox-1.3.4.css" type="text/css" media="all">
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/photon.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/devicepx-jetpack.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.ui.core.min.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.ui.widget.min.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.ui.mouse.min.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.ui.resizable.min.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.ui.draggable.min.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.ui.button.min.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.ui.position.min.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.ui.dialog.min.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jwplayer.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.easing.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.hoverIntent.minified.js"></script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/jquery.floater.2.2.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var recaptcha_options = {"lang":"en"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/sharing.js"></script>
+
+	<script src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/e-201348.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	st_go({v:'ext',j:'1:2.4.2',blog:'24502259',post:'5472',tz:'0'});
+	var load_cmc = function(){linktracker_init(24502259,5472,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script><img id="wpstats" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/g.gif" alt=""><div class="copyright" ;style="text-align: center">Copyright © 2009 <a href="http://gurkulindia.com/main" title="unixadminschool.com" class="sitename">unixadminschool.com</a>.                       All rights reserved.                        <script src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/in.js" type="text/javascript"></script>
+<span class="IN-widget" style="line-height: 1; vertical-align: baseline; display: inline-block;"><span style="padding: 0px !important; margin: 0px !important; text-indent: 0px !important; display: inline-block !important; vertical-align: baseline !important;"><span id="li_ui_li_gen_1385788859359_4" class="li-connect-widget"><a id="li_ui_li_gen_1385788859359_4-link" class="li-connect-link" href="javascript:void(0);"><span id="li_ui_li_gen_1385788859359_4-mark" class="li-connect-mark"></span></a> <a class="li-connect-link" href="javascript:void(0);"><span id="li_ui_li_gen_1385788859359_4-text" class="li-connect-text">Gurkulindia.com</span></a></span></span></span><script type="IN/CompanyProfile+init" data-id="2484403" data-format="hover" data-text="Gurkulindia.com"></script></div>
+
+
+
+
+
+
+<div class="clear"></div>
+</b></b></div><b><b>
+<!-- end -->
+
+
+
+
+</b></b></div></div><iframe name="oauth2relay833485276" id="oauth2relay833485276" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/postmessageRelay.html" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/xd_arbiter.html" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tab-index="-1" src="./unixadminschool.com » Linux – Understand Device Mapper and DM-Multipath_files/xd_arbiter(1).html" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" style="display: none;"></iframe></body></html>

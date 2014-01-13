@@ -1,0 +1,41 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-11-25T09:45:25+08:00
+
+====== 16982 ======
+Created Monday 25 November 2013
+
+==== port it in ====
+
+
+reference in house FP 16874 to support Play anywhere from Appsuite 5.2
+
+PlayAnywhere is middleware to enable seamless connection between devices by defining clear use cases such as device discovery, service discovery, judging best technology by utilizing intelligent abstraction layer, and extra function(e.g. power on) if PlayAnywhere both in source and sink device
+
+User benefits
+* Supports wider of range sink devices (Display Mirroring is possible with DLNA ready TV in addition to WFD ready TV.)
+* User does not have to figure out the best technology
+For instance, user does not have to choose DLNA push or WFD. 
+
+DMS03460799
+APK and few SOMC API,  Should get the exact solution from Eagle
+
+
+related:
+[[https://wiki.sonyericsson.net/androiki/PlayAnywhere_2.0_for_Eagle|PlayAnywhere 2.0 for Eagle]]
+16874 PlayAnywhere 2.0 for Appsuite5.2
+用来将索尼各种硬件（如手机，平板，游戏机，电视)通过无线连接连接起来，而连接具体用到了什么技术软件自动选择。
+
+Porting Step:
+/system/app/SemcPlayAnyWhere.apk 
+/system/app/SomcConnectivityCenter.apk 
+
+    platform/vendor/semc/api:
+        /system/framework/com.sonyericsson.dlna.playanywhere.jar
+        /system/etc/permissions/com.sonyericsson.dlna.playanywhere.xml
+        [[/system/framework/com.sonymobile.playanywhere.jar]]                                    
+        /system/etc/permissions/com.sonymobile.playanywhere.xml 
+
+
+
+

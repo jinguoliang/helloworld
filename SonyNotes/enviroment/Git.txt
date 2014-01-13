@@ -1,0 +1,636 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-11-28T15:00:52+08:00
+
+====== Git ======
+Created Thursday 28 November 2013
+
+
+
+stage 		      is a place ???
+the index         is reference in stage.
+working tree is current editing files and dirs
+
+Gitk   -- 一个基于 Tcl/Tk 的 Git 浏览器
+
+===== START =====
+客户端并不只提取最新版本的文件快照,而是把原始的代码仓库完整地镜像下来
+{{./pasted_image.png}}
+
+==== 直接快照,而非比较差异 ====
+Git 和其他版本控制系统的主要差别在于,Git 只关心文件数据的整体是否发生变化,而大多数其他系统则只关心文件内容的具体差异
+{{./pasted_image001.png}}
+每次提交更新时,它会纵览一遍所有文件的指纹信息并对文件作一快照,然后保存一个指向这次快照的索引。为提高性能,若文件没有变化,Git 不会再次保存,而只对上次保存的快照作一连接
+{{./pasted_image002.png}}
+Git 更像是个小型的文件系统,但它同时还提供了许多以此为基础的超强工具,而不只是一个简单的 VCS
+
+
+==== 时刻保持数据完整性 ====
+在保存到 Git 之前,所有数据都要进行内容的校验和(checksum)计算,并将此结果作为数据的唯一标识和索引
+Git 使用 SHA-1 算法计算数据的校验和,通过对文件的内容或目录的结构计算出一个SHA-1 哈希值,作为指纹字符串。该字串由 40 个十六进制字符(0-9 及 a-f)组成
+
+
+==== 多数操作仅添加数据 ====
+一旦提交快照之后就完全不用担心丢失数据
+
+==== 三种状态 ====
+对于任何一个文件,在 Git 内都只有三种状态:已提交(committed),已修改(modified)和已暂存(staged)。
+已提交表示该文件已经被安全地保存在本地数据库中了;已修改表示修改了某个文件,但还没有提交保存;已暂存表示把已修改的文件放在下次提交时要保存的清单中。
+{{./pasted_image003.png}}
+每个项目都有一个 git 目录,它是 Git 用来保存元数据和对象数据库的地方。该目录非常重要,每次克隆镜像仓库的时候,实际拷贝的就是这个目录里面的数据
+从项目中取出某个版本的所有文件和目录,用以开始后续工作的叫做工作目录
+所谓的暂存区域只不过是个简单的文件,一般都放在 git 目录中。有时候人们会把这个文件叫做索引文件,不过标准说法还是叫暂存区域
+
+==== 初次运行 Git 前的配置 ====
+Git 提供了一个叫做 git config 的工具(译注:实际是 git-config 命令,只不过可以通过 git 加一个名字来呼叫此命令。),专门用来配置或读取相应的工作环境变量
+而正是由这些环境变量,决定了 Git 在各个环节的具体工作方式和行为。这些变量可以存放在以下三个不同的地方:
+	* /etc/gitconfig文件:系统中对所有用户都普遍适用的配置。若使用 git config 时用 --system 选项,读写的就是这个文件。
+	* ~/.gitconfig文件:用户目录下的配置文件只适用于该用户。若使用 git config 时用 --global 选项,读写的就是这个文件。
+	* 当前项目的 git 目录中的配置文件(也就是工作目录中的 .git/config 文件):这里的配置仅仅针对当前项目有效。每一个级别的配置都会覆盖上层的相同配置,所以
+	.git/config 里的配置会覆盖 /etc/gitconfig 中的同名变量。
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+$git config --global core.editor emacs
+git config --list   查看配置信息
+$ git config user.name  直接查阅某个环境变量的设定
+有时候会看到重复的变量名,那就说明它们来自不同的配置文件(比如 /etc/gitconfig和 ~/.gitconfig),不过最终 Git 实际采用的是最后一个
+
+===== BASE =====
+
+==== 取得项目的 Git 仓库 ====
+	1.从当前目录初始化
+	git init
+	2.从现有仓库克隆
+
+	git clone git://github.com/schacon/grit.git [dirname] 
+	****http(s):// 或者 user@server:/path.git 表示的 SSH 传输协议
+
+
+==== 记录每次更新到仓库 ====
+{{./pasted_image004.png}}
+git status
+git add README
+
+=== 设置ignore ===
+	我们可以创建一个名为.gitignore 的文件,列出要忽略的文件模式
+	文件 .gitignore 的格式规范如下:
+	* 所有空行或者以注释符号 # 开头的行都会被 Git 忽略。
+	* 可以使用标准的 __glob 模式匹配__。--->所谓的 glob 模式是指 shell 所使用的简化了的正则表达式 ,[a-b] etc.
+	* 匹配模式最后跟反斜杠(/)说明要__忽略的是目录__。
+	* 要忽略指定模式以外的文件或目录,可以在模式前加上__惊叹号(!)取反__
+	Example:
+		# 此为注释 – 将被 Git 忽略
+		*.a # 忽略所有 .a 结尾的文件
+		!lib.a # 但 lib.a 除外
+		__/TODO__ # 仅仅忽略项目根目录下的 TODO 文件,不包括 subdir/TODO
+		build/ # 忽略 build/ 目录下的所有文件
+		doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+
+
+=== 查看已暂存和未暂存的更新 ===
+	要查看尚未暂存的文件更新了哪些部分,不加参数直接输入 git diff--->diff working and stage
+	若要看已经暂存起来的文件和上次提交时的快照之间的差异,可以用 git diff --cached命令 or git diff --staged
+
+
+=== 提交更新 ===
+	git commit
+	每次准备提交前,先用 git status 看下,是不是都已暂存起来了
+	用 git config --global core.editor 命令设定你喜欢的编辑软件
+	可以用 -v 选项将修改差异
+	的每一行都包含到注释中来
+
+
+=== 跳过使用暂存区域 ===
+	给 git commit 加上 -a 选项,Git 就会自动把所有已经跟踪过的文件暂存起来一并提交
+
+
+=== 移除文件 ===
+	1.要从 Git 中移除某个文件,就必须要从已跟踪文件清单中移除(确切地说,是从暂存区
+	域移除),然后提交。可以用 git rm 命令完成此项工作,并连带从工作目录中删除指定的
+	文件,这样以后就不会出现在未跟踪文件清单中了
+	2.如果删除之前修改过并且已经放到暂存区域的话,则必须要用强制删除选项 -f
+
+	3.仅是从跟踪清单中删除, 用 --cached 选项即可
+
+
+=== 移动文件 ===
+	git mv file_from file_to
+
+
+=== 查看提交历史 ===
+	git log
+	git log –p -2   -p 选项展开显示每次提交的内容差异,用 -2 则仅显示最近的两次更新
+	git log --pretty=oneline
+	git log --pretty=format:"%h - %an, %ar : %s"
+	git log --pretty=format:"%h %s" --graph
+	git log --since=2.weeks   
+	git log --pretty="%h:%s" --author=gitster --since="2008-10-01" \
+	--before="2008-11-01" --no-merges -- t/
+
+
+=== 撤消操作 ===
+	git commit --amend     修改最后一次提交
+	git reset HEAD benchmarks.rb    取消已经暂存的文件
+	git checkout -- benchmarks.rb     取消对文件的修改
+	
+
+=== 远程仓库的使用 ===
+	git remote     查看当前的远程库
+	git remote -v   显示对应的克隆地址
+	git remote add pb git://github.com/paulboone/ticgit.git           添加远程仓库
+	git fetch pb     从远程仓库抓取数据
+	git pull 命令自动抓取数据下来,然后将远端分支自动合并到本地仓库中当前分支
+	git push [remote-name] [branch-name]     推送数据到远程仓库    克隆操作会自动使用默认的master 和 origin 名字
+
+	git remote show origin     查看远程仓库信息
+	git remote rename pb paul
+	git remote rm
+
+
+=== 打标签 ===
+	git tag   v1.2   轻量级标签
+
+	git tag -l 'v1.4.2.*'
+	Git 使用的标签有两种类型:轻量级的(lightweight)和含附注的(annotated)
+	git tag -a v1.8 -m "comments"
+	git tag -s v1.9 -m "ansiged" 签署标签
+	git tag -v [tag-name]  验证标签                  ----------------?????
+	后期加注标签
+	git tag -a v1.2 9fceb02
+	分享标签
+	默认情况下,git push 并不会把标签传送到远端服务器上,只有通过显式命令才能分享标签到远端仓库
+
+	git push origin [tagname] 
+	git push origin --tags    一次推送所有(本地新增的)标签上去
+
+
+=== Git 命令别名 ===
+	git config --global alias.co checkout
+	使用这种技术还可以创造出新的命令,比方说取消暂存文件时的输入比较繁琐,可以自己设置一下:
+
+	$ git config --global alias.unstage 'reset HEAD --'
+	运行某个外部命令,而非 Git 的附属工具
+	git config --global alias.visual "!gitk"    add a !
+
+
+===== Git 分支 =====
+
+== 何谓分支 ==
+
+	__Git 鼓励在工作流程中频繁使用分支与合并,哪怕一天之内进行许多次都没有关系。理解分支的概念并熟练运用后,你才会意识到为什么 Git 是一个如此强大而独特的工具,并从此真正改变你的开发方式__。
+
+
+	{{./pasted_image006.png}}
+	{{./pasted_image007.png}}
+	{{./pasted_image008.png}}
+	Git 中的分支,其实本质上仅仅是个指向 commit 对象的__可变指针__。Git 会使用 master 作
+	为分支的默认名字。在若干次提交后,你其实已经有了一个指向最后一次提交对象的 master 分支,它在每次
+	提交的时候都会__自动向前移动__。
+	
+	git branch testing
+	{{./pasted_image009.png}}
+	Git 是如何知道你当前在哪个分支上工作的呢?
+	它保存着一个名为 HEAD 的特别指针,它是一个指向你正在工作中的本地分支的指针
+	
+	运行git branch命令,仅仅是建立了一个新的分支,但不会自动切换到这个分支中去
+	要切换到其他分支
+	$ git checkout testing
+	{{./pasted_image010.png}}
+	{{./pasted_image011.png}}
+	{{./pasted_image012.png}}
+
+
+== 基本的分支与合并 ==
+	现在让我们来看一个简单的分支与合并的例子,实际工作中大体也会用到这样的工作流程:
+	1. 开发某个网站。
+	2. 为实现某个新的需求,创建一个分支。
+	3. 在这个分支上开展工作。
+	假设此时,你突然接到一个电话说有个很严重的问题需要紧急修补,那么可以按照下面的方式处理:
+	1. 返回到原先已经发布到生产服务器上的分支。
+	2. 为这次紧急修补建立一个新分支。
+	3. 测试通过后,将此修补分支合并,再推送到生产服务器上。
+	4. 切换到之前实现新需求的分支,继续工作。
+	
+
+=== 基本分支 ===
+{{./pasted_image013.png}}
+要新建并切换到该分支,运行git checkout并加上-b参数:
+		$ git checkout -b iss53
+		Switched to a new branch "iss53"
+	相当于下面这两条命令:
+		$ git branch iss53
+		$ git checkout iss53
+	{{./pasted_image014.png}}
+	{{./pasted_image015.png}}
+	{{./pasted_image016.png}}
+	确保修补是成功的,然后把它合并到 master 分支并发布到生产服务器。用git merge命令来进行合并:
+
+		$ git checkout master
+		$ git merge hotfix
+	{{./pasted_image017.png}}
+	使用git branch的-d选项表示删除:
+	$ git branch -d hotfix
+	Deleted branch hotfix (3a0874c).
+
+
+=== 基本合并 ===
+	{{./pasted_image018.png}}
+	$ git checkout master
+	$ git merge iss53
+	Merge made by recursive.
+	README |
+	1 +
+	1 files changed, 1 insertions(+), 0 deletions(-)
+		{{./pasted_image019.png}}
+			__three part merge__
+			Git 可以自己裁决哪个共同祖先才是最佳合并基础;这和 CVS 或 Subversion(1.5 以后的
+			版本)不同,它们需要开发者手工指定合并基础。所以此特性让 Git 的合并操作比其他系统都要简单不少。
+			{{./pasted_image020.png}}
+
+
+=== 冲突的合并 ===
+	解决了所有文件里的所有冲突后,运行git add将把它们标记为已解决(resolved)
+	因为一旦暂存,就表示冲突已经解决。如果你想用一个有图形界面的工具来解决这些问题,不妨运行git mergetool
+
+
+=== 分支管理 ===
+	若要查看各个分支最后一次 commit 信息,运行git branch -v:
+
+	$ git branch -v
+		iss53 93b412c fix javascript issue
+	* master 7a98805 Merge branch 'iss53'
+		testing 782fd34 add scott to the author list in the readmes
+	要从该清单中筛选出你已经(或尚未)与当前分支合并的分支,可以用--merge和--no-merged选项
+
+	还未合并的分支因为其中还包含未合并的工作,用git branch -d删除该分支会导致失败 不过,如果你坚信你要删除它,可以用大写的删除选项-D强制执行
+
+
+===== 分支式工作流程 =====
+
+=== 长期分支 ===
+		{{./pasted_image021.png}}
+		拥有不同层次的稳定性:当这些分支进入到更稳定的水平时,再把它们合并到更高层分支中去
+
+
+=== 特性分支 (Topic Branch) ===
+		一个特性分支是指一个短期的,用来实现单一特性或与其相关工作的分支
+
+		{{./pasted_image022.png}}
+
+	以把作出的改变保持在特性分支中几分钟,几天甚至几个月,等它们成熟以后再合并,而不用在乎它们建立的顺序或者进度
+
+
+==== 远程分支 ====
+	远程分支(remote branch)是对远程仓库状态的索引。它们是一些无法移动的本地分支;只有在进行 Git的网络活动时才会更新。远程分支就像是书签,提醒着你上次连接远程仓库时上面各分支的位置。
+
+	{{./pasted_image023.png}}
+	{{./pasted_image024.png}}
+	{{./pasted_image025.png}}
+	{{./pasted_image026.png}}
+	{{./pasted_image027.png}}
+
+
+=== 推送 ===
+	git push (远程仓库名) (分支名):
+
+	git push origin serverfix		Git 自动把serverfix分支名扩展为refs/heads/serverfix 
+	
+
+=== : ===
+refs/heads/serverfix  意为“取出我的 serverfix 本地分支,推送它来更新远程仓库的 serverfix 分支”
+	git push origin [[serverfix:serferfix]]		通过此语法,你可以把本地分支推送到某个命名不同的远程分支
+
+	值得注意的是,在 fetch 操作抓来新的远程分支之后,你仍然无法在本地编辑该远程仓库   need to merge to local branch
+
+
+=== 跟踪分支 ===
+	从远程分支__检出__的本地分支,称为跟踪分支(__tracking branch__)。跟踪分支是一种和远程分支有直接联系的__本地分支__。
+
+	在跟踪分支里输入git push,Git会__自行推断应该向哪个服务器的哪个分支推送数据__
+
+	在这些分支里运行git pull会获取__所有远程索引__,并把它们的数据都合并到本地分支中来。
+	git checkout -b [branchname] [remote naem]/[branch name]
+	$ git checkout --track origin/serverfix
+	git checkout -b sf origin/serverfix
+	sf会自动向origin/serverfix推送和抓取数据了
+
+
+=== 删除远程分支 ===
+	用这个非常无厘头的语法来删除它:git push [远程名] :[分支名]
+	咚!服务器上的分支没了。__你最好特别留心这一页,__因为你一定会用到那个命令,而且你很可能会忘掉它的语法
+
+	记住我们不久前见过的git push __[远程名]__ [本地分支]:[远程分支]	__省略__ [本地分支],那就等于是在说“在这里__提取空白__然后把它__变成__[远程分支]”
+
+
+==== 衍合 ====
+	把一个分支整合到另一个分支的办法有两种:merge(合并) 和rebase(衍合)
+
+	你可以把在 C3 里产生的变化补丁重新在 C4 的基础上打一遍。在 Git 里,这种操作叫做衍合(rebase)。有了rebase命令,就可以把在一个分支里提交的改变在另一个分支里重放一遍。
+
+	$ git checkout experiment
+	$ git rebase master
+	它的原理是回到两个分支(你所在的分支和你想要衍合进去的分支)的共同祖先,提取你所在分支每次提交
+	时产生的差异(diff),把这些差异分别保存到临时文件里,然后从当前分支转换到你需要衍合入的分支,依
+	序施用每一个差异补丁文件
+	{{./pasted_image028.png}}
+	{{./pasted_image029.png}}
+	{{./pasted_image030.png}}
+
+	衍合能产生一个__更为整洁__的__提交历史__。如果视察一个衍合过的分支的历史记录,看起来更清楚:__仿佛__所有__修改都是先后进行__的,尽管实际上它们原来是__同时发__生的
+
+	合并结果中最后一次提交所指向的快照,__无论是通过一次衍合还是一次三方合并,都是同样的快照内容__,__只是提交的历史不同罢__了。衍合按照每行改变发生的次序重演发生的改变,而合并是把最终结果合在一起。
+
+	
+	=== 更多有趣的衍合 ===
+		{{./pasted_image031.png}}
+		假设在接下来的一次软件发布中,你决定把客户端的修改先合并到主线中,而暂缓并入服务端软件的修改(因为还需要进一步测试)。你可以仅提取对客户端的改变(C8 和 C9),然后通过使用git rebase的--onto
+
+		选项来把它们在 master 分支上重演:
+		$ git rebase --onto master server client
+		这基本上等于在说“检出 client 分支,找出client分支和server分支的共同祖先之后的变化,然后把它们在master上重演一遍
+		{{./pasted_image032.png}}
+		$ git checkout master
+		$ git merge client
+		{{./pasted_image033.png}}
+		git rebase [主分支] [特性分支]  命令会先检出特性分支server,然后在主分支 master上重演:
+		$ git rebase master server
+		{{./pasted_image034.png}}
+		$ git checkout master
+		$ git merge server
+		$ git branch -d client
+		$ git branch -d server
+		{{./pasted_image035.png}}
+		
+		Rebase Summary:
+			git rebase master
+			git rebase master server
+			git rebase --onto master server client
+
+
+===== 衍合的风险 =====
+	
+	==== 永远不要衍合那些已经推送到公共仓库的更新 ====
+	。
+		在衍合的时候,实际上抛弃了一些现存的 commit 而创造了一些类似但不同的新 commit。如果你把commit推送到某处然后其他人下载并在其基础上工作,然后你用git rebase重写了这些commit 再推送一次,你的合
+	作者就不得不重新合并他们的工作,这样当你再次从他们那里获取内容的时候事情就会变得一团糟。
+		如果把衍合当成一种在推送之前清理提交历史的手段,而且仅仅衍合那些永远不会公开的 commit,那就不会有任何问题。如果衍合那些已经公开的 commit,而与此同时其他人已经用这些 commit 进行了后续的开发
+	工作,那你有得麻烦了。
+	
+
+
+====== 自定义 Git ======
+	
+
+====  配置 Git  ====
+	the config file :
+			1. [[/etc/gitconfig]]   	system  all user    	git config  --system
+			2.~/.gitconfig	      	user				git config --global
+			3..git/cofnig		git					git config
+			以上阐述的三层配置从一般到特殊层层推进,如果定义的值有__冲突__,__以后面层__中定义的为准
+		客户端基本配置
+			core.editor			vi/emacs
+			commit.template	fileName			当运行gitcommit时,Git 会在你的编辑器中显示以上的内容
+
+			core.pager			more/less/""		分页器
+			user.signingkey		GPG签署密钥设置  
+			
+== ?? ==
+core.excludesfile		fileName			specify a file to be placed of .gitignore	
+ help.autocorrect		0/1				如果你 把help.autocorrect设置成1(译注:启动自动修正), 那 么 在 只 有 一 个 命 令 被 模 糊 匹 配 到 的 情 况下,Git 会自动运行该命令。
+
+== Git中的着色 ==
+				color.ui			true/false/aways	always则表明在任何情况下 都要着色,即使 Git 命令被重定向到文件或管道
+				
+== ?? ==
+color.*
+					color.branch
+					color.diff
+					color.interactive
+					color.status
+					以上每个选项都有子选项
+					你能设置的颜色值如:normal、black、red、green、yellow、blue、magenta、cyan、white,
+					设置字体属性:bold、dim、ul、blink、reverse
+			diff and merge tool:
+				diff.external
+					默认情况下, Git 传递以下参数给diff:		path old-file old-hex old-mode new-file new-hex new-mode
+						由于你仅仅需要old-file和new-file参数,用diff包装脚本来传递它们吧。
+							[ $# -eq 7 ] && /usr/local/bin/extMerge "$2" "$5"
+				merge.tool
+
+				git config --global mergetool.extMerge.cmd 'extMerge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"'        config how to call the mergetool
+				mergetool.trustExitCode
+				mergetool.trustExitCode会通知Git 程序的退出是否指示合并操作成
+			格式化与空白
+				core.autocrlf	true/input/false
+					Git可以在你提交时自动地把行结束符CRLF转换成LF,而在签出代码时把LF转换成CRLF。用core.autocrlf来打开此项功能, 如果是在Windows系统上,把它设置成true,这样当签出代码时,LF会被转换成CRLF
+				core.whitespace	trailing-space/space-before-tab/__indent-with-non-tab/cr-at-eol(the latter 2 is not default setting.__
+					当你运行git diff命令且为输出着色时,Git测到这些问题,因此你也许在提交前能修复它们,当你用git apply打补丁时同样也会从中受益。如果正准备运用的补丁有特别的空白问题,你可以让 Git 发警告:
+					$ git apply --whitespace=warn <patch>
+					或者让 Git 在打上补丁前自动修正此问题:
+					$ git apply --whitespace=fix <patch>
+
+
+==== Git属性 ====
+	识别二进制文件
+		让 Git 把所有pbxproj文件当成二进制文件,在.gitattributes文件中设置如下:
+			*.pbxproj -crlf -diff
+			Git 会尝试转换和修正CRLF(回车换行)问题,也不会当你在项目中运行git show或git diff时,比较不同的内容
+
+	比较二进制文件
+		你不能直接比较两个不同版本的Word文件,除非进行手动扫描,不是吗? Git 属性能很好地解决此问题,把下面的行加到.gitattributes文件:
+
+			*.doc diff=word
+			$ git config diff.word.textconv strings
+		你还能用这个方法比较图像文件。当比较时,对JPEG文件运用一个过滤器,它能提炼出EXIF信息 — 大部分图像格式使用的元数据。如果你下载并安装了exiftool程序,可以用它参照元数据把图像转换成文本。比较的
+
+		不同结果将会用文本向你展示:
+			$ echo '*.png diff=exif' >> .gitattributes
+			$ git config diff.exif.textconv exiftool
+	关键字扩展
+		1.你能够把blob的SHA-1校验和自动注入文件的$Id$字段。如果在一个或多个文件上设置了此字段,当下次你签出分支的时候,Git 用blob的SHA-1值替换那个字段。注意,这不是提交对象的SHA校验和,而是blob本身的校验和:
+
+			$ echo '*.txt ident' >> .gitattributes
+			$ echo '$Id$' > test.txt
+		你能写自己的过滤器,在提交文件到暂存区或签出文件时替换关键字。有2种过滤器,“clean”和“smudge”。在.gitattributes文件中,你能对特定的路径设置一个过滤器,然后设置处理文件的脚本,这些脚本会在文件签
+		出前(“smudge”,见图 7.2)和提交到暂存区前(“clean”,见图7-3)被调用。
+		{{./pasted_image036.png}}
+		{{./pasted_image037.png}}
+		2.这里举一个简单的例子:在暂存前,用indent(缩进)程序过滤所有C源代码。在.gitattributes文件中设置“indent”过滤器过滤*.c文件:
+			*.c	filter=indent
+		然后,通过以下配置,让 Git 知道“indent”过滤器在遇到“smudge”和“clean”时分别该做什么:
+			$ git config --global filter.indent.clean indent
+			$ git config --global filter.indent.smudge cat
+		于是,当你暂存*.c文件时,indent程序会被触发,在把它们签出之前,cat程序会被触发。但cat程序在这里没
+		什么实际作用。这样的组合,使C源代码在暂存前被indent程序过滤,非常有效。
+		3.另一个例子是类似RCS的$Date$关键字扩展,为了演示,需要一个小脚本,接受文件名参数,得到项目的最新提交日期,最后把日期写入该文件。下面用Ruby脚本来实现:
+			#! /usr/bin/env ruby
+			data = STDIN.read
+			last_date = `git log --pretty=format:"%ad" -1`
+			puts data.gsub('$Date$', '$Date: ' + last_date.to_s + '$')
+		该脚本从gitlog命令中得到最新提交日期,找到文件中的所有$Date$字符串,最后把该日期填充到$Date$字符串中 — 此脚本很简单,你可以选择你喜欢的编程语言来实现。把该脚本命名为expand_date,放到正确的路径
+		中,之后需要在 Git 中设置一个过滤器(dater),让它在签出文件时调用expand_date,在暂存文件时用Perl清除之:
+			$ git config filter.dater.smudge expand_date
+			$ git config filter.dater.clean 'perl -pe "s/\\\$Date[^\\\$]*\\\$/\\\$Date\\\$/"'
+		这个Perl小程序会删除$Date$字符串里多余的字符,恢复$Date$原貌。到目前为止,你的过滤器已经设置完毕,可以开始测试了。打开一个文件,在文件中输入$Date$关键字,然后设置 Git 属性:
+			$ echo '# $Date$' > date_test.txt
+			$ echo 'date*.txt filter=dater' >> .gitattributes
+		如果暂存该文件,之后再签出,你会发现关键字被替换了:
+			$ git add date_test.txt .gitattributes
+			$ git commit -m "Testing date expansion in Git"
+			$ rm date_test.txt
+			$ git checkout date_test.txt
+			$ cat date_test.txt
+			# $Date: Tue Apr 21 07:26:52 2009 -0700$
+
+
+==== Git挂钩 ====
+	和其他版本控制系统一样,当某些重要事件发生时,Git 以调用自定义脚本。有两组挂钩:客户端和服务器端。客户端挂钩用于客户端的操作,如提交和合并。服务器端挂钩用于 Git 服务器端的操作,如接收被推送的提交。
+	1.安装一个挂钩
+		挂钩都被存储在 Git 目录下的__hooks__子目录中,即大部分项目中的__.git/hooks__。 Git 默认会放置一些脚本样本
+		在这个目录中,除了可以作为挂钩使用,这些样本本身是可以__独立使用__的。所有的样本都是__shell脚本__,其中
+		一些还包含了__Perl的脚本__,不过,__任何正确命名的可执行脚本__都可以正常使用 — 可以用Ruby或Python,或其
+		他。在Git 1.6版本之后,这些样本名都是以__.sample__结尾,因此,__你必须重新命名__。在Git 1.6版本之前,这
+		些样本名都是正确的,但这些样本不是可执行文件。
+		把一个__正确命名且可执行__的文件放入 Git 目录下的hooks子目录中,可以__激活该挂钩脚本__,因此,之后他一
+		直会被 Git 调用。随后会讲解主要的挂钩脚本。
+		
+	2.客户端挂钩
+		有许多客户端挂钩,以下把他们分为:提交工作流挂钩、电子邮件工作流挂钩及其他客户端挂钩。
+		1.提交工作流挂钩
+			有 4个挂钩被用来处理提交的过程
+			pre-commit	键入提交信息前运行,被用来检查即将提交的快照,例如,检查是否有东西被遗漏,确认测试是否运行,以及检查代码。
+						当从该挂钩返回非零值时,Git 放弃此次提交,但可以用gitcommit --no-verify来忽略。该挂钩可以被用来检查代码错误(运行类似lint的程序),检查尾
+						部空白(默认挂钩是这么做的),检查新方法(译注:程序的函数)的说明。
+			prepare-commit-msg		在提交信息编辑器显示之前,默认信息被创建之后运行。
+						可以有机会在提交作者看到默认信息前进行编辑。该挂钩接收一些选项:拥有提交信息的文件路径,提交类型,如果是一次修订的
+						话,提交的SHA-1校验和。该挂钩对通常的提交来说不是很有用,只在自动产生的默认提交信息的情况下有作
+						用,如提交信息模板、合并、压缩和修订提交等。可以和提交模板配合使用,以编程的方式插入信息。
+			commit-msg	接收一个参数,此参数是包含最近提交信息的临时文件的路径。如果该挂钩脚本以非零退出,Git 放弃提交,因此,可以用来在提交通过前验证项目状态或提交信息。
+			
+			post-commit 	
+			
+== ???? ==
+		2.E-mail工作流挂钩
+			有3个可用的客户端挂钩用于e-mail工作流。
+			
+		3.其他客户端挂钩
+		
+	3.服务器端挂钩
+	
+	
+
+
+====== Git 内部原理 ======
+	
+
+====  底层命令 (Plumbing) 和高层命令 (Porcelain) ====
+	.git directory
+		objects		目录存储所有数据内容,
+		refs 			目录存储指向数据 (分支) 的提交对象的指针,
+		HEAD 			文件指向当前分支,
+		index			文件保存了暂存区域信息
+
+
+==== Git 对象 ====
+	Git 是一套内容寻址文件系统。很不错。不过这是什么意思呢?
+	这种说法的意思是,从内部来看,Git 是简单的 key-value 数据存储。它允许插入任意类型的内容,并会返回一个键值,通过该键值可以在任何时候再取出该内容。
+	
+	Git 存储数据内容的方式──为每份内容生成一个文件,取得该内容与头信息的 SHA-1 校验和,创建以该校验和前两个字符为名称的子目录,并以 (校验和) 剩下 38
+	个字符为文件命名 (保存至子目录下)。
+	echo 'test content' | git hash-object -w --stdin
+	git cat-file -p d670460b4b4aece5915caf5c68d12f560a9fe3e4  object name   __40 bits  so 2 + 38__
+	
+	Git 以一种类似 UNIX 文件系统但更简单的方式来存储内容。所有内容以 tree 或 blob 对象存储,其中 tree 对象对应于 UNIX 中的目录,blob 对象则大致对应于 inodes 或文件内容。
+	
+=== tree (树) 对象 ===
+			tree 对象可以存储文件名,同时也允许存储一组文件。
+			masterˆtree表示branch分支上最新提交指向的 tree 对象
+			{{./pasted_image038.png}}
+			通过该命令人为的将 test.txt文件的首个版本加入到了一个新的暂存区域中。由于该文件原先并不在暂存区域中 (甚至就连暂存区域也还没被创建出来呢) ,必须传入
+			cacheinfo --add 参数。同时指定了文件模式,SHA-1 值和文件名:
+				git update-index --add --cacheinfo 100644  83baae61804e65cc73a7201a7252750c76066a30 test.txt
+			现在可以用 write-tree 命令将暂存区域的内容写到一个 tree 对象
+			可以用read-tree命令将 tree 对象读到暂存区域中去。通过传一个--prefix参数给read-tree,将一个已有的tree 对象作为一个子 tree读到暂存区域中:
+				git read-tree --prefix=bak d8329fc1cc938780ffdd9f94e0d364e0ea74f579
+				{{./pasted_image039.png}}
+			100644,表明这是一个普通文件
+			100755 表示可执行文件
+			120000 表示符号链接
+			
+=== commit (提交) 对象 ===
+要创建一个 commit 对象,使用commit-tree命令,指定一个 tree 的 SHA-1,如果有任何前继提交对象,也可以指定。
+$ echo 'first commit' | git commit-tree d8329f
+$ echo 'second commit' | git commit-tree 0155eb -p fdf4fc3
+$ echo 'third commit' | git commit-tree 3c4e9c -p cac0cab
+{{./pasted_image040.png}}
+
+=== 对象存储 ===
+	content
+	header :type+" "+length+\0
+	header+content---->sh1
+	zlib and write to the specifical dir
+
+
+==== Git References ====
+	.git/refs
+	.git/refs/heads
+	.git/refs/tags
+	echo "1a410efbd13591db07496601ebc7a059dd55cfe9" > .git/refs/heads/master
+	git update-ref refs/heads/master 1a410efbd13591db07496601ebc7a059dd55cfe9
+	
+=== HEAD 标记 ===
+HEAD 文件是一个指向你当前所在分支的引用标识符。这样的引用标识符——它看起来并不像一个普通的引用——其实并不包含 SHA-1 值,而是一个指向另外一个引用的指针
+git symbolic-ref HEAD
+git symbolic-ref HEAD refs/heads/test
+git symbolic-ref HEAD test				XXX
+
+=== Tags ===
+	git update-ref refs/tags/v1.0 cac0cab538b970a37ea1e769cbbde608743bc96d   这就是 lightweight tag 的全部 
+
+
+=== Remotes ===
+	.git/refs/remotes/origin/master
+
+=== Packfiles ===
+	Git 往磁盘保存对象时默认使用的格式叫松散对象 (loose object) 格式。Git时不时地将这些对象打包至一个叫 packfile 的二进制文件以节省空间并提高效率。当仓库中有太多的松散对
+	象,或是手工调用git gc命令,或推送至远程服务器时,Git 都会这样做。
+	Git 是如何做到这点的?Git 打包对象时,会查找命名及尺寸相近的文件,并只保存文件不同版本之间的差异内容。可以查看一下 packfile ,观察它是如何节省空间的。gitverify-pack命令用于显示已打包的内容
+	
+
+
+
+==== The Refspec  ====
+
+==== 传输协议  ====
+
+==== 维护及数据恢复 ====
+
+	
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[[~/shared_with_windows/我的坚果云/resource/Pro_GitÖÐÎÄ.pdf|pro git]]
+

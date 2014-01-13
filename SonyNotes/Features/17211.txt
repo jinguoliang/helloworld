@@ -1,0 +1,75 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-11-25T09:50:25+08:00
+
+====== 17211 ======
+Created Monday 25 November 2013
+
+Description:
+Email solution Cherry pick from Rhine 1.2
+
+Note: We need to make sure we got the updated Shinano solution (Include Bug Fix)
+
+Reference FP ID: 17002 FAT Email - Rhine KK SW - Legacy feature (The ref FP is only for reference, for final feature scope should follow Rhine 1.2)
+ 
+Incremental 1, plan to deliver around w32.5
+1.Tablet UI adaptation
+2.1080p adaptation
+3. Predictive Address Completion: support prediction for addresses which is not already in the address book.
+
+
+Incremental 2, plan to deliver around w36.5
+1. J-release bring up
+R
+
+Include enhance feature reference from FP 16250 Email v6.0.0 for Appsuite 5.1 timeframe(Final scope should reference Rhine 1.2)
+
+Rich text editing
+Swipe to switch email
+Sync folders setting
+Pull to refresh
+Navigation drawer
+
+related:
+[[https://wiki.sonyericsson.net/androiki/FP15678_Email_solution_Cherry_pick_from_Rhine_1.1|FP15678 Email solution Cherry pick from Rhine 1.1]]
+[[https://wiki.sonyericsson.net/androiki/FP16179_Email_solution_Cherry_pick_from_Shinano_Definition|FP16179 Email solution Cherry pick from Shinano Definition]]
+
+Porting Step:
+[[/system/app/SemcEmail.apk]]
+[[/system/app/Exchange2.apk]]    
+Then there is no need to cherry-pick patches in /packages/apps/Email/emailcommon because Semc Email app refers to the path at build time.
+
+See its semcbuild.properties file:
+
+source-folders=src,../../../../../packages/apps/Email/emailcommon/src
+
+
+To avoid conflicts we need to remove the following components from the vendor baseline (by renaming their Android.mk to Android.mk.bak, for example):
+
+    platform/packages/apps/Email
+    platform/packages/apps/Exchange     
+
+
+The software part of the "FP15831 Email Security Step Up for ODM" is also defined in this definition, because the dependency to smime library makes us to deliver the software for these two features together.
+
+    PID004746(platform/frameworks/base , platform/system/core)
+    git:platform/vendor/semc/frameworks/smime
+        [[/system/framework/com.sonymobile.smime.jar]]				vendor/semc/frameworks/smime/api/
+        /system/etc/permissions/com.sonymobile.smime.xml 
+
+other dependencies:
+
+    SMIME lib depends on the IDD java API lib and the Google protobuf-2.3.0 lib, so they should be either integrated during bringup, or by this feature
+        [[/system/framework/com.sonyericsson.idd.jar]]							vendor/semc/system/idd/java_api/
+        /system/etc/permissions/com.sonyericsson.idd.xml
+        [[/system/framework/com.google.protobuf-2.3.0.jar]]                                  vendor/semc/system/idd/protobuf/
+        /system/etc/permissions/com.google.protobuf-2.3.0.xml 
+    this is a security feature and the functionality depends on security deliveries (FP15057 SW security for Yukon)
+
+SD card encryption and corresponding EAS policy Email need to do change:
+
+http://review.sonyericsson.net/429331 (email)
+
+http://review.sonyericsson.net/429326 (exchange)
+
+

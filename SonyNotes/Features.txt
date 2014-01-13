@@ -1,0 +1,63 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-11-25T09:42:14+08:00
+
+====== Features ======
+Created Monday 25 November 2013
+
+porting Note:
+don't port in here:
+* platform/vendor/semc/overlay
+* platform/frameworks/base/core/res
+* platform/vendor/semc/packages/resource/uxp
+
+
+=== Group 1 ===
+
+[[+16343]] Automatic power off control    ok 
+http://review-jdm.sonyericsson.net/#/c/18133/
+
+[[+16982]] PlayAnywhere 2.0 for Eagle        ok      
+http://review-jdm.sonyericsson.net/#/c/18867/
+    
+[[+15831]] [[../resouces/FP15831 Email Security Step Up for ODM - Androiki.html|Email Security Step Up for ODM]]                  ok      
+[[+17211]] [[../resouces/FP15678 Email solution Cherry pick from Rhine 1.1 - Androiki.html|Email solution Cherry pick from Rhine 1.2]]       ok  
+http://review-jdm.sonyericsson.net/#/c/18665/
+phone: 6665
+
+[[+15862]] Notification Tray solution for ODM products              OK
+[[/kk-rhine/frameworks/base/packages/SystemUI/res/values/somc_config.xml]]      [[line:110]]
+new patch get in:    pathid 4235
+	Close Notification panel when turning off Mobile data
+	Light theme should be used on ToolsbarSettings activity
+
+[[+15923]] [[../resouces/FP15923 Backup and restore Solution for Eagle-definition - Androiki.html|Backup and restore Solution for Eagle]]      
+FP[[+15338]]  [[~/shared_with_windows/我的坚果云/resource/html/FP15338 Downloadable themes enabler - Androiki.html|Downloadable themes enabler]]   
+   
+
+==== TODO ====
+	made the email CDF apk in [[/tmp]]  cdf*    and need to push to phone
+	need test email and upload to update
+	
+	
+
+=== Group 2 ===
+	1[[./FP15744 Transparent Status bar and Navigation bar Solution From Rhine 1.1 - Androiki.html]] 					need to view the kk-rhine
+		DMS02339145
+		vendor/semc/frameworks/base/libs/navbar-extensions/com.sonyericsson.navigationbar_impl.jar   no in kk-rhine but in rhine1.1   
+		not ready in house
+		
+		
+	2[[./FP3877 Set Google sync auto-sync to default OFF for Nicki SS JBMR2 project definition - Androiki001.html]] 
+		patch PID000207 :	platform/vendor/semc/overlay/platform-custom-replacements  						ok
+		DMS02339624
+	3.Custmization of SAT application name        										nothing  to do 					ok
+		https://wiki.sonyericsson.net/androiki/PatchRequest_DMS00870638
+		unicom is test and ok
+	4.Within 'Accounts & sync' menu, the option Auto-sync is disabled.				nothing  to do						ok
+		DMS02339786
+		Implemented by static overlay
+		push cdf to phone test ok 
+	5.FP7782 Email sync settings customization
+		Include in FP11573. The purpose of this feature is to make the value list and the default value customizable. And the value list in CDF should be chosen from the current list. The value list and the default value will be read from CDF first. If there is nothing in CDF, currently value list and default value as above will be used.
+		https://wiki.sonyericsson.net/androiki/FP7782_EmailSyncSettingsCustomization/Definition_Report

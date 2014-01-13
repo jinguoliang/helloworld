@@ -1,0 +1,29 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-11-27T10:43:09+08:00
+
+====== 15862 ======
+Created Wednesday 27 November 2013
+
+Y	DMS04120625	Notification Tray solution for ODM products	15862	SWD	Wang, Will 2	Jin, John	12/19/2013 12:00	Assigned			
+DMS02339166		Verified	Xin, Eileen	Together with FP 13871
+
+
+to do:
+git fetch ssh://john.jin@review.sonyericsson.net:29418/platform/vendor/semc/packages/apps/phone refs/changes/74/460774/12 && git cherry-pick FETCH_HEAD             -----have no phone project
+
+
+Y	DMS03459633	Notification tray - On/Off tools - Customizable	13871	SWD	Wang, Will 2	Jin, John	12/19/2013	Assigned								
+charry-picking......
+
+
+
+
+=== leave ===
+ the patch 
+http://review.sonyericsson.net/#/c/460774/
+
+
+patch to the date 
+	PID004235		2013-12-03 20:39:16
+

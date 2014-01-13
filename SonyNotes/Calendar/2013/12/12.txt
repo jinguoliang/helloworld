@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-12-11T18:49:34+08:00
+
+====== Thursday 12 Dec 2013 ======
+
+backup:
+	move in to source tree
+	and modify the mk and platform   no true
+	
+	find and port the patch
+
+playanywhere 
+	find and port the component needed by DLNA
+	test and test and delivery it 

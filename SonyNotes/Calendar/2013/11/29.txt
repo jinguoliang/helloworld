@@ -1,0 +1,7 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-11-29T09:14:26+08:00
+
+====== Friday 29 Nov 2013 ======
+
+patch and for all build
