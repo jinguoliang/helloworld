@@ -1,0 +1,48 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-10-12T22:17:45+08:00
+
+====== Linux ======
+Created 星期六 12 十月 2013
+
+[[+Linux启动过程分析]]  准确的说应该是ubuntu   
+[[+ubuntu 探索]]
+[[+ubuntu 环境]]
+[[+cmd]]
+[[+C语言]]
+[[system calls]]
+[[+lisp]]
+[[+lua]]的目标是成为一个很容易嵌入其它语言中使用的语言。大多数程序员也认为它的确做到了这一点
+[[+Groovy]]是Java平台上设计的面向对象编程语言。这门动态语言拥有类似Python、Ruby和Smalltalk中的一些特性，可以作为Java平台的脚本语言使用
+[[+vi]]
+[[+bash]]
+
+[[+mono]]
+
+[[+php]]
+
+[[+必须工具]]
+
+[[+make]]
+
+[[+ssh]]
+
+桌面环境
+gnome 2.0
+[[+gnome 3.0]]
+
+kde
+
+unity
+
+mate --gnome2-like
+sudo add-apt-repository "deb http://packages.mate-desktop.org/repo/ubuntu precise main"
+sudo apt-get update
+sudo apt-get install mate-archive-keyring
+sudo apt-get update
+sudo apt-get install mate-desktop-environment			kill my ubuntu ,it's so bad
+
+Linux OS    :
+SteamOS
+
+
