@@ -2,3 +2,8 @@
 *.bin
 .svn
 *.pdf
+a.out
+*.o
+*.a
+*.so
+
