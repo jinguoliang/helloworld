@@ -1,0 +1,36 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-10-16T20:47:44+08:00
+
+====== Activity ======
+Created Wednesday 16 October 2013
+
+[[+Loader|Loader]] 
+{{./pasted_image.png}}
+基本生命周期
+	onCreate(Bundle savedInstanceState)
+	onStart()
+	onResume()
+	onRestart()
+	onPause()
+	onStop()
+	onDestroy()
+	
+onPause（）不要做一些太费时的操作，会影响切换动画的效果 （在onStop（）做）
+onStop（）之后不可见了，释放了几乎所有资源，系统随时可能回收它，在一些极限的情况下系统可能会简单的杀掉它所在的进程，此时onDestroy（）都不调用。但是stop后图形界面状态回保存，即使被杀死，也可以通过bundle恢复状态。
+stop->restrart->start
+create -> start
+系统要求每个View都要有ID,才能用bundle自动恢复它
+在stop之前调用 onSaveInstanceState() 需要重建时把状态传到 onCreate() 和 onRestoreInstanceState()  
+系统在onstart（）后调用onRestoreInstanceState()并且只有需要恢复状态是才调用，所以不需要像onCreate内一样检查Bundle是否为空 
+
+Activity的顶层布局ID=android.R.id.content
+
+不显示title
+requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+
+
+
+
+

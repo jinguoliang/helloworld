@@ -1,0 +1,92 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-10-14T21:17:32+08:00
+
+====== view ======
+Created Monday 14 October 2013
+
+[[+menu]]
+[[+AdapterView]]
+[[+event]]
+[[+webview]]
+[[+view:Layout]]
+[[+view:widget]]
+[[window]]
+[[+dialog]]
+
+[[+android window analysis ------UI管理系统]]
+
+
+====== 自定义View： ======
+好的自定义类应该：
+	符合Android标准？？？
+	可以用XML配置
+	产生可被处理的事件		添加一些内部接口作为监听器
+	兼容多个版本
+步骤	
+	1.继承类
+	添加构造函数
+	public PieChart(Context context, AttributeSet attrs) 有它在可以被通过XML实例化
+	2.定义属性
+	（1）在<declare-styleable资源里定义属性
+		 res/values/attrs.xml
+		<resources>
+   			<declare-styleable name="PieChart">
+       			<attr name="showText" format="boolean" />
+       			<attr name="labelPosition" format="enum">
+          		 	<enum name="left" value="0"/>
+          		 	<enum name="right" value="1"/>
+       			</attr>
+  			 </declare-styleable>
+		</resources>
+	（2）在layout里声明值
+		是用自定义属性的唯一不同是命名空间的不同，
+		不是http://schemas.android.com/apk/res/android
+		而是http://schemas.android.com/apk/res/com.example.customviews(自己的包名)
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"			这里声明了Android命名空间
+   			xmlns:custom="http://schemas.android.com/apk/res/com.example.customviews">		这里声明自定义的命名空间
+ 			<com.example.customviews.charting.PieChart
+				custom:showText="true"
+				custom:labelPosition="left" />
+		</LinearLayout>
+		？？？？？
+		In order to avoid having to repeat the long namespace URI, the sample uses an xmlns directive. This directive assigns the alias custom to the namespace http://schemas.android.com/apk/res/com.example.customviews. You can choose any alias you want for your namespace.
+	（3）在代码里获取属性值
+	牵扯到AttributeSet		是对xml解析的到值，没有引用值解析，没有应用style
+		  TypedArray		对引用解析，应用了style
+	TypedArray a = context.getTheme().obtainStyledAttributes(
+        attrs,		//传入AttributeSet
+        R.styleable.PieChart,
+        0, 0);
+
+	（4）使用属性值
+	 设置了view属性值后需调用invalidate() 来更新显示and requestLayout()更新布局显示 ******注意
+
+	3.绘制  draw
+	（1）创建绘制的对象
+		有canvas来决定画什么   由paint来决定怎么画，什么样的风格
+		提前把需要的画笔对象等配置好是必要的，draw方法调用频繁，将一些初始化的工作放在它里面是耗时的。
+	（2）设置大小
+	protected void onSizeChanged(int w, int h, int oldw, int oldh) 
+
+	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) 
+	参数为 View.MeasureSpec 类型 ，因为优化的原因，用int类型来表示，包含了模式和大小两部分，是父亲传给的要求
+	可以用View.MeasureSpec的静态方法来提取其中的值，mode分为UNSPECIFIED，EXACTLY，AT_MOST
+        int widthMode = MeasureSpec.getMode(widthMeasureSpec);
+        int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+        int widthSize = MeasureSpec.getSize(widthMeasureSpec);
+        int heightSize = MeasureSpec.getSize(heightMeasureSpec);
+		if (widthMode == MeasureSpec.EXACTLY) {
+            // Parent has told us how big to be. So be it.
+            width = widthSize;
+        } else {
+		}
+	resolveSizeAndState(size, measureSpec, childMeasuredState)用来解决父亲和儿子的期望大小和我们需要的大小的调和结果，返回的是	View.MeasureSpec
+	
+	 setMeasuredDimension(w, h);作为onMeasure（）的返回结果，不掉用它会抛出异常
+	（3） 正式画
+	画得东西一般就这写：
+		文本：		drawText()	setTypeface() setColor()
+		基本图像：	drawRect（） drawOval() drawArc（） 设置他们的填充，轮廓用setStyle（）
+		Path：		drawPath（）		setStyle（）
+		LinearGradient：	实现颜色线性渐变		paint.setShader()

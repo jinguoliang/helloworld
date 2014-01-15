@@ -1,0 +1,15 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-11-08T04:45:05+08:00
+
+====== window ======
+Created Friday 08 November 2013
+
+设置当前window在锁屏界面仍显示
+        final Window win = getWindow();
+        win.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
+
+设置软件盘的模式，显示还是隐藏
+getWindow().setSoftInputMode(
+WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE
+| WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);

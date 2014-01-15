@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-12-24T16:19:05+08:00
+
+====== sone phrase ======
+Created Tuesday 24 December 2013
+
+=== cold boot   ===
+      
+	The start-up of a computer from a powered-down, or off, state.
+	Also called a hard boot.
+	Contrast with warm boot, restarting a computer via the operating system.
+
+
+==== asec ====
+ 
+	ASEC files are used by Froyo, the version 2.2 release of the Android mobile operating system. They store mobile application data using proprietary encryption which can be run with the Android SDK emulator. The secure ASEC format allows applications to exist on mobile devices without being modified or corrupted by other programs.

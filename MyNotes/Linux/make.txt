@@ -1,0 +1,25 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-11-25T22:39:22+08:00
+
+====== make ======
+Created Monday 25 November 2013
+
+==== 流程控制 ====
+ifeq （a，b）   没空格的就不加，如（ a，b )就不相等，注意呀!!括号内部紧临值
+else
+endif
+
+
+==== Function ====
+revoke a function
+	a=$(func args)     
+define a function 
+	  __define__   funcname
+		  $(func ...)
+	  __endef__
+
+shell cmd           revoke   shell cmd   and __return__ the contents of __stdout__
+wildcard  regs     match the files in current dir
+     
+

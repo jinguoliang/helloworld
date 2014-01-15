@@ -1,0 +1,17 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-12-01T00:49:17+08:00
+
+====== git ======
+Created Sunday 01 December 2013
+
+[[~/Nutstore/resource/Git Pocket Guide.pdf|Git Pocket Guide]]
+
+git config --global core.editor vi              set  the default commit editor
+git log -p    -2    -p means show the diff and -2 means show the last 2 
+
+git config --global alias.co checkout    alias a cmd
+git config --global alias.unstage 'reset HEAD --'   create a new cmd
+
+git reset --hard   sha1no
+git reflog   show the commit id which not display in git log

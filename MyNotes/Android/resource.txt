@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2013-10-16T20:48:34+08:00
+
+====== resource ======
+Created Wednesday 16 October 2013
+
+assets
+	放在assets下的文件，url表示如下：
+	webview.loadUrl("file:///android_asset/calendarview.html");注意，android_asset
+
+ getResources().getString(R.string.hello_world);
+
+Arrays.asList(array）	//把array转化为list
+
+context.getString(resId,args)		//格式化字符串，不过从资源获取格式字符串
