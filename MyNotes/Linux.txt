@@ -5,6 +5,7 @@ Creation-Date: 2013-10-12T22:17:45+08:00
 ====== Linux ======
 Created 星期六 12 十月 2013
 
+[[+Kernel]]
 [[+Unix环境高级编程]]
 [[+Linux启动过程分析]]  准确的说应该是ubuntu   
 [[+ubuntu 探索]]
@@ -45,4 +46,4 @@ sudo apt-get install mate-desktop-environment			kill my ubuntu ,it's so bad
 Linux OS    :
 SteamOS
 
-[[+Kernel]]
+

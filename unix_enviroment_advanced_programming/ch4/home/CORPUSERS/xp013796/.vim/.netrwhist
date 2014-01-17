@@ -1,0 +1,4 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/CORPUSERS/xp013796/source/eagle-tina-006/vendor/semc/prebuilt/eagle/semcaudioeffect'
+let g:netrw_dirhist_2='/home/CORPUSERS/xp013796/source/google-android/packages'
