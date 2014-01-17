@@ -14,3 +14,5 @@ Created Saturday 04 January 2014
 ==== uid and euid   setuid ====
 进程有uid和euid，uid是标识运行此进程的是谁，euid则用来控制文件访问
 比如passwd，它设置了setuid位并且它的uid是root，所以运行时可以有root的访问权限，所以是当设置了setuid位时，运行时就会把进程的euid设置为文件的uid，否则uid和euid都是正在运行它的user
+
+{{./pasted_image004.png}}
