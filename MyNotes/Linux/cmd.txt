@@ -53,6 +53,8 @@ gnome-screenshot -c -a		-c send the grab to clipboard   -a     area of screen   
 ==== Custom key shortcut: ====
 gconf-editor   
 
+==== system: ====
+last	 show listing of last logged in users
 
 === Packages管理: ===
 sudo dpkg-reconfigure $(dpkg -l | awk '{print $2}' | grep "^xserver" | tr '\n' ' ')
