@@ -16,3 +16,21 @@ Created Saturday 04 January 2014
 比如passwd，它设置了setuid位并且它的uid是root，所以运行时可以有root的访问权限，所以是当设置了setuid位时，运行时就会把进程的euid设置为文件的uid，否则uid和euid都是正在运行它的user
 
 {{./pasted_image004.png}}
+{{./pasted_image005.png}}
+
+=== Figure 6.8. Relationship of the various time functions ===
+
+{{./pasted_image006.png}}
+{{./pasted_image007.png}}
+
+==== Figure 6.9. Conversion specifiers for strftime ====
+{{./pasted_image008.png}}
+{{./pasted_image009.png}}
+{{./pasted_image010.png}}
+{{./pasted_image011.png}}
+{{./pasted_image012.png}}
+With Linux on an Intel x86 processor, the text segment starts at location 0x08048000, and the bottom of the stack starts just
+below 0xC0000000. (The stack grows from higher-numbered addresses to lower-numbered addresses
+on this particular architecture.) The unused virtual address space between the top of the heap and
+the top of the stack is large.
+

@@ -402,9 +402,12 @@
 <node CREATED="1388850098184" ID="ID_10467189" MODIFIED="1388850123135" TEXT="&#x65f6;&#x95f4;&#x5230;2106&#x5e74;&#x6ea2;&#x51fa;"/>
 </node>
 </node>
-<node CREATED="1388832083566" ID="ID_603060085" MODIFIED="1388832091887" POSITION="left" TEXT="&#x4e00;&#x4e9b;&#x96f6;&#x788e;">
+<node CREATED="1388832083566" ID="ID_603060085" MODIFIED="1390273887012" POSITION="left" TEXT="&#x4e00;&#x4e9b;&#x96f6;&#x788e;">
 <node CREATED="1388832096636" ID="ID_1506824430" MODIFIED="1388832097542" TEXT="&#x6309;&#x60ef;&#x4f8b;,&#x53c2;&#x6570; 0&#x7684;&#x610f;&#x601d;&#x662f; &#x6b63;&#x5e38;&#x7ed3;&#x675f;,&#x53c2;&#x6570;&#x503c; 1~255&#x5219;&#x8868;&#x793a;&#x51fa;&#x9519; "/>
 <node CREATED="1389958915485" ID="ID_481011001" MODIFIED="1389958917644" TEXT="&#x5f53;&#x6b63;&#x5728;&#x8bfb;&#x4e00;&#x4e2a;&#x8f93;&#x5165;&#x6d41;,&#x5e76;&#x8fdb;&#x884c;&#x67d0;&#x79cd;&#x5f62;&#x5f0f;&#x7684;&#x5206;&#x5b57;&#x6216;&#x5206;&#x8bb0;&#x53f7;&#x64cd;&#x4f5c;&#x65f6;,&#x4f1a;&#x7ecf;&#x5e38;&#x7528;&#x5230;&#x56de;&#x9001;&#x5b57;&#x7b26;&#x64cd;&#x4f5c;&#x3002; &#x6709;&#x65f6;&#x9700;&#x8981;&#x5148;&#x770b;&#x4e00;&#x770b;&#x4e0b;&#x4e00;&#x4e2a;&#x5b57;&#x7b26;,&#x4ee5;&#x51b3;&#x5b9a;&#x5982;&#x4f55;&#x5904;&#x7406;&#x5f53;&#x524d;&#x5b57;&#x7b26;&#x3002;&#x7136;&#x540e;&#x5c31;&#x9700;&#x8981;&#x65b9;&#x4fbf;&#x5730;&#x5c06;&#x521a;&#x67e5;&#x770b;&#x7684;&#x5b57;&#x7b26; &#x9001;&#x56de;,&#x4ee5;&#x4fbf;&#x4e0b;&#x4e00;&#x6b21;&#x8c03;&#x7528; getc&#x65f6;&#x8fd4;&#x56de;&#x8be5;&#x5b57;&#x7b26;&#x3002;&#x5982;&#x679c;&#x6807;&#x51c6; I/O&#x5e93;&#x4e0d;&#x63d0;&#x4f9b;&#x56de;&#x9001;&#x80fd;&#x529b;,&#x5c31;&#x9700;&#x5c06;&#x8be5;&#x5b57;&#x7b26;&#x5b58;&#x653e; &#x5230;&#x4e00;&#x4e2a;&#x6211;&#x4eec;&#x81ea;&#x5df1;&#x7684;&#x53d8;&#x91cf;&#x4e2d;,&#x5e76;&#x8bbe;&#x7f6e;&#x4e00;&#x4e2a;&#x6807;&#x5fd7;&#x4ee5;&#x4fbf;&#x5224;&#x522b;&#x5728;&#x4e0b;&#x4e00;&#x6b21;&#x9700;&#x8981;&#x4e00;&#x4e2a;&#x5b57;&#x7b26;&#x65f6;&#x662f;&#x8c03;&#x7528; getc,&#x8fd8; &#x662f;&#x4ece;&#x6211;&#x4eec;&#x81ea;&#x5df1;&#x7684;&#x53d8;&#x91cf;&#x4e2d;&#x53d6;&#x7528;&#x3002; "/>
+<node CREATED="1390273891402" ID="ID_1737279723" MODIFIED="1390273915340" TEXT="what&apos;s the meas of setuid ">
+<icon BUILTIN="help"/>
+</node>
 </node>
 <node CREATED="1388850344181" FOLDED="true" ID="ID_1356394570" MODIFIED="1389068502855" POSITION="right" TEXT="Unix&#x6807;&#x51c6;&#x5316;&#x53ca;&#x5b9e;&#x73b0;">
 <node CREATED="1388850359328" ID="ID_1505898779" MODIFIED="1388850365335" TEXT="Unix&#x6807;&#x51c6;&#x5316;">
@@ -1246,7 +1249,7 @@
 <node CREATED="1389268101561" ID="ID_1133816704" MODIFIED="1389268101941" TEXT="&#x6587;&#x4ef6;&#x5b58;&#x53d6;&#x8bb8;&#x53ef;&#x6743;&#x4f4d;&#x5c0f;&#x7ed3; "/>
 <node CREATED="1389268108082" ID="ID_1377269460" MODIFIED="1389268108440" TEXT="&#x5c0f;&#x7ed3; "/>
 </node>
-<node CREATED="1389955991440" ID="ID_474467445" MODIFIED="1389955993759" POSITION="right" TEXT="&#x6807; &#x51c6; I/O &#x5e93; ">
+<node CREATED="1389955991440" FOLDED="true" ID="ID_474467445" MODIFIED="1390210210912" POSITION="right" TEXT="&#x6807; &#x51c6; I/O &#x5e93; ">
 <node CREATED="1389956001200" ID="ID_40213422" MODIFIED="1389956003055" TEXT="&#x6d41;&#x548c;FILE&#x5bf9;&#x8c61; ">
 <node CREATED="1389956033665" ID="ID_347955784" MODIFIED="1389956035791" TEXT="&#x5b83;&#x5305;&#x542b;&#x4e86;I/O&#x5e93;&#x4e3a;&#x7ba1;&#x7406;&#x8be5;&#x6d41;&#x6240;&#x9700;&#x8981;&#x7684;&#x6240;&#x6709;&#x4fe1;&#x606f;:&#x7528;&#x4e8e;&#x5b9e;&#x9645; I/O&#x7684;&#x6587;&#x4ef6;&#x63cf;&#x8ff0;&#x7b26;,&#x6307;&#x5411;&#x6d41;&#x7f13;&#x5b58;&#x7684; &#x6307;&#x9488;,&#x7f13;&#x5b58;&#x7684;&#x957f;&#x5ea6;,&#x5f53;&#x524d;&#x5728;&#x7f13;&#x5b58;&#x4e2d;&#x7684;&#x5b57;&#x7b26;&#x6570;,&#x51fa;&#x9519;&#x6807;&#x5fd7;&#x7b49;&#x7b49; "/>
 </node>
@@ -1313,8 +1316,7 @@
       &#29992;&#35774;&#22791;&#19987;&#29992;&#20989;&#25968;&#20197;&#33719;&#24471;&#19968;&#20010;&#25991;&#20214;&#25551;&#36848;&#31526;,&#28982;&#21518;&#29992; fdopen&#20351;&#19968;&#20010;&#26631;&#20934;I/O&#27969;&#19982;&#35813;&#25551;&#36848;&#31526;&#30456;&#32467;&#21512;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1389957092100" FOLDED="true" ID="ID_1974602522" MODIFIED="1389958141920" TEXT="type&#x53c2;&#x6570; ">
@@ -1336,8 +1338,7 @@
       &#23454;&#38469;&#19978;&#24182;&#26080;&#20316;&#29992;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1389957100956" ID="ID_172762239" MODIFIED="1389957102889" TEXT="&#x4e3a;&#x8bfb;&#x800c;&#x6253;&#x5f00; ">
 <node CREATED="1389957209301" ID="ID_44336445" MODIFIED="1389957217780" TEXT="r &#x6216; rb "/>
 </node>
@@ -1357,8 +1358,7 @@
       &#29992;&#26631;&#20934;I/O&#28155;&#21152;&#26041;&#24335;&#25171;&#24320;&#20102;&#21516;&#19968;&#25991;&#20214;,&#37027;&#20040;&#26469;&#33258;&#27599;&#20010;&#36827;&#31243;&#30340;&#25968;&#25454;&#37117;&#23558;&#27491;&#30830;&#22320;&#20889;&#21040;&#25991;&#20214;&#20013;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1389957197120" ID="ID_1763064102" MODIFIED="1389957199228" TEXT="a &#x6216; ab  "/>
 </node>
 <node CREATED="1389957722606" ID="ID_654932593" MODIFIED="1389957723916" TEXT="+">
@@ -1384,8 +1384,7 @@
       &#20316;&#20043;&#21518;&#19981;&#33021;&#30452;&#25509;&#36319;&#38543;&#36755;&#20986;&#12290;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1389957181269" ID="ID_626346664" MODIFIED="1389957183265" TEXT="w+ &#x6216; w+b &#x6216; w b +  "/>
 </node>
 <node CREATED="1389957144181" ID="ID_492084160" MODIFIED="1389957146499" TEXT="&#x4e3a;&#x8bfb;&#x548c;&#x5199;&#x800c;&#x6253;&#x5f00; ">
@@ -1474,6 +1473,690 @@
 <node CREATED="1389956571652" ID="ID_1026826128" MODIFIED="1389956573850" TEXT="&#x4e34;&#x65f6;&#x6587;&#x4ef6; "/>
 <node CREATED="1389956580060" ID="ID_338618398" MODIFIED="1389956582523" TEXT="&#x6807;&#x51c6;I/O&#x7684;&#x66ff;&#x4ee3;&#x8f6f;&#x4ef6; "/>
 <node CREATED="1389956585293" ID="ID_704904692" MODIFIED="1389956587491" TEXT="&#x5c0f;&#x7ed3; "/>
+</node>
+<node CREATED="1390210219660" FOLDED="true" ID="ID_500171807" MODIFIED="1390353718419" POSITION="right" TEXT="System Data Files and Information ">
+<node CREATED="1390210236733" ID="ID_1352563031" MODIFIED="1390210244132" TEXT="Introduction "/>
+<node CREATED="1390210249405" ID="ID_1340235074" MODIFIED="1390273293269" TEXT="Password File ">
+<node CREATED="1390267890078" FOLDED="true" ID="ID_131347962" MODIFIED="1390273297557" TEXT="passwd  structure ">
+<node CREATED="1390267928837" ID="ID_1551505867" MODIFIED="1390267930900" TEXT="&lt;pwd.h&gt; "/>
+<node CREATED="1390267941605" ID="ID_99896505" MODIFIED="1390267945364" TEXT="pw_name  "/>
+<node CREATED="1390267949957" ID="ID_1669560497" MODIFIED="1390268219014" TEXT="pw_passwd  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      If the encrypted password field is empty, it
+    </p>
+    <p>
+      usually means that the user does not have a password.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390267956469" ID="ID_912000775" MODIFIED="1390267959091" TEXT="pw_uid  "/>
+<node CREATED="1390267963260" ID="ID_1449596262" MODIFIED="1390267965444" TEXT="pw_gid  "/>
+<node CREATED="1390267998518" ID="ID_1469013120" MODIFIED="1390268818631" TEXT="pw_gecos  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Some systems that provide the finger(1) command support additional information in the
+    </p>
+    <p>
+      comment field. Each of these fields is separated by a comma: the user's name, office location,
+    </p>
+    <p>
+      office phone number, and home phone number. Additionally, an ampersand in the comment
+    </p>
+    <p>
+      field is replaced with the login name (capitalized) by some utilities. For example, we could have
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      sar:x:205:105:Steve Rago, SF 5-121, 555-1111, 555-2222:/home/sar:/bin/sh
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Then we could use finger to print information about Steve Rago.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390268005510" ID="ID_1653597000" MODIFIED="1390268007957" TEXT="pw_dir  "/>
+<node CREATED="1390268011310" ID="ID_212480421" MODIFIED="1390268415386" TEXT="pw_shell  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#160;The default value for an empty shell field is usually /bin/sh
+    </p>
+    <p>
+      There are several alternatives to using /dev/null to prevent a particular user from logging in to
+    </p>
+    <p>
+      a system. It is common to see /bin/false used as the login shell. It simply exits with an
+    </p>
+    <p>
+      unsuccessful (nonzero) status; the shell evaluates the exit status as false. It is also common to
+    </p>
+    <p>
+      see /bin/true used to disable an account. All it does is exit with a successful (zero) status.
+    </p>
+    <p>
+      Some systems provide the nologin command. It prints a customizable error message and exits
+    </p>
+    <p>
+      with a nonzero exit status.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390268017846" ID="ID_355942769" MODIFIED="1390268019783" TEXT="pw_class  "/>
+<node CREATED="1390268023518" ID="ID_1530486005" MODIFIED="1390268025878" TEXT="pw_change  "/>
+<node CREATED="1390268030006" ID="ID_741808438" MODIFIED="1390268032496" TEXT="pw_expire  "/>
+</node>
+<node CREATED="1390267916908" FOLDED="true" ID="ID_752932933" MODIFIED="1390273295884" TEXT="/etc/passwd ">
+<node CREATED="1390268059527" ID="ID_1424704909" MODIFIED="1390268061307" TEXT="root:x:0:0:root:/root:/bin/bash "/>
+<node CREATED="1390268476598" ID="ID_952372635" MODIFIED="1390268503550" TEXT="squid:x:23:23::/var/spool/squid:/dev/null&#xa;">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Many services have separate user IDs for the daemon processes (Chapter 13) that help
+    </p>
+    <p>
+      implement the service. The squid enTRy is for the processes implementing the squid proxy
+    </p>
+    <p>
+      cache service.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390268482406" ID="ID_725187019" MODIFIED="1390268509417" TEXT="nobody:x:65534:65534:Nobody:/home:/bin/sh ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The nobody user name can be used to allow people to log in to a system, but with a user ID
+    </p>
+    <p>
+      (65534) and group ID (65534) that provide no privileges. The only files that this user ID and
+    </p>
+    <p>
+      group ID can access are those that are readable or writable by the world. (This assumes that
+    </p>
+    <p>
+      there are no files specifically owned by user ID 65534 or group ID 65534, which should be the
+    </p>
+    <p>
+      case.)
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1390268827986" ID="ID_706303368" MODIFIED="1390273972012" TEXT="vipw">
+<node CREATED="1390268831994" ID="ID_1177813029" MODIFIED="1390268847286" TEXT="Some systems provide the vipw command to allow administrators to edit the password file&#xa;"/>
+</node>
+<node CREATED="1390270133125" FOLDED="true" ID="ID_1497568584" MODIFIED="1390273296749" TEXT="functions">
+<node CREATED="1390270138813" ID="ID_1315811316" MODIFIED="1390270145164" TEXT="struct passwd *getpwuid(uid_t uid); "/>
+<node CREATED="1390270152078" ID="ID_1210380994" MODIFIED="1390270154172" TEXT="struct passwd *getpwnam(const char *name); "/>
+<node CREATED="1390270160662" ID="ID_1329588601" MODIFIED="1390270163149" TEXT="struct passwd *getpwent(void); ">
+<node CREATED="1390270195366" ID="ID_1309185253" MODIFIED="1390270197734" TEXT="We call getpwent to return the next entry in the password file "/>
+<node CREATED="1390270377650" ID="ID_1485071083" MODIFIED="1390270379658" TEXT="getpwent returns a pointer to a structure that it has filled in. This structure is normally overwritten each time we call this function "/>
+<node CREATED="1390270387202" ID="ID_246247218" MODIFIED="1390270389199" TEXT="There is no order implied when we use this function ">
+<node CREATED="1390270395644" ID="ID_434324496" MODIFIED="1390270397625" TEXT="because some systems use a hashed version of the file /etc/passwd "/>
+</node>
+</node>
+<node CREATED="1390270170142" ID="ID_683838056" MODIFIED="1390270172381" TEXT="void setpwent(void); ">
+<node CREATED="1390270465052" ID="ID_1185112934" MODIFIED="1390270467736" TEXT="The function setpwent rewinds whatever files it uses "/>
+</node>
+<node CREATED="1390270178126" ID="ID_1414971656" MODIFIED="1390270179941" TEXT="void endpwent(void); ">
+<node CREATED="1390270488892" ID="ID_1159045992" MODIFIED="1390270492490" TEXT="endpwent closes these files "/>
+<node CREATED="1390270503460" ID="ID_691339369" MODIFIED="1390270505515" TEXT="When using getpwent , we must always be sure to close these files by calling endpwent when we&apos;re through "/>
+<node CREATED="1390270637087" ID="ID_1604693567" MODIFIED="1390270638968" TEXT="The call to endpwent when we&apos;re done is because neither getpwnam nor getpwuid should leave any of the files open. "/>
+</node>
+</node>
+</node>
+<node CREATED="1390210257188" FOLDED="true" ID="ID_1514174285" MODIFIED="1390296624947" TEXT="Shadow Passwords ">
+<node CREATED="1390273290442" ID="ID_93681166" MODIFIED="1390273300657" TEXT="struct spwd ">
+<node CREATED="1390274009394" ID="ID_766202072" MODIFIED="1390274106980" TEXT="&lt;shadow.h&gt; "/>
+<node CREATED="1390273343578" ID="ID_360460403" MODIFIED="1390273346608" TEXT="sp_namp "/>
+<node CREATED="1390273356834" ID="ID_430653735" MODIFIED="1390273358777" TEXT="sp_pwdp "/>
+<node CREATED="1390273371194" ID="ID_1955211152" MODIFIED="1390273373790" TEXT="sp_lstchg ">
+<node CREATED="1390273385178" ID="ID_536554251" MODIFIED="1390273387856" TEXT="days since Epoch of last password  change  "/>
+</node>
+<node CREATED="1390273408913" ID="ID_851649305" MODIFIED="1390273411113" TEXT="sp_min "/>
+<node CREATED="1390273415369" ID="ID_899902976" MODIFIED="1390273417521" TEXT="sp_max "/>
+<node CREATED="1390273424658" ID="ID_1719764186" MODIFIED="1390273426976" TEXT="sp_warn "/>
+<node CREATED="1390273430642" ID="ID_1130116343" MODIFIED="1390273433081" TEXT="sp_inact "/>
+<node CREATED="1390273462938" ID="ID_1730742495" MODIFIED="1390273465208" TEXT="sp_expire . "/>
+<node CREATED="1390273470201" ID="ID_1477305241" MODIFIED="1390273472370" TEXT="sp_flag "/>
+</node>
+<node CREATED="1390273277010" ID="ID_1440736454" MODIFIED="1390273279600" TEXT="/etc/shadow "/>
+<node CREATED="1390273975890" ID="ID_1813709262" MODIFIED="1390273980217" TEXT="vipw -s"/>
+<node CREATED="1390273988890" ID="ID_1896291701" MODIFIED="1390273997377" TEXT="functions">
+<node CREATED="1390274117596" ID="ID_1914340444" MODIFIED="1390274120098" TEXT="struct spwd *getspnam(const char *name); "/>
+<node CREATED="1390274131987" ID="ID_244451098" MODIFIED="1390274134602" TEXT="struct spwd *getspent(void); "/>
+<node CREATED="1390274139187" ID="ID_750667933" MODIFIED="1390274141226" TEXT="void setspent(void); "/>
+<node CREATED="1390274145443" ID="ID_1163155860" MODIFIED="1390274147882" TEXT="void endspent(void); "/>
+</node>
+</node>
+<node CREATED="1390210265541" FOLDED="true" ID="ID_327571367" MODIFIED="1390292958267" TEXT="Group File ">
+<node CREATED="1390274257835" ID="ID_37567359" MODIFIED="1390274259730" TEXT="struct group ">
+<node CREATED="1390274318644" ID="ID_220300890" MODIFIED="1390274322171" TEXT="&lt;grp.h&gt; "/>
+<node CREATED="1390274342019" ID="ID_1098181074" MODIFIED="1390274343682" TEXT="gr_name "/>
+<node CREATED="1390274350075" ID="ID_628379149" MODIFIED="1390274351987" TEXT="gr_passwd "/>
+<node CREATED="1390274358091" ID="ID_12006367" MODIFIED="1390274360356" TEXT="gr_gid "/>
+<node CREATED="1390274370323" ID="ID_1067573110" MODIFIED="1390274372332" TEXT="char **gr_mem ">
+<node CREATED="1390274375747" ID="ID_1514748655" MODIFIED="1390274377322" TEXT="array of pointers to  individual user names  "/>
+<node CREATED="1390274402763" ID="ID_120233961" MODIFIED="1390274404450" TEXT="This array is terminated by a null pointer "/>
+</node>
+</node>
+<node CREATED="1390274266507" ID="ID_385805811" MODIFIED="1390274268490" TEXT="/etc/group "/>
+<node CREATED="1390274416435" ID="ID_1985193041" MODIFIED="1390274420754" TEXT="functions">
+<node CREATED="1390274426683" ID="ID_1512597216" MODIFIED="1390274429514" TEXT="struct group *getgrgid(gid_t gid); "/>
+<node CREATED="1390274436851" ID="ID_220393594" MODIFIED="1390274439010" TEXT="struct group *getgrnam(const char *name); "/>
+<node CREATED="1390275634621" ID="ID_633277231" MODIFIED="1390275636956" TEXT="struct group *getgrent(void); "/>
+<node CREATED="1390275641677" ID="ID_1240314829" MODIFIED="1390275644476" TEXT="void setgrent(void); "/>
+</node>
+</node>
+<node CREATED="1390210275077" FOLDED="true" ID="ID_68454568" MODIFIED="1390296626211" TEXT="Supplementary Group IDs ">
+<node CREATED="1390276246655" ID="ID_3696694" MODIFIED="1390276248901" TEXT="Not only did we belong to the group corresponding to the group ID in our password file entry, but we also could belong to up to 16 additional groups. "/>
+<node CREATED="1390276303414" ID="ID_288342247" MODIFIED="1390276305116" TEXT="The constant NGROUPS_MAX (Figure 2.10) specifies the number of supplementary group IDs. A common value is 16 "/>
+<node CREATED="1390276388213" ID="ID_1238660774" MODIFIED="1390276391051" TEXT="functions">
+<node CREATED="1390276398677" ID="ID_1132165748" MODIFIED="1390276401276" TEXT="int getgroups(int gidsetsize, gid_t grouplist[]); ">
+<node CREATED="1390277129789" ID="ID_76521809" MODIFIED="1390277131626" TEXT="The getgroups function fills in the array grouplist with the supplementary group IDs. Up to gidsetsize elements are stored in the array. "/>
+<node CREATED="1390277139461" ID="ID_748457261" MODIFIED="1390277142290" TEXT="The number of supplementary group IDs stored in the array is returned by the function "/>
+<node CREATED="1390277150293" ID="ID_577872171" MODIFIED="1390277152058" TEXT="As a special case, if gidsetsize is 0, the function returns only the number of supplementary group IDs. The array grouplist is not modified.  "/>
+</node>
+<node CREATED="1390277095853" ID="ID_107548805" MODIFIED="1390277286154" TEXT="int setgroups(int ngroups, const gid_t grouplist[]); ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The only use of setgroups is usually from the initgroups function, which reads the entire group
+    </p>
+    <p>
+      filewith the functions getgrent , setgrent , and endgrent , which we described earlierand determines
+    </p>
+    <p>
+      the group membership for username. It then calls setgroups to initialize the supplementary group ID
+    </p>
+    <p>
+      list for the user. One must be superuser to call initgroups, since it calls setgroups. In addition to
+    </p>
+    <p>
+      finding all the groups that username is a member of in the group file, initgroups also includes
+    </p>
+    <p>
+      basegid in the supplementary group ID list; basegid is the group ID from the password file for
+    </p>
+    <p>
+      username.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1390277166292" ID="ID_1853252068" MODIFIED="1390277168338" TEXT="by the superuser "/>
+</node>
+<node CREATED="1390277105293" ID="ID_247241767" MODIFIED="1390277335681" TEXT="int initgroups(const char *username, gid_t basegid); ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      called by only a few programs: the login(1) program
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1390210285373" ID="ID_918977323" MODIFIED="1390210288438" TEXT="Implementation Differences "/>
+<node CREATED="1390210294197" FOLDED="true" ID="ID_76025808" MODIFIED="1390296628147" TEXT="Other Data Files ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      this four is similar.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1390285712178" ID="ID_1097064556" MODIFIED="1390285742540" TEXT="/etc/hosts  ">
+<node CREATED="1390285744730" ID="ID_704590788" MODIFIED="1390285747258" TEXT="&lt;netdb.h&gt;  ">
+<node CREATED="1390285786932" ID="ID_1619779029" MODIFIED="1390285789497" TEXT="hostent  ">
+<node CREATED="1390285975609" ID="ID_1761264102" MODIFIED="1390285977878" TEXT="gethostbyname  "/>
+<node CREATED="1390285983529" ID="ID_1179540251" MODIFIED="1390285985658" TEXT="gethostbyaddr "/>
+</node>
+</node>
+</node>
+<node CREATED="1390285162562" ID="ID_1873981150" MODIFIED="1390285756959" TEXT="/etc/networks  ">
+<node CREATED="1390285759259" ID="ID_990833307" MODIFIED="1390285761250" TEXT="&lt;netdb.h&gt;  ">
+<node CREATED="1390285795460" ID="ID_1077554725" MODIFIED="1390285797841" TEXT="netent  "/>
+</node>
+</node>
+<node CREATED="1390285145434" ID="ID_1532286244" MODIFIED="1390285150672" TEXT="/etc/services ">
+<node CREATED="1390285768691" ID="ID_525813547" MODIFIED="1390285771322" TEXT="&lt;netdb.h&gt;  ">
+<node CREATED="1390285812580" ID="ID_1539497933" MODIFIED="1390285814814" TEXT="servent  "/>
+</node>
+</node>
+<node CREATED="1390285154746" ID="ID_1996685170" MODIFIED="1390285156759" TEXT="/etc/protocols ">
+<node CREATED="1390285776964" ID="ID_1999298496" MODIFIED="1390285779489" TEXT="&lt;netdb.h&gt;  ">
+<node CREATED="1390285802284" ID="ID_601473827" MODIFIED="1390285804923" TEXT="protoent  "/>
+</node>
+</node>
+<node CREATED="1390285178467" ID="ID_1749909846" MODIFIED="1390285383054" TEXT="general principle is that every data file has at least three functions: ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Additionally, if the data file supports some form of keyed lookup, routines are provided to search for a record with a specific key
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1390285201732" ID="ID_155767508" MODIFIED="1390285226356" TEXT="A get function that reads the next record, opening the file if necessary. ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      These functions
+    </p>
+    <p>
+      normally return a pointer to a structure. A null pointer is returned when the end of file is
+    </p>
+    <p>
+      reached. Most of the get functions return a pointer to a static structure, so we always have to
+    </p>
+    <p>
+      copy it if we want to save it.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390285242412" ID="ID_1829572293" MODIFIED="1390285281463" TEXT="A set function that opens the file, if not already open, and rewinds the file.  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This function is used
+    </p>
+    <p>
+      when we know we want to start again at the beginning of the file.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390285282614" ID="ID_1214086341" MODIFIED="1390285315756" TEXT="An end enTRy that closes the data file.  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      we always have to call this
+    </p>
+    <p>
+      when we're done, to close all the files.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1390210302573" ID="ID_1572639665" MODIFIED="1390287176034" TEXT="Login Accounting ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Two data files that have been provided with most UNIX systems are the utmp file, which keeps track
+    </p>
+    <p>
+      of all the users currently logged in, and the wtmp file, which keeps track of all logins and logouts.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      On login, one of these structures was filled in and written to the utmp file by the login program, and
+    </p>
+    <p>
+      the same structure was appended to the wtmp file. On logout, the entry in the utmp file was
+    </p>
+    <p>
+      erasedfilled with null bytesby the init process, and a new entry was appended to the wtmp file. This
+    </p>
+    <p>
+      logout entry in the wtmp file had the ut_name field zeroed out. Special entries were appended to the
+    </p>
+    <p>
+      wtmp file to indicate when the system was rebooted and right before and after the system's time and
+    </p>
+    <p>
+      date was changed. The who (1) program read the utmp file and printed its contents in a readable form.
+    </p>
+    <p>
+      Later versions of the UNIX System provided the last(1) command, which read through the wtmp file
+    </p>
+    <p>
+      and printed selected entries.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1390287087981" ID="ID_559157655" MODIFIED="1390287128904" TEXT="struct utmp  "/>
+</node>
+<node CREATED="1390210311030" FOLDED="true" ID="ID_1104710131" MODIFIED="1390353716203" TEXT="System Identification ">
+<node CREATED="1390287473863" ID="ID_670363196" MODIFIED="1390287476356" TEXT="int uname(struct utsname *name); ">
+<node CREATED="1390287462462" ID="ID_1797574095" MODIFIED="1390287465684" TEXT="return information on the current host and operating system. "/>
+<node CREATED="1390287487767" ID="ID_1765635210" MODIFIED="1390288029127" TEXT="struct utsname ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      unix time share system?
+    </p>
+    <p>
+      universal time share system?
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1390287784966" ID="ID_1453049187" MODIFIED="1390287786971" TEXT="sysname "/>
+<node CREATED="1390287791742" ID="ID_1037722048" MODIFIED="1390287794515" TEXT="nodename "/>
+<node CREATED="1390287803982" ID="ID_1144436987" MODIFIED="1390287805564" TEXT="release "/>
+<node CREATED="1390287810879" ID="ID_1730645164" MODIFIED="1390287812763" TEXT="version "/>
+<node CREATED="1390287817055" ID="ID_888349448" MODIFIED="1390287819298" TEXT="machine "/>
+</node>
+</node>
+<node CREATED="1390288030116" ID="ID_113529580" MODIFIED="1390288650697" TEXT="int gethostname(char *name, int namelen); ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      If the host is connected to a TCP/IP network, the host name is normally the fully qualified domain
+    </p>
+    <p>
+      name of the host.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1390210319582" FOLDED="true" ID="ID_1098275344" MODIFIED="1390296633052" TEXT="Time and Date Routines ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The basic time service provided by the UNIX kernel counts the number of seconds that have passed
+    </p>
+    <p>
+      since the Epoch: 00:00:00 January 1, 1970, Coordinated Universal Time (UTC)
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1390289121873" ID="ID_805128396" MODIFIED="1390291804881" TEXT="func">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The difference between localtime and gmtime is that the first converts the calendar time to the local
+    </p>
+    <p>
+      time, taking into account the local time zone and daylight saving time flag, whereas the latter
+    </p>
+    <p>
+      converts the calendar time into a broken-down time expressed as UTC.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1390289127241" ID="ID_943142232" MODIFIED="1390289129414" TEXT="time_t time(time_t *calptr); "/>
+<node CREATED="1390289138386" ID="ID_1818644108" MODIFIED="1390289140455" TEXT="int gettimeofday(struct timeval *restrict tp, void *restrict tzp); "/>
+<node CREATED="1390291651664" ID="ID_1888771279" MODIFIED="1390291653957" TEXT="struct tm *gmtime(const time_t *calptr); "/>
+<node CREATED="1390291662001" ID="ID_1215809710" MODIFIED="1390291664090" TEXT="struct tm *localtime(const time_t *calptr); "/>
+<node CREATED="1390291805772" ID="ID_1653449035" MODIFIED="1390291807652" TEXT="time_t mktime(struct tm *tmptr); "/>
+<node CREATED="1390291835588" ID="ID_1622548082" MODIFIED="1390291837823" TEXT="char *asctime(const struct tm *tmptr); "/>
+<node CREATED="1390291842725" ID="ID_964027272" MODIFIED="1390291845063" TEXT="char *ctime(const time_t *calptr); "/>
+<node CREATED="1390291913894" ID="ID_554022403" MODIFIED="1390291916412" TEXT="size_t strftime(char *restrict buf, size_t maxsize, const char *restrict format, const struct tm *restrict tmptr); "/>
+</node>
+<node CREATED="1390289550141" ID="ID_864008437" MODIFIED="1390289552402" TEXT="a broken-down time ">
+<node CREATED="1390289559485" ID="ID_1157463772" MODIFIED="1390289566648" TEXT="struct  tm ">
+<node CREATED="1390289620263" ID="ID_483844971" MODIFIED="1390291592779" TEXT="tm_sec; ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The reason that the seconds can be greater than 59 is to allow for a leap second.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390289626951" ID="ID_1015917181" MODIFIED="1390289629148" TEXT="tm_min; "/>
+<node CREATED="1390289632807" ID="ID_245240861" MODIFIED="1390289634804" TEXT="tm_hour; "/>
+<node CREATED="1390289641263" ID="ID_1598064336" MODIFIED="1390291612948" TEXT="tm_mday; ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Note that all the
+    </p>
+    <p>
+      fields except the day of the month are 0-based.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390289646383" ID="ID_1772869576" MODIFIED="1390289648299" TEXT="tm_mon; "/>
+<node CREATED="1390289651223" ID="ID_1663338819" MODIFIED="1390289653324" TEXT="tm_year; "/>
+<node CREATED="1390289664552" ID="ID_765749162" MODIFIED="1390289666169" TEXT="tm_wday; "/>
+<node CREATED="1390289670760" ID="ID_1259980565" MODIFIED="1390289672350" TEXT="tm_yday; "/>
+<node CREATED="1390289680952" ID="ID_1494405162" MODIFIED="1390291616182" TEXT="tm_isdst; ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The daylight saving time flag is positive if daylight
+    </p>
+    <p>
+      saving time is in effect, 0 if it's not in effect, and negative if the information isn't available.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1390289586069" ID="ID_1572446455" MODIFIED="1390289588464" TEXT="a calendar time "/>
+</node>
+<node CREATED="1390210328470" ID="ID_803471037" MODIFIED="1390210331518" TEXT="Summary "/>
+</node>
+<node CREATED="1390353726207" ID="ID_1452836328" MODIFIED="1390353729453" POSITION="right" TEXT="Process Environment ">
+<node CREATED="1390353735776" FOLDED="true" ID="ID_27004962" MODIFIED="1390443420132" TEXT="Introduction ">
+<node CREATED="1390442134894" ID="ID_1710580419" MODIFIED="1390442137899" TEXT="how the main function is called when the program is executed "/>
+<node CREATED="1390442138726" ID="ID_460026436" MODIFIED="1390442149363" TEXT="how command-line arguments are passed to the new program "/>
+<node CREATED="1390442157943" ID="ID_20198615" MODIFIED="1390442160697" TEXT="what the typical memory layout looks like "/>
+<node CREATED="1390442170127" ID="ID_1206434906" MODIFIED="1390442172302" TEXT="how to allocate additional memory "/>
+<node CREATED="1390442181719" ID="ID_68315364" MODIFIED="1390442184468" TEXT="how the process can use environment variables "/>
+<node CREATED="1390442193503" ID="ID_1300039162" MODIFIED="1390442195734" TEXT="various ways for the process to terminate "/>
+<node CREATED="1390442204600" ID="ID_1852894051" MODIFIED="1390442206889" TEXT="we&apos;ll look at the longjmp and setjmp functions and their interaction with the stack "/>
+<node CREATED="1390442231912" ID="ID_650606957" MODIFIED="1390442234105" TEXT="examining the resource limits of a process "/>
+</node>
+<node CREATED="1390353743424" FOLDED="true" ID="ID_1306496275" MODIFIED="1390443419340" TEXT="main Function ">
+<node CREATED="1390442496821" ID="ID_180501720" MODIFIED="1390442498748" TEXT="When a C program is executed by the kernelby one of the exec functions "/>
+<node CREATED="1390442504757" ID="ID_1161405395" MODIFIED="1390442506971" TEXT="a special start-up routine is called before the main function is called "/>
+<node CREATED="1390442532078" ID="ID_596750721" MODIFIED="1390442534251" TEXT="The executable program file specifies this routine as the starting address for the program "/>
+<node CREATED="1390442543871" ID="ID_181386004" MODIFIED="1390442545635" TEXT="his is set up by the link editor when it is invoked by the C compiler "/>
+<node CREATED="1390442555583" ID="ID_450327492" MODIFIED="1390442558505" TEXT="This start-up routine takes values from the kernelthe command-line arguments and the environmentand sets things up so that the main function is called as shown earlier "/>
+</node>
+<node CREATED="1390353751400" FOLDED="true" ID="ID_806120855" MODIFIED="1390537879624" TEXT="Process Termination ">
+<node CREATED="1390442647300" ID="ID_1466352328" MODIFIED="1390442664250" TEXT="8 ways to terminate">
+<node CREATED="1390442681461" ID="ID_1305754" MODIFIED="1390443861470" TEXT="Normal ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      _exit and _Exit, which return to the kernel
+    </p>
+    <p>
+      immediately, and exit, which performs certain cleanup processing and then returns to the kernel
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Historically, the exit function has always performed a clean shutdown of the standard I/O library: the
+    </p>
+    <p>
+      fclose function is called for all open streams
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1390442695358" ID="ID_366971447" MODIFIED="1390442697321" TEXT="Return from main "/>
+<node CREATED="1390443736197" ID="ID_1656742591" MODIFIED="1390443738649" TEXT="&lt;stdlib.h&gt; ">
+<node CREATED="1390442700750" ID="ID_1928352853" MODIFIED="1390442702873" TEXT="Calling exit ">
+<node CREATED="1390443685899" ID="ID_129659683" MODIFIED="1390443691809" TEXT="= return "/>
+</node>
+<node CREATED="1390443757453" ID="ID_467035057" MODIFIED="1390443762566" TEXT="Exit "/>
+</node>
+<node CREATED="1390443773070" ID="ID_286459315" MODIFIED="1390443775079" TEXT="&lt;unistd.h&gt; ">
+<node CREATED="1390442706679" ID="ID_1863583608" MODIFIED="1390443755385" TEXT="Calling _exit "/>
+</node>
+<node CREATED="1390442728648" ID="ID_38221228" MODIFIED="1390442730868" TEXT="Return of the last thread from its start routine  "/>
+<node CREATED="1390442737024" ID="ID_161668507" MODIFIED="1390442739396" TEXT="Calling pthread_exit (Section 11.5) from the last thread "/>
+</node>
+<node CREATED="1390442688294" ID="ID_989381949" MODIFIED="1390442689874" TEXT="Abnormal ">
+<node CREATED="1390442746848" ID="ID_832202241" MODIFIED="1390442748708" TEXT="Calling abort "/>
+<node CREATED="1390442753952" ID="ID_826881538" MODIFIED="1390442756724" TEXT="Receipt of a signal "/>
+<node CREATED="1390442771522" ID="ID_347580815" MODIFIED="1390442773530" TEXT="Response of the last thread to a cancellation request "/>
+</node>
+</node>
+<node CREATED="1390442911577" ID="ID_785222343" MODIFIED="1390442922726" TEXT="exit(main(argc, argv));">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The start-up routine that we mentioned in the previous section is also written so that if the main
+    </p>
+    <p>
+      function returns, the exit function is called. If the start-up routine were coded in C (it is often coded
+    </p>
+    <p>
+      in assembler) the call to main could look like
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390445746327" ID="ID_1691499209" MODIFIED="1390445749072" TEXT="int atexit(void (*func)(void)); ">
+<node CREATED="1390445831576" ID="ID_1839908501" MODIFIED="1390445833941" TEXT="a process can register up to 32 functions that are automatically called by exit ">
+<node CREATED="1390446005131" ID="ID_1728881162" MODIFIED="1390446007241" TEXT="The sysconf function can be used to determine the maximum number of exit handlers supported by a given platform "/>
+</node>
+<node CREATED="1390445924898" ID="ID_1411010113" MODIFIED="1390445927655" TEXT="he exit function calls these functions in reverse order of their registration. "/>
+<node CREATED="1390445932554" ID="ID_350589346" MODIFIED="1390445964273" TEXT="Each function is called as many times as it was registered. "/>
+</node>
+</node>
+<node CREATED="1390353759056" ID="ID_1288967303" MODIFIED="1390353761305" TEXT="Command-Line Arguments ">
+<node CREATED="1390537881952" ID="ID_215564944" MODIFIED="1390537888356" TEXT="We are guaranteed by both ISO C and POSIX.1 that argv[argc] is a null pointer "/>
+</node>
+<node CREATED="1390353764632" ID="ID_1763371937" MODIFIED="1390353767052" TEXT="Environment List ">
+<node CREATED="1390537957260" ID="ID_74120715" MODIFIED="1390537958960" TEXT="Each program is also passed an environment list ">
+<node CREATED="1390538078034" ID="ID_1442305275" MODIFIED="1390538080225" TEXT="extern char **environ; "/>
+</node>
+</node>
+<node CREATED="1390353770936" ID="ID_1115791120" MODIFIED="1390353775479" TEXT="Memory Layout of a C Program ">
+<node CREATED="1390543626238" ID="ID_1388971881" MODIFIED="1390543628729" TEXT="Text segment ">
+<node CREATED="1390543676646" ID="ID_768088066" MODIFIED="1390543678501" TEXT="the machine instructions that the CPU executes "/>
+</node>
+<node CREATED="1390543639213" ID="ID_643607725" MODIFIED="1390543641236" TEXT="Initialized data segment ">
+<node CREATED="1390543718462" ID="ID_302774884" MODIFIED="1390543720487" TEXT="called simply the data segment, containing variables that are specifically initialized in the program "/>
+</node>
+<node CREATED="1390543647525" ID="ID_1833016102" MODIFIED="1390543765311" TEXT="Uninitialized data segment ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      called the &quot;bss&quot; segment, named after an ancient assembler
+    </p>
+    <p>
+      operator that stood for &quot;block started by symbol.&quot; Data in this segment is initialized by the
+    </p>
+    <p>
+      kernel to arithmetic 0 or null pointers before the program starts executing
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1390543779255" ID="ID_1811951119" MODIFIED="1390543784436" TEXT="called the &quot;bss&quot; segment"/>
+</node>
+<node CREATED="1390543654989" ID="ID_1631308485" MODIFIED="1390543656943" TEXT="Stack ">
+<node CREATED="1390543816983" ID="ID_706965557" MODIFIED="1390543818843" TEXT="Data in this segment is initialized by the kernel to arithmetic 0 or null pointers"/>
+</node>
+<node CREATED="1390543661733" ID="ID_849505494" MODIFIED="1390543664259" TEXT="Heap ">
+<node CREATED="1390543866064" ID="ID_533989482" MODIFIED="1390543868689" TEXT="where dynamic memory allocation usually takes place "/>
+<node CREATED="1390543905281" ID="ID_1022583141" MODIFIED="1390543936318" TEXT="Historically,   the heap has been located between the uninitialized data and the stack "/>
+</node>
+</node>
+<node CREATED="1390353779625" ID="ID_1469942777" MODIFIED="1390353781798" TEXT="Shared Libraries "/>
+<node CREATED="1390353786513" ID="ID_745336090" MODIFIED="1390353788986" TEXT="Memory Allocation "/>
+<node CREATED="1390353794521" ID="ID_804673125" MODIFIED="1390353796582" TEXT="Environment Variables "/>
+<node CREATED="1390353801617" ID="ID_213315409" MODIFIED="1390353803967" TEXT="setjmp and longjmp Functions "/>
+<node CREATED="1390353808881" ID="ID_394871344" MODIFIED="1390353812097" TEXT="getrlimit and setrlimit Functions "/>
+<node CREATED="1390353814761" ID="ID_1860352453" MODIFIED="1390353818158" TEXT="Summary "/>
 </node>
 </node>
 </map>

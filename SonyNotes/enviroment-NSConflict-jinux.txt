@@ -57,7 +57,7 @@ tosemc_preb_sys
 	3.find the git path and do as follow:
 		$ mkdir apps
 		$ cd apps
-		$ repo init -u git://review.sonyericsson.net/platform/applicationmanifest.git
+		$ repo init -u git://review.sonyericsson.net/platform/applicationmanifest.git -b master
 		$ repo sync platform/vendor/semc/packages/apps/contacts-largeui
 		$ cd vendor/semc/packages/apps/contacts-largeui
 		$ git checkout -b mybranch 15.2.A.0.8

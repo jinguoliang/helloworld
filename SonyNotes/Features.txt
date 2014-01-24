@@ -61,3 +61,16 @@ FP[[+15338]]  [[~/shared_with_windows/我的坚果云/resource/html/FP15338 Down
 	5.FP7782 Email sync settings customization
 		Include in FP11573. The purpose of this feature is to make the value list and the default value customizable. And the value list in CDF should be chosen from the current list. The value list and the default value will be read from CDF first. If there is nothing in CDF, currently value list and default value as above will be used.
 		https://wiki.sonyericsson.net/androiki/FP7782_EmailSyncSettingsCustomization/Definition_Report
+
+
+FP14206 HW unique key for File System Encryption 
+	https://wiki.sonyericsson.net/androiki/FP14206_HW_unique_key_for_File_System_Encryption
+	PID002169
+18185	Use AES 256 for file system encryption for Yukon ODM
+	FP14207 Use AES 256 for file system encryption
+	https://wiki.sonyericsson.net/androiki/FP14207_Use_AES_256_for_file_system_encryption
+	PID002169
+18188	EAS Tasks for Yukon ODM
+	Feature Definition FP11804 Tasks https://wiki.sonyericsson.net/androiki/Feature_Definition_FP11804_Tasks
+	FP11804 EAS Tasks for Eagle TMO US https://wiki.sonyericsson.net/androiki/FP11804_EAS_Tasks_for_Eagle_TMO_US
+	PID002169
