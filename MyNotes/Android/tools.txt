@@ -27,3 +27,5 @@ adb shell am 可以用来发送intent打开activity，service，关闭等等
 aapt即Android Asset Packaging Tool , 在SDK的build-tools目录下. 该工具可以查看, 创建, 更新ZIP格式的文档附件(zip, jar, apk). 也可将资源文件编译成二进制文件
  aapt d[ump] --values permissions SemcPhone.apk       view the permissions
 
+mount -o remount,rw rootfs /   
+adb remount                  - remounts the /system partition on the device read-write

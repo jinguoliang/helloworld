@@ -2020,7 +2020,7 @@
 </node>
 <node CREATED="1390210328470" ID="ID_803471037" MODIFIED="1390210331518" TEXT="Summary "/>
 </node>
-<node CREATED="1390353726207" ID="ID_1452836328" MODIFIED="1390353729453" POSITION="right" TEXT="Process Environment ">
+<node CREATED="1390353726207" FOLDED="true" ID="ID_1452836328" MODIFIED="1390776660023" POSITION="right" TEXT="Process Environment ">
 <node CREATED="1390353735776" FOLDED="true" ID="ID_27004962" MODIFIED="1390443420132" TEXT="Introduction ">
 <node CREATED="1390442134894" ID="ID_1710580419" MODIFIED="1390442137899" TEXT="how the main function is called when the program is executed "/>
 <node CREATED="1390442138726" ID="ID_460026436" MODIFIED="1390442149363" TEXT="how command-line arguments are passed to the new program "/>
@@ -2108,15 +2108,15 @@
 <node CREATED="1390445932554" ID="ID_350589346" MODIFIED="1390445964273" TEXT="Each function is called as many times as it was registered. "/>
 </node>
 </node>
-<node CREATED="1390353759056" ID="ID_1288967303" MODIFIED="1390353761305" TEXT="Command-Line Arguments ">
+<node CREATED="1390353759056" FOLDED="true" ID="ID_1288967303" MODIFIED="1390727349381" TEXT="Command-Line Arguments ">
 <node CREATED="1390537881952" ID="ID_215564944" MODIFIED="1390537888356" TEXT="We are guaranteed by both ISO C and POSIX.1 that argv[argc] is a null pointer "/>
 </node>
-<node CREATED="1390353764632" ID="ID_1763371937" MODIFIED="1390353767052" TEXT="Environment List ">
+<node CREATED="1390353764632" FOLDED="true" ID="ID_1763371937" MODIFIED="1390763416466" TEXT="Environment List ">
 <node CREATED="1390537957260" ID="ID_74120715" MODIFIED="1390537958960" TEXT="Each program is also passed an environment list ">
 <node CREATED="1390538078034" ID="ID_1442305275" MODIFIED="1390538080225" TEXT="extern char **environ; "/>
 </node>
 </node>
-<node CREATED="1390353770936" ID="ID_1115791120" MODIFIED="1390353775479" TEXT="Memory Layout of a C Program ">
+<node CREATED="1390353770936" ID="ID_1115791120" MODIFIED="1390763403963" TEXT="Memory Layout of a C Program ">
 <node CREATED="1390543626238" ID="ID_1388971881" MODIFIED="1390543628729" TEXT="Text segment ">
 <node CREATED="1390543676646" ID="ID_768088066" MODIFIED="1390543678501" TEXT="the machine instructions that the CPU executes "/>
 </node>
@@ -2139,8 +2139,7 @@
       kernel to arithmetic 0 or null pointers before the program starts executing
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1390543779255" ID="ID_1811951119" MODIFIED="1390543784436" TEXT="called the &quot;bss&quot; segment"/>
 </node>
 <node CREATED="1390543654989" ID="ID_1631308485" MODIFIED="1390543656943" TEXT="Stack ">
@@ -2150,13 +2149,909 @@
 <node CREATED="1390543866064" ID="ID_533989482" MODIFIED="1390543868689" TEXT="where dynamic memory allocation usually takes place "/>
 <node CREATED="1390543905281" ID="ID_1022583141" MODIFIED="1390543936318" TEXT="Historically,   the heap has been located between the uninitialized data and the stack "/>
 </node>
+<node CREATED="1390763476536" ID="ID_1902362867" MODIFIED="1390763479329" TEXT="size ">
+<node CREATED="1390763482450" ID="ID_984796837" MODIFIED="1390763490634" TEXT="view the size of data and text"/>
 </node>
-<node CREATED="1390353779625" ID="ID_1469942777" MODIFIED="1390353781798" TEXT="Shared Libraries "/>
-<node CREATED="1390353786513" ID="ID_745336090" MODIFIED="1390353788986" TEXT="Memory Allocation "/>
-<node CREATED="1390353794521" ID="ID_804673125" MODIFIED="1390353796582" TEXT="Environment Variables "/>
-<node CREATED="1390353801617" ID="ID_213315409" MODIFIED="1390353803967" TEXT="setjmp and longjmp Functions "/>
-<node CREATED="1390353808881" ID="ID_394871344" MODIFIED="1390353812097" TEXT="getrlimit and setrlimit Functions "/>
+<node CREATED="1390763498634" ID="ID_1595181253" MODIFIED="1390763503410" TEXT="strip">
+<node CREATED="1390763504402" ID="ID_1023053010" MODIFIED="1390763539723" TEXT="remove the symbol table of bin file"/>
+</node>
+</node>
+<node CREATED="1390353779625" ID="ID_1469942777" MODIFIED="1390353781798" TEXT="Shared Libraries ">
+<node CREATED="1390728445360" ID="ID_1151529778" MODIFIED="1390728481901" TEXT="This reduces the size of each executable file but may add some runtime overhead, either when the program is first executed or the first time each shared library function is called "/>
+<node CREATED="1390728501454" ID="ID_363917448" MODIFIED="1390728503278" TEXT="Another advantage of shared libraries is that library functions can be replaced with new versions without having to relink edit every program that uses the library "/>
+<node CREATED="1390728517902" ID="ID_25661934" MODIFIED="1390728520653" TEXT="cc -static hello1.c ">
+<node CREATED="1390728521814" ID="ID_1080866960" MODIFIED="1390728527523" TEXT="prevent gcc from using shared libraries "/>
+</node>
+<node CREATED="1390728532838" ID="ID_912557651" MODIFIED="1390728534674" TEXT="gcc defaults to use shared libraries "/>
+</node>
+<node CREATED="1390353786513" ID="ID_745336090" MODIFIED="1390353788986" TEXT="Memory Allocation ">
+<node CREATED="1390728563599" ID="ID_1752163680" MODIFIED="1390728565662" TEXT="ISO C ">
+<node CREATED="1390728581999" ID="ID_1367077054" MODIFIED="1390728584409" TEXT="void *malloc(size_t size); ">
+<node CREATED="1390728649313" ID="ID_1194683729" MODIFIED="1390728651192" TEXT="The initial value of the memory is indeterminate. "/>
+</node>
+<node CREATED="1390728597639" ID="ID_1435162909" MODIFIED="1390728599660" TEXT="void *calloc(size_t nobj, size_t size); ">
+<node CREATED="1390728659833" ID="ID_1281110049" MODIFIED="1390728661778" TEXT="a specified number of objects of a specified size "/>
+<node CREATED="1390728667417" ID="ID_737372659" MODIFIED="1390728669202" TEXT="The space is initialized to all 0 bits. "/>
+</node>
+<node CREATED="1390728603623" ID="ID_926595835" MODIFIED="1390729811104" TEXT="void *realloc(void *ptr, size_t newsize); ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The allocation routines are usually implemented with the sbrk(2) system call.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Although sbrk can expand or contract the memory of a process, most versions of malloc and free
+    </p>
+    <p>
+      never decrease their memory size. The space that we free is available for a later allocation, but the
+    </p>
+    <p>
+      freed space is not usually returned to the kernel; that space is kept in the malloc pool.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1390728774835" ID="ID_222138400" MODIFIED="1390728776679" TEXT="when the size increases, the initial value of the space between the old contents and the end of the new area is indeterminate "/>
+<node CREATED="1390728980079" ID="ID_1144134548" MODIFIED="1390728982402" TEXT="Because the area may move, we shouldn&apos;t have any pointers into this area. "/>
+<node CREATED="1390729046561" ID="ID_1814125421" MODIFIED="1390729048659" TEXT="As a special case, if ptr is a null pointer, realloc behaves like malloc and allocates a region of the specified newsize "/>
+</node>
+<node CREATED="1390728616079" ID="ID_387572822" MODIFIED="1390728618424" TEXT="void free(void *ptr); "/>
+</node>
+<node CREATED="1390729814210" ID="ID_89961006" MODIFIED="1390729816761" TEXT="Alternate Memory Allocators ">
+<node CREATED="1390729910276" ID="ID_829291206" MODIFIED="1390729987616" TEXT="libmalloc ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      SVR4-based systems, such as Solaris, include the libmalloc library, which provides a set of
+    </p>
+    <p>
+      interfaces matching the ISO C memory allocation functions.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1390729987606" ID="ID_1409073746" MODIFIED="1390729989273" TEXT="mallopt ">
+<node CREATED="1390730002294" ID="ID_1973305234" MODIFIED="1390730004043" TEXT="function that allows a process to set certain variables that control the operation of the storage allocator "/>
+</node>
+<node CREATED="1390730009974" ID="ID_1003511315" MODIFIED="1390730012236" TEXT="mallinfo ">
+<node CREATED="1390730024127" ID="ID_840988273" MODIFIED="1390730025782" TEXT="is also available to provide statistics on the memory allocator "/>
+</node>
+</node>
+<node CREATED="1390729916444" ID="ID_37183588" MODIFIED="1390730286124" TEXT="vmalloc ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Vo [1996] describes a memory allocator that allows processes to allocate memory using different
+    </p>
+    <p>
+      techniques for different regions of memory.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      In addition to the functions specific to vmalloc, the library
+    </p>
+    <p>
+      also provides emulations of the ISO C memory allocation functions.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390729921245" ID="ID_547638369" MODIFIED="1390730328630" TEXT="quick-fit ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Historically, the standard malloc algorithm used either a best-fit or a first-fit memory allocation
+    </p>
+    <p>
+      strategy. Quick-fit is faster than either, but tends to use more memory. Weinstock and Wulf [1988]
+    </p>
+    <p>
+      describe the algorithm, which is based on splitting up memory into buffers of various sizes and
+    </p>
+    <p>
+      maintaining unused buffers on different free lists, depending on the size of the buffers. Free
+    </p>
+    <p>
+      implementations of malloc and free based on quick-fit are readily available from several FTP sites.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390729930469" ID="ID_718718192" MODIFIED="1390730498963" TEXT="alloca Function ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The function alloca has the same calling sequence
+    </p>
+    <p>
+      as malloc; however, instead of allocating memory from the heap, the memory is allocated from the
+    </p>
+    <p>
+      stack frame of the current function. The advantage is that we don't have to free the space; it goes
+    </p>
+    <p>
+      away automatically when the function returns. The alloca function increases the size of the stack
+    </p>
+    <p>
+      frame. The disadvantage is that some systems can't support alloca, if it's impossible to increase the
+    </p>
+    <p>
+      size of the stack frame after the function has been called. Nevertheless, many software packages use
+    </p>
+    <p>
+      it, and implementations exist for a wide variety of systems.
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="idea"/>
+<icon BUILTIN="idea"/>
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node CREATED="1390353794521" ID="ID_804673125" MODIFIED="1390353796582" TEXT="Environment Variables ">
+<node CREATED="1390731424624" ID="ID_1845878066" MODIFIED="1390731426391" TEXT="char *getenv(const char *name); "/>
+<node CREATED="1390732463630" ID="ID_1316336208" MODIFIED="1390732625892" TEXT="int putenv(char *str); ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      a string of the form name=value and places it in the environment list.
+    </p>
+    <p>
+      If name already exists, its old definition is first removed.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390732473470" ID="ID_1425166450" MODIFIED="1390732643284" TEXT="int setenv(const char *name, const char *value, int rewrite); ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      If name already exists in the environment, then (a) if
+    </p>
+    <p>
+      rewrite is nonzero, the existing definition for name is first removed; (b) if rewrite is 0, an
+    </p>
+    <p>
+      existing definition for name is not removed, name is not set to the new value, and no error
+    </p>
+    <p>
+      occurs.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390732482406" ID="ID_434175410" MODIFIED="1390732668731" TEXT="int unsetenv(const char *name); ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      removes any definition of name. It is not an error if such a definition does
+    </p>
+    <p>
+      not exist.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390733160477" ID="ID_1410159861" MODIFIED="1390733191688" TEXT="modify the env list">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      the environment listthe array of pointers to the actual name=value stringsand the
+    </p>
+    <p>
+      environment strings are typically stored at the top of a process's memory space, above the stack.
+    </p>
+    <p>
+      Deleting a string is simple; we simply find the pointer in the environment list and move all
+    </p>
+    <p>
+      subsequent pointers down one. But adding a string or modifying an existing string is more difficult.
+    </p>
+    <p>
+      The space at the top of the stack cannot be expanded, because it is often at the top of the address
+    </p>
+    <p>
+      space of the process and so can't expand upward; it can't be expanded downward, because all the
+    </p>
+    <p>
+      stack frames below it can't be moved
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1390733174229" ID="ID_1839221093" MODIFIED="1390733194673" TEXT="If we&apos;re modifying an existing name ">
+<node CREATED="1390733212349" ID="ID_1980633665" MODIFIED="1390733241504" TEXT="the new value is less than or equal to the size of the existing value">
+<node CREATED="1390733246070" ID="ID_1808066783" MODIFIED="1390733250960" TEXT="we can just copy the new string over the old string. "/>
+</node>
+<node CREATED="1390733344585" ID="ID_1315091036" MODIFIED="1390733346928" TEXT="the new value is larger than the old one ">
+<node CREATED="1390733329336" ID="ID_459868457" MODIFIED="1390733330659" TEXT="&#xa0;First, we have to call malloc to allocate room for the name=value string and copy the string to this area"/>
+<node CREATED="1390733360841" ID="ID_368279706" MODIFIED="1390733362755" TEXT="replace the old pointer in the environment list for name with the pointer to this allocated area "/>
+</node>
+</node>
+<node CREATED="1390733200901" ID="ID_125745095" MODIFIED="1390733388800" TEXT="adding a new name, it&apos;s more complicated.">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      a. Then, if it's the first time we've added a new name, we have to call malloc to obtain room
+    </p>
+    <p>
+      for a new list of pointers. We copy the old environment list to this new area and store a
+    </p>
+    <p>
+      pointer to the name=value string at the end of this list of pointers. We also store a null
+    </p>
+    <p>
+      pointer at the end of this list, of course. Finally, we set environ to point to this new list of
+    </p>
+    <p>
+      pointers. Note from Figure 7.6 that if the original environment list was contained above
+    </p>
+    <p>
+      the top of the stack, as is common, then we have moved this list of pointers to the heap.
+    </p>
+    <p>
+      But most of the pointers in this list still point to name=value strings above the top of the
+    </p>
+    <p>
+      stack.
+    </p>
+    <p>
+      b.
+    </p>
+    <p>
+      b. If this isn't the first time we've added new strings to the environment list, then we know
+    </p>
+    <p>
+      that we've already allocated room for the list on the heap, so we just call realloc to
+    </p>
+    <p>
+      allocate room for one more pointer. The pointer to the new name=value string is stored at
+    </p>
+    <p>
+      the end of the list (on top of the previous null pointer), followed by a null pointer.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1390353801617" ID="ID_213315409" MODIFIED="1390353803967" TEXT="setjmp and longjmp Functions ">
+<node CREATED="1390744353209" ID="ID_1444317681" MODIFIED="1390744449972" TEXT="jmp_buf ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This data type is some form of array that is capable of
+    </p>
+    <p>
+      holding all the information required to restore the status of the stack to the state when we call
+    </p>
+    <p>
+      longjmp
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390744277256" ID="ID_273160673" MODIFIED="1390744278256" TEXT="int setjmp(jmp_buf env); ">
+<node CREATED="1390744308216" ID="ID_60983758" MODIFIED="1390744310441" TEXT="We call setjmp from the location that we want to return to "/>
+<node CREATED="1390744594622" ID="ID_507348920" MODIFIED="1390744596927" TEXT="setjmp returns 0 because we called it directly "/>
+</node>
+<node CREATED="1390744283024" ID="ID_1783940126" MODIFIED="1390759298774" TEXT="void longjmp(jmp_buf env, int val); ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The setjmp(3) manual page on one system states
+    </p>
+    <p>
+      that variables stored in memory will have values as of the time of the longjmp, whereas variables in
+    </p>
+    <p>
+      the CPU and floating-point registers are restored to their values when setjmp was called.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1390744451107" ID="ID_990373703" MODIFIED="1390744453716" TEXT="the second, val, is a nonzero value that becomes the return value from setjmp "/>
+<node CREATED="1390744483772" ID="ID_1411314354" MODIFIED="1390744485963" TEXT="The reason for the second argument is to allow us to have more than one longjmp for each setjmp "/>
+</node>
+</node>
+<node CREATED="1390353808881" ID="ID_394871344" MODIFIED="1390353812097" TEXT="getrlimit and setrlimit Functions ">
+<node CREATED="1390759299915" ID="ID_843723685" MODIFIED="1390759302254" TEXT="int getrlimit(int resource, struct rlimit *rlptr); "/>
+<node CREATED="1390759306106" ID="ID_65308177" MODIFIED="1390759308356" TEXT="int setrlimit(int resource, const struct rlimit *rlptr); "/>
+<node CREATED="1390759576887" ID="ID_1392306958" MODIFIED="1390759579319" TEXT="The resource limits affect the calling process and are inherited by any of its children "/>
+</node>
 <node CREATED="1390353814761" ID="ID_1860352453" MODIFIED="1390353818158" TEXT="Summary "/>
+</node>
+<node CREATED="1390776414763" ID="ID_1468272683" MODIFIED="1390776417571" POSITION="right" TEXT="Process Control ">
+<node CREATED="1390776423725" FOLDED="true" ID="ID_1102468968" MODIFIED="1390777119110" TEXT="Introduction ">
+<node CREATED="1390776663386" ID="ID_1041953121" MODIFIED="1390776665650" TEXT="This includes the creation of new processes, program execution, and process termination.  "/>
+<node CREATED="1390776727131" ID="ID_447702619" MODIFIED="1390776729873" TEXT="the various IDs that are the property of the processreal, effective, and saved; user and group IDsand how they&apos;re affected by the process control primitives "/>
+<node CREATED="1390776739834" ID="ID_1351676046" MODIFIED="1390776741693" TEXT="Interpreter files and the system function are also covered. "/>
+<node CREATED="1390776762570" ID="ID_940784788" MODIFIED="1390776765031" TEXT="process accounting "/>
+</node>
+<node CREATED="1390776430251" FOLDED="true" ID="ID_697392142" MODIFIED="1390976418000" TEXT=" Process Identifiers ">
+<node CREATED="1390777120716" ID="ID_763959443" MODIFIED="1390777124896" TEXT="Every process has a unique process ID, a non-negative integer "/>
+<node CREATED="1390777161059" ID="ID_1272031378" MODIFIED="1390777186943" TEXT="it is often used as a piece of other identifiers, to guarantee uniqueness. ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      For example, applications sometimes include the process ID as part of a
+    </p>
+    <p>
+      filename in an attempt to generate unique filenames
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390777191829" ID="ID_231312240" MODIFIED="1390777228007" TEXT="process IDs are reused ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      As processes terminate, their IDs become candidates for
+    </p>
+    <p>
+      reuse. Most UNIX systems implement algorithms to delay reuse, however, so that newly created
+    </p>
+    <p>
+      processes are assigned IDs different from those used by processes that terminated recently. This
+    </p>
+    <p>
+      prevents a new process from being mistaken for the previous process to have used the same ID.
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390777230038" ID="ID_302905790" MODIFIED="1390777238053" TEXT="special process id">
+<node CREATED="1390777239932" ID="ID_1780583985" MODIFIED="1390777255014" TEXT="Process ID 0 is usually the scheduler process and is often known as the swapper ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      No program on disk
+    </p>
+    <p>
+      corresponds to this process, which is part of the kernel and is known as a system process.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390777261621" ID="ID_285104907" MODIFIED="1390777264179" TEXT="Process ID 1 is usually the init process and is invoked by the kernel at the end of the bootstrap procedure. "/>
+<node CREATED="1390777301567" ID="ID_1785333921" MODIFIED="1390777865447" TEXT="process ID 2 is the pagedaemon ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      For example, on some virtual memory implementations of the UNIX System, process ID 2 is
+    </p>
+    <p>
+      the pagedaemon. This process is responsible for supporting the paging of the virtual memory system.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1390776437677" FOLDED="true" ID="ID_620916461" MODIFIED="1390976419481" TEXT="fork Function ">
+<node CREATED="1390777916421" ID="ID_50929485" MODIFIED="1390777969194" TEXT="The child is a copy of the parent. ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      For example, the child gets a copy of the parent's data space, heap, and
+    </p>
+    <p>
+      stack. Note that this is a copy for the child; the parent and the child do not share these portions of
+    </p>
+    <p>
+      memory. The parent and the child share the text segment
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390779870350" ID="ID_519882012" MODIFIED="1390779892381" TEXT="File Sharing ">
+<node CREATED="1390779877742" ID="ID_747795696" MODIFIED="1390779922798" TEXT="inherited ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Besides the open files, there are numerous other properties of the parent that are inherited by the
+    </p>
+    <p>
+      child:
+    </p>
+    <p>
+      Real user ID, real group ID, effective user ID, effective group ID
+    </p>
+    <p>
+      Supplementary group IDs
+    </p>
+    <p>
+      Process group ID
+    </p>
+    <p>
+      Session ID
+    </p>
+    <p>
+      Controlling terminal
+    </p>
+    <p>
+      The set-user-ID and set-group-ID flags
+    </p>
+    <p>
+      Current working directory
+    </p>
+    <p>
+      Root directory
+    </p>
+    <p>
+      File mode creation mask
+    </p>
+    <p>
+      Signal mask and dispositions
+    </p>
+    <p>
+      The close-on-exec flag for any open file descriptors
+    </p>
+    <p>
+      Environment
+    </p>
+    <p>
+      Attached shared memory segments
+    </p>
+    <p>
+      Memory mappings
+    </p>
+    <p>
+      Resource limits
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1390779924685" ID="ID_147980596" MODIFIED="1390780027156" TEXT="differences ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The differences between the parent and child are
+    </p>
+    <p>
+      The return value from fork
+    </p>
+    <p>
+      The process IDs are different
+    </p>
+    <p>
+      The two processes have different parent process IDs: the parent process ID of the child is the
+    </p>
+    <p>
+      parent; the parent process ID of the parent doesn't change
+    </p>
+    <p>
+      The child's tms_utime, tms_stime, tms_cutime, and tms_cstime values are set to 0
+    </p>
+    <p>
+      File locks set by the parent are not inherited by the child
+    </p>
+    <p>
+      Pending alarms are cleared for the child
+    </p>
+    <p>
+      The set of pending signals for the child is set to the empty set
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1390780033009" ID="ID_819883764" MODIFIED="1390780035469" TEXT="reasons for fork to fail ">
+<node CREATED="1390780047329" ID="ID_283970144" MODIFIED="1390780049847" TEXT="if too many processes are already in the system "/>
+<node CREATED="1390780058769" ID="ID_13514500" MODIFIED="1390780061201" TEXT="if the total number of processes for this real user ID exceeds the system&apos;s limit. "/>
+</node>
+<node CREATED="1390780077569" ID="ID_1964858780" MODIFIED="1390780080078" TEXT="There are two uses for fork: ">
+<node CREATED="1390780124619" ID="ID_785178591" MODIFIED="1390780127940" TEXT="When a process wants to duplicate itself so that the parent and child can each execute different sections of code at the same time. "/>
+<node CREATED="1390780170666" ID="ID_1047983493" MODIFIED="1390780173261" TEXT="When a process wants to execute a different program. This is common for shells. In this case, the child does an exec  "/>
+</node>
+</node>
+<node CREATED="1390776444627" FOLDED="true" ID="ID_611515763" MODIFIED="1390976416206" TEXT=" vfork Function ">
+<node CREATED="1390794666840" ID="ID_439175176" MODIFIED="1390794681959" TEXT="  Instead, while the child is running and until it calls either exec or exit, the child runs in the address space of the parent "/>
+<node CREATED="1390794700241" ID="ID_1392290564" MODIFIED="1390797072196" TEXT="vfork guarantees that the child runs first, until the child calls exec or exit. ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This
+    </p>
+    <p>
+      can lead to deadlock if the child depends on further actions of the parent before calling either of these
+    </p>
+    <p>
+      two functions.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1390776450115" FOLDED="true" ID="ID_1737018772" MODIFIED="1390976415462" TEXT="exit Functions ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Regardless of how a process terminates, the same code in the kernel is eventually executed. This
+    </p>
+    <p>
+      kernel code closes all the open descriptors for the process, releases the memory that it was using,
+    </p>
+    <p>
+      and the like
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1390805402266" ID="ID_1672762229" MODIFIED="1390805404677" TEXT="In UNIX System terminology, a process that has terminated, but whose parent has not yet waited for it, is called a zombie. "/>
+<node CREATED="1390805460179" ID="ID_125690361" MODIFIED="1390805461423" TEXT="child processes, they become zombies unless we wait for them and fetch their termination status. "/>
+</node>
+<node CREATED="1390776456308" FOLDED="true" ID="ID_1887472067" MODIFIED="1390976413526" TEXT="wait and waitpid Functions ">
+<node CREATED="1390806616762" ID="ID_1453828693" MODIFIED="1390806618420" TEXT="When a process terminates, either normally or abnormally, the kernel notifies the parent by sending the SIGCHLD signal to the parent "/>
+<node CREATED="1390807429633" ID="ID_552503955" MODIFIED="1390807450062" TEXT="the return">
+<node CREATED="1390807456666" ID="ID_399152645" MODIFIED="1390807458576" TEXT="Block, if all of its children are still running "/>
+<node CREATED="1390807464323" ID="ID_559314070" MODIFIED="1390807466065" TEXT="eturn immediately with the termination status of a child, if a child has terminated and is waiting for its termination status to be fetched "/>
+<node CREATED="1390807470569" ID="ID_245780916" MODIFIED="1390807473068" TEXT="Return immediately with an error, if it doesn&apos;t have any child processes "/>
+</node>
+<node CREATED="1390807481659" ID="ID_151142023" MODIFIED="1390807484202" TEXT="functions">
+<node CREATED="1390807487787" ID="ID_115634721" MODIFIED="1390807490023" TEXT="pid_t wait(int *statloc); ">
+<node CREATED="1390807606252" ID="ID_184971738" MODIFIED="1390807607976" TEXT="The wait function can block the caller until a child process terminates, whereas waitpid has an option that prevents it from blocking "/>
+<node CREATED="1390810663073" ID="ID_1132118829" MODIFIED="1390810665245" TEXT="With wait, the only real error is if the calling process has no children. "/>
+<node CREATED="1390810711170" ID="ID_832614865" MODIFIED="1390810712745" TEXT="Another error return is possible, in case the function call is interrupted by a signal.  "/>
+</node>
+<node CREATED="1390807499195" ID="ID_1670746239" MODIFIED="1390807501270" TEXT="pid_t waitpid(pid_t pid, int *statloc, int options); ">
+<node CREATED="1390810769387" ID="ID_494003098" MODIFIED="1390810770403" TEXT="pid">
+<node CREATED="1390810405429" ID="ID_850364510" MODIFIED="1390810407223" TEXT="pid == 1  ">
+<node CREATED="1390810416454" ID="ID_581891737" MODIFIED="1390810419928" TEXT="Waits for any child process. In this respect, waitpid is equivalent to wait. "/>
+</node>
+<node CREATED="1390810425158" ID="ID_1302539161" MODIFIED="1390810427672" TEXT="pid &gt; 0  ">
+<node CREATED="1390810436270" ID="ID_1398464989" MODIFIED="1390810438721" TEXT="Waits for the child whose process ID equals pid "/>
+</node>
+<node CREATED="1390810452510" ID="ID_273543141" MODIFIED="1390810454055" TEXT="pid == 0  ">
+<node CREATED="1390810459130" ID="ID_383059330" MODIFIED="1390810461254" TEXT="Waits for any child whose process group ID equals that of the calling process "/>
+</node>
+<node CREATED="1390810466474" ID="ID_995802702" MODIFIED="1390810467847" TEXT="pid &lt; 1  ">
+<node CREATED="1390810478472" ID="ID_1460604082" MODIFIED="1390810480719" TEXT="Waits for any child whose process group ID equals the absolute value of pid "/>
+</node>
+</node>
+<node CREATED="1390810873116" ID="ID_1809376860" MODIFIED="1390810876066" TEXT="options ">
+<node CREATED="1390810890886" ID="ID_160510079" MODIFIED="1390810893508" TEXT="WCONTINUED ">
+<node CREATED="1390811303838" ID="ID_1674145388" MODIFIED="1390811389950" TEXT="support job control,if the pid of process stop and continue but not report">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      If the implementation supports job control, the status of any child specified by
+    </p>
+    <p>
+      pid that has been continued after being stopped, but whose status has not yet
+    </p>
+    <p>
+      been reported, is returned
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1390810901181" ID="ID_295837216" MODIFIED="1390810903558" TEXT="WNOHANG  "/>
+<node CREATED="1390810910589" ID="ID_908399129" MODIFIED="1390810912580" TEXT="WUNTRACED  ">
+<node CREATED="1390811403878" ID="ID_214456929" MODIFIED="1390811429620" TEXT="support job control,return the pid of process  stop but not report">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      If the implementation supports job control, the status of any child specified by
+    </p>
+    <p>
+      pid that has stopped, and whose status has not been reported since it has
+    </p>
+    <p>
+      stopped, is returned. The WIFSTOPPED macro determines whether the return
+    </p>
+    <p>
+      value corresponds to a stopped child process
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1390810739480" ID="ID_720252736" MODIFIED="1390810755350" TEXT="error :the specified process or process group does not exist or is not a child of the calling process. "/>
+</node>
+</node>
+</node>
+<node CREATED="1390776462605" ID="ID_740424571" MODIFIED="1390776464485" TEXT="waitid Function "/>
+<node CREATED="1390776468277" ID="ID_1275590068" MODIFIED="1390776470200" TEXT="wait3 and wait4 Functions "/>
+<node CREATED="1390776474260" ID="ID_1190049058" MODIFIED="1390776479298" TEXT="Race Conditions "/>
+<node CREATED="1390776484494" ID="ID_868421201" MODIFIED="1390776486811" TEXT="exec Functions "/>
+<node CREATED="1390776492662" FOLDED="true" ID="ID_835439584" MODIFIED="1390984692701" TEXT="Changing User IDs and Group IDs ">
+<node CREATED="1390984132518" FOLDED="true" ID="ID_1640020570" MODIFIED="1390984691894" TEXT="functions">
+<node CREATED="1390984146555" ID="ID_506459136" MODIFIED="1390984148275" TEXT="int setuid(uid_t uid); ">
+<node CREATED="1390984169836" ID="ID_771626857" MODIFIED="1390984171655" TEXT="superuser privileges, the setuid function sets the real user ID, effective user ID, and saved set-user-ID to uid. "/>
+<node CREATED="1390984186036" ID="ID_88191826" MODIFIED="1390984188383" TEXT="not have superuser privileges, but uid equals either the real user ID or the saved set-user-ID, setuid sets only the effective user ID to uid. The real user ID and the saved set-user-ID are not changed. "/>
+<node CREATED="1390984197661" ID="ID_26238785" MODIFIED="1390984199615" TEXT="If neither of these two conditions is true, errno is set to EPERM, and 1 is returned. "/>
+</node>
+<node CREATED="1390984151139" ID="ID_316110069" MODIFIED="1390984153403" TEXT="int setgid(gid_t gid); "/>
+<node CREATED="1390984445156" ID="ID_1047486964" MODIFIED="1390984447066" TEXT="int setreuid(uid_t ruid, uid_t euid); ">
+<node CREATED="1390984468637" ID="ID_1244806510" MODIFIED="1390984470432" TEXT="We can supply a value of 1 for any of the arguments to indicate that the corresponding ID should remain unchanged. "/>
+<node CREATED="1390984481877" ID="ID_16970035" MODIFIED="1390984483655" TEXT="an unprivileged user can always swap between the real user ID and the effective user ID.  ">
+<node CREATED="1390984507806" ID="ID_1349234090" MODIFIED="1390984510270" TEXT="This allows a set-user-ID program to swap to the user&apos;s normal permissions and swap back again later for set-user-ID operations. "/>
+<node CREATED="1390984516174" ID="ID_1889631073" MODIFIED="1390984518065" TEXT="When the saved set-user-ID feature was introduced with POSIX.1, the rule was enhanced to also allow an unprivileged user to set its effective user ID to its saved set-user-ID. "/>
+</node>
+</node>
+<node CREATED="1390984452036" ID="ID_1738159610" MODIFIED="1390984453799" TEXT="int setregid(gid_t rgid, gid_t egid); "/>
+<node CREATED="1390984540591" ID="ID_1307297882" MODIFIED="1390984542072" TEXT="int seteuid(uid_t uid); ">
+<node CREATED="1390984601049" ID="ID_751366934" MODIFIED="1390984603080" TEXT="An unprivileged user can set its effective user ID to either its real user ID or its saved set-user-ID. "/>
+</node>
+<node CREATED="1390984545447" ID="ID_51094900" MODIFIED="1390984547450" TEXT="int setegid(gid_t gid); "/>
+</node>
+<node CREATED="1390984277391" ID="ID_1175684570" MODIFIED="1390984444159" TEXT="three user IDs ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      To see the utility of the saved set-user-ID feature, let's examine the operation of a program that
+    </p>
+    <p>
+      uses it. We'll look at the man (1) program, which is used to display online manual pages. The man
+    </p>
+    <p>
+      program can be installed either set-user-ID or set-group-ID to a specific user or group, usually one
+    </p>
+    <p>
+      reserved for man itself. The man program can be made to read and possibly overwrite files in locations
+    </p>
+    <p>
+      that are chosen either through a configuration file (usually /etc/man.config or /etc/manpath.config)
+    </p>
+    <p>
+      or using a command-line option.
+    </p>
+    <p>
+      The man program might have to execute several other commands to process the files containing the
+    </p>
+    <p>
+      manual page to be displayed. To prevent being tricked into running the wrong commands or
+    </p>
+    <p>
+      overwriting the wrong files, the man command has to switch between two sets of privileges: those of
+    </p>
+    <p>
+      the user running the man command and those of the user that owns the man executable file. The
+    </p>
+    <p>
+      following steps take place.
+    </p>
+    <p>
+      1. Assuming that the man program file is owned by the user name man and has its set-user-ID bit
+    </p>
+    <p>
+      set, when we exec it, we have
+    </p>
+    <p>
+      real user ID = our user ID
+    </p>
+    <p>
+      effective user ID = man
+    </p>
+    <p>
+      saved set-user-ID = man
+    </p>
+    <p>
+      2. The man program accesses the required configuration files and manual pages. These files are
+    </p>
+    <p>
+      owned by the user name man , but because the effective user ID is man , file access is allowed.
+    </p>
+    <p>
+      3. Before man runs any command on our behalf, it calls setuid(getuid()). Because we are not a
+    </p>
+    <p>
+      superuser process, this changes only the effective user ID. We have
+    </p>
+    <p>
+      real user ID = our user ID (unchanged)
+    </p>
+    <p>
+      effective user ID = our user ID
+    </p>
+    <p>
+      saved set-user-ID = man (unchanged)
+    </p>
+    <p>
+      Now the man process is running with our user ID as its effective user ID. This means that we can
+    </p>
+    <p>
+      access only the files to which we have normal access. We have no additional permissions. It can
+    </p>
+    <p>
+      safely execute any filter on our behalf.
+    </p>
+    <p>
+      4. When the filter is done, man calls setuid(euid), where euid is the numerical user ID for the user
+    </p>
+    <p>
+      name man . (This was saved by man by calling geteuid.) This call is allowed because the argument
+    </p>
+    <p>
+      to setuid equals the saved set-user-ID. (This is why we need the saved set-user-ID.) Now we
+    </p>
+    <p>
+      have
+    </p>
+    <p>
+      real user ID = our user ID (unchanged)
+    </p>
+    <p>
+      effective user ID = man
+    </p>
+    <p>
+      saved set-user-ID = man (unchanged)
+    </p>
+    <p>
+      5. The man program can now operate on its files, as its effective user ID is man .
+    </p>
+    <p>
+      By using the saved set-user-ID in this fashion, we can use the extra privileges granted to us by the
+    </p>
+    <p>
+      set-user-ID of the program file at the beginning of the process and at the end of the process. In
+    </p>
+    <p>
+      between, however, the process runs with our normal permissions. If we weren't able to switch back
+    </p>
+    <p>
+      to the saved set-user-ID at the end, we might be tempted to retain the extra permissions the whole
+    </p>
+    <p>
+      time we were running (which is asking for trouble).
+    </p>
+    <p>
+      Let's look at what happens if man spawns a shell for us while it is running. (The shell is spawned using
+    </p>
+    <p>
+      fork and exec.) Because the real user ID and the effective user ID are both our normal user ID (step
+    </p>
+    <p>
+      3), the shell has no extra permissions. The shell can't access the saved set-user-ID that is set to man
+    </p>
+    <p>
+      while man is running, because the saved set-user-ID for the shell is copied from the effective user ID
+    </p>
+    <p>
+      by exec. So in the child process that does the exec, all three user IDs are our normal user ID.
+    </p>
+    <p>
+      Our description of how man uses the setuid function is not correct if the program is set-user-ID to
+    </p>
+    <p>
+      root, because a call to setuid with superuser privileges sets all three user IDs. For the example to
+    </p>
+    <p>
+      work as described, we need setuid to set only the effective user ID.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1390984286960" ID="ID_891400556" MODIFIED="1390984327557" TEXT="Only a superuser process can change the real user ID.  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Normally, the real user ID is set by the
+    </p>
+    <p>
+      login(1) program when we log in and never changes. Because login is a superuser process, it
+    </p>
+    <p>
+      sets all three user IDs when it calls setuid.
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1390984328953" ID="ID_618842460" MODIFIED="1390984331195" TEXT="The effective user ID is set by the exec functions only if the set-user-ID bit is set for the program file.  "/>
+<node CREATED="1390984350337" ID="ID_207256446" MODIFIED="1390984352403" TEXT="The saved set-user-ID is copied from the effective user ID by exec.  ">
+<node CREATED="1390984378626" ID="ID_1674576477" MODIFIED="1390984380948" TEXT="If the file&apos;s set-user-ID bit is set, this copy is saved after exec stores the effective user ID from the file&apos;s user ID. "/>
+</node>
+</node>
+</node>
+<node CREATED="1390776503582" ID="ID_781614473" MODIFIED="1390776505762" TEXT="Interpreter Files ">
+<node CREATED="1390984695483" ID="ID_1692280117" MODIFIED="1390984699535" TEXT="begin with">
+<node CREATED="1390984700403" ID="ID_1008942116" MODIFIED="1390984702840" TEXT="#! pathname [ optional-argument ] ">
+<node CREATED="1390984712547" ID="ID_1779844015" MODIFIED="1390984714331" TEXT="The space between the exclamation point and the pathname is optional. "/>
+<node CREATED="1390984812366" ID="ID_1322769832" MODIFIED="1390984814199" TEXT="The pathname is normally an absolute pathname, since no special operations are performed on it (i.e., PATH is not used). The recognition of these files is done within the kernel as part of processing the exec system call. The actual file that gets executed by the kernel is not the interpreter file, but the file specified by the pathname on the first line of the interpreter file "/>
+<node CREATED="1390984844647" ID="ID_1457938528" MODIFIED="1390984847090" TEXT="Be aware that systems place a size limit on the first line of an interpreter file. This limit includes the #!, the pathname, the optional argument, the terminating newline, and any spaces. "/>
+</node>
+</node>
+</node>
+<node CREATED="1390776508965" ID="ID_1639689186" MODIFIED="1390776510944" TEXT="system Function "/>
+<node CREATED="1390776515061" ID="ID_81666112" MODIFIED="1390776517019" TEXT="Process Accounting "/>
+<node CREATED="1390776526759" ID="ID_699953011" MODIFIED="1390776529223" TEXT="User Identification "/>
+<node CREATED="1390776533095" ID="ID_1045368204" MODIFIED="1390776535093" TEXT="Process Times "/>
+<node CREATED="1390776538286" ID="ID_1453101151" MODIFIED="1390776540769" TEXT="Summary "/>
 </node>
 </node>
 </map>

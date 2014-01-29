@@ -5,7 +5,7 @@ Creation-Date: 2013-12-24T16:19:05+08:00
 ====== sone phrase ======
 Created Tuesday 24 December 2013
 
-=== cold boot   ===
+=== cold boot ===
       
 	The start-up of a computer from a powered-down, or off, state.
 	Also called a hard boot.
@@ -15,3 +15,15 @@ Created Tuesday 24 December 2013
 ==== asec ====
  
 	ASEC files are used by Froyo, the version 2.2 release of the Android mobile operating system. They store mobile application data using proprietary encryption which can be run with the Android SDK emulator. The secure ASEC format allows applications to exist on mobile devices without being modified or corrupted by other programs.
+
+
+=== BluePrint ===
+	A blueprint is a reproduction of a technical drawing, documenting an architecture or an engineering design, using a contact print process on light-sensitive sheets. Introduced in the 19th century, the process allowed rapid and accurate reproduction of documents used in construction and industry. The blue-print process was characterized by light colored lines on a blue background, a negative of the original. The process was unable to reproduce color or shades of grey.
+	Various base materials have been used for blueprints. Paper was a common choice; for more durable prints linen was sometimes used, but with time, the linen prints would shrink slightly. To combat this problem, printing on imitation vellum and, later, polyester film (Mylar) was implemented.
+	The process has been largely displaced by the diazo whiteprint process and by large-format xerographic photocopiers, so reproduced drawings are usually called "prints" or just "drawings".
+	{{./pasted_image.bmp}}{{./pasted_image001.bmp}}{{./pasted_image002.bmp}}
+
+
+==== qualcomm ====
+即高通。
+高通（Qualcomm）是一家美国的无线电通信技术研发公司，成立于1985年7月，在以技术创新推动无线通讯向前发展方面扮演着重要的角色，以在CDMA技术方面处于领先地位而闻名，而CDMA技术已成为世界上发展最快的无线技术。

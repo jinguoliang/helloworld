@@ -38,8 +38,7 @@ FP[[+15338]]  [[~/shared_with_windows/我的坚果云/resource/html/FP15338 Down
 ==== TODO ====
 	made the email CDF apk in [[/tmp]]  cdf*    and need to push to phone
 	need test email and upload to update
-	
-	
+
 
 === Group 2 ===
 	1[[./FP15744 Transparent Status bar and Navigation bar Solution From Rhine 1.1 - Androiki.html]] 					need to view the kk-rhine
