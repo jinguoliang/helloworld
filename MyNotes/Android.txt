@@ -7,7 +7,7 @@ Created 星期六 12 十月 2013
 
 我的目标就是老罗 锤子科技
 {{./pasted_image002.png}}
-1.多媒体框架：[[~/Nutstore/resource/html/深入了解MediaServer-1 - MyArrow的专栏 - 博客频道 - CSDN.NET.html|MediaServer]]，[[~/Nutstore/resource/html/StageFright框架流程解读 - uBar_Multimedia Dev. and Data mining （CodeCore） - 博客频道 - CSDN.NET.html|Stagefright]]
+1.[[+多媒体框架|多媒体框架]]：[[~/Nutstore/resource/html/深入了解MediaServer-1 - MyArrow的专栏 - 博客频道 - CSDN.NET.html|MediaServer]]，[[~/Nutstore/resource/html/StageFright框架流程解读 - uBar_Multimedia Dev. and Data mining （CodeCore） - 博客频道 - CSDN.NET.html|Stagefright]]
 2.[[+OpenGL ES]]
 3.[[+蓝牙 wifi NFC相关协议]]
 4.Android上线产品开发经验 
@@ -45,6 +45,8 @@ Created 星期六 12 十月 2013
 
 [[+java]]
 
+[[+test|test]]
+
 [[+硬件]]
 
 [[+图像]]
@@ -52,6 +54,8 @@ Created 星期六 12 十月 2013
 [[+xml parser]]
 
 [[+game]]
+
+[[+source|source]]
 
 frameworks/base/core/res/res/values/config.xml     config the __default value__ of sync,data trasaction,wifi etc.
 runtime overlay      example:[[./auto-sync.tar.gz]]           

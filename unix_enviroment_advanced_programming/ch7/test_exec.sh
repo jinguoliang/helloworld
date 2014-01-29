@@ -1,0 +1,5 @@
+#! ./echoall "hello"
+
+jin 
+guo
+
