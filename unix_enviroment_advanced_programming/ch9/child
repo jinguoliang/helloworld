@@ -1,0 +1,16 @@
+  PID  PPID  PGID   SID TPGID CMD
+ 2435     1  2435  2435    -1 //bin/dbus-daemon --fork --print-pid 5 --print-address 7 --session
+ 2471     1  2435  2435    -1 /usr/lib/x86_64-linux-gnu/gconf/gconfd-2
+ 2537     1  2435  2435    -1 /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+ 2544     1  2543  2543    -1 /usr/bin/python /usr/bin/zim
+ 2545  2544  2543  2543    -1 /usr/bin/python /usr/bin/zim
+ 2574  2545  2543  2543    -1 /bin/sh /usr/bin/xdg-open /usr/local/jinux/我的坚果云/MyNotes/Linux/Kernel/Advanced Programming in the UNIX Environment by W. Richard Stevens, Stephen A. Rago II Edition.pdf
+ 2626  2574  2543  2543    -1 /usr/bin/evince /usr/local/jinux/我的坚果云/MyNotes/Linux/Kernel/Advanced Programming in the UNIX Environment by W. Richard Stevens, Stephen A. Rago II Edition.pdf
+ 2633     1  2435  2435    -1 /usr/lib/evince/evinced
+ 2775     1  2775  2775    -1 gnome-terminal
+ 2781  2775  2775  2775    -1 gnome-pty-helper
+ 2846     1  2846  2846    -1 /bin/sh /usr/bin/freemind
+ 2865  2846  2846  2846    -1 /usr/lib/jvm/java-7-openjdk-amd64/bin/java -Xmx256M -Dgnu.java.awt.peer.gtk.Graphics=Graphics2D -Dfreemind.base.dir=/usr/share/freemind -cp ::/usr/share/freemind/lib/freemind.jar:/usr/share/java/SimplyHTML.jar:/usr/share/java/gnu-regexp.jar:/usr/share/java/jibx-run-1.1.6a.jar:/usr/share/java/xpp3.jar:/usr/share/freemind/lib/bindings.jar:/usr/share/java/forms.jar:/usr/share/freemind freemind.main.FreeMindStarter
+ 3183  3182  3183  3183    -1 ./a.out
+ 3185  3183  3183  3183    -1 sh -c ps -o pid,ppid,pgid,sid,tpgid,cmd>child
+ 3187  3185  3183  3183    -1 ps -o pid,ppid,pgid,sid,tpgid,cmd

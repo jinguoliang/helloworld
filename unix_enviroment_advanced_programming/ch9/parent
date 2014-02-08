@@ -1,0 +1,6 @@
+  PID  PPID  PGID   SID TPGID CMD
+ 2782  2775  2782  2782  3182 bash
+ 3174  2782  3174  2782  3182 vi e3.2.c
+ 3182  2782  3182  2782  3182 ./a.out
+ 3184  3182  3182  2782  3182 sh -c ps -o pid,ppid,pgid,sid,tpgid,cmd>parent
+ 3186  3184  3182  2782  3182 ps -o pid,ppid,pgid,sid,tpgid,cmd

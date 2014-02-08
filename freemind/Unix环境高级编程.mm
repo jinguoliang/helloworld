@@ -1,7 +1,7 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1388825541958" ID="ID_950708638" MODIFIED="1388825764278" TEXT="Unix&#x73af;&#x5883;&#x9ad8;&#x7ea7;&#x7f16;&#x7a0b;">
-<node CREATED="1388825565435" FOLDED="true" ID="ID_545402450" MODIFIED="1389267796616" POSITION="right" TEXT="Unix&#x57fa;&#x7840;&#x77e5;&#x8bc6;">
+<node CREATED="1388825541958" ID="ID_950708638" MODIFIED="1391429265535" TEXT="Unix&#x73af;&#x5883;&#x9ad8;&#x7ea7;&#x7f16;&#x7a0b;">
+<node CREATED="1388825565435" FOLDED="true" ID="ID_545402450" MODIFIED="1391693167740" POSITION="right" TEXT="Unix&#x57fa;&#x7840;&#x77e5;&#x8bc6;">
 <node CREATED="1388825585796" ID="ID_674545421" MODIFIED="1388825635770" TEXT="&#x5f15;&#x8a00;"/>
 <node CREATED="1388825636250" FOLDED="true" ID="ID_1312466121" MODIFIED="1388850164501" TEXT="&#x767b;&#x5f55;">
 <node CREATED="1388826151852" ID="ID_1750770617" MODIFIED="1388826155433" TEXT="&#x767b;&#x5f55;&#x540d;">
@@ -251,7 +251,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1388825687886" FOLDED="true" ID="ID_840979991" MODIFIED="1388935470105" TEXT="&#x51fa;&#x9519;&#x5904;&#x7406;">
+<node CREATED="1388825687886" ID="ID_840979991" MODIFIED="1391692808683" TEXT="&#x51fa;&#x9519;&#x5904;&#x7406;">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -285,6 +285,10 @@
 </html></richcontent>
 <node CREATED="1388845702026" ID="ID_301528717" MODIFIED="1388845703544" TEXT="s t r e r r o r "/>
 <node CREATED="1388845758072" ID="ID_709926094" MODIFIED="1388845759410" TEXT="p e r r o r "/>
+</node>
+<node CREATED="1391692990178" ID="ID_1235965752" MODIFIED="1391692991812" TEXT="supports multithreaded access to errno by defining it as ">
+<node CREATED="1391693000311" ID="ID_1645642232" MODIFIED="1391693002051" TEXT="extern int *_ _errno_location(void); "/>
+<node CREATED="1391693008738" ID="ID_1908811369" MODIFIED="1391693010473" TEXT="#define errno (*_ _errno_location()) "/>
 </node>
 </node>
 <node CREATED="1388825693436" FOLDED="true" ID="ID_1992885639" MODIFIED="1388850159474" TEXT="&#x7528;&#x6237;&#x6807;&#x8bc6;">
@@ -407,6 +411,34 @@
 <node CREATED="1389958915485" ID="ID_481011001" MODIFIED="1389958917644" TEXT="&#x5f53;&#x6b63;&#x5728;&#x8bfb;&#x4e00;&#x4e2a;&#x8f93;&#x5165;&#x6d41;,&#x5e76;&#x8fdb;&#x884c;&#x67d0;&#x79cd;&#x5f62;&#x5f0f;&#x7684;&#x5206;&#x5b57;&#x6216;&#x5206;&#x8bb0;&#x53f7;&#x64cd;&#x4f5c;&#x65f6;,&#x4f1a;&#x7ecf;&#x5e38;&#x7528;&#x5230;&#x56de;&#x9001;&#x5b57;&#x7b26;&#x64cd;&#x4f5c;&#x3002; &#x6709;&#x65f6;&#x9700;&#x8981;&#x5148;&#x770b;&#x4e00;&#x770b;&#x4e0b;&#x4e00;&#x4e2a;&#x5b57;&#x7b26;,&#x4ee5;&#x51b3;&#x5b9a;&#x5982;&#x4f55;&#x5904;&#x7406;&#x5f53;&#x524d;&#x5b57;&#x7b26;&#x3002;&#x7136;&#x540e;&#x5c31;&#x9700;&#x8981;&#x65b9;&#x4fbf;&#x5730;&#x5c06;&#x521a;&#x67e5;&#x770b;&#x7684;&#x5b57;&#x7b26; &#x9001;&#x56de;,&#x4ee5;&#x4fbf;&#x4e0b;&#x4e00;&#x6b21;&#x8c03;&#x7528; getc&#x65f6;&#x8fd4;&#x56de;&#x8be5;&#x5b57;&#x7b26;&#x3002;&#x5982;&#x679c;&#x6807;&#x51c6; I/O&#x5e93;&#x4e0d;&#x63d0;&#x4f9b;&#x56de;&#x9001;&#x80fd;&#x529b;,&#x5c31;&#x9700;&#x5c06;&#x8be5;&#x5b57;&#x7b26;&#x5b58;&#x653e; &#x5230;&#x4e00;&#x4e2a;&#x6211;&#x4eec;&#x81ea;&#x5df1;&#x7684;&#x53d8;&#x91cf;&#x4e2d;,&#x5e76;&#x8bbe;&#x7f6e;&#x4e00;&#x4e2a;&#x6807;&#x5fd7;&#x4ee5;&#x4fbf;&#x5224;&#x522b;&#x5728;&#x4e0b;&#x4e00;&#x6b21;&#x9700;&#x8981;&#x4e00;&#x4e2a;&#x5b57;&#x7b26;&#x65f6;&#x662f;&#x8c03;&#x7528; getc,&#x8fd8; &#x662f;&#x4ece;&#x6211;&#x4eec;&#x81ea;&#x5df1;&#x7684;&#x53d8;&#x91cf;&#x4e2d;&#x53d6;&#x7528;&#x3002; "/>
 <node CREATED="1390273891402" ID="ID_1737279723" MODIFIED="1390273915340" TEXT="what&apos;s the meas of setuid ">
 <icon BUILTIN="help"/>
+<node CREATED="1391266139496" ID="ID_1258781298" MODIFIED="1391266150824" TEXT="linux &#x4e0d;&#x8d77;&#x4f5c;&#x7528;&#x5417;"/>
+</node>
+<node CREATED="1391266105484" ID="ID_396109468" MODIFIED="1391267197964" TEXT="execl(&quot;/bin/sh&quot;, &quot;-sh&quot;, (char *)0); ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The minus sign as the first character of argv[0] is a flag to all the shells that they are
+    </p>
+    <p>
+      being invoked as a login shell. The shells can look at this character and modify their start-
+    </p>
+    <p>
+      up accordingly.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1391268680182" ID="ID_1774630511" MODIFIED="1391268687197" TEXT="inetd"/>
+<node CREATED="1391268708396" ID="ID_1762602717" MODIFIED="1391268711155" TEXT="init">
+<node CREATED="1391268712288" ID="ID_313579494" MODIFIED="1391268724721" TEXT="shell /etc/rc">
+<node CREATED="1391268748139" ID="ID_133934757" MODIFIED="1391268755252" TEXT="inetd">
+<node CREATED="1391268766094" ID="ID_961325797" MODIFIED="1391268770906" TEXT="wait request"/>
+<node CREATED="1391268780350" ID="ID_760754207" MODIFIED="1391268838796" TEXT="fork and exec appropriate program"/>
+</node>
+</node>
 </node>
 </node>
 <node CREATED="1388850344181" FOLDED="true" ID="ID_1356394570" MODIFIED="1389068502855" POSITION="right" TEXT="Unix&#x6807;&#x51c6;&#x5316;&#x53ca;&#x5b9e;&#x73b0;">
@@ -1106,7 +1138,7 @@
 <node CREATED="1389267709535" ID="ID_1948033871" MODIFIED="1389267710611" TEXT="3 . 2 "/>
 </node>
 </node>
-<node CREATED="1389267780891" FOLDED="true" ID="ID_1434174460" MODIFIED="1389955963475" POSITION="right" TEXT="file and directory">
+<node CREATED="1389267780891" FOLDED="true" ID="ID_1434174460" MODIFIED="1391172355709" POSITION="right" TEXT="file and directory">
 <node CREATED="1389267800145" ID="ID_503020766" MODIFIED="1389267840633" TEXT="&#x5f15;&#x8a00; ">
 <node CREATED="1389268481724" ID="ID_958415145" MODIFIED="1389268482432" TEXT="s t a t&#x51fd;&#x6570;&#x5f00; &#x59cb;,&#x9010;&#x4e2a;&#x8bf4;&#x660e; s t a t&#x7ed3;&#x6784;&#x7684;&#x6bcf;&#x4e00;&#x4e2a;&#x6210;&#x5458;&#x4ee5;&#x4e86;&#x89e3;&#x6587;&#x4ef6;&#x7684;&#x6240;&#x6709;&#x5c5e;&#x6027;&#x3002; "/>
 <node CREATED="1389268494109" ID="ID_1277573516" MODIFIED="1389268494528" TEXT="&#x66f4;&#x8be6;&#x7ec6;&#x5730;&#x5bdf;&#x770b; U N I X&#x6587;&#x4ef6;&#x7cfb;&#x7edf;&#x7684;&#x7ed3;&#x6784;&#x4ee5; &#x53ca;&#x7b26;&#x53f7;&#x8fde;&#x63a5; "/>
@@ -1211,7 +1243,7 @@
 </node>
 </node>
 <node CREATED="1389267937469" ID="ID_247077787" MODIFIED="1389267941577" TEXT="umask&#x51fd;&#x6570; "/>
-<node CREATED="1389267948317" ID="ID_328812717" MODIFIED="1389267950672" TEXT="chmod&#x548c;fchmod&#x51fd;&#x6570; ">
+<node CREATED="1389267948317" FOLDED="true" ID="ID_328812717" MODIFIED="1391171913519" TEXT="chmod&#x548c;fchmod&#x51fd;&#x6570; ">
 <node CREATED="1389358916619" ID="ID_1504976576" MODIFIED="1389358917754" TEXT="S_ISUID  "/>
 <node CREATED="1389358922371" ID="ID_710349199" MODIFIED="1389358925304" TEXT="S_ISGID  "/>
 <node CREATED="1389358928156" ID="ID_1338865251" MODIFIED="1389358931567" TEXT="S_ISVTX  "/>
@@ -2499,7 +2531,7 @@
 </node>
 <node CREATED="1390353814761" ID="ID_1860352453" MODIFIED="1390353818158" TEXT="Summary "/>
 </node>
-<node CREATED="1390776414763" ID="ID_1468272683" MODIFIED="1390776417571" POSITION="right" TEXT="Process Control ">
+<node CREATED="1390776414763" FOLDED="true" ID="ID_1468272683" MODIFIED="1391257260139" POSITION="right" TEXT="Process Control ">
 <node CREATED="1390776423725" FOLDED="true" ID="ID_1102468968" MODIFIED="1390777119110" TEXT="Introduction ">
 <node CREATED="1390776663386" ID="ID_1041953121" MODIFIED="1390776665650" TEXT="This includes the creation of new processes, program execution, and process termination.  "/>
 <node CREATED="1390776727131" ID="ID_447702619" MODIFIED="1390776729873" TEXT="the various IDs that are the property of the processreal, effective, and saved; user and group IDsand how they&apos;re affected by the process control primitives "/>
@@ -2716,9 +2748,48 @@
 <node CREATED="1390780170666" ID="ID_1047983493" MODIFIED="1390780173261" TEXT="When a process wants to execute a different program. This is common for shells. In this case, the child does an exec  "/>
 </node>
 </node>
-<node CREATED="1390776444627" FOLDED="true" ID="ID_611515763" MODIFIED="1390976416206" TEXT=" vfork Function ">
+<node CREATED="1390776444627" ID="ID_611515763" MODIFIED="1391161155414" TEXT=" vfork Function ">
+<node CREATED="1391162094139" ID="ID_992027989" MODIFIED="1391162984441" TEXT="The vfork function is intended to create a new process when the purpose of the new process is to exec a new program  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The vfork function is intended to create a new process when the purpose of the new process is to
+    </p>
+    <p>
+      exec a new program (step 2 at the end of the previous section). The bare-bones shell in the program
+    </p>
+    <p>
+      from Figure 1.7 is also an example of this type of program. The vfork function creates the new
+    </p>
+    <p>
+      process, just like fork, without copying the address space of the parent into the child, as the child
+    </p>
+    <p>
+      won't reference that address space; the child simply calls exec (or exit) right after the vfork.
+    </p>
+    <p>
+      Instead, while the child is running and until it calls either exec or exit, the child runs in the address
+    </p>
+    <p>
+      space of the parent. This optimization provides an efficiency gain on some paged virtual-memory
+    </p>
+    <p>
+      implementations of the UNIX System. (As we mentioned in the previous section, implementations use
+    </p>
+    <p>
+      copy-on-write to improve the efficiency of a fork followed by an exec, but no copying is still faster
+    </p>
+    <p>
+      than some copying.)
+    </p>
+  </body>
+</html></richcontent>
+</node>
 <node CREATED="1390794666840" ID="ID_439175176" MODIFIED="1390794681959" TEXT="  Instead, while the child is running and until it calls either exec or exit, the child runs in the address space of the parent "/>
-<node CREATED="1390794700241" ID="ID_1392290564" MODIFIED="1390797072196" TEXT="vfork guarantees that the child runs first, until the child calls exec or exit. ">
+<node CREATED="1390794700241" ID="ID_1392290564" MODIFIED="1391162092281" TEXT="vfork guarantees that the child runs first, until the child calls exec or exit. ">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -2839,7 +2910,7 @@
 <node CREATED="1390776468277" ID="ID_1275590068" MODIFIED="1390776470200" TEXT="wait3 and wait4 Functions "/>
 <node CREATED="1390776474260" ID="ID_1190049058" MODIFIED="1390776479298" TEXT="Race Conditions "/>
 <node CREATED="1390776484494" ID="ID_868421201" MODIFIED="1390776486811" TEXT="exec Functions "/>
-<node CREATED="1390776492662" FOLDED="true" ID="ID_835439584" MODIFIED="1390984692701" TEXT="Changing User IDs and Group IDs ">
+<node CREATED="1390776492662" FOLDED="true" ID="ID_835439584" MODIFIED="1391170017499" TEXT="Changing User IDs and Group IDs ">
 <node CREATED="1390984132518" FOLDED="true" ID="ID_1640020570" MODIFIED="1390984691894" TEXT="functions">
 <node CREATED="1390984146555" ID="ID_506459136" MODIFIED="1390984148275" TEXT="int setuid(uid_t uid); ">
 <node CREATED="1390984169836" ID="ID_771626857" MODIFIED="1390984171655" TEXT="superuser privileges, the setuid function sets the real user ID, effective user ID, and saved set-user-ID to uid. "/>
@@ -3008,8 +3079,7 @@
       work as described, we need setuid to set only the effective user ID.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1390984286960" ID="ID_891400556" MODIFIED="1390984327557" TEXT="Only a superuser process can change the real user ID.  ">
 <richcontent TYPE="NOTE"><html>
   <head>
@@ -3029,8 +3099,7 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1390984328953" ID="ID_618842460" MODIFIED="1390984331195" TEXT="The effective user ID is set by the exec functions only if the set-user-ID bit is set for the program file.  "/>
 <node CREATED="1390984350337" ID="ID_207256446" MODIFIED="1390984352403" TEXT="The saved set-user-ID is copied from the effective user ID by exec.  ">
@@ -3050,8 +3119,854 @@
 <node CREATED="1390776508965" ID="ID_1639689186" MODIFIED="1390776510944" TEXT="system Function "/>
 <node CREATED="1390776515061" ID="ID_81666112" MODIFIED="1390776517019" TEXT="Process Accounting "/>
 <node CREATED="1390776526759" ID="ID_699953011" MODIFIED="1390776529223" TEXT="User Identification "/>
-<node CREATED="1390776533095" ID="ID_1045368204" MODIFIED="1390776535093" TEXT="Process Times "/>
-<node CREATED="1390776538286" ID="ID_1453101151" MODIFIED="1390776540769" TEXT="Summary "/>
+<node CREATED="1390776533095" ID="ID_1045368204" MODIFIED="1390776535093" TEXT="Process Times ">
+<node CREATED="1391172511687" ID="ID_1932450785" MODIFIED="1391172512990" TEXT="struct tms ">
+<node CREATED="1391172533354" ID="ID_427793910" MODIFIED="1391172535528" TEXT="tms_utime "/>
+<node CREATED="1391172538855" ID="ID_894465824" MODIFIED="1391172543784" TEXT="tms_stime">
+<node CREATED="1391172593787" ID="ID_1148746465" MODIFIED="1391172597434" TEXT="system cpu time "/>
+</node>
+<node CREATED="1391172551146" ID="ID_502752429" MODIFIED="1391172553392" TEXT="tms_cutime">
+<node CREATED="1391172582365" ID="ID_500823320" MODIFIED="1391172602730" TEXT="child user cpu time"/>
+</node>
+<node CREATED="1391172560714" ID="ID_1087039421" MODIFIED="1391172562463" TEXT="tms_cstime "/>
+</node>
+<node CREATED="1391172622595" ID="ID_958821861" MODIFIED="1391172624516" TEXT="clock_t times(struct tms *buf); ">
+<node CREATED="1391172635231" ID="ID_658032214" MODIFIED="1391172826439" TEXT="Returns: elapsed wall clock time in clock ticks if OK, 1 on error ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &#160;This value is
+    </p>
+    <p>
+      measured from some arbitrary point in the past, so we can't use its absolute value; instead, we use
+    </p>
+    <p>
+      its relative value.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1391172830008" ID="ID_1294336342" MODIFIED="1391172831058" TEXT="The two structure fields for child processes contain values only for children that we have waited for with wait, waitid, or waitpid. "/>
+<node CREATED="1391172880049" ID="ID_399524187" MODIFIED="1391172881178" TEXT="All the clock_t values returned by this function are converted to seconds using the number of clock ticks per secondthe _SC_CLK_TCK value returned by sysconf  "/>
+</node>
+</node>
+<node CREATED="1390776538286" ID="ID_1453101151" MODIFIED="1390776540769" TEXT="Summary ">
+<node CREATED="1391172362579" ID="ID_447466265" MODIFIED="1391172367691" TEXT="8.7  ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+</node>
+</node>
+</node>
+<node CREATED="1391257267268" FOLDED="true" ID="ID_909475423" MODIFIED="1391528612006" POSITION="right" TEXT="Process Relationships ">
+<node CREATED="1391257275905" ID="ID_535475009" MODIFIED="1391257277512" TEXT="Introduction ">
+<node CREATED="1391257438078" ID="ID_614168070" MODIFIED="1391257439916" TEXT="process groups "/>
+<node CREATED="1391257448290" ID="ID_171094518" MODIFIED="1391257450035" TEXT="the concept of sessions "/>
+<node CREATED="1391257554859" ID="ID_556843212" MODIFIED="1391257572672" TEXT="the relationship between the login shell and all the processes "/>
+</node>
+<node CREATED="1391257282284" ID="ID_1870216832" MODIFIED="1391257283607" TEXT="Terminal Logins ">
+<node CREATED="1391257782583" ID="ID_1719990624" MODIFIED="1391257791782" TEXT="type of terminal">
+<node CREATED="1391257855383" ID="ID_1773039889" MODIFIED="1391257857308" TEXT="a character-based terminal "/>
+<node CREATED="1391257873101" ID="ID_1803005579" MODIFIED="1391257874682" TEXT="a graphical terminal emulating a simple character-based terminal "/>
+<node CREATED="1391257885881" ID="ID_772944684" MODIFIED="1391257887106" TEXT="a graphical terminal running a windowing system "/>
+</node>
+<node CREATED="1391263434497" ID="ID_1245954268" MODIFIED="1391263436405" TEXT="getty">
+<node CREATED="1391263471808" ID="ID_356408759" MODIFIED="1391263559820" TEXT="open the terminal device ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The terminal is opened for reading and writing
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1391263559762" ID="ID_1870929613" MODIFIED="1391263562064" TEXT="Once the device is open, file descriptors 0, 1, and 2 are set to the device "/>
+<node CREATED="1391263610287" ID="ID_734292963" MODIFIED="1391263611640" TEXT="getty outputs something like login: and waits for us to enter our user name. "/>
+<node CREATED="1391263637206" ID="ID_691273470" MODIFIED="1391263638200" TEXT="change the terminal&apos;s speed "/>
+<node CREATED="1391263663286" ID="ID_45519980" MODIFIED="1391263664444" TEXT="When we enter our user name, getty&apos;s job is complete, and it then invokes the login program "/>
+</node>
+<node CREATED="1391264057364" ID="ID_1056659759" MODIFIED="1391264059100" TEXT="agetty opens a tty port, prompts for  a  login  name  and  invokes  the        /bin/login command. It is normally invoked by init(8)."/>
+</node>
+<node CREATED="1391264066536" FOLDED="true" ID="ID_1001525266" MODIFIED="1391267656704" TEXT="login">
+<node CREATED="1391265405334" ID="ID_635197707" MODIFIED="1391265407624" TEXT="getpwnam "/>
+<node CREATED="1391265415330" ID="ID_917822902" MODIFIED="1391265417289" TEXT="getpass "/>
+<node CREATED="1391265447295" ID="ID_1767473490" MODIFIED="1391265448697" TEXT="crypt "/>
+<node CREATED="1391265463752" ID="ID_92426830" MODIFIED="1391265465354" TEXT="compares the encrypted result to the pw_passwd field from our shadow password file entry "/>
+<node CREATED="1391265492240" ID="ID_745505653" MODIFIED="1391265521293" TEXT="login attempt fails  because of an invalid password ">
+<node CREATED="1391265502872" ID="ID_1413451772" MODIFIED="1391265505077" TEXT="login calls exit with an argument of 1 ">
+<node CREATED="1391265573757" ID="ID_90236532" MODIFIED="1391265594376" TEXT="the parent (init) will do another fork followed by an exec of getty"/>
+</node>
+</node>
+<node CREATED="1391265903787" ID="ID_1964515165" MODIFIED="1391265905403" TEXT="If we log in correctly, login will ">
+<node CREATED="1391265914508" ID="ID_948336759" MODIFIED="1391265916058" TEXT="chdir "/>
+<node CREATED="1391265919458" ID="ID_1855889013" MODIFIED="1391265921325" TEXT="chown ">
+<node CREATED="1391265936688" ID="ID_371026296" MODIFIED="1391265947841" TEXT="Change the ownership of our terminal device so we own it "/>
+</node>
+<node CREATED="1391265974350" ID="ID_422229416" MODIFIED="1391265975718" TEXT="Change the access permissions for our terminal device so we have permission to read from and write to it "/>
+<node CREATED="1391266028821" ID="ID_1891377477" MODIFIED="1391266030593" TEXT="Set our group IDs by calling setgid and initgroups "/>
+<node CREATED="1391266060686" ID="ID_1551468423" MODIFIED="1391266062186" TEXT="Initialize the environment with all the information that login has: our home directory (HOME), shell (SHELL), user name (USER and LOGNAME), and a default path (PATH) "/>
+<node CREATED="1391266073133" ID="ID_1176373692" MODIFIED="1391266074680" TEXT="Change to our user ID (setuid) and invoke our login shell "/>
+</node>
+</node>
+<node CREATED="1391267199523" ID="ID_1268782409" MODIFIED="1391267204222" TEXT="login shell">
+<node CREATED="1391267211527" ID="ID_1957928408" MODIFIED="1391267214146" TEXT=".profile "/>
+</node>
+<node CREATED="1391265746496" ID="ID_1043685829" MODIFIED="1391265902405" TEXT="PAM (Pluggable Authentication Modules) ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      PAM
+    </p>
+    <p>
+      allows an administrator to configure the authentication methods to be used to access services that
+    </p>
+    <p>
+      are written to use the PAM library.
+    </p>
+    <p>
+      If our application needs to verify that a user has the appropriate permission to perform a task, we
+    </p>
+    <p>
+      can either hard code the authentication mechanism in the application, or we can use the PAM library
+    </p>
+    <p>
+      to give us the equivalent functionality. The advantage to using PAM is that administrators can
+    </p>
+    <p>
+      configure different ways to authenticate users for different tasks, based on the local site policies.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1391257288622" ID="ID_1117442566" MODIFIED="1391257290153" TEXT="Network Logins ">
+<node CREATED="1391268002420" ID="ID_1200385307" MODIFIED="1391268065510" TEXT="difference with terminal login(a serial terminal )">
+<node CREATED="1391268189093" ID="ID_429332354" MODIFIED="1391268190975" TEXT="the connection between the terminal and the computer isn&apos;t point-to-point "/>
+<node CREATED="1391268196128" ID="ID_826139406" MODIFIED="1391268197334" TEXT="In this case, login is simply a service available, just like any other network service, such as FTP or SMTP. "/>
+</node>
+<node CREATED="1391268278675" ID="ID_1980902204" MODIFIED="1391268279942" TEXT="a pseudo terminal  ">
+<node CREATED="1391268296751" ID="ID_857290766" MODIFIED="1391268298833" TEXT="To allow the same software to process logins over both terminal logins and network logins "/>
+</node>
+<node CREATED="1391269211464" ID="ID_1614258134" MODIFIED="1391269213391" TEXT="telnet">
+<node CREATED="1391269221503" ID="ID_1380303000" MODIFIED="1391269231317" TEXT="The client opens a TCP connection to hostname "/>
+<node CREATED="1391269239870" ID="ID_97402731" MODIFIED="1391269241143" TEXT="the program that&apos;s started on hostname is called the TELNET server "/>
+<node CREATED="1391269248575" ID="ID_275228127" MODIFIED="1391269261655" TEXT="using the TELNET application protocol "/>
+<node CREATED="1391269308712" ID="ID_1240489372" MODIFIED="1391269310613" TEXT="The telnetd process then opens a pseudo-terminal device ">
+<node CREATED="1391269318807" ID="ID_1387405103" MODIFIED="1391269320034" TEXT="splits into two processes using fork ">
+<node CREATED="1391269334842" ID="ID_1797302784" MODIFIED="1391269336230" TEXT="The parent handles the communication across the network connection "/>
+<node CREATED="1391269343101" ID="ID_1638158180" MODIFIED="1391269344506" TEXT="the child does an exec of the login program ">
+<node CREATED="1391269375530" ID="ID_680553296" MODIFIED="1391269377021" TEXT="Before doing the exec, the child sets up file descriptors 0, 1, and 2 to the pseudo terminal.  ">
+<node CREATED="1391269406461" ID="ID_1078354769" MODIFIED="1391269408580" TEXT="Then login replaces itself with our login shell by calling exec "/>
+</node>
+</node>
+<node CREATED="1391269355764" ID="ID_1424251062" MODIFIED="1391269356921" TEXT="The parent and the child are connected through the pseudo terminal "/>
+</node>
+</node>
+<node CREATED="1391269331087" ID="ID_1158512248" MODIFIED="1391269634565" TEXT="">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The important thing to understand is that whether we log in through a terminal (Figure 9.3) or a
+    </p>
+    <p>
+      network (Figure 9.5), we have a login shell with its standard input, standard output, and standard
+    </p>
+    <p>
+      error connected to either a terminal device or a pseudo-terminal device. We'll see in the coming
+    </p>
+    <p>
+      sections that this login shell is the start of a POSIX.1 session, and that the terminal or pseudo
+    </p>
+    <p>
+      terminal is the controlling terminal for the session.
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+</node>
+</node>
+</node>
+<node CREATED="1391257294378" ID="ID_48488021" MODIFIED="1391257296089" TEXT="Process Groups ">
+<node CREATED="1391269770646" ID="ID_1262489789" MODIFIED="1391269772440" TEXT="A process group is a collection of one or more processes, usually associated with the same job (job control is discussed in Section 9.8), that can receive signals from the same terminal "/>
+<node CREATED="1391269965744" ID="ID_235527346" MODIFIED="1391269968718" TEXT="process group leader">
+<node CREATED="1391269906735" ID="ID_536645787" MODIFIED="1391269985689" TEXT="The leader is identified by its process group ID being equal to its process ID. "/>
+<node CREATED="1391269935095" ID="ID_712276793" MODIFIED="1391270032895" TEXT="create a process group, create processes in the group, and then terminate. "/>
+<node CREATED="1391270098407" ID="ID_1551897816" MODIFIED="1391270099761" TEXT="The process group still exists, as long as at least one process is in the group, regardless of whether the group leader terminates. "/>
+</node>
+<node CREATED="1391269793623" ID="ID_1525298179" MODIFIED="1391269795174" TEXT="pid_t getpgrp(void); "/>
+<node CREATED="1391269817322" ID="ID_15603324" MODIFIED="1391269818958" TEXT="pid_t getpgid(pid_t pid); ">
+<node CREATED="1391269839093" ID="ID_1489011913" MODIFIED="1391269857313" TEXT="getpgid(0)===getpgrp()"/>
+</node>
+<node CREATED="1391270139409" ID="ID_1853070152" MODIFIED="1391270141443" TEXT="int setpgid(pid_t pid, pid_t pgid); ">
+<node CREATED="1391270159532" ID="ID_1496707179" MODIFIED="1391270161281" TEXT="joins an existing process group or creates a new process group by calling setpgid. "/>
+<node CREATED="1391316211463" ID="ID_346233799" MODIFIED="1391316213945" TEXT="sets the process group ID to pgid in the process whose process ID equals pid "/>
+<node CREATED="1391316414205" ID="ID_1069553625" MODIFIED="1391316416168" TEXT="If the two arguments are equal, the process specified by pid becomes a process group leader "/>
+<node CREATED="1391316434900" ID="ID_1432541416" MODIFIED="1391316436071" TEXT="If pid is 0, the process ID of the caller is used "/>
+<node CREATED="1391316450972" ID="ID_902933080" MODIFIED="1391316452401" TEXT="f pgid is 0, the process ID specified by pid is used as the process group ID "/>
+<node CREATED="1391429742916" ID="ID_1912667474" MODIFIED="1391429790868" TEXT="how to use ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      In most job-control shells, this function is called after a fork to have the parent set the process group
+    </p>
+    <p>
+      ID of the child, and to have the child set its own process group ID. One of these calls is redundant,
+    </p>
+    <p>
+      but by doing both, we are guaranteed that the child is placed into its own process group before either
+    </p>
+    <p>
+      process assumes that this has happened. If we didn't do this, we would have a race condition, since
+    </p>
+    <p>
+      the child's process group membership would depend on which process executes first.
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="idea"/>
+<icon BUILTIN="idea"/>
+</node>
+</node>
+</node>
+<node CREATED="1391257302570" FOLDED="true" ID="ID_248195082" MODIFIED="1391528608673" TEXT="Sessions ">
+<node CREATED="1391429791742" ID="ID_1294544804" MODIFIED="1391429799395" TEXT="A session is a collection of one or more process groups.  "/>
+<node CREATED="1391432960124" ID="ID_1550473655" MODIFIED="1391432961196" TEXT="There is no &quot;session ID&quot; similar to a process ID or a process group ID. "/>
+<node CREATED="1391433060032" ID="ID_60252589" MODIFIED="1391433061774" TEXT="the session leader is always the leader of a process group. "/>
+<node CREATED="1391431644914" ID="ID_214690471" MODIFIED="1391527699201" TEXT="pid_t setsid(void); ">
+<node CREATED="1391431657181" ID="ID_1400060756" MODIFIED="1391431658129" TEXT="If the calling process is not a process group leader, this function creates a new session.  ">
+<node CREATED="1391431689906" ID="ID_318902495" MODIFIED="1391431695014" TEXT="The process becomes the session leader of this new session. "/>
+<node CREATED="1391431915554" ID="ID_1434346049" MODIFIED="1391431917249" TEXT="The process becomes the process group leader of a new process group "/>
+<node CREATED="1391431920945" ID="ID_1965092993" MODIFIED="1391431922868" TEXT="The process has no controlling terminal. "/>
+</node>
+<node CREATED="1391431944276" ID="ID_36643912" MODIFIED="1391431945998" TEXT="This function returns an error if the caller is already a process group leader.  ">
+<node CREATED="1391431989544" ID="ID_509153229" MODIFIED="1391431991101" TEXT="To ensure this is not the case, the usual practice is to call fork and have the parent terminate and the child continue. "/>
+</node>
+</node>
+<node CREATED="1391433487931" ID="ID_1248867792" MODIFIED="1391433489591" TEXT="pid_t getsid(pid_t pid); ">
+<node CREATED="1391433510529" ID="ID_1320928453" MODIFIED="1391433511508" TEXT="some implementations may restrict the calling process from obtaining the process group ID of the session leader if pid doesn&apos;t belong to the same session as the caller "/>
+</node>
+</node>
+<node CREATED="1391257311024" FOLDED="true" ID="ID_1224815233" MODIFIED="1391435071926" TEXT="Controlling Terminal ">
+<node CREATED="1391433530398" ID="ID_1390907138" MODIFIED="1391433694530" TEXT="Sessions and process groups some characteristic">
+<node CREATED="1391433611661" ID="ID_707772839" MODIFIED="1391433613526" TEXT="A session can have a single controlling terminal. "/>
+<node CREATED="1391433640800" ID="ID_907977090" MODIFIED="1391433641984" TEXT="The session leader that establishes the connection to the controlling terminal is called the controlling process. "/>
+<node CREATED="1391433669975" ID="ID_1457434839" MODIFIED="1391433671426" TEXT="a single foreground process group and one or more background process groups. "/>
+<node CREATED="1391433837689" ID="ID_1612667865" MODIFIED="1391433838943" TEXT="Whenever we type the terminal&apos;s interrupt key (often DELETE or Control-C), this causes the interrupt signal be sent to all processes in the foreground process group. "/>
+<node CREATED="1391433854408" ID="ID_1358404942" MODIFIED="1391433855822" TEXT="Whenever we type the terminal&apos;s quit key (often Control-backslash), this causes the quit signal to be sent to all processes in the foreground process group. "/>
+<node CREATED="1391433867548" ID="ID_1575462962" MODIFIED="1391433869138" TEXT="If a modem (or network) disconnect is detected by the terminal interface, the hang-up signal is sent to the controlling process (the session leader). "/>
+</node>
+<node CREATED="1391434161226" ID="ID_1012908368" MODIFIED="1391434163427" TEXT="Systems derived from UNIX System V allocate the controlling terminal for a session when the session leader opens the first terminal device that is not already associated with a session. ">
+<node CREATED="1391434177962" ID="ID_884068325" MODIFIED="1391434189112" TEXT="open does not specify the O_NOCTTY flag "/>
+</node>
+<node CREATED="1391434275250" ID="ID_1457036033" MODIFIED="1391434277206" TEXT="BSD-based systems allocate the controlling terminal for a session when the session leader calls ioctl with a request argument of TIOCSCTTY (the third argument is a null pointer). The session cannot already have a controlling terminal for this call to succeed. (Normally, this call to ioctl follows a call to setsid, which guarantees that the process is a session leader without a controlling terminal.) The POSIX.1 O_NOCTTY flag to open is not used by BSD-based systems, except in compatibility-mode support for other systems. "/>
+<node CREATED="1391434353582" ID="ID_824918144" MODIFIED="1391434355174" TEXT="/dev/tty ">
+<node CREATED="1391434377621" ID="ID_454844748" MODIFIED="1391434379173" TEXT="This special file is a synonym within the kernel for the controlling terminal. "/>
+<node CREATED="1391434394111" ID="ID_1175115921" MODIFIED="1391434395317" TEXT="There are times when a program wants to talk to the controlling terminal, regardless of whether the standard input or standard output is redirected. "/>
+<node CREATED="1391434402341" ID="ID_682571236" MODIFIED="1391434405132" TEXT="if the program doesn&apos;t have a controlling terminal, the open of this device will fail. "/>
+</node>
+</node>
+<node CREATED="1391257325266" FOLDED="true" ID="ID_1919476895" MODIFIED="1391436293970" TEXT="tcgetpgrp, tcsetpgrp, and tcgetsid Functions ">
+<node CREATED="1391435073966" ID="ID_724339420" MODIFIED="1391435098116" TEXT="select the foreground process group"/>
+<node CREATED="1391435125786" ID="ID_1092823249" MODIFIED="1391435127010" TEXT="pid_t tcgetpgrp(int filedes); ">
+<node CREATED="1391435170668" HGAP="59" ID="ID_1064245377" MODIFIED="1391435385071" TEXT="returns the process group ID of the foreground process group associated with the terminal open on filedes. " VSHIFT="-2"/>
+</node>
+<node CREATED="1391435134471" ID="ID_51205968" MODIFIED="1391435136321" TEXT="int tcsetpgrp(int filedes, pid_t pgrpid); ">
+<node CREATED="1391436075500" ID="ID_973159557" MODIFIED="1391436076935" TEXT="set the foreground process group ID to pgrpid. "/>
+<node CREATED="1391436146417" ID="ID_332120240" MODIFIED="1391436148403" TEXT="The value of pgrpid must be the process group ID of a process group in the same session "/>
+<node CREATED="1391436153807" ID="ID_1618763231" MODIFIED="1391436155054" TEXT="filedes must refer to the controlling terminal of the session "/>
+</node>
+<node CREATED="1391436038775" ID="ID_496251761" MODIFIED="1391436040034" TEXT="XSI extension ">
+<node CREATED="1391436047862" ID="ID_961491242" MODIFIED="1391436049141" TEXT="pid_t tcgetsid(int filedes); ">
+<node CREATED="1391436060912" ID="ID_1790135913" MODIFIED="1391436062257" TEXT="obtain the process group ID for the session leader given a file descriptor for the controlling TTY. "/>
+</node>
+</node>
+</node>
+<node CREATED="1391257334144" ID="ID_988839398" MODIFIED="1391257337679" TEXT="Job Control ">
+<node CREATED="1391436291124" ID="ID_1811092422" MODIFIED="1391436292681" TEXT="Job control requires three forms of support: ">
+<node CREATED="1391436307460" ID="ID_464783041" MODIFIED="1391436308972" TEXT="shell "/>
+<node CREATED="1391436317775" ID="ID_800803885" MODIFIED="1391436319694" TEXT="The terminal driver in the kernel "/>
+<node CREATED="1391436328787" ID="ID_1264250247" MODIFIED="1391436381844" TEXT="kernel must support certain job-control signals "/>
+</node>
+<node CREATED="1391436490263" ID="ID_1921558108" MODIFIED="1391436491666" TEXT=" A job is simply a collection of processes, often a pipeline of processes.  "/>
+<node CREATED="1391436857140" ID="ID_1799270449" MODIFIED="1391436858876" TEXT="The terminal driver looks for three special characters, which generate signals to the foreground process group. ">
+<node CREATED="1391436750985" ID="ID_1248452939" MODIFIED="1391436753518" TEXT="Control-Z ">
+<node CREATED="1391437428589" ID="ID_111266221" MODIFIED="1391437453388" TEXT="SIGTSTP">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      causes the terminal driver to send the SIGTSTP signal to all processes in the foreground process group
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1391436987700" ID="ID_112989633" MODIFIED="1391436989015" TEXT="Control-C ">
+<node CREATED="1391436995479" ID="ID_318028882" MODIFIED="1391436997010" TEXT="SIGINT "/>
+</node>
+<node CREATED="1391437769021" ID="ID_876469699" MODIFIED="1391437776448" TEXT="control-\">
+<node CREATED="1391437777498" ID="ID_554114820" MODIFIED="1391437808771" TEXT="SIGQUIT"/>
+</node>
+</node>
+<node CREATED="1391437271830" ID="ID_554814526" MODIFIED="1391437273094" TEXT="Another job control condition can arise that must be handled by the terminal driver. ">
+<node CREATED="1391437409468" ID="ID_608263951" MODIFIED="1391437482590" TEXT="SIGTTIN ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Only the foreground job receives terminal input. It is not an error for a
+    </p>
+    <p>
+      background job to try to read from the terminal, but the terminal driver detects this and sends a
+    </p>
+    <p>
+      special signal to the background job: SIGTTIN.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1391437486957" ID="ID_643744307" MODIFIED="1391437488917" TEXT="stops the background job "/>
+</node>
+<node CREATED="1391438091696" ID="ID_139996631" MODIFIED="1391438092864" TEXT="SIGTTOU ">
+<node CREATED="1391438181539" ID="ID_1805196666" MODIFIED="1391438183330" TEXT="stty tostop "/>
+</node>
+</node>
+<node CREATED="1391437611882" ID="ID_1605156597" MODIFIED="1391437623179" TEXT=" we can allow or disallow a background job outputs to the controlling terminal "/>
+</node>
+<node CREATED="1391257342930" ID="ID_1328792548" MODIFIED="1391257344569" TEXT="Shell Execution of Programs ">
+<node CREATED="1391439726001" ID="ID_1077139474" MODIFIED="1391439727369" TEXT="The foreground process group ID is an attribute of the terminal, not the process.  "/>
+<node CREATED="1391440764692" ID="ID_1279171273" MODIFIED="1391440765971" TEXT="TPGID ">
+<node CREATED="1391440785009" ID="ID_1038338592" MODIFIED="1391440786435" TEXT="print the process group ID associated with the session&apos;s controlling terminal. "/>
+</node>
+</node>
+<node CREATED="1391257349477" ID="ID_1448211405" MODIFIED="1391257351973" TEXT="Orphaned Process Groups ">
+<node CREATED="1391443056276" ID="ID_1526093161" MODIFIED="1391443057586" TEXT="The POSIX.1 definition of an orphaned process group is one in which the parent of every member is either itself a member of the group or is not a member of the group&apos;s session. ">
+<node CREATED="1391443064603" ID="ID_1351291706" MODIFIED="1391443066268" TEXT="Another way of wording this is that the process group is not orphaned as long as a process in the group has a parent in a different process group but in the same session.  ">
+<node CREATED="1391443086735" ID="ID_175576015" MODIFIED="1391443087925" TEXT="If the process group is not orphaned, there is a chance that one of those parents in a different process group but in the same session will restart a stopped process in the process group that is not orphaned. "/>
+<node CREATED="1391443136518" ID="ID_1374794829" MODIFIED="1391443138221" TEXT="POSIX.1 requires that every process in the newly orphaned process group that is stopped (as our child is) be sent the hang- up signal (SIGHUP) followed by the continue signal (SIGCONT). "/>
+</node>
+</node>
+<node CREATED="1391443386195" ID="ID_1490404640" MODIFIED="1391443392332" TEXT="POSIX.1 specifies that the read is to return an error with errno set to EIO (whose value is 5 on this system) "/>
+</node>
+<node CREATED="1391257356423" ID="ID_547353604" MODIFIED="1391257357725" TEXT="FreeBSD Implementation "/>
+<node CREATED="1391257361899" ID="ID_1956076564" MODIFIED="1391257363568" TEXT="Summary "/>
+<node CREATED="1391257367138" ID="ID_386316447" MODIFIED="1391257368970" TEXT="Exercises "/>
+</node>
+<node CREATED="1391446002955" ID="ID_411208603" MODIFIED="1391691487546" POSITION="right" TEXT="Signals ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="yes"/>
+<node CREATED="1391446008713" FOLDED="true" ID="ID_1396490293" MODIFIED="1391529068825" TEXT="Introduction ">
+<node CREATED="1391528614904" ID="ID_187532510" MODIFIED="1391528619601" TEXT="reliable">
+<node CREATED="1391528639972" ID="ID_397820756" MODIFIED="1391528642404" TEXT="Version 7 "/>
+</node>
+<node CREATED="1391528665032" ID="ID_1779709868" MODIFIED="1391528666555" TEXT="reliable signals ">
+<node CREATED="1391528675208" ID="ID_459205748" MODIFIED="1391528678031" TEXT="4.3BSD "/>
+<node CREATED="1391528683502" ID="ID_1225337309" MODIFIED="1391528687080" TEXT="SVR3 "/>
+</node>
+<node CREATED="1391528725647" ID="ID_521795271" MODIFIED="1391528727409" TEXT="an overview of signals "/>
+<node CREATED="1391528747308" ID="ID_478151682" MODIFIED="1391528749885" TEXT="the problems with earlier implementations "/>
+</node>
+<node CREATED="1391446016402" FOLDED="true" ID="ID_1590902460" MODIFIED="1391608944427" TEXT="Signal Concepts ">
+<node CREATED="1391529072201" ID="ID_1894243707" MODIFIED="1391529074291" TEXT="every signal has a name ">
+<node CREATED="1391529084800" ID="ID_1078423861" MODIFIED="1391529087115" TEXT="begin with the three characters SIG "/>
+<node CREATED="1391529494581" ID="ID_308208592" MODIFIED="1391529496587" TEXT="positive integer constants ">
+<node CREATED="1391529505394" ID="ID_1688414317" MODIFIED="1391529560846" TEXT="&lt;signal.h&gt; ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Implementations actually define the individual signals in an alternate header file, but this header
+    </p>
+    <p>
+      file is included by &lt;signal.h&gt;. It is considered bad form for the kernel to include header files
+    </p>
+    <p>
+      meant for user-level applications, so if the applications and the kernel both need the same
+    </p>
+    <p>
+      definitions, the information is placed in a kernel header file that is then included by the user-
+    </p>
+    <p>
+      level header file. Thus, both FreeBSD 5.2.1 and Mac OS X 10.3 define the signals in
+    </p>
+    <p>
+      &lt;sys/signal.h&gt;. Linux 2.4.22 defines the signals in &lt;bits/signum.h&gt;, and Solaris 9 defines them
+    </p>
+    <p>
+      in &lt;sys/iso/signal_iso.h&gt;.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1391529522101" ID="ID_992072804" MODIFIED="1391529524518" TEXT="&lt;bits/signum.h&gt; "/>
+</node>
+</node>
+</node>
+<node CREATED="1391530066917" ID="ID_1281438236" MODIFIED="1391530068738" TEXT="conditions ">
+<node CREATED="1391529735282" ID="ID_1929198761" MODIFIED="1391529736870" TEXT="The terminal-generated signals "/>
+<node CREATED="1391529750624" ID="ID_163278186" MODIFIED="1391529753512" TEXT="Hardware exceptions ">
+<node CREATED="1391529765855" ID="ID_668436682" MODIFIED="1391529769418" TEXT="divide by 0 "/>
+<node CREATED="1391529778220" ID="ID_1295382248" MODIFIED="1391529780704" TEXT="invalid memory reference "/>
+</node>
+<node CREATED="1391529935009" ID="ID_1779265698" MODIFIED="1391529936278" TEXT="The kill(2) function ">
+<node CREATED="1391529944831" ID="ID_1739855900" MODIFIED="1391529947120" TEXT="limitations: ">
+<node CREATED="1391529959747" ID="ID_835499617" MODIFIED="1391529962862" TEXT="the owner of the process "/>
+<node CREATED="1391529973012" ID="ID_481601147" MODIFIED="1391529974596" TEXT="superuser. "/>
+</node>
+</node>
+<node CREATED="1391530101614" ID="ID_1130767003" MODIFIED="1391530111560" TEXT="software conditions">
+<node CREATED="1391530202359" ID="ID_751073501" MODIFIED="1391530205293" TEXT="SIGURG (generated when out-of-band data arrives over a network connection) "/>
+<node CREATED="1391530218735" ID="ID_1759801021" MODIFIED="1391530220665" TEXT="SIGPIPE (generated when a process writes to a pipe after the reader of the pipe has terminated) "/>
+<node CREATED="1391530233194" ID="ID_852875569" MODIFIED="1391530240710" TEXT="SIGALRM (generated when an alarm clock set by the process expires) "/>
+</node>
+</node>
+<node CREATED="1391530364159" ID="ID_804767373" MODIFIED="1391530366541" TEXT="Signals are classic examples of asynchronous events. "/>
+<node CREATED="1391531350930" ID="ID_1432661224" MODIFIED="1391531352570" TEXT="the action associated with a signal ">
+<node CREATED="1391531361526" ID="ID_454306056" MODIFIED="1391531363120" TEXT="Ignore the signal.  ">
+<node CREATED="1391531453915" ID="ID_632959586" MODIFIED="1391531737253" TEXT="two signals can never be ignored ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The reason these two signals can't be ignored is to provide the kernel and the
+    </p>
+    <p>
+      superuser with a surefire way of either killing or stopping any process.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1391531462411" ID="ID_576358185" MODIFIED="1391531468918" TEXT="SIGKILL "/>
+<node CREATED="1391531473454" ID="ID_339593146" MODIFIED="1391531475631" TEXT="SIGSTOP "/>
+</node>
+</node>
+<node CREATED="1391531370840" ID="ID_1573077568" MODIFIED="1391531373041" TEXT="Catch the signal. ">
+<node CREATED="1391531738119" ID="ID_1231025527" MODIFIED="1391531739552" TEXT="Note that the two signals SIGKILL and SIGSTOP can&apos;t be caught. "/>
+</node>
+<node CREATED="1391531381890" ID="ID_1919714151" MODIFIED="1391531385161" TEXT="Let the default action apply. "/>
+</node>
+<node CREATED="1391532276154" ID="ID_785007679" MODIFIED="1391532277738" TEXT="core">
+<node CREATED="1391532780090" ID="ID_878597932" MODIFIED="1391532782073" TEXT="not be generated if  ">
+<node CREATED="1391532803905" ID="ID_1205980808" MODIFIED="1391532805649" TEXT="the process was set-user-ID and the current user is not the owner of the program file "/>
+<node CREATED="1391532814575" ID="ID_1754258174" MODIFIED="1391532817016" TEXT="the process was set-group-ID and the current user is not the group owner of the file "/>
+<node CREATED="1391532829027" ID="ID_1783313403" MODIFIED="1391532832645" TEXT="the user does not have permission to write in the current working directory "/>
+<node CREATED="1391532841256" ID="ID_837153361" MODIFIED="1391532843744" TEXT="the file already exists and the user does not have permission to write to it "/>
+<node CREATED="1391532857323" ID="ID_1722511132" MODIFIED="1391532858446" TEXT="the file is too big "/>
+</node>
+</node>
+<node CREATED="1391532918153" FOLDED="true" ID="ID_348522869" MODIFIED="1391608940488" TEXT="describe each of these signals ">
+<node CREATED="1391532936090" ID="ID_611525306" MODIFIED="1391532958467" TEXT="SIGABRT">
+<node CREATED="1391602274821" ID="ID_505506075" MODIFIED="1391602277421" TEXT="generated by calling the abort function "/>
+</node>
+<node CREATED="1391602335836" ID="ID_633156848" MODIFIED="1391602353217" TEXT="SIGALRM">
+<node CREATED="1391602318282" ID="ID_96167187" MODIFIED="1391602572596" TEXT="when a timer set with the alarm function expires "/>
+<node CREATED="1391602611611" ID="ID_532741336" MODIFIED="1391602613936" TEXT="when an interval timer set by the setitimer(2) function expires "/>
+</node>
+<node CREATED="1391602630955" ID="ID_1240898551" MODIFIED="1391602652442" TEXT="SIGBUS  ">
+<node CREATED="1391602677082" ID="ID_1107409503" MODIFIED="1391602682979" TEXT="an implementation-defined hardware fault "/>
+<node CREATED="1391602706517" ID="ID_1592928209" MODIFIED="1391602708092" TEXT="on certain types of memory faults "/>
+</node>
+<node CREATED="1391602717787" ID="ID_1094216567" MODIFIED="1391602720622" TEXT="SIGCANCEL  ">
+<node CREATED="1391602742931" ID="ID_408741486" MODIFIED="1391602745714" TEXT="used internally by the Solaris threads library "/>
+</node>
+<node CREATED="1391602759043" ID="ID_1950524681" MODIFIED="1391602765393" TEXT="SIGCHLD  ">
+<node CREATED="1391602785650" ID="ID_253881531" MODIFIED="1391602791103" TEXT="Whenever a process terminates or stops, the SIGCHLD signal is sent to the parent "/>
+<node CREATED="1391602831297" ID="ID_515345211" MODIFIED="1391602834281" TEXT="The normal action in the signal-catching function is to call one of the wait functions to fetch the child&apos;s process ID and termination status "/>
+<node CREATED="1391602885793" ID="ID_1851699521" MODIFIED="1391602890230" TEXT="Earlier releases of System V had a similar signal named SIGCLD (without the H). "/>
+</node>
+<node CREATED="1391603001569" ID="ID_808399520" MODIFIED="1391603005546" TEXT="SIGCONT  ">
+<node CREATED="1391603060573" ID="ID_685279405" MODIFIED="1391603141683" TEXT="This job-control signal is sent to a stopped process when it is continued. ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      A full-screen editor, for example, might catch this
+    </p>
+    <p>
+      signal and use the signal handler to make a note to redraw the terminal screen
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1391603155866" ID="ID_18875657" MODIFIED="1391603169131" TEXT="SIGEMT  ">
+<node CREATED="1391603142291" ID="ID_1090728266" MODIFIED="1391603172103" TEXT="This indicates an implementation-defined hardware fault "/>
+<node CREATED="1391603204565" ID="ID_1146295531" MODIFIED="1391603207302" TEXT="The name EMT comes from the PDP-11 &quot;emulator trap&quot; instruction. "/>
+</node>
+<node CREATED="1391603220643" ID="ID_1255229742" MODIFIED="1391603234274" TEXT="SIGFPE  ">
+<node CREATED="1391603516662" ID="ID_1946405656" MODIFIED="1391603523450" TEXT="This signals an arithmetic exception, such as divide by 0, floating-point overflow, and so on. "/>
+</node>
+<node CREATED="1391603548504" ID="ID_548317067" MODIFIED="1391603554268" TEXT="SIGFREEZE  ">
+<node CREATED="1391603590782" ID="ID_265449002" MODIFIED="1391603656961" TEXT="This signal is defined only by Solaris ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      It is used to notify processes that need to
+    </p>
+    <p>
+      take special action before freezing the system state, such as might happen
+    </p>
+    <p>
+      when a system goes into hibernation or suspended mode
+    </p>
+    <p>
+      
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1391603657888" ID="ID_1931850262" MODIFIED="1391603660019" TEXT="SIGHUP  ">
+<node CREATED="1391603710956" ID="ID_1616371887" MODIFIED="1391603714274" TEXT="if a disconnect is detected by the terminal interface "/>
+<node CREATED="1391603890213" ID="ID_543116168" MODIFIED="1391603894630" TEXT="Figure 9.12, we see that the signal is sent to the process pointed to by the s_leader field in the session structure "/>
+<node CREATED="1391603997357" ID="ID_166530074" MODIFIED="1391604425773" TEXT="generated for this condition only if the terminal&apos;s CLOCAL flag is not set ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The CLOCAL flag for a
+    </p>
+    <p>
+      terminal is set if the attached terminal is local. The flag tells the terminal driver
+    </p>
+    <p>
+      to ignore all modem status lines.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1391604419874" ID="ID_1903301111" MODIFIED="1391604421992" TEXT="sent to">
+<node CREATED="1391603694869" ID="ID_511222534" MODIFIED="1391604429296" TEXT="sent to the controlling process (session leader) associated with a controlling terminal ">
+<node CREATED="1391604186519" ID="ID_892308773" MODIFIED="1391604194227" TEXT="This differs from the normal terminal-generated signals (interrupt, quit, and suspend), which are always delivered to the foreground process group. "/>
+</node>
+<node CREATED="1391604248550" ID="ID_694899993" MODIFIED="1391604435860" TEXT="This signal is also generated if the session leader terminates. In this case, the signal is sent to each process in the foreground process group. "/>
+<node CREATED="1391604394059" ID="ID_1368331437" MODIFIED="1391604438512" TEXT="This signal is commonly used to notify daemon processes (Chapter 13) to reread their configuration files. The reason SIGHUP is chosen for this is that a daemon should not have a controlling terminal and would normally never receive this signal. "/>
+</node>
+</node>
+<node CREATED="1391604477747" ID="ID_1781227031" MODIFIED="1391604480414" TEXT="SIGILL ">
+<node CREATED="1391604489613" ID="ID_1908584550" MODIFIED="1391604493240" TEXT="indicates that the process has executed an illegal hardware instruction "/>
+</node>
+<node CREATED="1391604625352" ID="ID_554050160" MODIFIED="1391604628277" TEXT="SIGINFO ">
+<node CREATED="1391604829792" ID="ID_1312687671" MODIFIED="1391604833744" TEXT="This BSD signal is generated by the terminal driver when we type the status key (often Control-T) "/>
+<node CREATED="1391604841009" ID="ID_287813142" MODIFIED="1391604844981" TEXT="sent to all processes in the foreground process group "/>
+<node CREATED="1391604876548" ID="ID_1793554693" MODIFIED="1391604880398" TEXT="linux not support"/>
+</node>
+<node CREATED="1391604895085" ID="ID_383831722" MODIFIED="1391604897417" TEXT="SIGINT  ">
+<node CREATED="1391604911032" ID="ID_295902115" MODIFIED="1391604913788" TEXT="generated by the terminal driver when we type the interrupt key (often DELETE or Control-C). "/>
+</node>
+<node CREATED="1391604969807" ID="ID_604932623" MODIFIED="1391604972370" TEXT="SIGIO  ">
+<node CREATED="1391604985753" ID="ID_1823213487" MODIFIED="1391604987796" TEXT="indicates an asynchronous I/O event "/>
+<node CREATED="1391605054395" ID="ID_128216869" MODIFIED="1391605058599" TEXT="Linux 2.4.22 and Solaris 9 define SIGIO to be the same value as SIGPOLL "/>
+<node CREATED="1391605078344" ID="ID_1105508934" MODIFIED="1391605081209" TEXT="default behavior is to terminate the process "/>
+</node>
+<node CREATED="1391605118896" ID="ID_203570308" MODIFIED="1391605121121" TEXT="SIGIOT ">
+<node CREATED="1391605131621" ID="ID_33017268" MODIFIED="1391605135278" TEXT="indicates an implementation-defined hardware fault "/>
+<node CREATED="1391605150672" ID="ID_976931609" MODIFIED="1391605153454" TEXT="The name IOT comes from the PDP-11 mnemonic for the &quot;input/output TRAP&quot; instruction. "/>
+</node>
+<node CREATED="1391605189867" ID="ID_842808029" MODIFIED="1391605191811" TEXT="SIGKILL  ">
+<node CREATED="1391605203803" ID="ID_1705651140" MODIFIED="1391605205978" TEXT="one of the two that can&apos;t be caught or ignored "/>
+</node>
+<node CREATED="1391605546593" ID="ID_227135324" MODIFIED="1391605547929" TEXT="SIGLWP  ">
+<node CREATED="1391605561089" ID="ID_727045200" MODIFIED="1391605563762" TEXT="is used internally by the Solaris threads library "/>
+</node>
+<node CREATED="1391605657306" ID="ID_536648742" MODIFIED="1391605658271" TEXT="SIGPIPE  ">
+<node CREATED="1391606148250" ID="ID_1672228034" MODIFIED="1391606152233" TEXT="If we write to a pipeline but the reader has terminated "/>
+<node CREATED="1391606134322" ID="ID_1916024799" MODIFIED="1391606136452" TEXT="also generated when a process writes to a socket of type SOCK_STREAM that is no longer connected "/>
+</node>
+<node CREATED="1391605665334" ID="ID_1795562672" MODIFIED="1391605666867" TEXT="SIGPOLL  ">
+<node CREATED="1391606181182" ID="ID_1271609097" MODIFIED="1391606186981" TEXT="when a specific event occurs on a pollable device "/>
+<node CREATED="1391606274718" ID="ID_1394348588" MODIFIED="1391606277064" TEXT="On Linux and Solaris, SIGPOLL is defined to have the same value as SIGIO. "/>
+</node>
+<node CREATED="1391605673499" ID="ID_1834766400" MODIFIED="1391605676326" TEXT="SIGPROF  ">
+<node CREATED="1391606306492" ID="ID_481461319" MODIFIED="1391606309314" TEXT="when a profiling interval timer set by the setitimer(2) function expires "/>
+</node>
+<node CREATED="1391605683433" ID="ID_305713369" MODIFIED="1391605685766" TEXT="SIGPWR  ">
+<node CREATED="1391606460990" ID="ID_799097984" MODIFIED="1391606511376" TEXT="Most systems have the process that is notified of the low-battery condition send the SIGPWR signal to the init process, and init handles the shutdown. ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      This signal is system dependent. Its main use is on a system that has an
+    </p>
+    <p>
+      uninterruptible power supply (UPS). If power fails, the UPS takes over and the
+    </p>
+    <p>
+      software can usually be notified. Nothing needs to be done at this point, as the
+    </p>
+    <p>
+      system continues running on battery power. But if the battery gets low (if the
+    </p>
+    <p>
+      power is off for an extended period), the software is usually notified again; at
+    </p>
+    <p>
+      this point, it behooves the system to shut everything down within about 1530
+    </p>
+    <p>
+      seconds. This is when SIGPWR should be sent.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1391605693372" ID="ID_702725434" MODIFIED="1391605695712" TEXT="SIGQUIT  ">
+<node CREATED="1391606595637" ID="ID_1329658506" MODIFIED="1391606597998" TEXT="This signal is generated by the terminal driver when we type the terminal quit key (often Control-backslash) "/>
+<node CREATED="1391606620848" ID="ID_1536505393" MODIFIED="1391606622986" TEXT="also generates a core file "/>
+</node>
+<node CREATED="1391605702068" ID="ID_724977899" MODIFIED="1391605704619" TEXT="SIGSEGV  ">
+<node CREATED="1391606638916" ID="ID_574434017" MODIFIED="1391606641737" TEXT="indicates that the process has made an invalid memory reference "/>
+<node CREATED="1391606660399" ID="ID_1585102801" MODIFIED="1391606662509" TEXT="stands for &quot;segmentation violation.&quot; "/>
+</node>
+<node CREATED="1391605715605" ID="ID_1070330060" MODIFIED="1391605716821" TEXT="SIGSTKFLT  ">
+<node CREATED="1391606679647" ID="ID_1863857521" MODIFIED="1391606682000" TEXT="This signal is defined only by Linux "/>
+<node CREATED="1391606718517" ID="ID_423475660" MODIFIED="1391606720532" TEXT="be used for stack faults taken by the math coprocessor.  "/>
+</node>
+<node CREATED="1391605725380" ID="ID_1438300436" MODIFIED="1391605726531" TEXT="SIGSTOP  ">
+<node CREATED="1391606751117" ID="ID_1582342525" MODIFIED="1391606753223" TEXT="stops a process "/>
+<node CREATED="1391606766117" ID="ID_228066009" MODIFIED="1391606768069" TEXT="like the interactive stop signal (SIGTSTP) "/>
+<node CREATED="1391606776352" ID="ID_245567502" MODIFIED="1391606778197" TEXT="but SIGSTOP cannot be caught or ignored. "/>
+</node>
+<node CREATED="1391605732727" ID="ID_491698197" MODIFIED="1391605734817" TEXT="SIGSYS  ">
+<node CREATED="1391607029231" ID="ID_1774178313" MODIFIED="1391607124231" TEXT="This signals an invalid system call. ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Somehow, the process executed a machine
+    </p>
+    <p>
+      instruction that the kernel thought was a system call, but the parameter with
+    </p>
+    <p>
+      the instruction that indicates the type of system call was invalid. This might
+    </p>
+    <p>
+      happen if you build a program that uses a new system call and you then try to
+    </p>
+    <p>
+      run the same binary on an older version of the operating system where the
+    </p>
+    <p>
+      system call doesn't exist.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1391605740306" ID="ID_855826986" MODIFIED="1391605741930" TEXT="SIGTERM  ">
+<node CREATED="1391607126713" ID="ID_1059342225" MODIFIED="1391607129125" TEXT="the termination signal sent by the kill(1) command by default. "/>
+</node>
+<node CREATED="1391605748241" ID="ID_896941916" MODIFIED="1391605750113" TEXT="SIGTHAW  ">
+<node CREATED="1391607153004" ID="ID_1408895558" MODIFIED="1391607154841" TEXT="This signal is defined only by Solaris "/>
+<node CREATED="1391607179608" ID="ID_678605121" MODIFIED="1391607182290" TEXT="notify processes that need to take special action when the system resumes operation after being suspended. "/>
+</node>
+<node CREATED="1391605755996" ID="ID_616098712" MODIFIED="1391605757923" TEXT="SIGTRAP  ">
+<node CREATED="1391607202599" ID="ID_1259427330" MODIFIED="1391607204939" TEXT="This indicates an implementation-defined hardware fault "/>
+<node CREATED="1391607221377" ID="ID_1481783666" MODIFIED="1391607224331" TEXT="transfer control to a debugger when a breakpoint instruction is executed. "/>
+</node>
+<node CREATED="1391605763794" ID="ID_828644469" MODIFIED="1391605766489" TEXT="SIGTSTP ">
+<node CREATED="1391607249819" ID="ID_1335676140" MODIFIED="1391607251988" TEXT="This interactive stop signal is generated by the terminal driver when we type the terminal suspend key (often Control-Z). "/>
+<node CREATED="1391607520370" ID="ID_1276952978" MODIFIED="1391607577312" TEXT="When discussing job control and signals, we talk about stopping and continuing jobs "/>
+<node CREATED="1391607590134" ID="ID_829504303" MODIFIED="1391607593032" TEXT="The terminal driver, however, has historically used the term stop to refer to stopping and starting the terminal output using the Control-S and Control- Q characters.  "/>
+</node>
+<node CREATED="1391605774474" ID="ID_852248414" MODIFIED="1391605777410" TEXT="SIGTTIN  ">
+<node CREATED="1391607653354" ID="ID_1445153238" MODIFIED="1391607655959" TEXT="when a process in a background process group tries to read from its controlling terminal. "/>
+<node CREATED="1391607701358" ID="ID_1819149978" MODIFIED="1391607832474" TEXT="special cases not generated ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      instead, the read
+    </p>
+    <p>
+      operation returns an error with errno set to EIO .
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1391607720143" ID="ID_257726951" MODIFIED="1391607722562" TEXT="the reading process is ignoring or blocking this signal "/>
+<node CREATED="1391607739586" ID="ID_730862136" MODIFIED="1391607741678" TEXT="the process group of the reading process is orphaned "/>
+</node>
+</node>
+<node CREATED="1391605782013" ID="ID_157684306" MODIFIED="1391605784224" TEXT="SIGTTOU  ">
+<node CREATED="1391607834285" ID="ID_1261559228" MODIFIED="1391607837525" TEXT="when a process in a background process group tries to write to its controlling terminal. "/>
+<node CREATED="1391608082439" ID="ID_651399165" MODIFIED="1391608086105" TEXT="If background writes are not allowed, then like the SIGTTIN signal "/>
+<node CREATED="1391608097210" ID="ID_883953460" MODIFIED="1391608098928" TEXT="Regardless of whether background writes are allowed, certain terminal operations (other than writing) can also generate the SIGTTOU signal: tcsetattr, tcsendbreak, tcdrain, tcflush, tcflow, and tcsetpgrp. "/>
+</node>
+<node CREATED="1391605791528" ID="ID_1466396205" MODIFIED="1391605793282" TEXT="SIGURG  ">
+<node CREATED="1391608247500" ID="ID_68949279" MODIFIED="1391608250310" TEXT="notifies the process that an urgent condition has occurred "/>
+<node CREATED="1391608258119" ID="ID_50496556" MODIFIED="1391608260890" TEXT="optionally generated when out-of-band data is received on a network connection "/>
+</node>
+<node CREATED="1391605799073" ID="ID_528988754" MODIFIED="1391605800998" TEXT="SIGUSR1  ">
+<node CREATED="1391608322730" ID="ID_1032720926" MODIFIED="1391608329509" TEXT="a user-defined signal"/>
+</node>
+<node CREATED="1391605806360" ID="ID_1542978240" MODIFIED="1391605808549" TEXT="SIGUSR2  ">
+<node CREATED="1391608360679" ID="ID_1128917126" MODIFIED="1391608364274" TEXT="another user-defined signal "/>
+</node>
+<node CREATED="1391605815918" ID="ID_1088938294" MODIFIED="1391605817665" TEXT="SIGVTALRM  ">
+<node CREATED="1391608390698" ID="ID_1937750482" MODIFIED="1391608394468" TEXT="when a virtual interval timer set by the setitimer(2) function expires "/>
+</node>
+<node CREATED="1391605823405" ID="ID_1485498943" MODIFIED="1391605825417" TEXT="SIGWAITING  ">
+<node CREATED="1391608409033" ID="ID_1342382411" MODIFIED="1391608411620" TEXT="This signal is used internally by the Solaris threads library "/>
+</node>
+<node CREATED="1391605829941" ID="ID_320393816" MODIFIED="1391605831438" TEXT="SIGWINCH  ">
+<node CREATED="1391608520722" ID="ID_1334572976" MODIFIED="1391608524108" TEXT="If a process changes the window size from its previous value using the ioctl set-window-size command, the kernel generates the SIGWINCH signal for the foreground process group "/>
+</node>
+<node CREATED="1391605837963" ID="ID_938711876" MODIFIED="1391605840236" TEXT="SIGXCPU  ">
+<node CREATED="1391608557989" ID="ID_595580077" MODIFIED="1391608559790" TEXT=" If the process exceeds its soft CPU time limit, the SIGXCPU signal is generated. "/>
+</node>
+<node CREATED="1391605846912" ID="ID_1749394940" MODIFIED="1391605848629" TEXT="SIGXFSZ ">
+<node CREATED="1391608668247" ID="ID_546622082" MODIFIED="1391608669910" TEXT="if the process exceeds its soft file size limit "/>
+</node>
+<node CREATED="1391605860083" ID="ID_1732151121" MODIFIED="1391605862483" TEXT="SIGXRES ">
+<node CREATED="1391608697512" ID="ID_1389207493" MODIFIED="1391608700029" TEXT="This signal is defined only by Solaris.  "/>
+<node CREATED="1391608721971" ID="ID_1718401069" MODIFIED="1391608723784" TEXT="exceeded a preconfigured resource value. "/>
+</node>
+</node>
+</node>
+<node CREATED="1391446023601" FOLDED="true" ID="ID_1531507739" MODIFIED="1391695189878" TEXT="signal Function ">
+<node CREATED="1391608946988" ID="ID_1371109145" MODIFIED="1391688983163" TEXT="void (*signal(int signo, void (*func)(int)))(int); ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The signal function is defined by ISO C, which doesn't involve multiple processes, process
+    </p>
+    <p>
+      groups, terminal I/O, and the like. Therefore, its definition of signals is vague enough to be
+    </p>
+    <p>
+      almost useless for UNIX systems.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1391610924818" ID="ID_1551695924" MODIFIED="1391610927065" TEXT="func ">
+<node CREATED="1391610940566" ID="ID_831167885" MODIFIED="1391610944986" TEXT="SIG_IGN "/>
+<node CREATED="1391610949634" ID="ID_70191874" MODIFIED="1391610951202" TEXT="SIG_DFL "/>
+<node CREATED="1391610963031" ID="ID_1198343362" MODIFIED="1391610964376" TEXT="the address of a function to be called when the signal occurs "/>
+</node>
+<node CREATED="1391611127496" ID="ID_1041162322" MODIFIED="1391611130536" TEXT="The return value from signal is the pointer to the previous signal handler. ">
+<node CREATED="1391688420827" ID="ID_799014949" MODIFIED="1391688424392" TEXT="SIG_ERR"/>
+</node>
+<node CREATED="1391688795515" ID="ID_161528405" MODIFIED="1391688796774" TEXT="the shell automatically sets the disposition of the interrupt and quit signals in the background process to be ignored.  "/>
+<node CREATED="1391688984722" ID="ID_1398694871" MODIFIED="1391688986098" TEXT="When a process calls fork, the child inherits the parent&apos;s signal dispositions.  "/>
+</node>
+</node>
+<node CREATED="1391446030866" FOLDED="true" ID="ID_677278567" MODIFIED="1391695186212" TEXT="Unreliable Signals ">
+<node CREATED="1391689172956" ID="ID_1766660435" MODIFIED="1391689176610" TEXT="mean that signals could get lost: a signal could occur and the process would never know about it "/>
+<node CREATED="1391690320797" ID="ID_148367394" MODIFIED="1391690322337" TEXT="One problem with these early versions is that the action for a signal was reset to its default each time the signal occurred "/>
+<node CREATED="1391690354172" ID="ID_1828594950" MODIFIED="1391690356164" TEXT="Another problem with these earlier systems is that the process was unable to turn a signal off when it didn&apos;t want the signal to occur. "/>
+</node>
+<node CREATED="1391446036166" FOLDED="true" ID="ID_136816160" MODIFIED="1391692020146" TEXT="Interrupted System Calls ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<node CREATED="1391690691455" ID="ID_1317258499" MODIFIED="1391690693926" TEXT="two categories ">
+<node CREATED="1391690699577" ID="ID_1106957780" MODIFIED="1391690703340" TEXT="the &quot;slow&quot; system calls ">
+<node CREATED="1391690721208" ID="ID_610566828" MODIFIED="1391690723309" TEXT="can block forever "/>
+<node CREATED="1391690808686" ID="ID_1579221395" MODIFIED="1391690809837" TEXT="Reads that can block the caller forever if data isn&apos;t present with certain file types (pipes, terminal devices, and network devices) "/>
+<node CREATED="1391690815334" ID="ID_1110187405" MODIFIED="1391690816344" TEXT="Writes that can block the caller forever if the data can&apos;t be accepted immediately by these same file types "/>
+<node CREATED="1391690823510" ID="ID_838578992" MODIFIED="1391690824956" TEXT="Opens that block until some condition occurs on certain file types (such as an open of a terminal device that waits until an attached modem answers the phone) "/>
+<node CREATED="1391690847289" ID="ID_1354092409" MODIFIED="1391690848194" TEXT="The pause function (which by definition puts the calling process to sleep until a signal is caught) and the wait function "/>
+<node CREATED="1391690851809" ID="ID_1422562571" MODIFIED="1391690853406" TEXT="Certain ioctl operations "/>
+<node CREATED="1391690859353" ID="ID_1882507921" MODIFIED="1391690860182" TEXT="Some of the interprocess communication functions "/>
+</node>
+<node CREATED="1391690708777" ID="ID_602258938" MODIFIED="1391690709923" TEXT="all the others "/>
+</node>
+</node>
+<node CREATED="1391446041381" FOLDED="true" ID="ID_1086977365" MODIFIED="1391695184529" TEXT="Reentrant Functions ">
+<node CREATED="1391692631185" ID="ID_679701932" MODIFIED="1391692644562" TEXT="no reentrant because">
+<node CREATED="1391692663584" ID="ID_101240413" MODIFIED="1391692665380" TEXT="use static data structures "/>
+<node CREATED="1391692671464" ID="ID_1292997301" MODIFIED="1391692672554" TEXT="call malloc or free "/>
+<node CREATED="1391692684760" ID="ID_1837265058" MODIFIED="1391692686661" TEXT="the standard I/O library ">
+<node CREATED="1391692696366" ID="ID_1557447880" MODIFIED="1391692697798" TEXT="use global data structures in a nonreentrant way. "/>
+</node>
+<node CREATED="1391693348959" ID="ID_1354809082" MODIFIED="1391695126884" TEXT="longjmp  and siglongjmp ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      the signal may have occurred while the main routine was updating a data structure in a
+    </p>
+    <p>
+      nonreentrant way. This data structure could be left half updated if we call siglongjmp instead of
+    </p>
+    <p>
+      returning from the signal handler.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1391693172588" ID="ID_1348805532" MODIFIED="1391693174453" TEXT="as a general rule, when calling the functions listed in Figure 10.4 from a signal handler, we should save and restore errno. "/>
+<node CREATED="1391695132834" ID="ID_1762358544" MODIFIED="1391695182426" TEXT="Figure 10.5. Call a nonreentrant function from a signal handler ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<node CREATED="1391695159579" ID="ID_1915372472" MODIFIED="1391695174436" TEXT="the handler didn&apos;t return"/>
+</node>
+</node>
+<node CREATED="1391446046349" ID="ID_1274988891" MODIFIED="1391446047399" TEXT="SIGCLD Semantics "/>
+<node CREATED="1391446054791" ID="ID_540278595" MODIFIED="1391446056879" TEXT="Reliable-Signal Terminology and Semantics "/>
+<node CREATED="1391446061331" ID="ID_736687170" MODIFIED="1391446062706" TEXT="kill and raise Functions "/>
+<node CREATED="1391446070403" ID="ID_892035063" MODIFIED="1391446071262" TEXT="alarm and pause Functions "/>
+<node CREATED="1391446076191" ID="ID_1001815" MODIFIED="1391446076995" TEXT="Signal Sets "/>
+<node CREATED="1391446082268" ID="ID_67788245" MODIFIED="1391446083152" TEXT="sigprocmask Function "/>
+<node CREATED="1391446088766" ID="ID_646480423" MODIFIED="1391446089606" TEXT="sigpending Function "/>
+<node CREATED="1391446094708" ID="ID_1932212883" MODIFIED="1391446095719" TEXT="sigaction Function "/>
+<node CREATED="1391446100818" ID="ID_1450583875" MODIFIED="1391446101639" TEXT="sigsetjmp and siglongjmp Functions "/>
+<node CREATED="1391446107175" ID="ID_984588754" MODIFIED="1391446108015" TEXT="sigsuspend Function "/>
+<node CREATED="1391446112242" ID="ID_175575677" MODIFIED="1391446113018" TEXT="abort Function "/>
+<node CREATED="1391446116941" ID="ID_1314597290" MODIFIED="1391446117901" TEXT="system Function "/>
+<node CREATED="1391446122233" ID="ID_846443431" MODIFIED="1391446125016" TEXT="sleep Function "/>
+<node CREATED="1391446129804" ID="ID_1256383307" MODIFIED="1391446130762" TEXT="Job-Control Signals "/>
+<node CREATED="1391446135519" ID="ID_1218700903" MODIFIED="1391446136501" TEXT=" Additional Features "/>
+<node CREATED="1391446140125" ID="ID_1268518014" MODIFIED="1391446142538" TEXT=" Summary "/>
 </node>
 </node>
 </map>
