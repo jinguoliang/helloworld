@@ -45,3 +45,7 @@ $ export CCACHE_DIR=/<path_of_your_choice>/.ccache
 watch -n1 -d prebuilts/misc/linux-x86/ccache/ccache -s
 $ prebuilts/misc/linux-x86/ccache/ccache -M 50G
 [[./Android.mk 简介 - haomcu的专栏 - 博客频道 - CSDN.NET.html]] 
+
+
+==== Android Make: ====
+LOCAL_MODULE_PATH := $(TARGET_OUT)/vendor/overlay

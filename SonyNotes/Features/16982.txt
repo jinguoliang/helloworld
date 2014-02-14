@@ -39,3 +39,6 @@ Porting Step:
 
 
 
+{{./pasted_image.bmp}}
+
+{{./pasted_image001.bmp}}

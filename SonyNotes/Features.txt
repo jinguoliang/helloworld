@@ -11,21 +11,18 @@ don't port in here:
 * platform/frameworks/base/core/res
 * platform/vendor/semc/packages/resource/uxp
 
-
-=== Group 1 ===
-
 [[+16343]] Automatic power off control    ok 
 http://review-jdm.sonyericsson.net/#/c/18133/
 
 [[+16982]] PlayAnywhere 2.0 for Eagle        ok      
 http://review-jdm.sonyericsson.net/#/c/18867/
     
-[[+15831]] [[../resouces/FP15831 Email Security Step Up for ODM - Androiki.html|Email Security Step Up for ODM]]                  ok      
-[[+17211]] [[../resouces/FP15678 Email solution Cherry pick from Rhine 1.1 - Androiki.html|Email solution Cherry pick from Rhine 1.2]]       ok  
+[[+15831]] [[../resouces/FP15831 Email Security Step Up for ODM - Androiki.html|Email Security Step Up for ODM]]                        
+[[+17211]] [[../resouces/FP15678 Email solution Cherry pick from Rhine 1.1 - Androiki.html|Email solution Cherry pick from Rhine 1.2]]         
 http://review-jdm.sonyericsson.net/#/c/18665/
 phone: 6665
 
-[[+15862]] Notification Tray solution for ODM products              OK
+[[+15862]] Notification Tray solution for ODM products              
 [[/kk-rhine/frameworks/base/packages/SystemUI/res/values/somc_config.xml]]      [[line:110]]
 new patch get in:    pathid 4235
 	Close Notification panel when turning off Mobile data
@@ -33,14 +30,7 @@ new patch get in:    pathid 4235
 
 [[+15923]] [[../resouces/FP15923 Backup and restore Solution for Eagle-definition - Androiki.html|Backup and restore Solution for Eagle]]      
 FP[[+15338]]  [[~/shared_with_windows/我的坚果云/resource/html/FP15338 Downloadable themes enabler - Androiki.html|Downloadable themes enabler]]   
-   
 
-==== TODO ====
-	made the email CDF apk in [[/tmp]]  cdf*    and need to push to phone
-	need test email and upload to update
-
-
-=== Group 2 ===
 	1[[./FP15744 Transparent Status bar and Navigation bar Solution From Rhine 1.1 - Androiki.html]] 					need to view the kk-rhine
 		DMS02339145
 		vendor/semc/frameworks/base/libs/navbar-extensions/com.sonyericsson.navigationbar_impl.jar   no in kk-rhine but in rhine1.1   
@@ -48,12 +38,12 @@ FP[[+15338]]  [[~/shared_with_windows/我的坚果云/resource/html/FP15338 Down
 		
 		
 	2[[./FP3877 Set Google sync auto-sync to default OFF for Nicki SS JBMR2 project definition - Androiki001.html]] 
-		patch PID000207 :	platform/vendor/semc/overlay/platform-custom-replacements  						ok
+		patch PID000207 :	platform/vendor/semc/overlay/platform-custom-replacements  						
 		DMS02339624
-	3.Custmization of SAT application name        										nothing  to do 					ok
+	3.Custmization of SAT application name        										nothing  to do 					
 		https://wiki.sonyericsson.net/androiki/PatchRequest_DMS00870638
 		unicom is test and ok
-	4.Within 'Accounts & sync' menu, the option Auto-sync is disabled.				nothing  to do						ok
+	4.Within 'Accounts & sync' menu, the option Auto-sync is disabled.				nothing  to do						
 		DMS02339786
 		Implemented by static overlay
 		push cdf to phone test ok 
@@ -69,7 +59,6 @@ FP14206 HW unique key for File System Encryption
 	FP14207 Use AES 256 for file system encryption
 	https://wiki.sonyericsson.net/androiki/FP14207_Use_AES_256_for_file_system_encryption
 	PID002169
-18188	EAS Tasks for Yukon ODM
-	Feature Definition FP11804 Tasks https://wiki.sonyericsson.net/androiki/Feature_Definition_FP11804_Tasks
-	FP11804 EAS Tasks for Eagle TMO US https://wiki.sonyericsson.net/androiki/FP11804_EAS_Tasks_for_Eagle_TMO_US
-	PID002169
+[[+18188|18188]]	EAS Tasks for Yukon ODM
+
+

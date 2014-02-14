@@ -7,3 +7,505 @@ Created Tuesday 28 January 2014
 
 
 /kk-rhine/vendor/semc/packages/apps/email/
+src
+├── com
+│   ├── android
+│   │   ├── email
+│   │   │   ├── activity
+│   │   │   │   ├── ActionBarController.java
+│   │   │   │   ├── ActivityHelper.java
+│   │   │   │   ├── att
+│   │   │   │   │   └── MessageViewFragmentAtt.java
+│   │   │   │   ├── AttachmentChargeConfirmDialog.java
+│   │   │   │   ├── AttachmentInfoDialog.java
+│   │   │   │   ├── AttachmentWarningDialog.java
+│   │   │   │   ├── BannerController.java
+│   │   │   │   ├── CalendarHolder.java
+│   │   │   │   ├── ContactStatusLoader.java
+│   │   │   │   ├── DeleteMessageConfirmationDialog.java
+│   │   │   │   ├── EmailActivity.java
+│   │   │   │   ├── FileManager.java
+│   │   │   │   ├── FragmentInstallable.java
+│   │   │   │   ├── GalContactInformationDialog.java
+│   │   │   │   ├── GalContactLookupTask.java
+│   │   │   │   ├── InsertQuickResponseDialog.java
+│   │   │   │   ├── MailboxFinder.java
+│   │   │   │   ├── MailboxFragmentAdapter.java
+│   │   │   │   ├── MailboxListFragment.java
+│   │   │   │   ├── MailboxListItem.java
+│   │   │   │   ├── MailboxMoveToAdapter.java
+│   │   │   │   ├── MailListSortUtility.java
+│   │   │   │   ├── MessageComposeCalendar.java
+│   │   │   │   ├── MessageCompose.java
+│   │   │   │   ├── MessageFileViewFragment.java
+│   │   │   │   ├── MessageFileView.java
+│   │   │   │   ├── MessageListFragment.java
+│   │   │   │   ├── MessageListItemCache.java
+│   │   │   │   ├── MessageListItemCoordinates.java
+│   │   │   │   ├── MessageListItem.java
+│   │   │   │   ├── MessageOrderManager.java
+│   │   │   │   ├── MessagesAdapterDecorator.java
+│   │   │   │   ├── MessagesAdapterForThreads.java
+│   │   │   │   ├── MessagesAdapter.java
+│   │   │   │   ├── MessagesAdapterWithHeaders.java
+│   │   │   │   ├── MessageViewFragmentBase.java
+│   │   │   │   ├── MessageViewFragment.java
+│   │   │   │   ├── MessageViewPagerFragment.java
+│   │   │   │   ├── MoveMailToDraftsInfoDialog.java
+│   │   │   │   ├── MoveMessageToDialog.java
+│   │   │   │   ├── NavigationDrawerAdapter.java
+│   │   │   │   ├── NfcHandler.java
+│   │   │   │   ├── RecentMailboxManager.java
+│   │   │   │   ├── ResendDialog.java
+│   │   │   │   ├── setup
+│   │   │   │   │   ├── AccountCheckFrequencyFragment.java
+│   │   │   │   │   ├── AccountCheckFrequency.java
+│   │   │   │   │   ├── AccountCheckSettingsFragment.java
+│   │   │   │   │   ├── AccountSecurity.java
+│   │   │   │   │   ├── AccountServerBaseFragment.java
+│   │   │   │   │   ├── AccountSettingsEditQuickResponsesFragment.java
+│   │   │   │   │   ├── AccountSettingsFragment.java
+│   │   │   │   │   ├── AccountSettings.java
+│   │   │   │   │   ├── AccountSettingsUtils.java
+│   │   │   │   │   ├── AccountSetupAccountType.java
+│   │   │   │   │   ├── AccountSetupActivity.java
+│   │   │   │   │   ├── AccountSetupBasics.java
+│   │   │   │   │   ├── AccountSetupExchangeFragment.java
+│   │   │   │   │   ├── AccountSetupExchange.java
+│   │   │   │   │   ├── AccountSetupIncomingFragment.java
+│   │   │   │   │   ├── AccountSetupIncoming.java
+│   │   │   │   │   ├── AccountSetupNames.java
+│   │   │   │   │   ├── AccountSetupOof.java
+│   │   │   │   │   ├── AccountSetupOptions.java
+│   │   │   │   │   ├── AccountSetupOutgoingFragment.java
+│   │   │   │   │   ├── AccountSetupOutgoing.java
+│   │   │   │   │   ├── DebugFragment.java
+│   │   │   │   │   ├── DuplicateAccountDialogFragment.java
+│   │   │   │   │   ├── EditQuickResponseDialog.java
+│   │   │   │   │   ├── GeneralPreferences.java
+│   │   │   │   │   ├── MailboxSettings.java
+│   │   │   │   │   ├── PeakTimePreferenceCategory.java
+│   │   │   │   │   ├── PushAccountSetup.java
+│   │   │   │   │   ├── RepeatPreference.java
+│   │   │   │   │   ├── SetupData.java
+│   │   │   │   │   └── SpinnerOption.java
+│   │   │   │   ├── ShortcutPickerFragment.java
+│   │   │   │   ├── ShortcutPicker.java
+│   │   │   │   ├── SingleChoiceDialogFragment.java
+│   │   │   │   ├── SwipeableMessageListItem.java
+│   │   │   │   ├── UIControllerBase.java
+│   │   │   │   ├── UIControllerOnePane.java
+│   │   │   │   ├── UIControllerTwoPane.java
+│   │   │   │   ├── UiUtilities.java
+│   │   │   │   └── Welcome.java
+│   │   │   ├── api
+│   │   │   │   └── Intents.java
+│   │   │   ├── AttachmentInfo.java
+│   │   │   ├── Clock.java
+│   │   │   ├── Controller.java
+│   │   │   ├── ControllerResultUiThreadWrapper.java
+│   │   │   ├── data
+│   │   │   │   ├── ClosingMatrixCursor.java
+│   │   │   │   └── ThrottlingCursorLoader.java
+│   │   │   ├── DelayedExecuter.java
+│   │   │   ├── EmailAddressAdapter.java
+│   │   │   ├── EmailAddressValidator.java
+│   │   │   ├── EmailBackupAgent.java
+│   │   │   ├── EmailConnectivityManager.java
+│   │   │   ├── EmailFactory.java
+│   │   │   ├── Email.java
+│   │   │   ├── FixedLengthInputStream.java
+│   │   │   ├── FolderProperties.java
+│   │   │   ├── GroupMessagingListener.java
+│   │   │   ├── LegacyConversions.java
+│   │   │   ├── mail
+│   │   │   │   ├── Sender.java
+│   │   │   │   ├── store
+│   │   │   │   │   ├── ExchangeStore.java
+│   │   │   │   │   ├── imap
+│   │   │   │   │   │   ├── ImapConstants.java
+│   │   │   │   │   │   ├── ImapElement.java
+│   │   │   │   │   │   ├── ImapList.java
+│   │   │   │   │   │   ├── ImapMemoryLiteral.java
+│   │   │   │   │   │   ├── ImapResponse.java
+│   │   │   │   │   │   ├── ImapResponseParser.java
+│   │   │   │   │   │   ├── ImapSimpleString.java
+│   │   │   │   │   │   ├── ImapString.java
+│   │   │   │   │   │   ├── ImapTempFileLiteral.java
+│   │   │   │   │   │   └── ImapUtility.java
+│   │   │   │   │   ├── ImapConnection.java
+│   │   │   │   │   ├── ImapFolder.java
+│   │   │   │   │   ├── ImapResponseEnumeration.java
+│   │   │   │   │   ├── ImapStore.java
+│   │   │   │   │   ├── orange
+│   │   │   │   │   │   └── ImapStoreOrange.java
+│   │   │   │   │   ├── Pop3Store.java
+│   │   │   │   │   └── ServiceStore.java
+│   │   │   │   ├── Store.java
+│   │   │   │   ├── transport
+│   │   │   │   │   ├── CountingOutputStream.java
+│   │   │   │   │   ├── DiscourseLogger.java
+│   │   │   │   │   ├── EOLConvertingOutputStream.java
+│   │   │   │   │   ├── ExchangeSender.java
+│   │   │   │   │   ├── MailTransport.java
+│   │   │   │   │   ├── SmtpException.java
+│   │   │   │   │   ├── SmtpSender.java
+│   │   │   │   │   └── StatusOutputStream.java
+│   │   │   │   └── Transport.java
+│   │   │   ├── MessageListContext.java
+│   │   │   ├── MessagingController.java
+│   │   │   ├── MessagingExceptionStrings.java
+│   │   │   ├── MessagingListener.java
+│   │   │   ├── NotificationController.java
+│   │   │   ├── PeekableInputStream.java
+│   │   │   ├── Preferences.java
+│   │   │   ├── provider
+│   │   │   │   ├── AccountBackupRestore.java
+│   │   │   │   ├── AccountReconciler.java
+│   │   │   │   ├── AddressCache.java
+│   │   │   │   ├── AttachmentProvider.java
+│   │   │   │   ├── ContentCache.java
+│   │   │   │   ├── DBHelper.java
+│   │   │   │   ├── EmailProvider.java
+│   │   │   │   ├── EmailSearchSuggestionProvider.java
+│   │   │   │   ├── SearchContent.java
+│   │   │   │   ├── SmimeProvider.java
+│   │   │   │   ├── SQLiteExtensionOpenHelper.java
+│   │   │   │   └── WidgetProvider.java
+│   │   │   ├── RecipientAdapter.java
+│   │   │   ├── RefreshManager.java
+│   │   │   ├── RequireManualSyncDialog.java
+│   │   │   ├── ResourceHelper.java
+│   │   │   ├── SecurityPolicy.java
+│   │   │   ├── service
+│   │   │   │   ├── AccountService.java
+│   │   │   │   ├── AttachmentDownloadService.java
+│   │   │   │   ├── EasAuthenticatorServiceAlternate.java
+│   │   │   │   ├── EasAuthenticatorService.java
+│   │   │   │   ├── EasTestAuthenticatorService.java
+│   │   │   │   ├── EmailBroadcastProcessorService.java
+│   │   │   │   ├── EmailBroadcastReceiver.java
+│   │   │   │   ├── EmailPushNotification.java
+│   │   │   │   ├── EmailServiceUtils.java
+│   │   │   │   ├── EmnWbxmlParser.java
+│   │   │   │   ├── MailPushSecurity.java
+│   │   │   │   ├── MailPushService.java
+│   │   │   │   ├── MailService.java
+│   │   │   │   ├── NotificationService.java
+│   │   │   │   ├── PolicyService.java
+│   │   │   │   ├── PopImapAuthenticatorService.java
+│   │   │   │   └── PopImapSyncAdapterService.java
+│   │   │   ├── SingleRunningTask.java
+│   │   │   ├── SortType.java
+│   │   │   ├── StatesPreferences.java
+│   │   │   ├── StopWatch.java
+│   │   │   ├── Throttle.java
+│   │   │   ├── VendorPolicyLoader.java
+│   │   │   ├── view
+│   │   │   │   ├── CertificateSelector.java
+│   │   │   │   ├── EmailContainer.java
+│   │   │   │   ├── EmailViewPager.java
+│   │   │   │   ├── EmailWebView.java
+│   │   │   │   ├── SizeBoundingFrameLayout.java
+│   │   │   │   └── SwipeableListView.java
+│   │   │   └── widget
+│   │   │       ├── EmailWidget.java
+│   │   │       ├── EmailWidgetLoader.java
+│   │   │       ├── NoAccountDialog.java
+│   │   │       ├── WidgetConfiguration.java
+│   │   │       └── WidgetManager.java
+│   │   ├── ex
+│   │   │   └── chips
+│   │   │       └── ChipsAddressTextView.java
+│   │   └── mail
+│   │       ├── providers
+│   │       │   └── UIProvider.java
+│   │       └── utils
+│   │           ├── LoggingInputStream.java
+│   │           ├── LogUtils.java
+│   │           └── SyncScheduleProcessor.java
+│   ├── beetstra
+│   │   ├── jutf7
+│   │   │   ├── Base64Util.java
+│   │   │   ├── CharsetProvider.java
+│   │   │   ├── ModifiedUTF7Charset.java
+│   │   │   ├── UTF7Charset.java
+│   │   │   ├── UTF7StyleCharsetDecoder.java
+│   │   │   ├── UTF7StyleCharsetEncoder.java
+│   │   │   └── UTF7StyleCharset.java
+│   │   └── ThirdPartyProject.prop
+│   ├── dashwire
+│   │   └── email
+│   │       └── EmailIntents.java
+│   ├── sonyericsson
+│   │   └── email
+│   │       ├── receiver
+│   │       │   ├── AccountCreationService.java
+│   │       │   ├── CreateAccountBroadcastReceiver.java
+│   │       │   ├── EnterpriseCreateAccountBroadcastReceiver.java
+│   │       │   ├── MasterResetReceiver.java
+│   │       │   ├── ProvisioningReceiver.java
+│   │       │   └── ProvisioningReceiverProcessorService.java
+│   │       ├── ui
+│   │       │   ├── AddAttachment.java
+│   │       │   ├── BrandedAccountsListAdapter.java
+│   │       │   ├── BrandedAccountsList.java
+│   │       │   ├── OTAUncompletedAccountsListAdapter.java
+│   │       │   └── OTAUncompletedAccountsList.java
+│   │       └── utils
+│   │           ├── AccountProvider.java
+│   │           ├── AccountUtilities.java
+│   │           ├── customization
+│   │           │   ├── AccountData.java
+│   │           │   ├── CmzXmlParser.java
+│   │           │   ├── CustomizationFactory.java
+│   │           │   ├── CustomizationFromProvider.java
+│   │           │   ├── CustomizationFromRRO.java
+│   │           │   └── Customization.java
+│   │           ├── Debug.java
+│   │           ├── DeviceType.java
+│   │           ├── EmailGaHelper.java
+│   │           ├── EmailGaHelperSubscriber.java
+│   │           ├── r2r
+│   │           │   ├── R2R.java
+│   │           │   └── R2RParser.java
+│   │           ├── StorageUtilities.java
+│   │           ├── ThreadCursor.java
+│   │           └── Utilities.java
+│   └── sonymobile
+│       └── email
+│           ├── MapWrapperSet.java
+│           ├── richtexteditor
+│           │   ├── FontColor.java
+│           │   ├── FontSize.java
+│           │   ├── FontStyle.java
+│           │   ├── MessageComposeScrollview.java
+│           │   ├── RichEditText.java
+│           │   ├── RichTextToolbar.java
+│           │   └── TextMetaInfo.java
+│           ├── service
+│           │   └── imappush
+│           │       ├── ImapIdleBroadcastReceiver.java
+│           │       ├── ImapIdleHandler.java
+│           │       ├── ImapIdlePushTask.java
+│           │       └── ImapIdleService.java
+│           ├── SomcDateUtil.java
+│           └── view
+│               ├── AnimationListenerWrapper.java
+│               ├── ComposeSubjectEditText.java
+│               ├── ExpandableAnimationHandler.java
+│               ├── ExpandableListItem.java
+│               ├── FastScrollable.java
+│               ├── FastScroller.java
+│               ├── FastScrollListView.java
+│               ├── FastScrollView.java
+│               ├── FollowingSectionFastScroller.java
+│               ├── ListFastScroller.java
+│               ├── ListPositionListener.java
+│               ├── OnFastScrollChangedListener.java
+│               ├── OnFastScrollListener.java
+│               ├── OnScrollChangedListener.java
+│               ├── PullToRefreshBanner.java
+│               ├── PullToRefreshContainer.java
+│               ├── SectionIndexerPercentageAdapter.java
+│               └── SectionIndexerPercentage.java
+└── org
+    └── apache
+        ├── commons
+        │   └── io
+        │       ├── comparator
+        │       │   ├── DefaultFileComparator.java
+        │       │   ├── ExtensionFileComparator.java
+        │       │   ├── LastModifiedFileComparator.java
+        │       │   ├── NameFileComparator.java
+        │       │   ├── package.html
+        │       │   ├── PathFileComparator.java
+        │       │   ├── ReverseComparator.java
+        │       │   └── SizeFileComparator.java
+        │       ├── CopyUtils.java
+        │       ├── DirectoryWalker.java
+        │       ├── EndianUtils.java
+        │       ├── FileCleaner.java
+        │       ├── FileCleaningTracker.java
+        │       ├── FileDeleteStrategy.java
+        │       ├── filefilter
+        │       │   ├── AbstractFileFilter.java
+        │       │   ├── AgeFileFilter.java
+        │       │   ├── AndFileFilter.java
+        │       │   ├── CanReadFileFilter.java
+        │       │   ├── CanWriteFileFilter.java
+        │       │   ├── ConditionalFileFilter.java
+        │       │   ├── DelegateFileFilter.java
+        │       │   ├── DirectoryFileFilter.java
+        │       │   ├── EmptyFileFilter.java
+        │       │   ├── FalseFileFilter.java
+        │       │   ├── FileFileFilter.java
+        │       │   ├── FileFilterUtils.java
+        │       │   ├── HiddenFileFilter.java
+        │       │   ├── IOFileFilter.java
+        │       │   ├── NameFileFilter.java
+        │       │   ├── NotFileFilter.java
+        │       │   ├── OrFileFilter.java
+        │       │   ├── package.html
+        │       │   ├── PrefixFileFilter.java
+        │       │   ├── RegexFileFilter.java
+        │       │   ├── SizeFileFilter.java
+        │       │   ├── SuffixFileFilter.java
+        │       │   ├── TrueFileFilter.java
+        │       │   └── WildcardFileFilter.java
+        │       ├── FilenameUtils.java
+        │       ├── FileSystemUtils.java
+        │       ├── FileUtils.java
+        │       ├── HexDump.java
+        │       ├── input
+        │       │   ├── AutoCloseInputStream.java
+        │       │   ├── CharSequenceReader.java
+        │       │   ├── ClassLoaderObjectInputStream.java
+        │       │   ├── ClosedInputStream.java
+        │       │   ├── CloseShieldInputStream.java
+        │       │   ├── CountingInputStream.java
+        │       │   ├── DemuxInputStream.java
+        │       │   ├── NullInputStream.java
+        │       │   ├── NullReader.java
+        │       │   ├── package.html
+        │       │   ├── ProxyInputStream.java
+        │       │   ├── ProxyReader.java
+        │       │   ├── SwappedDataInputStream.java
+        │       │   └── TeeInputStream.java
+        │       ├── IOCase.java
+        │       ├── IOExceptionWithCause.java
+        │       ├── IOUtils.java
+        │       ├── LineIterator.java
+        │       ├── output
+        │       │   ├── ByteArrayOutputStream.java
+        │       │   ├── ClosedOutputStream.java
+        │       │   ├── CloseShieldOutputStream.java
+        │       │   ├── CountingOutputStream.java
+        │       │   ├── DeferredFileOutputStream.java
+        │       │   ├── DemuxOutputStream.java
+        │       │   ├── FileWriterWithEncoding.java
+        │       │   ├── LockableFileWriter.java
+        │       │   ├── NullOutputStream.java
+        │       │   ├── NullWriter.java
+        │       │   ├── package.html
+        │       │   ├── ProxyOutputStream.java
+        │       │   ├── ProxyWriter.java
+        │       │   ├── TeeOutputStream.java
+        │       │   └── ThresholdingOutputStream.java
+        │       ├── overview.html
+        │       ├── package.html
+        │       └── ThirdPartyProject.prop
+        └── james
+            └── mime4j
+                ├── AbstractContentHandler.java
+                ├── BodyDescriptor.java
+                ├── CloseShieldInputStream.java
+                ├── codec
+                │   ├── Base64OutputStream.java
+                │   └── EncoderUtil.java
+                ├── ContentHandler.java
+                ├── decoder
+                │   ├── Base64InputStream.java
+                │   ├── ByteQueue.java
+                │   ├── DecoderUtil.java
+                │   ├── QuotedPrintableInputStream.java
+                │   └── UnboundedFifoByteBuffer.java
+                ├── EOLConvertingInputStream.java
+                ├── field
+                │   ├── address
+                │   │   ├── Address.java
+                │   │   ├── AddressList.java
+                │   │   ├── Builder.java
+                │   │   ├── DomainList.java
+                │   │   ├── Group.java
+                │   │   ├── Mailbox.java
+                │   │   ├── MailboxList.java
+                │   │   ├── NamedMailbox.java
+                │   │   └── parser
+                │   │       ├── AddressListParserConstants.java
+                │   │       ├── AddressListParser.java
+                │   │       ├── AddressListParser.jj
+                │   │       ├── AddressListParserTokenManager.java
+                │   │       ├── AddressListParserTreeConstants.java
+                │   │       ├── AddressListParserVisitor.java
+                │   │       ├── ASTaddress.java
+                │   │       ├── ASTaddress_list.java
+                │   │       ├── ASTaddr_spec.java
+                │   │       ├── ASTangle_addr.java
+                │   │       ├── ASTdomain.java
+                │   │       ├── ASTgroup_body.java
+                │   │       ├── ASTlocal_part.java
+                │   │       ├── ASTmailbox.java
+                │   │       ├── ASTname_addr.java
+                │   │       ├── ASTphrase.java
+                │   │       ├── ASTroute.java
+                │   │       ├── BaseNode.java
+                │   │       ├── JJTAddressListParserState.java
+                │   │       ├── Node.java
+                │   │       ├── ParseException.java
+                │   │       ├── SimpleCharStream.java
+                │   │       ├── SimpleNode.java
+                │   │       ├── Token.java
+                │   │       └── TokenMgrError.java
+                │   ├── AddressListField.java
+                │   ├── ContentTransferEncodingField.java
+                │   ├── contenttype
+                │   │   └── parser
+                │   │       ├── ContentTypeParserConstants.java
+                │   │       ├── ContentTypeParser.java
+                │   │       ├── ContentTypeParserTokenManager.java
+                │   │       ├── ParseException.java
+                │   │       ├── SimpleCharStream.java
+                │   │       ├── Token.java
+                │   │       └── TokenMgrError.java
+                │   ├── ContentTypeField.java
+                │   ├── datetime
+                │   │   ├── DateTime.java
+                │   │   └── parser
+                │   │       ├── DateTimeParserConstants.java
+                │   │       ├── DateTimeParser.java
+                │   │       ├── DateTimeParserTokenManager.java
+                │   │       ├── ParseException.java
+                │   │       ├── SimpleCharStream.java
+                │   │       ├── Token.java
+                │   │       └── TokenMgrError.java
+                │   ├── DateTimeField.java
+                │   ├── DefaultFieldParser.java
+                │   ├── DelegatingFieldParser.java
+                │   ├── Field.java
+                │   ├── FieldParser.java
+                │   ├── MailboxField.java
+                │   ├── MailboxListField.java
+                │   └── UnstructuredField.java
+                ├── LogFactory.java
+                ├── Log.java
+                ├── message
+                │   ├── AbstractBody.java
+                │   ├── BinaryBody.java
+                │   ├── Body.java
+                │   ├── BodyPart.java
+                │   ├── Entity.java
+                │   ├── Header.java
+                │   ├── MemoryBinaryBody.java
+                │   ├── MemoryTextBody.java
+                │   ├── Message.java
+                │   ├── Multipart.java
+                │   ├── TempFileBinaryBody.java
+                │   ├── TempFileTextBody.java
+                │   └── TextBody.java
+                ├── MimeBoundaryInputStream.java
+                ├── MimeStreamParser.java
+                ├── PreambleInputStream.java
+                ├── RootInputStream.java
+                ├── SimpleContentHandler.java
+                ├── ThirdPartyProject.prop
+                └── util
+                    ├── CharsetUtil.java
+                    ├── PartialInputStream.java
+                    ├── PositionInputStream.java
+                    ├── SimpleTempStorage.java
+                    ├── TempFile.java
+                    ├── TempPath.java
+                    └── TempStorage.java
+
+60 directories, 439 files

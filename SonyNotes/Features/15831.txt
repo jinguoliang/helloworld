@@ -28,3 +28,20 @@ openssl rsa -in privkey.pem -pubout>pubkey.pem
 openssl req -new -x509 -key privkey.pem -out cacert.pem -days 1095
 #create The PKCS #12 file
 openssl pkcs12 -export -in cacert.pem -inkey privkey.pem -out privkey.p12 -name "My private key" -passout pass:1234
+
+==== 163: ====
+{{./pasted_image.bmp}}
+
+==== sunmail: ====
+semctest0001@sunmail.cn
+se000000
+Domain: 	sunmail.cn
+Server:   	mail.sunmail.cn
+
+==== hotmail: ====
+jinguol999[[@hotmail.com]]
+jin8146999
+Domain: 	sunmail.cn
+Server:   	m.hotmail.com
+{{./pasted_image005.bmp}}{{./pasted_image006.bmp}}{{./pasted_image007.bmp}}{{./pasted_image008.bmp}}{{./pasted_image009.bmp}}
+[[+18188|18188]]	EAS Tasks for Yukon ODM

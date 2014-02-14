@@ -1,0 +1,33 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-02-12T16:10:14+08:00
+
+====== 18188 ======
+Created Wednesday 12 February 2014
+
+	Feature Definition FP11804 Tasks https://wiki.sonyericsson.net/androiki/Feature_Definition_FP11804_Tasks
+	FP11804 EAS Tasks for Eagle TMO US https://wiki.sonyericsson.net/androiki/FP11804_EAS_Tasks_for_Eagle_TMO_US
+
+--------------------------------------------------------------------------------------------------------------
+Tasks - Only keep provider + stepped up version number
+	    
+	    - Disabled the launcher icon for original
+	    Tasks-application since the functionality
+	    of this application will be covered by
+	    the Calendar-application instead.
+	    
+	    - Disabled notification receiver with the
+	    same reason as above
+	    
+	    - Stepped up version number
+	    
+	    - Removed unused resources, tests and code
+	    
+	    __NOTE: This should only be delivered to__
+	__    Shinano. Never to Rhine.__
+--------------------------------------------------------------------------------------------------------------
+Moved provider into application
+	        Moved Tasks provider into application .apk
+
+
+So: we just need deliver one apk Tasks.apk and one patch PID002169 (it's contained in Email)
