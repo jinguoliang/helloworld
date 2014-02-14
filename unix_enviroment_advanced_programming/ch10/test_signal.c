@@ -18,9 +18,11 @@ int main(int argc,char *argv[])
 	if(signal(SIGUSR2,sig_usr)==SIG_ERR)
 		err_sys("can't catch SIGUSR1");
 
-	for(;;)
-		pause();
+//	for(;;)
+//		pause();
 
+	sleep(100);
+	puts("finish");
 	return 0;
 }
 
