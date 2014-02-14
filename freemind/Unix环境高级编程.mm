@@ -4436,7 +4436,12 @@
 </richcontent>
 </node>
 </node>
-<node CREATED="1391446112242" ID="ID_175575677" MODIFIED="1391446113018" TEXT="abort Function "/>
+<node CREATED="1391446112242" ID="ID_175575677" MODIFIED="1391446113018" TEXT="abort Function ">
+<node CREATED="1392381019911" ID="ID_930948110" MODIFIED="1392381023017" TEXT="void abort(void); ">
+<node CREATED="1392381040769" ID="ID_233909145" MODIFIED="1392381042348" TEXT="This function sends the SIGABRT signal to the caller "/>
+<node CREATED="1392381490258" ID="ID_831359036" MODIFIED="1392381491896" TEXT="If the process doesn&apos;t terminate itself from this signal handler, POSIX.1 states that, when the signal handler returns, abort terminates the process "/>
+</node>
+</node>
 <node CREATED="1391446116941" ID="ID_1314597290" MODIFIED="1391446117901" TEXT="system Function "/>
 <node CREATED="1391446122233" ID="ID_846443431" MODIFIED="1391446125016" TEXT="sleep Function "/>
 <node CREATED="1391446129804" ID="ID_1256383307" MODIFIED="1391446130762" TEXT="Job-Control Signals "/>
