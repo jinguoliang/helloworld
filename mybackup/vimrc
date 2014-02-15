@@ -1,0 +1,127 @@
+"base
+set nocompatible
+set number
+set cursorline
+set autochdir
+
+"the tab
+set shiftwidth=4
+set tabstop=4
+"set expandtab
+"set smarttab
+set smartindent
+
+set keywordprg=sdcv.sh
+
+" Minimal number of screen lines to keep above and below the cursor.
+set scrolloff=999
+
+" Use UTF-8.
+"set encoding=utf-8
+
+" Set color scheme that I like.
+colorscheme default	
+
+" Status line
+set laststatus=2
+set statusline=
+set statusline+=%-3.3n\	                    	"buffer number
+set statusline+=%f\	                    		"filename
+set statusline+=%h%m%r%w	                    "status flags
+set statusline+=\[%{strlen(&ft)?&ft:'none'}] 	"file type
+set statusline+=%=								"right align remainder
+set statusline+=0x%-8B							"character value
+set statusline+=%-14(%l,%c%V%)					"line character
+set statusline+=%<%P							"file position
+set showmode
+set wildmenu
+
+" Show line number, cursor position.
+set ruler
+" Display incomplete commands.
+set showcmd
+" Search as you type.
+set incsearch
+" Ignore case when searching.
+"set ignorecase
+" Show autocomplete menus.
+
+"设置配色方案
+"colorscheme delek 
+
+"if has("vms")
+"	set nobackup
+"else
+"	set backup
+"endif
+
+"set list 
+
+"map
+:omap <f2> a{
+":map <f5> i{<esc>ea}<esc>a{<esc>  "f5 map to a series keys
+"add comment
+:nmap <f5> 0i//<esc>j	
+"del comment
+:nmap <f4> 0xxj			
+"add ;
+:nmap <f6> A;<esc>j			
+"add _j
+:nmap <f7> ea_j<esc>j
+"move to a window
+:nmap <c-k> <c-w>k		
+:nmap <c-j> <c-w>j
+:nmap <c-l> <c-w>l
+:nmap <c-h> <c-w>h
+:nmap <c-space> <c-]>
+"control the tab
+:nmap <a-j> :tabnext
+:nmap <a-k> :tabp
+" To insert timestamp, press F3.
+nmap <F3> a<C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR><Esc>
+imap <F3> <C-R>=strftime("%Y-%m-%d %a %I:%M %p")<CR>
+" To save, press ctrl-s.
+nmap <c-s> :w<CR>
+imap <c-s> <Esc>:w<CR>a
+map  <c-f> :!indent  %<CR>
+
+
+" some abrrevate
+ab sop System.out.println(
+
+
+
+"模板
+aug Template
+	au!
+	let skeletonName="$HOME/.vim/template/skeleton"
+	"read file
+	autocmd BufNewFile *.*  execute '0r '.skeletonName.'.'.expand("<afile>:e")
+
+	"substitute the tag
+	autocmd BufNewFile * %substitute#\[:VIM_TAG:\]\(.\{-\}\)\[:END_VIM_TAG:\]#\=eval(submatch(1))#ge
+aug end
+"compiler
+autocmd BufNewFile,Bufread *.java compiler javac
+autocmd BufNewFile,Bufread *.php compiler php
+autocmd BufNewFile,Bufread *.c compiler  gcc
+"folder
+"set foldenable
+autocmd BufNewFile,Bufread *.c set foldmethod=syntax
+autocmd BufNewFile,Bufread *.c setlocal foldlevel=1
+"set foldclose=all	"auto close
+nnoremap <space> @=((foldclosed(line('.'))<0)? 'zc' : 'zo')<CR>
+
+source ~/.vim/pysnow_adt.vim
+
+"support lisp
+let g:slimv_swank_cmd = '! xterm -e sbcl --load /usr/share/common-lisp/source/slime/start-swank.lisp &'
+
+"ctags
+set tags+=~/.vim/tags
+
+
+
+set hlsearch
+highlight PmenuSel ctermbg=blue ctermfg=white
+highlight Pmenu ctermbg=white ctermfg=blue
