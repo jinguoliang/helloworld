@@ -30,4 +30,17 @@ void abort(void)
 	exit(1);
 }
 
+void abort_handler(int signo)
+{
+	puts("SIGABRT catched");
+}
+
+void main(void)
+{
+	if(signal(SIGABRT,abort_handler)<0)
+		perror("signal error");
+
+	abort();
+}
+
 

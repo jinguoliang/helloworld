@@ -2,4 +2,5 @@
 name=MyNotes
 version=0.4
 endofline=unix
+profile=None
 
