@@ -1,0 +1,8 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-02-15T22:45:51+08:00
+
+====== 一些点子 ======
+Created 星期六 15 二月 2014
+
+夏天用放大镜代替激光头用点子控制绘图

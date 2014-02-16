@@ -3475,7 +3475,7 @@
 <node CREATED="1391257361899" ID="ID_1956076564" MODIFIED="1391257363568" TEXT="Summary "/>
 <node CREATED="1391257367138" ID="ID_386316447" MODIFIED="1391257368970" TEXT="Exercises "/>
 </node>
-<node CREATED="1391446002955" ID="ID_411208603" MODIFIED="1392168503246" POSITION="right" TEXT="Signals ">
+<node CREATED="1391446002955" ID="ID_411208603" MODIFIED="1392557977901" POSITION="right" TEXT="Signals ">
 <icon BUILTIN="help"/>
 <icon BUILTIN="yes"/>
 <node CREATED="1391446008713" FOLDED="true" ID="ID_1396490293" MODIFIED="1392031977367" TEXT="Introduction ">
@@ -4189,7 +4189,7 @@
 <node CREATED="1392168527291" ID="ID_1479677309" MODIFIED="1392168550642" TEXT="impliment sleep"/>
 <node CREATED="1392168551519" ID="ID_1168462182" MODIFIED="1392253741088" TEXT="impliment time-out input"/>
 </node>
-<node CREATED="1391446076191" ID="ID_1001815" MODIFIED="1391446076995" TEXT="Signal Sets ">
+<node CREATED="1391446076191" FOLDED="true" ID="ID_1001815" MODIFIED="1392557979853" TEXT="Signal Sets ">
 <node CREATED="1392254002983" ID="ID_810833775" MODIFIED="1392254004797" TEXT="a data type to represent multiple signals "/>
 <node CREATED="1392254036632" ID="ID_1304502238" MODIFIED="1392254038784" TEXT="POSIX.1 defines the data type sigset_t to contain a signal set "/>
 <node CREATED="1392254043768" ID="ID_106644376" MODIFIED="1392254133703" TEXT="function">
@@ -4285,8 +4285,7 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1392368155247" ID="ID_692084008" MODIFIED="1392368171614" TEXT="SA_RESTART ">
 <richcontent TYPE="NOTE"><html>
@@ -4301,8 +4300,7 @@
       signal are automatically restarted
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1392368172784" ID="ID_1725879054" MODIFIED="1392370338694" TEXT="SA_SIGINFO ">
 <richcontent TYPE="NOTE"><html>
@@ -4326,8 +4324,7 @@
       process context.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1392367095407" ID="ID_1366174223" MODIFIED="1392368594462" TEXT="void (*sa_sigaction)(int, siginfo_t *info, void *context); ">
@@ -4357,7 +4354,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1391446100818" ID="ID_1450583875" MODIFIED="1392370352965" TEXT="sigsetjmp and siglongjmp Functions ">
+<node CREATED="1391446100818" FOLDED="true" ID="ID_1450583875" MODIFIED="1392557981994" TEXT="sigsetjmp and siglongjmp Functions ">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -4376,8 +4373,7 @@
       out of the signal handler, what happens to the signal mask for the process?
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1392370344210" ID="ID_1284039836" MODIFIED="1392370349399" TEXT="background "/>
 <node CREATED="1392370362387" ID="ID_413084935" MODIFIED="1392370363931" TEXT="int sigsetjmp(sigjmp_buf env, int savemask); ">
 <node CREATED="1392373502376" ID="ID_764105534" MODIFIED="1392373504659" TEXT="The only difference between these functions and the setjmp and longjmp functions is that sigsetjmp has an additional argument "/>
@@ -4432,8 +4428,7 @@
       a single atomic operation. This feature is provided by the sigsuspend function.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1391446112242" ID="ID_175575677" MODIFIED="1391446113018" TEXT="abort Function ">
