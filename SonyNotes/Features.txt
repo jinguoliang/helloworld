@@ -21,6 +21,7 @@ http://review-jdm.sonyericsson.net/#/c/18867/
 [[+17211]] [[../resouces/FP15678 Email solution Cherry pick from Rhine 1.1 - Androiki.html|Email solution Cherry pick from Rhine 1.2]]         
 http://review-jdm.sonyericsson.net/#/c/18665/
 phone: 6665
+Email sync settings customization           https://wiki.sonyericsson.net/androiki/FP7782_EmailSyncSettingsCustomization/Definition_Report
 
 [[+15862]] Notification Tray solution for ODM products              
 [[/kk-rhine/frameworks/base/packages/SystemUI/res/values/somc_config.xml]]      [[line:110]]

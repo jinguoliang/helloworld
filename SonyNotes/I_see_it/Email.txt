@@ -6,7 +6,106 @@ Creation-Date: 2014-01-28T16:36:44+08:00
 Created Tuesday 28 January 2014
 
 
-/kk-rhine/vendor/semc/packages/apps/email/
+[[/kk-rhine/vendor/semc/packages/apps/email/]]
+
+emailcommon/
+├── AndroidManifest.xml
+└── src
+    └── com
+        └── android
+            └── emailcommon
+                ├── AccountManagerTypes.java
+                ├── Api.java
+                ├── CalendarProviderStub.java
+                ├── Configuration.java
+                ├── Device.java
+                ├── internet
+                │   ├── BinaryTempFileBody.java
+                │   ├── MimeBodyPart.java
+                │   ├── MimeHeader.java
+                │   ├── MimeMessage.java
+                │   ├── MimeMultipart.java
+                │   ├── MimeUtility.java
+                │   ├── Rfc822Output.java
+                │   └── TextBody.java
+                ├── Logging.java
+                ├── mail
+                │   ├── Address.java
+                │   ├── AuthenticationFailedException.java
+                │   ├── Body.java
+                │   ├── BodyPart.java
+                │   ├── CertificateValidationException.java
+                │   ├── Fetchable.java
+                │   ├── FetchProfile.java
+                │   ├── Flag.java
+                │   ├── Folder.java
+                │   ├── MeetingInfo.java
+                │   ├── MessageDateComparator.java
+                │   ├── Message.java
+                │   ├── MessagingException.java
+                │   ├── Multipart.java
+                │   ├── PackedString.java
+                │   └── Part.java
+                ├── provider
+                │   ├── Account.java
+                │   ├── EmailContent.java
+                │   ├── HeaderColumns.java
+                │   ├── Header.java
+                │   ├── HeaderNames.java
+                │   ├── HeaderUtils.java
+                │   ├── HostAuth.aidl
+                │   ├── HostAuth.java
+                │   ├── Mailbox.java
+                │   ├── OofSettings.aidl
+                │   ├── OofSettings.java
+                │   ├── Policy.aidl
+                │   ├── Policy.java
+                │   ├── ProviderUnavailableException.java
+                │   ├── QuickResponse.java
+                │   ├── SyncSchedule.java
+                │   ├── ThreadColumns.java
+                │   ├── ThreadQuery.java
+                │   └── ThreadUtils.java
+                ├── security
+                │   ├── SmimeHandlerFactory.java
+                │   ├── SmimeHandlerInjectable.java
+                │   ├── SmimeHandler.java
+                │   ├── SmimePolicies.java
+                │   └── SmimeUtility.java
+                ├── service
+                │   ├── AccountServiceProxy.java
+                │   ├── EmailServiceConstants.java
+                │   ├── EmailServiceProxy.java
+                │   ├── EmailServiceStatus.java
+                │   ├── IAccountService.aidl
+                │   ├── IEmailService.aidl
+                │   ├── IEmailServiceCallback.aidl
+                │   ├── IPolicyService.aidl
+                │   ├── LegacyPolicySet.java
+                │   ├── PolicyServiceConstants.java
+                │   ├── PolicyServiceProxy.java
+                │   ├── SearchParams.aidl
+                │   ├── SearchParams.java
+                │   ├── ServiceProxy.java
+                │   ├── ServiceUnavailableException.java
+                │   └── SyncWindow.java
+                ├── TasksProviderStub.java
+                ├── TempDirectory.java
+                ├── TrafficFlags.java
+                ├── TrafficStats.java
+                └── utility
+                    ├── AttachmentUtilities.java
+                    ├── CertificateRequestor.java
+                    ├── ConversionUtilities.java
+                    ├── DelayedOperations.java
+                    ├── EmailAsyncTask.java
+                    ├── EmailClientConnectionManager.java
+                    ├── IntentUtilities.java
+                    ├── LoggingInputStream.java
+                    ├── SSLSocketFactory.java
+                    ├── SSLUtils.java
+                    ├── TextUtilities.java
+                    └── Utility.java
 src
 ├── com
 │   ├── android

@@ -12,7 +12,7 @@ XP010718
 ASdf!2345678
 
 http://alm.sonyericsson.net/   test case 
-Username：xp013447	PWD：Beijing000
+Username：xp013447	PWD：Beijing111
 
 
 Project share dir in windows
