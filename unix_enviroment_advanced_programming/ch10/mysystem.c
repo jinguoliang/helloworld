@@ -20,7 +20,7 @@ void myhandler(int signo)
 		printf("SIGINT:\t%d\n",getpid());
 }
 
-int system(const char *cmdstring)
+int system_j(const char *cmdstring)
 {
 
 	pid_t 				pid;
@@ -69,7 +69,7 @@ int system(const char *cmdstring)
 
 int main(int argc,char *argv[])
 {
-	if(system("ed")==-1)
+	if(system("ed")==-1)    ///ignored the SIGINT but not SIGQUIT.
 		perror("system error");
 
 	return 0;
