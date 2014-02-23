@@ -4443,7 +4443,7 @@
 <node CREATED="1391446135519" ID="ID_1218700903" MODIFIED="1391446136501" TEXT=" Additional Features "/>
 <node CREATED="1391446140125" ID="ID_1268518014" MODIFIED="1391446142538" TEXT=" Summary "/>
 </node>
-<node CREATED="1392949541994" ID="ID_637081276" MODIFIED="1392949554852" POSITION="right" TEXT="Threads ">
+<node CREATED="1392949541994" FOLDED="true" ID="ID_637081276" MODIFIED="1393166212174" POSITION="right" TEXT="Threads ">
 <node CREATED="1392949564039" FOLDED="true" ID="ID_607133705" MODIFIED="1392963514942" TEXT="Introduction ">
 <node CREATED="1392952883696" ID="ID_278083049" MODIFIED="1392952885737" TEXT="All threads within a single process have access to the same process components, such as file descriptors and memory. "/>
 <node CREATED="1392952924568" ID="ID_446283079" MODIFIED="1392952926761" TEXT="synchronization mechanisms "/>
@@ -4501,8 +4501,7 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1392963672703" ID="ID_1766691068" MODIFIED="1392963674826" TEXT="pthread_t pthread_self(void); "/>
 </node>
@@ -4515,7 +4514,7 @@
 <node CREATED="1392964324878" ID="ID_1024261863" MODIFIED="1392964327211" TEXT="The per thread copy of errno is provided only for compatibility with existing functions that use it. "/>
 </node>
 </node>
-<node CREATED="1392949595152" ID="ID_725018461" MODIFIED="1392949597329" TEXT="Thread Termination ">
+<node CREATED="1392949595152" FOLDED="true" ID="ID_725018461" MODIFIED="1393077143175" TEXT="Thread Termination ">
 <node CREATED="1392971324580" ID="ID_44870007" MODIFIED="1392971327517" TEXT="stopping its flow of control, without terminating the entire process ">
 <node CREATED="1392971339205" ID="ID_1455100013" MODIFIED="1392971340487" TEXT="return "/>
 <node CREATED="1392971351765" ID="ID_1103062992" MODIFIED="1392971353574" TEXT="be canceled by another thread in the same process "/>
@@ -4561,8 +4560,7 @@
       pthread_cleanup_pop definition.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1392980122453" ID="ID_219037309" MODIFIED="1392980124238" TEXT="void pthread_cleanup_push(void (*rtn)(void *), void *arg); "/>
 <node CREATED="1392980131061" ID="ID_1910228433" MODIFIED="1392980134750" TEXT="void pthread_cleanup_pop(int execute); ">
 <node CREATED="1392980321855" ID="ID_1683452834" MODIFIED="1392980331169" TEXT="removes the cleanup handler established by the last call to pthread_cleanup_push "/>
@@ -4581,12 +4579,81 @@
 </node>
 </node>
 </node>
-<node CREATED="1392949600936" ID="ID_1649197403" MODIFIED="1392949602245" TEXT="Thread Synchronization "/>
-<node CREATED="1392949604984" ID="ID_1196509855" MODIFIED="1392949606558" TEXT="Summary "/>
-<node CREATED="1392949609496" ID="ID_1749062199" MODIFIED="1392949611953" TEXT="Exercises "/>
+<node CREATED="1392949600936" ID="ID_1649197403" MODIFIED="1392949602245" TEXT="Thread Synchronization ">
+<node CREATED="1393077250554" ID="ID_1628759742" MODIFIED="1393077253681" TEXT="Mutexes">
+<node CREATED="1393077325956" ID="ID_195342127" MODIFIED="1393077327466" TEXT="int pthread_mutex_init(pthread_mutex_t *restrict mutex, const pthread_mutexattr_t *restrict attr);"/>
+<node CREATED="1393077332347" ID="ID_686700518" MODIFIED="1393077333991" TEXT="int pthread_mutex_destroy(pthread_mutex_t *mutex);"/>
+<node CREATED="1393077357783" ID="ID_1369051332" MODIFIED="1393077358834" TEXT="int pthread_mutex_lock(pthread_mutex_t *mutex);">
+<node CREATED="1393077503414" ID="ID_64095341" MODIFIED="1393077504661" TEXT="unlocked">
+<node CREATED="1393077507988" ID="ID_1458952808" MODIFIED="1393077509560" TEXT="lock"/>
 </node>
-<node CREATED="1392949620657" ID="ID_1461218239" MODIFIED="1392949622675" POSITION="right" TEXT="Thread Control ">
-<node CREATED="1392949627585" ID="ID_389424779" MODIFIED="1392949629294" TEXT="Introduction "/>
+<node CREATED="1393077511165" ID="ID_828056694" MODIFIED="1393077513458" TEXT="locked">
+<node CREATED="1393077514379" ID="ID_1248968445" MODIFIED="1393077516601" TEXT="wait"/>
+</node>
+</node>
+<node CREATED="1393077369833" ID="ID_1662047500" MODIFIED="1393077371033" TEXT="int pthread_mutex_trylock(pthread_mutex_t *mutex);">
+<node CREATED="1393077496135" ID="ID_854778818" MODIFIED="1393077497535" TEXT="unlocked">
+<node CREATED="1393077523755" ID="ID_1560622401" MODIFIED="1393077525725" TEXT="lock"/>
+</node>
+<node CREATED="1393077527576" ID="ID_1546023562" MODIFIED="1393077529324" TEXT="locked">
+<node CREATED="1393077530179" ID="ID_792939620" MODIFIED="1393077536780" TEXT="failed"/>
+<node CREATED="1393077547058" ID="ID_1082383282" MODIFIED="1393077551976" TEXT="noblock"/>
+</node>
+</node>
+<node CREATED="1393077376234" ID="ID_31244048" MODIFIED="1393077378697" TEXT="int pthread_mutex_unlock(pthread_mutex_t *mutex);"/>
+</node>
+<node CREATED="1393081723286" ID="ID_731045825" MODIFIED="1393086428496" TEXT="Deadlock Avoidance">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      have the potential for a deadlock only when one thread Sometimes, an application's architecture makes it difficult to apply a lock ordering
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1393086459277" ID="ID_1819680063" MODIFIED="1393086461300" TEXT="ReaderWriter Locks">
+<node CREATED="1393086473434" ID="ID_1907645415" MODIFIED="1393086475235" TEXT="int pthread_rwlock_init(pthread_rwlock_t *restrict rwlock, const pthread_rwlockattr_t *restrict attr);"/>
+<node CREATED="1393086485992" ID="ID_203730568" MODIFIED="1393086487470" TEXT="int pthread_rwlock_destroy(pthread_rwlock_t *rwlock);"/>
+<node CREATED="1393151148406" ID="ID_1821852014" MODIFIED="1393151150165" TEXT="int pthread_rwlock_rdlock(pthread_rwlock_t *rwlock);"/>
+<node CREATED="1393151159475" ID="ID_1723791153" MODIFIED="1393151161489" TEXT="int pthread_rwlock_wrlock(pthread_rwlock_t *rwlock);"/>
+<node CREATED="1393151169949" ID="ID_751097395" MODIFIED="1393151172712" TEXT="int pthread_rwlock_unlock(pthread_rwlock_t *rwlock);"/>
+<node CREATED="1393151264244" ID="ID_229617342" MODIFIED="1393151265811" TEXT="int pthread_rwlock_tryrdlock(pthread_rwlock_t *rwlock);"/>
+<node CREATED="1393151273019" ID="ID_345353548" MODIFIED="1393151274536" TEXT="int pthread_rwlock_trywrlock(pthread_rwlock_t *rwlock);"/>
+</node>
+<node CREATED="1393158274618" FOLDED="true" ID="ID_1958996318" MODIFIED="1393160016180" TEXT="Condition Variables">
+<node CREATED="1393158452195" ID="ID_577195859" MODIFIED="1393158454223" TEXT="PTHREAD_COND_INITIALIZER">
+<node CREATED="1393158461927" ID="ID_1922717461" MODIFIED="1393158463495" TEXT="a statically-allocated condition variable"/>
+</node>
+<node CREATED="1393158470094" ID="ID_1507517193" MODIFIED="1393158471380" TEXT="int pthread_cond_init(pthread_cond_t *restrict cond, pthread_condattr_t *restrict attr);"/>
+<node CREATED="1393158476772" ID="ID_723086098" MODIFIED="1393158478145" TEXT="int pthread_cond_destroy(pthread_cond_t *cond);"/>
+<node CREATED="1393158527045" ID="ID_287616110" MODIFIED="1393158528424" TEXT="int pthread_cond_wait(pthread_cond_t *restrict cond, pthread_mutex_t *restrict mutex);"/>
+<node CREATED="1393158535648" ID="ID_771574414" MODIFIED="1393158536713" TEXT="int pthread_cond_timedwait(pthread_cond_t *restrict cond, pthread_mutex_t *restrict mutex, const struct timespec *restrict timeout);"/>
+<node CREATED="1393158960381" ID="ID_806626163" MODIFIED="1393158961806" TEXT="int pthread_cond_signal(pthread_cond_t *cond);"/>
+<node CREATED="1393158966790" ID="ID_379656033" MODIFIED="1393158968794" TEXT="int pthread_cond_broadcast(pthread_cond_t *cond);"/>
+</node>
+</node>
+<node CREATED="1392949604984" ID="ID_1196509855" MODIFIED="1392949606558" TEXT="Summary ">
+<node CREATED="1393160019265" ID="ID_1169048077" MODIFIED="1393160020969" TEXT="concept of threads"/>
+<node CREATED="1393160050358" ID="ID_1676063974" MODIFIED="1393160055837" TEXT="create and destroy them"/>
+<node CREATED="1393160064385" ID="ID_190462217" MODIFIED="1393160065649" TEXT="thread synchronization"/>
+</node>
+<node CREATED="1392949609496" ID="ID_1749062199" MODIFIED="1393166209896" TEXT="Exercises ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+</node>
+</node>
+<node CREATED="1392949620657" ID="ID_1461218239" MODIFIED="1393166213685" POSITION="right" TEXT="Thread Control ">
+<node CREATED="1392949627585" ID="ID_389424779" MODIFIED="1392949629294" TEXT="Introduction ">
+<node CREATED="1393166217114" ID="ID_1712655516" MODIFIED="1393166218808" TEXT="learn the details of controlling thread behavior"/>
+<node CREATED="1393166226887" ID="ID_1544414118" MODIFIED="1393166228882" TEXT="thread attributes"/>
+<node CREATED="1393166235203" ID="ID_1476322396" MODIFIED="1393166236386" TEXT="synchronization primitive attributes"/>
+<node CREATED="1393166261342" ID="ID_1497578395" MODIFIED="1393166262690" TEXT="keep data private from other threads"/>
+</node>
 <node CREATED="1392949634193" ID="ID_1648678860" MODIFIED="1392949635939" TEXT="Thread Limits "/>
 <node CREATED="1392949642274" ID="ID_1407192448" MODIFIED="1392949644371" TEXT="Thread Attributes "/>
 <node CREATED="1392949648930" ID="ID_1313573177" MODIFIED="1392949650748" TEXT="Synchronization Attributes "/>
