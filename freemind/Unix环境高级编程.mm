@@ -4501,8 +4501,7 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1392963672703" ID="ID_1766691068" MODIFIED="1392963674826" TEXT="pthread_t pthread_self(void); "/>
 </node>
@@ -4515,7 +4514,7 @@
 <node CREATED="1392964324878" ID="ID_1024261863" MODIFIED="1392964327211" TEXT="The per thread copy of errno is provided only for compatibility with existing functions that use it. "/>
 </node>
 </node>
-<node CREATED="1392949595152" ID="ID_725018461" MODIFIED="1392949597329" TEXT="Thread Termination ">
+<node CREATED="1392949595152" FOLDED="true" ID="ID_725018461" MODIFIED="1393244018372" TEXT="Thread Termination ">
 <node CREATED="1392971324580" ID="ID_44870007" MODIFIED="1392971327517" TEXT="stopping its flow of control, without terminating the entire process ">
 <node CREATED="1392971339205" ID="ID_1455100013" MODIFIED="1392971340487" TEXT="return "/>
 <node CREATED="1392971351765" ID="ID_1103062992" MODIFIED="1392971353574" TEXT="be canceled by another thread in the same process "/>
@@ -4561,8 +4560,7 @@
       pthread_cleanup_pop definition.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1392980122453" ID="ID_219037309" MODIFIED="1392980124238" TEXT="void pthread_cleanup_push(void (*rtn)(void *), void *arg); "/>
 <node CREATED="1392980131061" ID="ID_1910228433" MODIFIED="1392980134750" TEXT="void pthread_cleanup_pop(int execute); ">
 <node CREATED="1392980321855" ID="ID_1683452834" MODIFIED="1392980331169" TEXT="removes the cleanup handler established by the last call to pthread_cleanup_push "/>
@@ -4587,17 +4585,419 @@
 </node>
 <node CREATED="1392949620657" ID="ID_1461218239" MODIFIED="1392949622675" POSITION="right" TEXT="Thread Control ">
 <node CREATED="1392949627585" ID="ID_389424779" MODIFIED="1392949629294" TEXT="Introduction "/>
-<node CREATED="1392949634193" ID="ID_1648678860" MODIFIED="1392949635939" TEXT="Thread Limits "/>
-<node CREATED="1392949642274" ID="ID_1407192448" MODIFIED="1392949644371" TEXT="Thread Attributes "/>
-<node CREATED="1392949648930" ID="ID_1313573177" MODIFIED="1392949650748" TEXT="Synchronization Attributes "/>
-<node CREATED="1392949654835" ID="ID_760586738" MODIFIED="1392949657560" TEXT="Reentrancy "/>
-<node CREATED="1392949661331" ID="ID_1980818415" MODIFIED="1392949663224" TEXT="Thread-Specific Data "/>
+<node CREATED="1392949634193" FOLDED="true" ID="ID_1648678860" MODIFIED="1393334819101" TEXT="Thread Limits ">
+<node CREATED="1393334067500" FOLDED="true" ID="ID_384298981" MODIFIED="1393334818373" TEXT="sysconf ">
+<node CREATED="1393334076236" ID="ID_1684630493" MODIFIED="1393334786992" TEXT="_SC_THREAD_DESTRUCTOR_ITERATIONS ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      maximum number of times
+    </p>
+    <p>
+      an implementation will try
+    </p>
+    <p>
+      to destroy the thread-
+    </p>
+    <p>
+      specific data when a thread
+    </p>
+    <p>
+      exits
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1393334044981" ID="ID_1154523975" MODIFIED="1393334047510" TEXT="PTHREAD_DESTRUCTOR_ITERATIONS  "/>
+</node>
+<node CREATED="1393334701552" ID="ID_1405100343" MODIFIED="1393334703424" TEXT="_SC_THREAD_KEYS_MAX ">
+<node CREATED="1393334725224" ID="ID_719510300" MODIFIED="1393334726970" TEXT="PTHREAD_KEYS_MAX  "/>
+</node>
+<node CREATED="1393334710312" ID="ID_1306801431" MODIFIED="1393334712512" TEXT="_SC_THREAD_STACK_MIN ">
+<node CREATED="1393334730632" ID="ID_150852235" MODIFIED="1393334732624" TEXT="PTHREAD_STACK_MIN  "/>
+</node>
+<node CREATED="1393334717976" ID="ID_690485633" MODIFIED="1393334720272" TEXT="_SC_THREAD_THREADS_MAX ">
+<node CREATED="1393334736816" ID="ID_837935913" MODIFIED="1393334738494" TEXT="PTHREAD_THREADS_MAX  "/>
+</node>
+</node>
+</node>
+<node CREATED="1392949642274" ID="ID_1407192448" MODIFIED="1393337538292" TEXT="Thread Attributes ">
+<node CREATED="1393334821770" ID="ID_1981184389" MODIFIED="1393334828834" TEXT="int pthread_attr_init(pthread_attr_t *attr); "/>
+<node CREATED="1393334843346" ID="ID_1972945719" MODIFIED="1393334845424" TEXT="int pthread_attr_destroy(pthread_attr_t *attr); "/>
+<node CREATED="1393334979469" ID="ID_1785638593" MODIFIED="1393334982383" TEXT="POSIX.1 thread attributes ">
+<node CREATED="1393334988597" ID="ID_404855370" MODIFIED="1393337540471" TEXT="detachstate  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      If we know that we don't need the thread's termination status at the time we create the thread, we
+    </p>
+    <p>
+      can arrange for the thread to start out in the detached state by modifying the detachstate thread
+    </p>
+    <p>
+      attribute in the pthread_attr_t structure.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1393335149407" ID="ID_921642902" MODIFIED="1393335151526" TEXT="PTHREAD_CREATE_DETACHED "/>
+<node CREATED="1393335154695" ID="ID_1725779998" MODIFIED="1393335156549" TEXT="PTHREAD_CREATE_JOINABLE "/>
+<node CREATED="1393335173968" ID="ID_958425655" MODIFIED="1393335175825" TEXT="int pthread_attr_getdetachstate(const pthread_attr_t *restrict attr, int *detachstate); "/>
+<node CREATED="1393335182280" ID="ID_1740583958" MODIFIED="1393335195589" TEXT=" int pthread_attr_setdetachstate(pthread_attr_t *attr, int detachstate); "/>
+</node>
+<node CREATED="1393335005333" FOLDED="true" ID="ID_650464378" MODIFIED="1393337174344" TEXT="guardsize  ">
+<node CREATED="1393336282311" ID="ID_1868016175" MODIFIED="1393336284218" TEXT="int pthread_attr_getguardsize(const pthread_attr_t *restrict attr, size_t *restrict guardsize); "/>
+<node CREATED="1393336289719" ID="ID_1706378451" MODIFIED="1393336291232" TEXT="int pthread_attr_setguardsize(pthread_attr_t *attr , size_t guardsize); "/>
+<node CREATED="1393336298423" ID="ID_298729817" MODIFIED="1393336300497" TEXT="The guardsize thread attribute controls the size of the memory extent after the end of the thread&apos;s stack to protect against stack overflow "/>
+<node CREATED="1393336418161" ID="ID_1838141190" MODIFIED="1393336428452" TEXT="If the thread&apos;s stack pointer overflows into the guard area, the application will receive an error, possibly with a signal. ">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1393335018478" FOLDED="true" ID="ID_1700055919" MODIFIED="1393337173600" TEXT="stackaddr  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      With a process, the amount of virtual address space is fixed. Since there is only one stack, its size
+    </p>
+    <p>
+      usually isn't a problem. With threads, however, the same amount of virtual address space must be
+    </p>
+    <p>
+      shared by all the thread stacks. You might have to reduce your default thread stack size if your
+    </p>
+    <p>
+      application uses so many threads that the cumulative size of their stacks exceeds the available virtual
+    </p>
+    <p>
+      address space. On the other hand, if your threads call functions that allocate large automatic
+    </p>
+    <p>
+      variables or call functions many stack frames deep, you might need more than the default stack size.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1393336348824" ID="ID_772928831" MODIFIED="1393336358364" TEXT="If you run out of virtual address space for thread stacks, you can use malloc or mmap (see Section 14.9) to allocate space for an alternate stack and use pthread_attr_setstack to change the stack location of threads you create "/>
+<node CREATED="1393335905345" ID="ID_1324150062" MODIFIED="1393335908322" TEXT="int pthread_attr_getstack(const pthread_attr_t *restrict attr, void **restrict stackaddr, size_t *restrict stacksize); "/>
+<node CREATED="1393335944490" ID="ID_126227321" MODIFIED="1393335946865" TEXT="int pthread_attr_setstack(const pthread_attr_t *attr, void *stackaddr, size_t *stacksize); "/>
+<node CREATED="1393336185077" ID="ID_1327031316" MODIFIED="1393336187983" TEXT="int pthread_attr_getstacksize(const pthread_attr_t *restrict attr, size_t *restrict stacksize); "/>
+<node CREATED="1393336193133" ID="ID_1114120238" MODIFIED="1393336195045" TEXT="int pthread_attr_setstacksize(pthread_attr_t *attr , size_t stacksize); "/>
+</node>
+<node CREATED="1393335023206" ID="ID_941510198" MODIFIED="1393335024769" TEXT="stacksize  "/>
+<node CREATED="1393337032243" FOLDED="true" ID="ID_1140948262" MODIFIED="1393337176856" TEXT="concurrency level ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The concurrency level controls the number of kernel threads or processes on top of which the user-
+    </p>
+    <p>
+      level threads are mapped. If an implementation keeps a one-to-one mapping between kernel-level
+    </p>
+    <p>
+      threads and user-level threads, then changing the concurrency level will have no effect, since it is
+    </p>
+    <p>
+      possible for all user-level threads to be scheduled. If the implementation multiplexes user-level
+    </p>
+    <p>
+      threads on top of kernel-level threads or processes, however, you might be able to improve
+    </p>
+    <p>
+      performance by increasing the number of user-level threads that can run at a given time. The
+    </p>
+    <p>
+      pthread_setconcurrency function can be used to provide a hint to the system of the desired level of
+    </p>
+    <p>
+      concurrency.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1393337053211" ID="ID_1786423929" MODIFIED="1393337055492" TEXT="int pthread_getconcurrency(void); "/>
+<node CREATED="1393337059363" ID="ID_755854832" MODIFIED="1393337061046" TEXT="int pthread_setconcurrency(int level); ">
+<node CREATED="1393337110004" ID="ID_1161604028" MODIFIED="1393337112148" TEXT="is only a hint to the system "/>
+<node CREATED="1393337122380" ID="ID_204719574" MODIFIED="1393337123998" TEXT="tell the system that you want it to decide for itself what concurrency level to use by passing a level of 0 "/>
+</node>
+</node>
+<node CREATED="1393337150356" ID="ID_1289879451" MODIFIED="1393337158407" TEXT="cancelability  state "/>
+<node CREATED="1393337162597" ID="ID_58702075" MODIFIED="1393337164583" TEXT="cancelability type "/>
+</node>
+</node>
+<node CREATED="1392949648930" FOLDED="true" ID="ID_1313573177" MODIFIED="1393344084097" TEXT="Synchronization Attributes ">
+<node CREATED="1393337301063" ID="ID_1618522153" MODIFIED="1393337303140" TEXT="Mutex Attributes ">
+<node CREATED="1393337310039" ID="ID_423166422" MODIFIED="1393337312008" TEXT="int pthread_mutexattr_init(pthread_mutexattr_t *attr); "/>
+<node CREATED="1393337315111" ID="ID_1480110488" MODIFIED="1393337316905" TEXT="int pthread_mutexattr_destroy(pthread_mutexattr_t *attr); "/>
+<node CREATED="1393337485666" ID="ID_1546128856" MODIFIED="1393337487808" TEXT="attr">
+<node CREATED="1393337489418" ID="ID_27276052" MODIFIED="1393337491678" TEXT="process-shared ">
+<node CREATED="1393337503523" ID="ID_1970388175" MODIFIED="1393337505667" TEXT="int pthread_mutexattr_getpshared(const pthread_mutexattr_t * restrict attr, int *restrict pshared); "/>
+<node CREATED="1393337531827" ID="ID_602661090" MODIFIED="1393337534250" TEXT="int pthread_mutexattr_setpshared (pthread_mutexattr_t *attr, int pshared); "/>
+<node CREATED="1393337556051" ID="ID_1365878857" MODIFIED="1393337558468" TEXT="PTHREAD_PROCESS_SHARED ">
+<node CREATED="1393337713862" ID="ID_900439510" MODIFIED="1393337713862" TEXT=""/>
+</node>
+<node CREATED="1393337562988" ID="ID_1781028386" MODIFIED="1393337565021" TEXT="PTHREAD_PROCESS_PRIVATE ">
+<node CREATED="1393337717175" ID="ID_1080747544" MODIFIED="1393337719541" TEXT="provide more efficient mutex implementations when the attribute is set to PTHREAD_PROCESS_PRIVATE , "/>
+</node>
+</node>
+<node CREATED="1393337740783" ID="ID_473635973" MODIFIED="1393337742181" TEXT="type">
+<node CREATED="1393337747599" ID="ID_1550772012" MODIFIED="1393337749978" TEXT="PTHREAD_MUTEX_NORMAL ">
+<node CREATED="1393337765695" ID="ID_360437437" MODIFIED="1393337767737" TEXT="doesn&apos;t do any special error checking or deadlock detection "/>
+</node>
+<node CREATED="1393337772151" ID="ID_1254219812" MODIFIED="1393337774361" TEXT="PTHREAD_MUTEX_ERRORCHECK ">
+<node CREATED="1393337783240" ID="ID_250512151" MODIFIED="1393337785246" TEXT="provides error checking "/>
+</node>
+<node CREATED="1393337790432" ID="ID_481342882" MODIFIED="1393342394951" TEXT="PTHREAD_MUTEX_RECURSIVE ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Recall from Section 11.6 that a mutex is used to protect the condition that is associated with a
+    </p>
+    <p>
+      condition variable. Before blocking the thread, the pthread_cond_wait and the
+    </p>
+    <p>
+      pthread_cond_timedwait functions release the mutex associated with the condition. This allows other
+    </p>
+    <p>
+      threads to acquire the mutex, change the condition, release the mutex, and signal the condition
+    </p>
+    <p>
+      variable. Since the mutex must be held to change the condition, it is not a good idea to use a
+    </p>
+    <p>
+      recursive mutex. If a recursive mutex is locked multiple times and used in a call to
+    </p>
+    <p>
+      pthread_cond_wait, the condition can never be satisfied, because the unlock done by
+    </p>
+    <p>
+      pthread_cond_wait doesn't release the mutex.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1393337814344" ID="ID_1426871784" MODIFIED="1393337856355" TEXT="allows the same thread to lock it multiple times without first unlocking it. ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      A recursive mutex maintains a lock count and isn't released until it is unlocked the
+    </p>
+    <p>
+      same number of times it is locked.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1393337796200" ID="ID_1076864228" MODIFIED="1393337798354" TEXT="PTHREAD_MUTEX_DEFAULT ">
+<node CREATED="1393337858137" ID="ID_1310282662" MODIFIED="1393337860698" TEXT="be used to request default semantics "/>
+<node CREATED="1393337878721" ID="ID_698320464" MODIFIED="1393337880355" TEXT=" Implementations are free to map this to one of the other types. "/>
+</node>
+<node CREATED="1393337957675" ID="ID_1241486227" MODIFIED="1393337960012" TEXT="int pthread_mutexattr_gettype(const pthread_mutexattr_t * restrict attr, int *restrict type); "/>
+<node CREATED="1393337964219" ID="ID_1641097083" MODIFIED="1393337965897" TEXT="int pthread_mutexattr_settype(pthread_mutexattr_t *attr, int type); "/>
+</node>
+</node>
+</node>
+<node CREATED="1393342451083" ID="ID_1531903843" MODIFIED="1393342453287" TEXT="ReaderWriter Lock Attributes ">
+<node CREATED="1393342511308" ID="ID_1713007530" MODIFIED="1393342529053" TEXT="int pthread_rwlockattr_init(pthread_rwlockattr_t *attr); "/>
+<node CREATED="1393342530388" ID="ID_990031686" MODIFIED="1393342542944" TEXT="int pthread_rwlockattr_destroy (pthread_rwlockattr_t *attr); "/>
+<node CREATED="1393342558100" ID="ID_1988787046" MODIFIED="1393342565027" TEXT="attr">
+<node CREATED="1393342566453" ID="ID_1292966189" MODIFIED="1393342569012" TEXT="process-shared ">
+<node CREATED="1393342620982" ID="ID_1107531878" MODIFIED="1393342622656" TEXT="int pthread_rwlockattr_getpshared(const pthread_rwlockattr_t * restrict attr, int *restrict pshared); "/>
+<node CREATED="1393342636374" ID="ID_1418764185" MODIFIED="1393342638688" TEXT="int pthread_rwlockattr_setpshared (pthread_rwlockattr_t *attr, int pshared); "/>
+</node>
+</node>
+</node>
+<node CREATED="1393342648334" ID="ID_351915335" MODIFIED="1393342651176" TEXT="Condition Variable Attributes ">
+<node CREATED="1393342672223" ID="ID_734370662" MODIFIED="1393342675020" TEXT="int pthread_condattr_init(pthread_condattr_t *attr); "/>
+<node CREATED="1393342680895" ID="ID_305473643" MODIFIED="1393342682961" TEXT="int pthread_condattr_destroy(pthread_condattr_t *attr); "/>
+<node CREATED="1393342717375" ID="ID_1692584588" MODIFIED="1393342718229" TEXT="attr">
+<node CREATED="1393342566453" ID="ID_162373420" MODIFIED="1393342569012" TEXT="process-shared ">
+<node CREATED="1393342735944" ID="ID_1326758282" MODIFIED="1393342738459" TEXT="int pthread_condattr_getpshared(const pthread_condattr_t * restrict attr, int *restrict pshared); "/>
+<node CREATED="1393342750064" ID="ID_783655027" MODIFIED="1393342752099" TEXT="int pthread_condattr_setpshared(pthread_condattr_t *attr, int pshared); "/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1392949654835" FOLDED="true" ID="ID_760586738" MODIFIED="1393375679683" TEXT="Reentrancy ">
+<node CREATED="1393344088531" ID="ID_1210415968" MODIFIED="1393344093352" TEXT="thread-safe">
+<node CREATED="1393344094339" ID="ID_1953306677" MODIFIED="1393344097825" TEXT="If a function can be safely called by multiple threads at the same time, we say that the function is thread-safe.  "/>
+<node CREATED="1393344199453" ID="ID_524461296" MODIFIED="1393344201116" TEXT="Implementations that support thread-safe functions will define the _POSIX_THREAD_SAFE_FUNCTIONS symbol in &lt;unistd.h&gt; "/>
+</node>
+<node CREATED="1393344311016" ID="ID_1880510177" MODIFIED="1393344313160" TEXT="async-signal safe ">
+<node CREATED="1393344323600" ID="ID_1065540167" MODIFIED="1393344325216" TEXT="We say that a function that is safe to be reentered from an asynchronous signal handler is async-signal safe. "/>
+</node>
+<node CREATED="1393344248566" ID="ID_110023770" MODIFIED="1393344253052" TEXT="acstime_r  ">
+<node CREATED="1393344262631" ID="ID_131250469" MODIFIED="1393344271476" TEXT="_r : reentrancy"/>
+</node>
+<node CREATED="1393344385954" ID="ID_890755141" MODIFIED="1393344397402" TEXT="thrad safe functions"/>
+<node CREATED="1393344368025" ID="ID_1116241755" MODIFIED="1393345947592" TEXT="FILE objects ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Although the standard I/O routines might be implemented to be thread-safe from the perspective of
+    </p>
+    <p>
+      their own internal data structures, it is still useful to expose the locking to applications. This allows
+    </p>
+    <p>
+      applications to compose multiple calls to standard I/O functions into atomic sequences. Of course,
+    </p>
+    <p>
+      when dealing with multiple FILE objects, you need to beware of potential deadlocks and to order your
+    </p>
+    <p>
+      locks carefully.
+    </p>
+    <p>
+      If the standard I/O routines acquire their own locks, then we can run into serious performance
+    </p>
+    <p>
+      degradation when doing character-at-a-time I/O. In this situation, we end up acquiring and releasing
+    </p>
+    <p>
+      a lock for every character read or written. To avoid this overhead, unlocked versions of the
+    </p>
+    <p>
+      character-based standard I/O routines are available.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1393344432715" ID="ID_980821938" MODIFIED="1393344434651" TEXT="int ftrylockfile(FILE *fp); "/>
+<node CREATED="1393344439163" ID="ID_1476006798" MODIFIED="1393344448704" TEXT="void flockfile(FILE *fp); "/>
+<node CREATED="1393344449803" ID="ID_1666400784" MODIFIED="1393344451582" TEXT="void funlockfile(FILE *fp); "/>
+<node CREATED="1393344558557" ID="ID_366993632" MODIFIED="1393344561838" TEXT="int getchar_unlocked(void); "/>
+<node CREATED="1393344566518" ID="ID_636761424" MODIFIED="1393344569037" TEXT="int getc_unlocked(FILE *fp); "/>
+<node CREATED="1393344573318" ID="ID_1555345839" MODIFIED="1393344575143" TEXT="int putchar_unlocked(int c); "/>
+<node CREATED="1393344578398" ID="ID_1102745069" MODIFIED="1393344580927" TEXT="int putc_unlocked(int c, FILE *fp); "/>
+</node>
+</node>
+<node CREATED="1392949661331" ID="ID_1980818415" MODIFIED="1392949663224" TEXT="Thread-Specific Data ">
+<node CREATED="1393375682015" ID="ID_155877577" MODIFIED="1393375684990" TEXT="is a mechanism for storing and finding data associated with a particular thread. "/>
+<node CREATED="1393375717127" ID="ID_660362017" MODIFIED="1393375719079" TEXT="we&apos;d like each thread to access its own separate copy of the data, without worrying about synchronizing access with other threads "/>
+<node CREATED="1393375856842" ID="ID_526117908" MODIFIED="1393375859015" TEXT="reason">
+<node CREATED="1393375907851" ID="ID_1478431343" MODIFIED="1393375910018" TEXT="need to maintain data on a per thread basis "/>
+<node CREATED="1393375946164" ID="ID_1570259553" MODIFIED="1393375948573" TEXT="provide a mechanism for adapting process-based interfaces to a multithreaded environment ">
+<node CREATED="1393376048990" ID="ID_957943681" MODIFIED="1393376051291" TEXT="errno"/>
+</node>
+</node>
+<node CREATED="1393376077262" FOLDED="true" ID="ID_1140664147" MODIFIED="1393376146619" TEXT="Recall that all threads in a process have access to the entire address space of the process ">
+<icon BUILTIN="yes"/>
+<icon BUILTIN="yes"/>
+<icon BUILTIN="yes"/>
+<node CREATED="1393376098614" ID="ID_1532138208" MODIFIED="1393376100472" TEXT="Other than using registers, there is no way for one thread to prevent another from accessing its data "/>
+</node>
+<node CREATED="1393376148112" ID="ID_705695650" MODIFIED="1393376240623" TEXT="int pthread_key_create(pthread_key_t *keyp, void (*destructor)(void *)); ">
+<node CREATED="1393376216641" ID="ID_1467498398" MODIFIED="1393376317062" TEXT="keyp">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The same key can be used by
+    </p>
+    <p>
+      all threads in the process, but each thread will associate a different thread-specific data address with
+    </p>
+    <p>
+      the key
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1393376319483" ID="ID_537576709" MODIFIED="1393376362269" TEXT="destructor">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      When the thread exits, if the data address has been set to a non-null value, the destructor
+    </p>
+    <p>
+      function is called with the data address as the only argume
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1393376379812" ID="ID_440340169" MODIFIED="1393376381335" TEXT="pthread_exit or by returning, the destructor is called "/>
+<node CREATED="1393376388780" ID="ID_1697817400" MODIFIED="1393376390135" TEXT="exit, _exit, _Exit, or abort, or otherwise exits abnormally, the destructor is not called "/>
+</node>
+<node CREATED="1393376630193" ID="ID_1938732787" MODIFIED="1393376662401" TEXT="check and check to call destructor">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      After all destructors are called, the system will
+    </p>
+    <p>
+      check whether any non-null thread-specific values were associated with the keys and, if so, call the
+    </p>
+    <p>
+      destructors again. This process will repeat until either all keys for the thread have null thread-specific
+    </p>
+    <p>
+      data values or a maximum of PTHREAD_DESTRUCTOR_ITERATIONS (Figure 12.1) attempts have been
+    </p>
+    <p>
+      made.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1393376667970" ID="ID_748740276" MODIFIED="1393376669830" TEXT="int pthread_key_delete(pthread_key_t *key); ">
+<node CREATED="1393376710939" ID="ID_406308596" MODIFIED="1393376716246" TEXT="will not invoke the destructor function associated with the key ">
+<icon BUILTIN="yes"/>
+<icon BUILTIN="yes"/>
+</node>
+</node>
+<node CREATED="1393376771341" ID="ID_888711625" MODIFIED="1393376786408" TEXT="pthread_once_t initflag = PTHREAD_ONCE_INIT; &#xa;int pthread_once(pthread_once_t *initflag, void (*initfn)(void)); ">
+<node CREATED="1393376801869" ID="ID_1415953503" MODIFIED="1393376803823" TEXT="The initflag must be a nonlocal variable (i.e., global or static) and initialized to PTHREAD_ONCE_INIT. "/>
+<node CREATED="1393376842022" ID="ID_1041071602" MODIFIED="1393376844211" TEXT="the system guarantees that the initialization routine, initfn, will be called only once, on the first call to pthread_once. "/>
+</node>
+<node CREATED="1393376859679" ID="ID_1626425628" MODIFIED="1393376861725" TEXT="void *pthread_getspecific(pthread_key_t key); "/>
+<node CREATED="1393376872567" ID="ID_916616534" MODIFIED="1393376874514" TEXT="int pthread_setspecific(pthread_key_t key, const void *value); "/>
+</node>
 <node CREATED="1392949667115" ID="ID_2924296" MODIFIED="1392949668684" TEXT="Cancel Options "/>
 <node CREATED="1392949672987" ID="ID_1928920779" MODIFIED="1392949680405" TEXT="Threads and Signals "/>
 <node CREATED="1392949684652" ID="ID_1903883162" MODIFIED="1392949686049" TEXT="Threads and fork "/>
 <node CREATED="1392949690484" ID="ID_607287955" MODIFIED="1392949691958" TEXT="Threads and I/O "/>
 <node CREATED="1392949694956" ID="ID_1514840687" MODIFIED="1392949697257" TEXT="Summary "/>
 <node CREATED="1392949707205" ID="ID_1112814910" MODIFIED="1392949709056" TEXT="Exercises "/>
+<node CREATED="1393342397162" ID="ID_798185148" MODIFIED="1393342400408" TEXT="problem">
+<node CREATED="1393342402866" ID="ID_108058634" MODIFIED="1393342406832" TEXT="Figure 12.8 ">
+<node CREATED="1393342413154" ID="ID_768564597" MODIFIED="1393342414733" TEXT="SECTONSEC  "/>
+</node>
+</node>
 </node>
 </node>
 </map>
