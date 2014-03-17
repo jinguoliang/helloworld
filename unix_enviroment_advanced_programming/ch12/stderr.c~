@@ -9,16 +9,17 @@
 #include <stdarg.h>
 #include "ourhdr.h"
 
-static void err_doit(int merrnoflag, int merrno, const char *fmt, va_list ap)
+static void
+err_doit(int merrnoflag,int merrno,const char *fmt,va_list ap)
 {
 	char buf[MAXLINE];
 
-	vsprintf(buf, fmt, ap);
-	if (merrnoflag)
-		sprintf(buf + strlen(buf), ":%s", strerror(merrno));
-	strcat(buf, "\n");
+	vsprintf(buf,fmt,ap);
+	if(merrnoflag)
+		sprintf(buf+strlen(buf),":%s",strerror(merrno));
+	strcat(buf,"\n");
 	fflush(stdout);
-	fputs(buf, stderr);
+	fputs(buf,stderr);
 	fflush(NULL);
 
 	return;
@@ -30,7 +31,7 @@ void err_sys(const char *fmt, ...)
 {
 	va_list ap;
 	va_start(ap, fmt);
-	err_doit(1, errno, fmt, ap);
+	err_doit(1, errno,fmt, ap);
 	va_end(ap);
 	exit(1);
 }
@@ -39,16 +40,16 @@ void err_quit(const char *fmt, ...)
 {
 	va_list ap;
 	va_start(ap, fmt);
-	err_doit(0, errno, fmt, ap);
+	err_doit(0,errno, fmt, ap);
 	va_end(ap);
 	exit(1);
 }
 
-void err_exit(int merrno, const char *fmt, ...)
+void err_exit(int merrno,const char *fmt, ...)
 {
 	va_list ap;
 	va_start(ap, fmt);
-	err_doit(0, merrno, fmt, ap);
+	err_doit(0,merrno, fmt, ap);
 	va_end(ap);
 	exit(1);
 }
@@ -57,7 +58,7 @@ void err_dump(const char *fmt, ...)
 {
 	va_list ap;
 	va_start(ap, fmt);
-	err_doit(1, errno, fmt, ap);
+	err_doit(1,errno, fmt, ap);
 	va_end(ap);
 	abort();
 	exit(1);
@@ -67,24 +68,23 @@ void err_ret(const char *fmt, ...)
 {
 	va_list ap;
 	va_start(ap, fmt);
-	err_doit(1, errno, fmt, ap);
+	err_doit(1,errno, fmt, ap);
 	va_end(ap);
 	return;
 }
 
+
 void pr_exit(int status)
 {
-	if (WIFEXITED(status))
-		printf("normal termination, exit status = %d\n",
-		       WEXITSTATUS(status));
+	if(WIFEXITED(status))
+		printf("normal termination, exit status = %d\n",WEXITSTATUS(status));
 	else if (WIFSIGNALED(status))
-		printf("abnormal termination,signal number = %d%s\n",
-		       WTERMSIG(status),
+		printf("abnormal termination,signal number = %d%s\n",WTERMSIG(status),
 #ifdef WCOREDUMP
-		       WCOREDUMP(status) ? " (core file generated)" : "");
+		WCOREDUMP(status)? " (core file generated)" : "");
 #else
-		       "");
+		"");
 #endif
-	else if (WIFSTOPPED(status))
-		printf("child stopped, signal number = %d\n", WSTOPSIG(status));
+	else if(WIFSTOPPED(status))
+		printf("child stopped, signal number = %d\n",WSTOPSIG(status));
 }

@@ -47,15 +47,17 @@ emailcommon/
                 │   ├── PackedString.java
                 │   └── Part.java
                 ├── provider
-                │   ├── Account.java
-                │   ├── EmailContent.java
+                │   ├── __Account__.java					---------------->::__EmailContent__
+                │   ├── __EmailContent__.java				---------------->the superclass of the various classes of content stored by [[EmailProvider]]
+														It is intended to include 1) column definitions for use with the Provider, and 2) convenience
+														 methods for saving and retrieving content from the Provider.
                 │   ├── HeaderColumns.java
                 │   ├── Header.java
                 │   ├── HeaderNames.java
                 │   ├── HeaderUtils.java
                 │   ├── HostAuth.aidl
                 │   ├── HostAuth.java
-                │   ├── Mailbox.java
+                │   ├── __Mailbox__.java                                  --------------------------->::__EmailContent__
                 │   ├── OofSettings.aidl
                 │   ├── OofSettings.java
                 │   ├── Policy.aidl
@@ -128,7 +130,8 @@ src
 │   │   │   │   ├── GalContactInformationDialog.java
 │   │   │   │   ├── GalContactLookupTask.java
 │   │   │   │   ├── InsertQuickResponseDialog.java
-│   │   │   │   ├── MailboxFinder.java
+│   │   │   │   ├── __MailboxFinder__.java									------------->A class that finds a mailbox ID by account ID and mailbox type
+															--------->nested:__FindMailboxTask__
 │   │   │   │   ├── MailboxFragmentAdapter.java
 │   │   │   │   ├── MailboxListFragment.java
 │   │   │   │   ├── MailboxListItem.java
@@ -186,7 +189,7 @@ src
 │   │   │   │   │   ├── PeakTimePreferenceCategory.java
 │   │   │   │   │   ├── PushAccountSetup.java
 │   │   │   │   │   ├── RepeatPreference.java
-│   │   │   │   │   ├── SetupData.java
+│   │   │   │   │   ├── __SetupData.java__					<<Parcelable  ------------persistant object : account password flow ...Policy(?) 
 │   │   │   │   │   └── SpinnerOption.java
 │   │   │   │   ├── ShortcutPickerFragment.java
 │   │   │   │   ├── ShortcutPicker.java
@@ -257,7 +260,7 @@ src
 │   │   │   ├── MessagingListener.java
 │   │   │   ├── NotificationController.java
 │   │   │   ├── PeekableInputStream.java
-│   │   │   ├── Preferences.java
+│   │   │   ├── __Preferences__.java										-------->wraped the __SharedPreference__
 │   │   │   ├── provider
 │   │   │   │   ├── AccountBackupRestore.java
 │   │   │   │   ├── AccountReconciler.java
@@ -265,7 +268,7 @@ src
 │   │   │   │   ├── AttachmentProvider.java
 │   │   │   │   ├── ContentCache.java
 │   │   │   │   ├── DBHelper.java
-│   │   │   │   ├── EmailProvider.java
+│   │   │   │   ├── __EmailProvider__.java								
 │   │   │   │   ├── EmailSearchSuggestionProvider.java
 │   │   │   │   ├── SearchContent.java
 │   │   │   │   ├── SmimeProvider.java
@@ -512,12 +515,12 @@ src
                 ├── EOLConvertingInputStream.java
                 ├── field
                 │   ├── address
-                │   │   ├── Address.java
+                │   │   ├── Address.java			
                 │   │   ├── AddressList.java
                 │   │   ├── Builder.java
                 │   │   ├── DomainList.java
                 │   │   ├── Group.java
-                │   │   ├── Mailbox.java
+                │   │   ├── __Mailbox__.java				--->::Address      Represents a single e-mail address
                 │   │   ├── MailboxList.java
                 │   │   ├── NamedMailbox.java
                 │   │   └── parser
