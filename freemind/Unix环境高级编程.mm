@@ -4609,8 +4609,7 @@
       exits
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1393334044981" ID="ID_1154523975" MODIFIED="1393334047510" TEXT="PTHREAD_DESTRUCTOR_ITERATIONS  "/>
 </node>
 <node CREATED="1393334701552" ID="ID_1405100343" MODIFIED="1393334703424" TEXT="_SC_THREAD_KEYS_MAX ">
@@ -4644,8 +4643,7 @@
       attribute in the pthread_attr_t structure.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1393335149407" ID="ID_921642902" MODIFIED="1393335151526" TEXT="PTHREAD_CREATE_DETACHED "/>
 <node CREATED="1393335154695" ID="ID_1725779998" MODIFIED="1393335156549" TEXT="PTHREAD_CREATE_JOINABLE "/>
 <node CREATED="1393335173968" ID="ID_958425655" MODIFIED="1393335175825" TEXT="int pthread_attr_getdetachstate(const pthread_attr_t *restrict attr, int *detachstate); "/>
@@ -4684,8 +4682,7 @@
       variables or call functions many stack frames deep, you might need more than the default stack size.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1393336348824" ID="ID_772928831" MODIFIED="1393336358364" TEXT="If you run out of virtual address space for thread stacks, you can use malloc or mmap (see Section 14.9) to allocate space for an alternate stack and use pthread_attr_setstack to change the stack location of threads you create "/>
 <node CREATED="1393335905345" ID="ID_1324150062" MODIFIED="1393335908322" TEXT="int pthread_attr_getstack(const pthread_attr_t *restrict attr, void **restrict stackaddr, size_t *restrict stacksize); "/>
 <node CREATED="1393335944490" ID="ID_126227321" MODIFIED="1393335946865" TEXT="int pthread_attr_setstack(const pthread_attr_t *attr, void *stackaddr, size_t *stacksize); "/>
@@ -4724,8 +4721,7 @@
       concurrency.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1393337053211" ID="ID_1786423929" MODIFIED="1393337055492" TEXT="int pthread_getconcurrency(void); "/>
 <node CREATED="1393337059363" ID="ID_755854832" MODIFIED="1393337061046" TEXT="int pthread_setconcurrency(int level); ">
 <node CREATED="1393337110004" ID="ID_1161604028" MODIFIED="1393337112148" TEXT="is only a hint to the system "/>
@@ -4789,8 +4785,7 @@
       pthread_cond_wait doesn't release the mutex.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1393337814344" ID="ID_1426871784" MODIFIED="1393337856355" TEXT="allows the same thread to lock it multiple times without first unlocking it. ">
 <richcontent TYPE="NOTE"><html>
   <head>
@@ -4804,8 +4799,7 @@
       same number of times it is locked.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1393337796200" ID="ID_1076864228" MODIFIED="1393337798354" TEXT="PTHREAD_MUTEX_DEFAULT ">
@@ -4884,8 +4878,7 @@
       character-based standard I/O routines are available.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1393344432715" ID="ID_980821938" MODIFIED="1393344434651" TEXT="int ftrylockfile(FILE *fp); "/>
 <node CREATED="1393344439163" ID="ID_1476006798" MODIFIED="1393344448704" TEXT="void flockfile(FILE *fp); "/>
 <node CREATED="1393344449803" ID="ID_1666400784" MODIFIED="1393344451582" TEXT="void funlockfile(FILE *fp); "/>
@@ -4927,8 +4920,7 @@
       the key
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1393376319483" ID="ID_537576709" MODIFIED="1393376362269" TEXT="destructor">
 <richcontent TYPE="NOTE"><html>
@@ -4943,8 +4935,7 @@
       function is called with the data address as the only argume
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1393376379812" ID="ID_440340169" MODIFIED="1393376381335" TEXT="pthread_exit or by returning, the destructor is called "/>
 <node CREATED="1393376388780" ID="ID_1697817400" MODIFIED="1393376390135" TEXT="exit, _exit, _Exit, or abort, or otherwise exits abnormally, the destructor is not called "/>
 </node>
@@ -4970,8 +4961,7 @@
       made.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1393376667970" ID="ID_748740276" MODIFIED="1393376669830" TEXT="int pthread_key_delete(pthread_key_t *key); ">
@@ -4987,15 +4977,155 @@
 <node CREATED="1393376859679" ID="ID_1626425628" MODIFIED="1393376861725" TEXT="void *pthread_getspecific(pthread_key_t key); "/>
 <node CREATED="1393376872567" ID="ID_916616534" MODIFIED="1393376874514" TEXT="int pthread_setspecific(pthread_key_t key, const void *value); "/>
 </node>
-<node CREATED="1392949667115" ID="ID_2924296" MODIFIED="1392949668684" TEXT="Cancel Options "/>
-<node CREATED="1392949672987" ID="ID_1928920779" MODIFIED="1392949680405" TEXT="Threads and Signals "/>
-<node CREATED="1392949684652" ID="ID_1903883162" MODIFIED="1392949686049" TEXT="Threads and fork "/>
-<node CREATED="1392949690484" ID="ID_607287955" MODIFIED="1392949691958" TEXT="Threads and I/O "/>
+<node CREATED="1392949667115" FOLDED="true" ID="ID_2924296" MODIFIED="1393536283857" TEXT="Cancel Options ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Two thread attributes that are not included in the pthread_attr_t structure are the cancelability state
+    </p>
+    <p>
+      and the cancelability type. These attributes affect the behavior of a thread in response to a call to
+    </p>
+    <p>
+      pthread_cancel
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1393507764359" ID="ID_1601835334" MODIFIED="1393507766317" TEXT="int pthread_setcancelstate(int state, int *oldstate); ">
+<node CREATED="1393507744622" ID="ID_101397328" MODIFIED="1393507746672" TEXT="PTHREAD_CANCEL_DISABLE "/>
+<node CREATED="1393507738873" ID="ID_692801687" MODIFIED="1393507740917" TEXT="PTHREAD_CANCEL_ENABLE "/>
+</node>
+<node CREATED="1393507826384" ID="ID_1072130201" MODIFIED="1393507828186" TEXT="cancellation points ">
+<node CREATED="1393507858032" ID="ID_322193207" MODIFIED="1393507864583" TEXT="occur when a thread calls some functions"/>
+<node CREATED="1393507943002" ID="ID_293693912" MODIFIED="1393507944912" TEXT="void pthread_testcancel(void); ">
+<node CREATED="1393508131597" ID="ID_1621563636" MODIFIED="1393508163542" TEXT="similar with adding a cancelation point"/>
+</node>
+</node>
+<node CREATED="1393508009899" ID="ID_897537435" MODIFIED="1393508012642" TEXT="cancellation type ">
+<node CREATED="1393508040827" ID="ID_1834304076" MODIFIED="1393508241068" TEXT="int pthread_setcanceltype(int type, int *oldtype); ">
+<node CREATED="1393508049556" ID="ID_1272904927" MODIFIED="1393508051261" TEXT="PTHREAD_CANCEL_DEFERRED "/>
+<node CREATED="1393508055908" ID="ID_1637155591" MODIFIED="1393508088122" TEXT="PTHREAD_CANCEL_ASYNCHRONOUS ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The thread doesn't necessarily need to hit a cancellation point for it to be canceled.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1392949672987" FOLDED="true" ID="ID_1928920779" MODIFIED="1393536283106" TEXT="Threads and Signals ">
+<node CREATED="1393508275872" ID="ID_169646208" MODIFIED="1393508278724" TEXT="Each thread has its own signal mask "/>
+<node CREATED="1393508289400" ID="ID_894057609" MODIFIED="1393508292247" TEXT="the signal disposition is shared by all threads in the process "/>
+<node CREATED="1393508339337" ID="ID_360904564" MODIFIED="1393508341488" TEXT="Signals are delivered to a single thread in the process ">
+<node CREATED="1393508390834" ID="ID_1650013813" MODIFIED="1393508393579" TEXT="If the signal is related to a hardware fault or expiring timer, the signal is sent to the thread whose action caused the event "/>
+<node CREATED="1393508404250" ID="ID_630456431" MODIFIED="1393508406431" TEXT="Other signals, on the other hand, are delivered to an arbitrary thread "/>
+</node>
+<node CREATED="1393508461395" ID="ID_719046960" MODIFIED="1393508463429" TEXT="int pthread_sigmask(int how, const sigset_t *restrict set, sigset_t *restrict oset); ">
+<node CREATED="1393508640270" ID="ID_542274787" MODIFIED="1393508642265" TEXT="sigprocmask ">
+<node CREATED="1393508652463" ID="ID_377250896" MODIFIED="1393508654783" TEXT="undefined in a multithreaded process "/>
+</node>
+</node>
+<node CREATED="1393508682895" ID="ID_644404511" MODIFIED="1393510086365" TEXT="int sigwait(const sigset_t *restrict set, int *restrict signop); ">
+<node CREATED="1393508768633" ID="ID_481752813" MODIFIED="1393508770752" TEXT="set ">
+<node CREATED="1393508780913" ID="ID_1378630225" MODIFIED="1393508782896" TEXT="the set of signals for which the thread is waiting "/>
+</node>
+<node CREATED="1393508787417" ID="ID_1953012437" MODIFIED="1393508791487" TEXT="signop">
+<node CREATED="1393508808898" ID="ID_34023008" MODIFIED="1393508827024" TEXT="which delivered"/>
+</node>
+<node CREATED="1393510436600" ID="ID_415275090" MODIFIED="1393510439604" TEXT="If multiple threads are blocked in calls to sigwait for the same signal, only one of the threads will return from sigwait when the signal is delivered. "/>
+</node>
+<node CREATED="1393510392391" ID="ID_1849096093" MODIFIED="1393510395288" TEXT="int pthread_kill(pthread_t thread, int signo); ">
+<node CREATED="1393510450576" ID="ID_744971646" MODIFIED="1393510452659" TEXT="a signo value of 0 to check for existence of the thread "/>
+<node CREATED="1393510527577" ID="ID_1289333112" MODIFIED="1393510529277" TEXT="If the default action for a signal is to terminate the process, then sending the signal to a thread will still kill the entire process. "/>
+</node>
+<node CREATED="1393510614347" ID="ID_914151440" MODIFIED="1393510616358" TEXT="Note ">
+<node CREATED="1393510623323" ID="ID_1043744267" MODIFIED="1393510625341" TEXT="alarm timers are a process resource ">
+<node CREATED="1393510631523" ID="ID_1536480451" MODIFIED="1393510633355" TEXT="all threads share the same set of alarms "/>
+</node>
+</node>
+</node>
+<node CREATED="1392949684652" ID="ID_1903883162" MODIFIED="1392949686049" TEXT="Threads and fork ">
+<node CREATED="1393536290549" ID="ID_1829140670" MODIFIED="1393536292862" TEXT="By inheriting a copy of the address space, the child also inherits the state of every mutex, readerwriter lock, and condition variable from the parent process. ">
+<node CREATED="1393536320437" ID="ID_863645029" MODIFIED="1393536322566" TEXT="If the parent consists of more than one thread, the child will need to clean up the lock state if it isn&apos;t going to call exec immediately after fork returns "/>
+</node>
+<node CREATED="1393536339718" ID="ID_952399601" MODIFIED="1393536341631" TEXT="Inside the child process, only one thread exists ">
+<node CREATED="1393536420032" ID="ID_1137878809" MODIFIED="1393536421918" TEXT=" If the threads in the parent process hold any locks, the locks will also be held in the child process.  "/>
+</node>
+<node CREATED="1393536442208" ID="ID_604717499" MODIFIED="1393536444998" TEXT="int pthread_atfork(void (*prepare)(void), void (*parent)(void), void (*child)(void)); ">
+<node CREATED="1393536459104" ID="ID_1666418649" MODIFIED="1393536461566" TEXT="prepare">
+<node CREATED="1393536501361" ID="ID_1156351611" MODIFIED="1393536503213" TEXT="in the parent "/>
+<node CREATED="1393536513874" ID="ID_1913609100" MODIFIED="1393536515880" TEXT="before fork creates the child process "/>
+<node CREATED="1393536527338" ID="ID_1262877861" MODIFIED="1393536529347" TEXT="acquire all locks defined by the parent "/>
+</node>
+<node CREATED="1393536462217" ID="ID_969376360" MODIFIED="1393536465516" TEXT="parent">
+<node CREATED="1393536548130" ID="ID_526774042" MODIFIED="1393536551321" TEXT="in the context of the parent "/>
+<node CREATED="1393536574827" ID="ID_1466726648" MODIFIED="1393537009548" TEXT="after fork has created the child process ">
+<node CREATED="1393536587963" ID="ID_284663457" MODIFIED="1393536591983" TEXT=" but before fork has returned "/>
+</node>
+<node CREATED="1393536639484" ID="ID_809635672" MODIFIED="1393536644159" TEXT="to unlock all the locks acquired by the prepare fork handler ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+</node>
+</node>
+<node CREATED="1393536466313" ID="ID_1303389974" MODIFIED="1393536467559" TEXT="child">
+<node CREATED="1393536655212" ID="ID_1972810455" MODIFIED="1393536657188" TEXT="in the context of the child process "/>
+<node CREATED="1393536666037" ID="ID_1405965070" MODIFIED="1393536667718" TEXT="returning from fork "/>
+<node CREATED="1393536682013" ID="ID_90536746" MODIFIED="1393537004028" TEXT="must release all the locks acquired by the prepare fork handler. ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+</node>
+</node>
+<node CREATED="1393536802111" ID="ID_1201984134" MODIFIED="1393536805542" TEXT="We can call pthread_atfork multiple times to install more than one set of fork handlers. ">
+<node CREATED="1393536846464" ID="ID_452618963" MODIFIED="1393536870543" TEXT="the order in which the handlers are called ">
+<node CREATED="1393536912634" ID="ID_760433903" MODIFIED="1393536914838" TEXT="parent and child fork handlers are called in the order in which they were registered "/>
+<node CREATED="1393536932290" ID="ID_201122589" MODIFIED="1393536934207" TEXT="the prepare fork handlers are called in the opposite order from which they were registered.  "/>
+</node>
+<node CREATED="1393536994555" ID="ID_797774901" MODIFIED="1393537012806" TEXT="This allows multiple modules to register their own fork handlers and still honor the locking hierarchy. ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1392949690484" ID="ID_607287955" MODIFIED="1392949691958" TEXT="Threads and I/O ">
+<node CREATED="1393538763092" ID="ID_847178052" MODIFIED="1393538765508" TEXT="pread(fd, buf1, 100, 300); ">
+<node CREATED="1393538776677" ID="ID_1376385676" MODIFIED="1393538778852" TEXT="lseek(fd, 300, SEEK_SET); "/>
+<node CREATED="1393538784469" ID="ID_1645493069" MODIFIED="1393538786436" TEXT="read(fd, buf1, 100); "/>
+</node>
+</node>
 <node CREATED="1392949694956" ID="ID_1514840687" MODIFIED="1392949697257" TEXT="Summary "/>
 <node CREATED="1392949707205" ID="ID_1112814910" MODIFIED="1392949709056" TEXT="Exercises "/>
-<node CREATED="1393342397162" ID="ID_798185148" MODIFIED="1393342400408" TEXT="problem">
+<node CREATED="1393342397162" ID="ID_798185148" MODIFIED="1393510059812" TEXT="problem">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
 <node CREATED="1393342402866" ID="ID_108058634" MODIFIED="1393342406832" TEXT="Figure 12.8 ">
 <node CREATED="1393342413154" ID="ID_768564597" MODIFIED="1393342414733" TEXT="SECTONSEC  "/>
+</node>
+<node CREATED="1393510021569" ID="ID_911399105" MODIFIED="1393510050719" TEXT="624">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      If one of the signals specified in the set is pending at the time sigwait is called, then sigwait will return without blocking. Before returning, sigwait removes the signal from the set of signals pending for the process. To avoid erroneous behavior, a thread must block the signals it is waiting for before calling sigwait. The sigwait function will atomically unblock the signals and wait until one is delivered. Before returning, sigwait will restore the thread's signal mask. If the signals are not blocked at the time that sigwait is called, then a timing window is opened up w
+    </p>
+  </body>
+</html>
+</richcontent>
 </node>
 </node>
 </node>

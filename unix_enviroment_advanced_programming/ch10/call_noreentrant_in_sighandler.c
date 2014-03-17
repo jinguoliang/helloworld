@@ -17,7 +17,7 @@ static void my_alarm(int signo)
 	if((rootptr=getpwnam("root"))==NULL)
 		err_sys("getpwnam(root) error");
 	alarm(1);
-	puts("hwllo in signal");
+	puts("hello in signal");
 }
 int main(int argc,char *argv[])
 {
@@ -25,10 +25,10 @@ int main(int argc,char *argv[])
 	signal(SIGALRM,my_alarm);
 	alarm(1);
 	for(;;){
-		if((ptr=getpwnam("jinux"))==NULL)
+		if((ptr=getpwnam("xp013796"))==NULL)
 			err_sys("getpwnam error");
-		puts("hwllo");
-		if(strcmp(ptr->pw_name,"jinux")!=0)
+		sleep(2);
+		if(strcmp(ptr->pw_name,"xp013796")!=0)
 			printf("return value corrupted!, pw_name = %s\n",ptr->pw_name);
 	}
 
