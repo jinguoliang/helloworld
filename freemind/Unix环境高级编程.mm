@@ -4443,7 +4443,7 @@
 <node CREATED="1391446135519" ID="ID_1218700903" MODIFIED="1391446136501" TEXT=" Additional Features "/>
 <node CREATED="1391446140125" ID="ID_1268518014" MODIFIED="1391446142538" TEXT=" Summary "/>
 </node>
-<node CREATED="1392949541994" ID="ID_637081276" MODIFIED="1392949554852" POSITION="right" TEXT="Threads ">
+<node CREATED="1392949541994" FOLDED="true" ID="ID_637081276" MODIFIED="1395043494191" POSITION="right" TEXT="Threads ">
 <node CREATED="1392949564039" FOLDED="true" ID="ID_607133705" MODIFIED="1392963514942" TEXT="Introduction ">
 <node CREATED="1392952883696" ID="ID_278083049" MODIFIED="1392952885737" TEXT="All threads within a single process have access to the same process components, such as file descriptors and memory. "/>
 <node CREATED="1392952924568" ID="ID_446283079" MODIFIED="1392952926761" TEXT="synchronization mechanisms "/>
@@ -4583,7 +4583,9 @@
 <node CREATED="1392949604984" ID="ID_1196509855" MODIFIED="1392949606558" TEXT="Summary "/>
 <node CREATED="1392949609496" ID="ID_1749062199" MODIFIED="1392949611953" TEXT="Exercises "/>
 </node>
-<node CREATED="1392949620657" ID="ID_1461218239" MODIFIED="1392949622675" POSITION="right" TEXT="Thread Control ">
+<node CREATED="1392949620657" FOLDED="true" ID="ID_1461218239" MODIFIED="1395043698582" POSITION="right" TEXT="Thread Control ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
 <node CREATED="1392949627585" ID="ID_389424779" MODIFIED="1392949629294" TEXT="Introduction "/>
 <node CREATED="1392949634193" FOLDED="true" ID="ID_1648678860" MODIFIED="1393334819101" TEXT="Thread Limits ">
 <node CREATED="1393334067500" FOLDED="true" ID="ID_384298981" MODIFIED="1393334818373" TEXT="sysconf ">
@@ -4623,7 +4625,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1392949642274" ID="ID_1407192448" MODIFIED="1393337538292" TEXT="Thread Attributes ">
+<node CREATED="1392949642274" FOLDED="true" ID="ID_1407192448" MODIFIED="1395043501985" TEXT="Thread Attributes ">
 <node CREATED="1393334821770" ID="ID_1981184389" MODIFIED="1393334828834" TEXT="int pthread_attr_init(pthread_attr_t *attr); "/>
 <node CREATED="1393334843346" ID="ID_1972945719" MODIFIED="1393334845424" TEXT="int pthread_attr_destroy(pthread_attr_t *attr); "/>
 <node CREATED="1393334979469" ID="ID_1785638593" MODIFIED="1393334982383" TEXT="POSIX.1 thread attributes ">
@@ -4888,7 +4890,7 @@
 <node CREATED="1393344578398" ID="ID_1102745069" MODIFIED="1393344580927" TEXT="int putc_unlocked(int c, FILE *fp); "/>
 </node>
 </node>
-<node CREATED="1392949661331" ID="ID_1980818415" MODIFIED="1392949663224" TEXT="Thread-Specific Data ">
+<node CREATED="1392949661331" FOLDED="true" ID="ID_1980818415" MODIFIED="1395043496218" TEXT="Thread-Specific Data ">
 <node CREATED="1393375682015" ID="ID_155877577" MODIFIED="1393375684990" TEXT="is a mechanism for storing and finding data associated with a particular thread. "/>
 <node CREATED="1393375717127" ID="ID_660362017" MODIFIED="1393375719079" TEXT="we&apos;d like each thread to access its own separate copy of the data, without worrying about synchronizing access with other threads "/>
 <node CREATED="1393375856842" ID="ID_526117908" MODIFIED="1393375859015" TEXT="reason">
@@ -4993,8 +4995,7 @@
       pthread_cancel
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1393507764359" ID="ID_1601835334" MODIFIED="1393507766317" TEXT="int pthread_setcancelstate(int state, int *oldstate); ">
 <node CREATED="1393507744622" ID="ID_101397328" MODIFIED="1393507746672" TEXT="PTHREAD_CANCEL_DISABLE "/>
 <node CREATED="1393507738873" ID="ID_692801687" MODIFIED="1393507740917" TEXT="PTHREAD_CANCEL_ENABLE "/>
@@ -5018,13 +5019,12 @@
       The thread doesn't necessarily need to hit a cancellation point for it to be canceled.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
 </node>
-<node CREATED="1392949672987" FOLDED="true" ID="ID_1928920779" MODIFIED="1393536283106" TEXT="Threads and Signals ">
+<node CREATED="1392949672987" FOLDED="true" ID="ID_1928920779" MODIFIED="1395043497722" TEXT="Threads and Signals ">
 <node CREATED="1393508275872" ID="ID_169646208" MODIFIED="1393508278724" TEXT="Each thread has its own signal mask "/>
 <node CREATED="1393508289400" ID="ID_894057609" MODIFIED="1393508292247" TEXT="the signal disposition is shared by all threads in the process "/>
 <node CREATED="1393508339337" ID="ID_360904564" MODIFIED="1393508341488" TEXT="Signals are delivered to a single thread in the process ">
@@ -5055,7 +5055,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1392949684652" ID="ID_1903883162" MODIFIED="1392949686049" TEXT="Threads and fork ">
+<node CREATED="1392949684652" FOLDED="true" ID="ID_1903883162" MODIFIED="1395043550067" TEXT="Threads and fork ">
 <node CREATED="1393536290549" ID="ID_1829140670" MODIFIED="1393536292862" TEXT="By inheriting a copy of the address space, the child also inherits the state of every mutex, readerwriter lock, and condition variable from the parent process. ">
 <node CREATED="1393536320437" ID="ID_863645029" MODIFIED="1393536322566" TEXT="If the parent consists of more than one thread, the child will need to clean up the lock state if it isn&apos;t going to call exec immediately after fork returns "/>
 </node>
@@ -5106,7 +5106,10 @@
 </node>
 </node>
 <node CREATED="1392949694956" ID="ID_1514840687" MODIFIED="1392949697257" TEXT="Summary "/>
-<node CREATED="1392949707205" ID="ID_1112814910" MODIFIED="1392949709056" TEXT="Exercises "/>
+<node CREATED="1392949707205" ID="ID_1112814910" MODIFIED="1395043691531" TEXT="Exercises ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+</node>
 <node CREATED="1393342397162" ID="ID_798185148" MODIFIED="1393510059812" TEXT="problem">
 <icon BUILTIN="help"/>
 <icon BUILTIN="help"/>
@@ -5124,10 +5127,25 @@
       If one of the signals specified in the set is pending at the time sigwait is called, then sigwait will return without blocking. Before returning, sigwait removes the signal from the set of signals pending for the process. To avoid erroneous behavior, a thread must block the signals it is waiting for before calling sigwait. The sigwait function will atomically unblock the signals and wait until one is delivered. Before returning, sigwait will restore the thread's signal mask. If the signals are not blocked at the time that sigwait is called, then a timing window is opened up w
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
+</node>
+<node CREATED="1395043596570" ID="ID_1610336038" MODIFIED="1395043598840" POSITION="right" TEXT="13Daemon Processes ">
+<node CREATED="1395043636202" ID="ID_820966342" MODIFIED="1395043638029" TEXT="Introduction ">
+<node CREATED="1395043959648" ID="ID_630151807" MODIFIED="1395043975700" TEXT="live for a long time "/>
+<node CREATED="1395043981759" ID="ID_849367339" MODIFIED="1395043983301" TEXT="started when the system is bootstrapped "/>
+<node CREATED="1395043993032" ID="ID_1705348048" MODIFIED="1395043995274" TEXT="terminate only when the system is shut down "/>
+<node CREATED="1395044007169" ID="ID_1776857391" MODIFIED="1395044009133" TEXT="don&apos;t have a controlling terminal "/>
+</node>
+<node CREATED="1395043643642" ID="ID_999045995" MODIFIED="1395043645273" TEXT="Daemon Characteristics "/>
+<node CREATED="1395043649025" ID="ID_35270725" MODIFIED="1395043650805" TEXT="Coding Rules "/>
+<node CREATED="1395043653816" ID="ID_419289991" MODIFIED="1395043655724" TEXT="Error Logging "/>
+<node CREATED="1395043659850" ID="ID_1167665390" MODIFIED="1395043661599" TEXT="Single-Instance Daemons "/>
+<node CREATED="1395043665498" ID="ID_936530780" MODIFIED="1395043667370" TEXT="Daemon Conventions "/>
+<node CREATED="1395043670914" ID="ID_1576879899" MODIFIED="1395043672898" TEXT="ClientServer Model "/>
+<node CREATED="1395043675946" ID="ID_618131736" MODIFIED="1395043677093" TEXT="Summary "/>
+<node CREATED="1395043679850" ID="ID_362605863" MODIFIED="1395043682081" TEXT="Exercises "/>
 </node>
 </node>
 </map>
