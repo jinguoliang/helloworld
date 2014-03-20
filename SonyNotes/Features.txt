@@ -5,39 +5,48 @@ Creation-Date: 2013-11-25T09:42:14+08:00
 ====== Features ======
 Created Monday 25 November 2013
 
-porting Note:
-don't port in here:
-* platform/vendor/semc/overlay
-* platform/frameworks/base/core/res
-* platform/vendor/semc/packages/resource/uxp
+[[+16343]] Automatic power off control    ok 			SemcAutoPowerOff.apk 
 
-[[+16343]] Automatic power off control    ok 
-http://review-jdm.sonyericsson.net/#/c/18133/
+[[+16982]] PlayAnywhere 2.5 for Eagle        ok      
+*patch list:
 
-[[+16982]] PlayAnywhere 2.0 for Eagle        ok      
-http://review-jdm.sonyericsson.net/#/c/18867/
+    http://review-jdm.sonyericsson.net/#/c/23320/
+
+*APK and other files:
+
+    SomcPlayAnywhere.apk;
+    SomcConnectivityCenter.apk;
+    com.sonyericsson.dlna.playanywhere.jar;
+    com.sonyericsson.dlna.playanywhere.xml;
+    com.sonymobile.playanywhere.jar;
+    com.sonymobile.playanywhere.xml;
     
-[[+15831]] [[../resouces/FP15831 Email Security Step Up for ODM - Androiki.html|Email Security Step Up for ODM]]                        
+[[+15831]] [[../resouces/FP15831 Email Security Step Up for ODM - Androiki.html|Email Security Step Up for ODM]] 
+*patch list:
+	            PID004818
+		  PID004746           
 [[+17211]] [[../resouces/FP15678 Email solution Cherry pick from Rhine 1.1 - Androiki.html|Email solution Cherry pick from Rhine 1.2]]         
 http://review-jdm.sonyericsson.net/#/c/18665/
-phone: 6665
-Email sync settings customization           https://wiki.sonyericsson.net/androiki/FP7782_EmailSyncSettingsCustomization/Definition_Report
+Email sync settings customization     
+      https://wiki.sonyericsson.net/androiki/FP7782_EmailSyncSettingsCustomization/Definition_Report
 
 [[+15862]] Notification Tray solution for ODM products              
 [[/kk-rhine/frameworks/base/packages/SystemUI/res/values/somc_config.xml]]      [[line:110]]
 new patch get in:    pathid 4235
 	Close Notification panel when turning off Mobile data
 	Light theme should be used on ToolsbarSettings activity
+ Patch list:
+	PID004928
+	PID002318
+	PID004235
+	PID004726
 
 [[+15923]] [[../resouces/FP15923 Backup and restore Solution for Eagle-definition - Androiki.html|Backup and restore Solution for Eagle]]      
 FP[[+15338]]  [[~/shared_with_windows/我的坚果云/resource/html/FP15338 Downloadable themes enabler - Androiki.html|Downloadable themes enabler]]   
 
 	1[[./FP15744 Transparent Status bar and Navigation bar Solution From Rhine 1.1 - Androiki.html]] 					need to view the kk-rhine
 		DMS02339145
-		vendor/semc/frameworks/base/libs/navbar-extensions/com.sonyericsson.navigationbar_impl.jar   no in kk-rhine but in rhine1.1   
-		not ready in house
-		
-		
+
 	2[[./FP3877 Set Google sync auto-sync to default OFF for Nicki SS JBMR2 project definition - Androiki001.html]] 
 		patch PID000207 :	platform/vendor/semc/overlay/platform-custom-replacements  						
 		DMS02339624

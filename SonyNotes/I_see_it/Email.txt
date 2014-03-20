@@ -55,8 +55,8 @@ emailcommon/
                 │   ├── Header.java
                 │   ├── HeaderNames.java
                 │   ├── HeaderUtils.java
-                │   ├── HostAuth.aidl
-                │   ├── HostAuth.java
+                │   ├── HostAuth.aidl				
+                │   ├── HostAuth.java				-------------------------->::__EmailContent__
                 │   ├── __Mailbox__.java                                  --------------------------->::__EmailContent__
                 │   ├── OofSettings.aidl
                 │   ├── OofSettings.java
@@ -130,7 +130,7 @@ src
 │   │   │   │   ├── GalContactInformationDialog.java
 │   │   │   │   ├── GalContactLookupTask.java
 │   │   │   │   ├── InsertQuickResponseDialog.java
-│   │   │   │   ├── __MailboxFinder__.java									------------->A class that finds a mailbox ID by account ID and mailbox type
+│   │   │   │   ├── __MailboxFinder__.java									------------->A class that finds a mailbox ID by account ID and mailbox type      1
 															--------->nested:__FindMailboxTask__
 │   │   │   │   ├── MailboxFragmentAdapter.java
 │   │   │   │   ├── MailboxListFragment.java
@@ -169,13 +169,13 @@ src
 │   │   │   │   │   ├── AccountSettingsFragment.java
 │   │   │   │   │   ├── AccountSettings.java
 │   │   │   │   │   ├── AccountSettingsUtils.java
-│   │   │   │   │   ├── AccountSetupAccountType.java
+│   │   │   │   │   ├── __AccountSetupAccountType__.java
 │   │   │   │   │   ├── AccountSetupActivity.java
-│   │   │   │   │   ├── AccountSetupBasics.java
+│   │   │   │   │   ├── __AccountSetupBasics__.java
 │   │   │   │   │   ├── AccountSetupExchangeFragment.java
 │   │   │   │   │   ├── AccountSetupExchange.java
 │   │   │   │   │   ├── AccountSetupIncomingFragment.java
-│   │   │   │   │   ├── AccountSetupIncoming.java
+│   │   │   │   │   ├── __AccountSetupIncoming__.java
 │   │   │   │   │   ├── AccountSetupNames.java
 │   │   │   │   │   ├── AccountSetupOof.java
 │   │   │   │   │   ├── AccountSetupOptions.java
@@ -199,7 +199,7 @@ src
 │   │   │   │   ├── UIControllerOnePane.java
 │   │   │   │   ├── UIControllerTwoPane.java
 │   │   │   │   ├── UiUtilities.java
-│   │   │   │   └── Welcome.java
+│   │   │   │   └── __Welcome.java     ------------------   ok__
 │   │   │   ├── api
 │   │   │   │   └── Intents.java
 │   │   │   ├── AttachmentInfo.java
@@ -249,11 +249,11 @@ src
 │   │   │   │   │   ├── DiscourseLogger.java
 │   │   │   │   │   ├── EOLConvertingOutputStream.java
 │   │   │   │   │   ├── ExchangeSender.java
-│   │   │   │   │   ├── MailTransport.java
+│   │   │   │   │   ├── __MailTransport.java							---------->::Transport__
 │   │   │   │   │   ├── SmtpException.java
 │   │   │   │   │   ├── SmtpSender.java
 │   │   │   │   │   └── StatusOutputStream.java
-│   │   │   │   └── Transport.java
+│   │   │   │   └── __Transport.java__										-------->This interface defines a "transport", which is defined here as being one layer below the  specific wire protocols such as POP3, IMAP, or SMTP.
 │   │   │   ├── MessageListContext.java
 │   │   │   ├── MessagingController.java
 │   │   │   ├── MessagingExceptionStrings.java
