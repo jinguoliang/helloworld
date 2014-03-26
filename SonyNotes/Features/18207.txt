@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-03-26T14:42:35+08:00
+
+====== 18207 ======
+Created Wednesday 26 March 2014
+
+=== Draft Design Proposal ===
+Plan to reuse the Shinano EAS/Tasks feature.
+
+Tasks.apk
+Exchange2.apk
+TaskProvider.apk
+SemcEmail.apk
+
+PID003635

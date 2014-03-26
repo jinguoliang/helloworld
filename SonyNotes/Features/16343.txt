@@ -5,7 +5,6 @@ Creation-Date: 2013-11-25T09:45:05+08:00
 ====== 16343 ======
 Created Monday 25 November 2013
 
-==== State: put it at the position not test ====
 reference inhouse 7762 we should use same solution for embeded battery ODM products
 
 Nypon/Zeus 2/Kumquat will all have built in battery which is connected when shipped to customer. To ensure no drainage of the battery a application SW function is needed. There are methods to ensure no power on up until labeling station in SI line, but the phone might be powered on by mistake after it has passed labeling station.

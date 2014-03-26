@@ -91,4 +91,4 @@ __script and tries to invoke /bin/sh with the filename as input to the shell.---
 		
 		{{./pasted_image020.png}}
 		{{./pasted_image021.png}}
-		
+		{{./pasted_image022.png}}
