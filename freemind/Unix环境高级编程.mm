@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1388825541958" ID="ID_950708638" MODIFIED="1392030831781" TEXT="Unix&#x73af;&#x5883;&#x9ad8;&#x7ea7;&#x7f16;&#x7a0b;">
+<node CREATED="1388825541958" ID="ID_950708638" MODIFIED="1395631627752" TEXT="2">
 <node CREATED="1388825565435" FOLDED="true" ID="ID_545402450" MODIFIED="1391693167740" POSITION="right" TEXT="Unix&#x57fa;&#x7840;&#x77e5;&#x8bc6;">
 <node CREATED="1388825585796" ID="ID_674545421" MODIFIED="1388825635770" TEXT="&#x5f15;&#x8a00;"/>
 <node CREATED="1388825636250" FOLDED="true" ID="ID_1312466121" MODIFIED="1388850164501" TEXT="&#x767b;&#x5f55;">
@@ -5131,21 +5131,398 @@
 </node>
 </node>
 </node>
-<node CREATED="1395043596570" ID="ID_1610336038" MODIFIED="1395043598840" POSITION="right" TEXT="13Daemon Processes ">
+<node CREATED="1395043596570" FOLDED="true" ID="ID_1610336038" MODIFIED="1395736902617" POSITION="right" TEXT="13Daemon Processes ">
 <node CREATED="1395043636202" ID="ID_820966342" MODIFIED="1395043638029" TEXT="Introduction ">
 <node CREATED="1395043959648" ID="ID_630151807" MODIFIED="1395043975700" TEXT="live for a long time "/>
 <node CREATED="1395043981759" ID="ID_849367339" MODIFIED="1395043983301" TEXT="started when the system is bootstrapped "/>
 <node CREATED="1395043993032" ID="ID_1705348048" MODIFIED="1395043995274" TEXT="terminate only when the system is shut down "/>
 <node CREATED="1395044007169" ID="ID_1776857391" MODIFIED="1395044009133" TEXT="don&apos;t have a controlling terminal "/>
 </node>
-<node CREATED="1395043643642" ID="ID_999045995" MODIFIED="1395043645273" TEXT="Daemon Characteristics "/>
+<node CREATED="1395043643642" ID="ID_726448842" MODIFIED="1395631910347" TEXT="Daemon Characteristics ">
+<node CREATED="1395625564293" ID="ID_1208881458" MODIFIED="1395625565917" TEXT="Anything with a parent process ID of 0 is usually a kernel process started as part of the system bootstrap procedure ">
+<node CREATED="1395625578512" ID="ID_1037262374" MODIFIED="1395625579698" TEXT="Anything with a parent process ID of 0 is usually a kernel process started as part of the system bootstrap procedure "/>
+<node CREATED="1395625595961" ID="ID_1178954185" MODIFIED="1395625597760" TEXT="Kernel processes are special and generally exist for the entire lifetime of the system "/>
+<node CREATED="1395625607578" ID="ID_1827463063" MODIFIED="1395625609359" TEXT="They run with superuser privileges  "/>
+</node>
+<node CREATED="1395625648652" ID="ID_857574157" MODIFIED="1395625652170" TEXT="some daemon">
+<node CREATED="1395625657276" ID="ID_716204533" MODIFIED="1395625659468" TEXT="kevenTD ">
+<node CREATED="1395625670725" ID="ID_1470946818" MODIFIED="1395625672520" TEXT="provides process context for running scheduled functions in the kernel "/>
+</node>
+<node CREATED="1395625677309" ID="ID_1556618747" MODIFIED="1395625680696" TEXT="kapmd ">
+<node CREATED="1395625698494" ID="ID_1949381676" MODIFIED="1395625700958" TEXT="provides support for the advanced power management features available with various computer systems "/>
+</node>
+<node CREATED="1395625723959" ID="ID_1478320299" MODIFIED="1395625725689" TEXT="kswapd ">
+<node CREATED="1395625733032" ID="ID_379908992" MODIFIED="1395625734703" TEXT="the pageout daemon "/>
+<node CREATED="1395625831061" ID="ID_1329735009" MODIFIED="1395625832700" TEXT="supports the virtual memory subsystem by writing dirty pages to disk slowly over time, so the pages can be reclaimed "/>
+</node>
+<node CREATED="1395625853766" ID="ID_775659756" MODIFIED="1395625884639" TEXT="bdflush and kupdated  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      flushes cached data to disk using two additional daemons
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1395625884583" ID="ID_1214454604" MODIFIED="1395625886690" TEXT="bdflush ">
+<node CREATED="1395625900192" ID="ID_476442102" MODIFIED="1395625901891" TEXT="flushes dirty buffers from the buffer cache back to disk when available memory reaches a low-water mark "/>
+</node>
+<node CREATED="1395625906753" ID="ID_561046131" MODIFIED="1395625908399" TEXT="kupdated "/>
+</node>
+</node>
+</node>
 <node CREATED="1395043649025" ID="ID_35270725" MODIFIED="1395043650805" TEXT="Coding Rules "/>
-<node CREATED="1395043653816" ID="ID_419289991" MODIFIED="1395043655724" TEXT="Error Logging "/>
-<node CREATED="1395043659850" ID="ID_1167665390" MODIFIED="1395043661599" TEXT="Single-Instance Daemons "/>
-<node CREATED="1395043665498" ID="ID_936530780" MODIFIED="1395043667370" TEXT="Daemon Conventions "/>
+<node CREATED="1395043653816" FOLDED="true" ID="ID_419289991" MODIFIED="1395649398942" TEXT="Error Logging ">
+<node CREATED="1395632201147" ID="ID_213195896" MODIFIED="1395632204274" TEXT="three ways to generate log messages ">
+<node CREATED="1395632212051" ID="ID_1268305665" MODIFIED="1395632214177" TEXT="Kernel routines can call the log function ">
+<node CREATED="1395632266788" ID="ID_15986898" MODIFIED="1395632268653" TEXT="These messages can be read by any user process that opens and reads the /dev/klog device "/>
+</node>
+<node CREATED="1395632244308" ID="ID_196232408" MODIFIED="1395632251298" TEXT="user processes (daemons) call the syslog(3) function ">
+<node CREATED="1395632282645" ID="ID_396526374" MODIFIED="1395632284142" TEXT="This causes the message to be sent to the UNIX domain datagram socket /dev/log "/>
+</node>
+<node CREATED="1395632328118" ID="ID_1082435125" MODIFIED="1395632362638" TEXT="A user process on this host, or on some other host that is connected to this host by a TCP/IP network, can send log messages to UDP port 514 ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Note that the syslog function never
+    </p>
+    <p>
+      generates these UDP datagrams: they require explicit network programming by the process
+    </p>
+    <p>
+      generating the log message.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1395632363569" ID="ID_841521155" MODIFIED="1395632365425" TEXT="syslogd daemon reads all three forms of log messages "/>
+<node CREATED="1395632373177" ID="ID_1991323876" MODIFIED="1395632374615" TEXT="/etc/syslog.conf ">
+<node CREATED="1395632382441" ID="ID_1190501028" MODIFIED="1395632384386" TEXT="determines where different classes of messages are to be sent "/>
+</node>
+<node CREATED="1395632403346" ID="ID_1951340877" MODIFIED="1395632406192" TEXT="functions">
+<node CREATED="1395632414514" FOLDED="true" ID="ID_1025540793" MODIFIED="1395649320483" TEXT="void openlog(const char *ident, int option, int facility); ">
+<node CREATED="1395632457596" ID="ID_1758739606" MODIFIED="1395632459804" TEXT="Calling openlog is optional. "/>
+<node CREATED="1395633414478" ID="ID_922494474" MODIFIED="1395646388871" TEXT="facility ">
+<node CREATED="1395647788984" ID="ID_1888017677" MODIFIED="1395647790978" TEXT="LOG_AUTH  ">
+<node CREATED="1395647971763" ID="ID_1917860494" MODIFIED="1395647973359" TEXT="authorization programs: login, su, getty, ... "/>
+</node>
+<node CREATED="1395647800808" ID="ID_795444700" MODIFIED="1395647802746" TEXT="LOG_CRON  ">
+<node CREATED="1395647943419" ID="ID_155025536" MODIFIED="1395647945332" TEXT="cron and at "/>
+</node>
+<node CREATED="1395647811872" ID="ID_841236029" MODIFIED="1395647813617" TEXT="LOG_DAEMON  ">
+<node CREATED="1395647932771" ID="ID_1433260691" MODIFIED="1395647934910" TEXT="system daemons: inetd, routed, ... "/>
+</node>
+<node CREATED="1395647823265" ID="ID_1190350119" MODIFIED="1395647826212" TEXT="LOG_KERN  ">
+<node CREATED="1395647923129" ID="ID_1351687695" MODIFIED="1395647924829" TEXT="messages generated by the kernel "/>
+</node>
+<node CREATED="1395647868721" ID="ID_1109406014" MODIFIED="1395647870348" TEXT="LOG_LOCAL0  "/>
+<node CREATED="1395647873121" ID="ID_758957645" MODIFIED="1395647874716" TEXT="LOG_LOCAL1  ">
+<node CREATED="1395647911410" ID="ID_1109461549" MODIFIED="1395647913181" TEXT="reserved for local use "/>
+</node>
+<node CREATED="1395647878825" ID="ID_1793229250" MODIFIED="1395647880228" TEXT="LOG_LOCAL2  "/>
+<node CREATED="1395647884938" ID="ID_1996285039" MODIFIED="1395647887044" TEXT="LOG_LOCAL3  "/>
+<node CREATED="1395647901946" ID="ID_1826202520" MODIFIED="1395647903584" TEXT="LOG_MAIL  "/>
+</node>
+<node CREATED="1395633497208" ID="ID_1789049895" MODIFIED="1395633509918" TEXT="option ">
+<node CREATED="1395646315941" ID="ID_1935635515" MODIFIED="1395646319040" TEXT="LOG_CONS  ">
+<node CREATED="1395646306437" ID="ID_1507897072" MODIFIED="1395646309881" TEXT="can&apos;t be sent to syslogd via the UNIX domain datagram "/>
+<node CREATED="1395646414182" ID="ID_359888115" MODIFIED="1395646415720" TEXT="the message is written to the console instead "/>
+</node>
+<node CREATED="1395646326421" ID="ID_454810053" MODIFIED="1395646856491" TEXT="LOG_NDELAY  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Open the UNIX domain datagram socket to the syslogd daemon immediately;
+    </p>
+    <p>
+      don't wait until the first message is logged. Normally, the socket is not opened
+    </p>
+    <p>
+      until the first message is logged
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1395646331397" ID="ID_1986180574" MODIFIED="1395646861864" TEXT="LOG_NOWAIT  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Do not wait for child processes that might have been created in the process of
+    </p>
+    <p>
+      logging the message. This prevents conflicts with applications that catch
+    </p>
+    <p>
+      SIGCHLD, since the application might have retrieved the child's status by the
+    </p>
+    <p>
+      time that syslog calls wait.
+    </p>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+</node>
+<node CREATED="1395646336701" ID="ID_1071979993" MODIFIED="1395646338496" TEXT="LOG_ODELAY  ">
+<node CREATED="1395646326421" ID="ID_35408599" MODIFIED="1395646856491" TEXT="LOG_NDELAY  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Open the UNIX domain datagram socket to the syslogd daemon immediately;
+    </p>
+    <p>
+      don't wait until the first message is logged. Normally, the socket is not opened
+    </p>
+    <p>
+      until the first message is logged
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1395646342285" ID="ID_1316936391" MODIFIED="1395647013753" TEXT="LOG_PERROR ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Write the log message to standard error in addition to sending it to syslogd.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+<node CREATED="1395646346853" ID="ID_1314104382" MODIFIED="1395647041544" TEXT="LOG_PID ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Log the process ID with each message.
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1395632422786" ID="ID_1474741487" MODIFIED="1395632424724" TEXT="void syslog(int priority, const char *format, ...); ">
+<node CREATED="1395648001539" ID="ID_1685861758" MODIFIED="1395648005698" TEXT="priority">
+<node CREATED="1395648011956" ID="ID_1256491163" MODIFIED="1395648014000" TEXT="LOG_EMERG  "/>
+<node CREATED="1395648016788" ID="ID_719434288" MODIFIED="1395648018412" TEXT="LOG_ALERT  "/>
+<node CREATED="1395648021892" ID="ID_858168545" MODIFIED="1395648023412" TEXT="LOG_CRIT  "/>
+<node CREATED="1395648026628" ID="ID_1779751572" MODIFIED="1395648028612" TEXT="LOG_ERR  "/>
+<node CREATED="1395648032236" ID="ID_1055712587" MODIFIED="1395648033749" TEXT="LOG_WARNING "/>
+<node CREATED="1395648036389" ID="ID_1948438021" MODIFIED="1395648037925" TEXT="LOG_NOTICE  "/>
+<node CREATED="1395648041452" ID="ID_967692545" MODIFIED="1395648043597" TEXT="LOG_INFO  "/>
+<node CREATED="1395648047069" ID="ID_1441188114" MODIFIED="1395648048765" TEXT="LOG_DEBUG  "/>
+</node>
+</node>
+<node CREATED="1395632431027" ID="ID_1225722448" MODIFIED="1395632432621" TEXT="void closelog(void); ">
+<node CREATED="1395632518238" ID="ID_1935070618" MODIFIED="1395632519836" TEXT="Calling closelog is also optional "/>
+</node>
+<node CREATED="1395632436859" ID="ID_714182930" MODIFIED="1395632439029" TEXT="int setlogmask(int maskpri); ">
+<node CREATED="1395649041033" ID="ID_143884527" MODIFIED="1395649044929" TEXT="set the log priority mask for the process "/>
+<node CREATED="1395649069137" ID="ID_810144803" MODIFIED="1395649070810" TEXT="When the log priority mask is set, messages are not logged unless their priority is set in the log priority mask. "/>
+<node CREATED="1395649105835" ID="ID_397566865" MODIFIED="1395649107721" TEXT="Note that attempts to set the log priority mask to 0 will have no effect. "/>
+</node>
+<node CREATED="1395649324289" ID="ID_1794320002" MODIFIED="1395649326652" TEXT="void vsyslog(int priority, const char *format, va_list arg); "/>
+</node>
+<node CREATED="1395649125459" ID="ID_1956233976" MODIFIED="1395649127270" TEXT="The logger(1) program is also provided by many systems as a way to send log messages to the syslog facility "/>
+<node CREATED="1395649361930" ID="ID_1946751089" MODIFIED="1395649378999" TEXT="syslogd">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Most syslogd implementations will queue messages for a short time. If a duplicate message arrives
+    </p>
+    <p>
+      during this time, the syslog daemon will not write it to the log. Instead, the daemon will print out a
+    </p>
+    <p>
+      message similar to &quot;last message repeated N times.&quot;
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1395043659850" ID="ID_1167665390" MODIFIED="1395043661599" TEXT="Single-Instance Daemons ">
+<node CREATED="1395650747207" ID="ID_93597519" MODIFIED="1395650756373" TEXT="lockfile"/>
+<node CREATED="1395650757359" ID="ID_424327520" MODIFIED="1395650764093" TEXT="write into pid"/>
+</node>
+<node CREATED="1395043665498" ID="ID_936530780" MODIFIED="1395043667370" TEXT="Daemon Conventions ">
+<node CREATED="1395650794304" ID="ID_1974799489" MODIFIED="1395650796936" TEXT="If the daemon uses a lock file, the file is usually stored in /var/run ">
+<node CREATED="1395650903523" ID="ID_1577111463" MODIFIED="1395650916171" TEXT="name:/var/run/crond.pid "/>
+</node>
+<node CREATED="1395651121489" ID="ID_57308834" MODIFIED="1395651123936" TEXT="If the daemon supports configuration options, they are usually stored in /etc ">
+<node CREATED="1395651132785" ID="ID_1571809065" MODIFIED="1395651136924" TEXT="/etc/syslog.conf "/>
+</node>
+<node CREATED="1395651156146" ID="ID_193157329" MODIFIED="1395651157978" TEXT="Daemons can be started from the command line, but they are usually started from one of the system initialization scripts (/etc/rc* or /etc/init.d/* ).  "/>
+<node CREATED="1395651631631" ID="ID_351365730" MODIFIED="1395651641296" TEXT="If a daemon has a configuration file, the daemon reads it when it starts, but usually won&apos;t look at it again ">
+<node CREATED="1395651649912" ID="ID_1680932652" MODIFIED="1395651657254" TEXT="If an administrator changes the configuration ,need to restart"/>
+<node CREATED="1395651675304" ID="ID_466081214" MODIFIED="1395651676840" TEXT="To avoid this, some daemons will catch SIGHUP and reread their configuration files when they receive the signal "/>
+</node>
+</node>
 <node CREATED="1395043670914" ID="ID_1576879899" MODIFIED="1395043672898" TEXT="ClientServer Model "/>
 <node CREATED="1395043675946" ID="ID_618131736" MODIFIED="1395043677093" TEXT="Summary "/>
-<node CREATED="1395043679850" ID="ID_362605863" MODIFIED="1395043682081" TEXT="Exercises "/>
+<node CREATED="1395043679850" ID="ID_362605863" MODIFIED="1395043682081" TEXT="Exercises ">
+<node CREATED="1395717042479" ID="ID_1717202845" MODIFIED="1395717044917" TEXT="13.2">
+<node CREATED="1395717046575" HGAP="22" ID="ID_888545915" MODIFIED="1395717606739" TEXT="daemons" VSHIFT="-27">
+<node CREATED="1395717091113" ID="ID_1785171166" MODIFIED="1395717590119" TEXT="kworker">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="UbuntuRegular, Ubuntu, Bitstream Vera Sans, DejaVu Sans, Tahoma, sans-serif" size="14px" color="rgb(51, 51, 51)"><span http-equiv="content-type" style="color: rgb(51, 51, 51); white-space: normal; font-weight: normal; font-variant: normal; text-align: left; font-family: UbuntuRegular, Ubuntu, Bitstream Vera Sans, DejaVu Sans, Tahoma, sans-serif; line-height: 18px; text-indent: 0px; background-color: rgb(255, 255, 255); word-spacing: 0px; font-size: 14px; display: inline !important; font-style: normal; text-transform: none; float: none; letter-spacing: normal" content="text/html; charset=utf-8">&quot;kworker&quot; is a placeholder process for kernel worker threads, which perform most of the actual processing for the kernel, especially in cases where there are interrupts, timers, I/O, etc. These typically correspond to the vast majority of any allocated &quot;system&quot; time to running processes.</span></font>
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1395734937232" ID="ID_1576365928" MODIFIED="1395734939175" TEXT="winbindd">
+<node CREATED="1395734945496" ID="ID_1917234015" MODIFIED="1395734947438" TEXT="Name Service Switch daemon for resolving names from NT servers"/>
+<node CREATED="1395734953328" ID="ID_183281170" MODIFIED="1395734955271" TEXT="This program is part of the samba(7) suite."/>
+<node CREATED="1395734990818" ID="ID_533574937" MODIFIED="1395734992504" TEXT="provides a number of services to the Name Service Switch capability found in most modern C libraries, to arbitrary applications via PAM and ntlm_auth and to Samba itself"/>
+</node>
+<node CREATED="1395735427695" ID="ID_950921957" MODIFIED="1395735428913" TEXT="whoopsie">
+<node CREATED="1395735414583" ID="ID_1199902489" MODIFIED="1395735416205" TEXT="It&apos;s the &quot;Ubuntu Error Reporting&quot; daemon, and is installed by default in both desktop/server installations."/>
+</node>
+<node CREATED="1395736012344" ID="ID_795109754" MODIFIED="1395736014470" TEXT="cups">
+<node CREATED="1395736313810" ID="ID_1805757600" MODIFIED="1395736315033" TEXT="CUPS is the standards-based, open source printing system developed by Apple Inc"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1395736904957" ID="ID_668430026" MODIFIED="1395736923299" POSITION="right" TEXT="14Advanted I/O">
+<node CREATED="1395736924798" ID="ID_1511726348" MODIFIED="1395736929148" TEXT="introduction"/>
+<node CREATED="1395736929734" FOLDED="true" ID="ID_1565147501" MODIFIED="1395797334885" TEXT="Nonblocking I/O">
+<node CREATED="1395737426459" ID="ID_568376492" MODIFIED="1395737436625" TEXT="two categories system call">
+<node CREATED="1395737438163" ID="ID_1293348730" MODIFIED="1395737439897" TEXT="slow">
+<node CREATED="1395737511261" ID="ID_415914883" MODIFIED="1395737512339" TEXT="can block forever "/>
+<node CREATED="1395737521214" ID="ID_4398257" MODIFIED="1395737528355" TEXT="includes:">
+<node CREATED="1395738343868" ID="ID_1582513354" MODIFIED="1395738345120" TEXT="Reads that can block the caller forever if data isn&apos;t present with certain file types (pipes, terminal devices, and network devices) "/>
+<node CREATED="1395738354716" ID="ID_1087304928" MODIFIED="1395738357016" TEXT="Writes that can block the caller forever if the data can&apos;t be accepted immediately by these same file types (no room in the pipe, network flow control, etc.) "/>
+<node CREATED="1395738369397" ID="ID_1586806234" MODIFIED="1395738371624" TEXT="Opens that block until some condition occurs on certain file types (such as an open of a terminal device that waits until an attached modem answers the phone, or an open of a FIFO for writing- only when no other process has the FIFO open for reading) "/>
+<node CREATED="1395738379413" ID="ID_1781221064" MODIFIED="1395738382169" TEXT="Reads and writes of files that have mandatory record locking enabled "/>
+<node CREATED="1395738388189" ID="ID_1384275948" MODIFIED="1395738389945" TEXT="Certain ioctl operations "/>
+<node CREATED="1395738394877" ID="ID_807877090" MODIFIED="1395738396714" TEXT="Some of the interprocess communication functions "/>
+</node>
+</node>
+<node CREATED="1395737440371" ID="ID_375742051" MODIFIED="1395737442010" TEXT="other"/>
+</node>
+<node CREATED="1395738497664" ID="ID_1785262359" MODIFIED="1395738500086" TEXT="issue an I/O operation, such as an open, read, or write, and not have it block forever ">
+<node CREATED="1395738516896" ID="ID_1546106735" MODIFIED="1395738519932" TEXT="two ways to specify  it">
+<node CREATED="1395738520865" ID="ID_454492448" MODIFIED="1395738542791" TEXT="open  with O_NONBLOCK "/>
+<node CREATED="1395738621179" ID="ID_247589080" MODIFIED="1395738622345" TEXT="we call fcntl to turn on the O_NONBLOCK file status flag "/>
+</node>
+</node>
+</node>
+<node CREATED="1395736937894" ID="ID_676453084" MODIFIED="1395797337633" TEXT="Record Locking">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Record locking is the term normally used to describe the ability of a process to prevent other
+    </p>
+    <p>
+      processes from modifying a region of a file while the first process is reading or modifying that portion
+    </p>
+    <p>
+      of the file
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1395797677081" ID="ID_852701621" MODIFIED="1395797679363" TEXT="history">
+<node CREATED="1395797680193" ID="ID_1857972937" MODIFIED="1395797681487" TEXT="flock">
+<node CREATED="1395797692201" ID="ID_1543729129" MODIFIED="1395797693971" TEXT="locks only entire files, not regions of a file "/>
+</node>
+<node CREATED="1395797708905" ID="ID_900729544" MODIFIED="1395797713687" TEXT="fcntl">
+<node CREATED="1395797717777" ID="ID_881344067" MODIFIED="1395797720249" TEXT="lockf"/>
+</node>
+</node>
+<node CREATED="1395797939502" ID="ID_521638550" MODIFIED="1395803590788" TEXT="fcntl">
+<node CREATED="1395802432013" ID="ID_1102705023" MODIFIED="1395802433372" TEXT="int fcntl(int filedes, int cmd, ... /* struct flock *flockptr */ ); "/>
+<node CREATED="1395802458525" ID="ID_723262708" MODIFIED="1395802459284" TEXT="cmd">
+<node CREATED="1395802463718" ID="ID_365207533" MODIFIED="1395802468247" TEXT="F_GETLK ">
+<node CREATED="1395804069107" ID="ID_1826584241" MODIFIED="1395804122531" TEXT="if the flockptr is prevent by exiting lock,set the lock to lockptr"/>
+<node CREATED="1395804123148" ID="ID_553231375" MODIFIED="1395804148219" TEXT="if no,set the l_type to F_UNLCK"/>
+</node>
+<node CREATED="1395802471246" ID="ID_234739400" MODIFIED="1395802472132" TEXT="F_SETLK ">
+<node CREATED="1395804272903" ID="ID_81546601" MODIFIED="1395804309398" TEXT="if prevent by the compatibility rulefcntl returns immediately with errno set to either EACCES or EAGAIN "/>
+<node CREATED="1395804333424" ID="ID_1034570306" MODIFIED="1395804334358" TEXT="also used to clear the lock described by flockptr (l_type of F_UNLCK). "/>
+</node>
+<node CREATED="1395802475718" ID="ID_455155142" MODIFIED="1395802476604" TEXT="F_SETLKW ">
+<node CREATED="1395804377888" ID="ID_979038791" MODIFIED="1395804379583" TEXT="a blocking version of F_SETLK "/>
+<node CREATED="1395804391409" ID="ID_1893547445" MODIFIED="1395804393116" TEXT="The process wakes up either when the lock becomes available or when interrupted by a signal "/>
+</node>
+</node>
+<node CREATED="1395802503854" ID="ID_1588325115" MODIFIED="1395802504940" TEXT="args">
+<node CREATED="1395802507102" ID="ID_505001678" MODIFIED="1395802516613" TEXT="struct flock">
+<node CREATED="1395802529415" ID="ID_1618735378" MODIFIED="1395802531045" TEXT="l_type ">
+<node CREATED="1395802571624" ID="ID_1284259906" MODIFIED="1395802574662" TEXT="F_RDLCK"/>
+<node CREATED="1395802578376" ID="ID_301673151" MODIFIED="1395802580566" TEXT="F_WRLCK"/>
+<node CREATED="1395802584176" ID="ID_1305021950" MODIFIED="1395802588086" TEXT="F_UNLCK "/>
+</node>
+<node CREATED="1395802536399" ID="ID_413532112" MODIFIED="1395802541357" TEXT="l_start"/>
+<node CREATED="1395802546471" ID="ID_925829669" MODIFIED="1395802548373" TEXT="l_whence ">
+<node CREATED="1395802596808" ID="ID_1819372879" MODIFIED="1395802600550" TEXT="SEEK_SET"/>
+<node CREATED="1395802604472" ID="ID_591908674" MODIFIED="1395802606358" TEXT="SEEK_CUR"/>
+<node CREATED="1395802609736" ID="ID_209969254" MODIFIED="1395802611375" TEXT="SEEK_END "/>
+</node>
+<node CREATED="1395802554031" ID="ID_384979380" MODIFIED="1395802555438" TEXT="l_len ">
+<node CREATED="1395802645913" ID="ID_1066841427" MODIFIED="1395802647863" TEXT="0 means lock to EOF "/>
+</node>
+<node CREATED="1395802558967" ID="ID_621551662" MODIFIED="1395802564510" TEXT="l_pid">
+<node CREATED="1395802668977" ID="ID_125716784" MODIFIED="1395802670641" TEXT="returned with F_GETLK "/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1395802752835" ID="ID_105099733" MODIFIED="1395802754503" TEXT="rules about the specification of the region to be locked or unlocked ">
+<node CREATED="1395802821676" ID="ID_1164276218" MODIFIED="1395802823369" TEXT="Locks can start and extend beyond the current end of file, but cannot start or extend before the beginning of the file. "/>
+<node CREATED="1395803262756" ID="ID_1130580565" MODIFIED="1395803279008" TEXT="rdlock and wlock">
+<node CREATED="1395803252100" ID="ID_274215855" MODIFIED="1395803253257" TEXT="The compatibility rule applies to lock requests made from different processes, not to multiple lock requests made by a single process. If a process has an existing lock on a range of a file, a subsequent attempt to place a lock on the same range by the same process will replace the existing lock with the new one "/>
+<node CREATED="1395803292213" ID="ID_1764773874" MODIFIED="1395803294297" TEXT="To obtain a read lock, the descriptor must be open for reading; to obtain a write lock, the descriptor must be open for writing "/>
+</node>
+</node>
+</node>
+<node CREATED="1395736945270" ID="ID_898226691" MODIFIED="1395736950188" TEXT="STREAMS"/>
+<node CREATED="1395736950830" ID="ID_664047134" MODIFIED="1395736962196" TEXT="I/O Multiplexing"/>
+<node CREATED="1395736962862" ID="ID_538848863" MODIFIED="1395736976453" TEXT="Asynchronous I/O"/>
+<node CREATED="1395736977151" ID="ID_816322505" MODIFIED="1395736986021" TEXT="readv and writev Functions"/>
+<node CREATED="1395736987319" ID="ID_53986937" MODIFIED="1395736996094" TEXT="readn and writen Functions"/>
+<node CREATED="1395736997175" ID="ID_1813072623" MODIFIED="1395737005070" TEXT="Memory-Mapped I/O"/>
+<node CREATED="1395737006544" ID="ID_903519873" MODIFIED="1395737013734" TEXT="summary"/>
+<node CREATED="1395737016720" ID="ID_567416017" MODIFIED="1395737021718" TEXT="Exercises"/>
 </node>
 </node>
 </map>
