@@ -245,9 +245,9 @@ src
 │   │   │   │   │   └── ServiceStore.java
 │   │   │   │   ├── Store.java
 │   │   │   │   ├── transport
-│   │   │   │   │   ├── CountingOutputStream.java
-│   │   │   │   │   ├── DiscourseLogger.java
-│   │   │   │   │   ├── EOLConvertingOutputStream.java
+│   │   │   │   │   ├── __CountingOutputStream__.java				--------->A simple OutputStream that does nothing but count how many bytes are written to it and makes that count available to callers
+│   │   │   │   │   ├── __DiscourseLogger__.java						---------->A class to keep last N of lines sent to the server and responses received from the server
+│   │   │   │   │   ├── __EOLConvertingOutputStream__.java
 │   │   │   │   │   ├── ExchangeSender.java
 │   │   │   │   │   ├── __MailTransport.java							---------->::Transport__
 │   │   │   │   │   ├── SmtpException.java

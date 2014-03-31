@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1388825541958" ID="ID_950708638" MODIFIED="1395631627752" TEXT="2">
+<node CREATED="1388825541958" ID="ID_950708638" MODIFIED="1395889568042" TEXT="Unix">
 <node CREATED="1388825565435" FOLDED="true" ID="ID_545402450" MODIFIED="1391693167740" POSITION="right" TEXT="Unix&#x57fa;&#x7840;&#x77e5;&#x8bc6;">
 <node CREATED="1388825585796" ID="ID_674545421" MODIFIED="1388825635770" TEXT="&#x5f15;&#x8a00;"/>
 <node CREATED="1388825636250" FOLDED="true" ID="ID_1312466121" MODIFIED="1388850164501" TEXT="&#x767b;&#x5f55;">
@@ -5198,8 +5198,7 @@
       generating the log message.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1395632363569" ID="ID_841521155" MODIFIED="1395632365425" TEXT="syslogd daemon reads all three forms of log messages "/>
@@ -5251,8 +5250,7 @@
       until the first message is logged
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1395646331397" ID="ID_1986180574" MODIFIED="1395646861864" TEXT="LOG_NOWAIT  ">
 <richcontent TYPE="NOTE"><html>
@@ -5273,8 +5271,7 @@
       time that syslog calls wait.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="help"/>
 <icon BUILTIN="help"/>
 </node>
@@ -5308,8 +5305,7 @@
       Write the log message to standard error in addition to sending it to syslogd.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1395646346853" ID="ID_1314104382" MODIFIED="1395647041544" TEXT="LOG_PID ">
 <richcontent TYPE="NOTE"><html>
@@ -5321,8 +5317,7 @@
       Log the process ID with each message.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>
@@ -5365,8 +5360,7 @@
       message similar to &quot;last message repeated N times.&quot;
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1395043659850" ID="ID_1167665390" MODIFIED="1395043661599" TEXT="Single-Instance Daemons ">
@@ -5401,8 +5395,7 @@
       <font face="UbuntuRegular, Ubuntu, Bitstream Vera Sans, DejaVu Sans, Tahoma, sans-serif" size="14px" color="rgb(51, 51, 51)"><span http-equiv="content-type" style="color: rgb(51, 51, 51); white-space: normal; font-weight: normal; font-variant: normal; text-align: left; font-family: UbuntuRegular, Ubuntu, Bitstream Vera Sans, DejaVu Sans, Tahoma, sans-serif; line-height: 18px; text-indent: 0px; background-color: rgb(255, 255, 255); word-spacing: 0px; font-size: 14px; display: inline !important; font-style: normal; text-transform: none; float: none; letter-spacing: normal" content="text/html; charset=utf-8">&quot;kworker&quot; is a placeholder process for kernel worker threads, which perform most of the actual processing for the kernel, especially in cases where there are interrupts, timers, I/O, etc. These typically correspond to the vast majority of any allocated &quot;system&quot; time to running processes.</span></font>
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1395734937232" ID="ID_1576365928" MODIFIED="1395734939175" TEXT="winbindd">
@@ -5443,7 +5436,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1395736937894" ID="ID_676453084" MODIFIED="1395797337633" TEXT="Record Locking">
+<node CREATED="1395736937894" ID="ID_676453084" MODIFIED="1395889575517" TEXT="Record Locking">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -5459,8 +5452,7 @@
       of the file
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1395797677081" ID="ID_852701621" MODIFIED="1395797679363" TEXT="history">
 <node CREATED="1395797680193" ID="ID_1857972937" MODIFIED="1395797681487" TEXT="flock">
 <node CREATED="1395797692201" ID="ID_1543729129" MODIFIED="1395797693971" TEXT="locks only entire files, not regions of a file "/>
@@ -5512,6 +5504,56 @@
 <node CREATED="1395803262756" ID="ID_1130580565" MODIFIED="1395803279008" TEXT="rdlock and wlock">
 <node CREATED="1395803252100" ID="ID_274215855" MODIFIED="1395803253257" TEXT="The compatibility rule applies to lock requests made from different processes, not to multiple lock requests made by a single process. If a process has an existing lock on a range of a file, a subsequent attempt to place a lock on the same range by the same process will replace the existing lock with the new one "/>
 <node CREATED="1395803292213" ID="ID_1764773874" MODIFIED="1395803294297" TEXT="To obtain a read lock, the descriptor must be open for reading; to obtain a write lock, the descriptor must be open for writing "/>
+</node>
+<node CREATED="1395890562033" ID="ID_37403796" MODIFIED="1395890564257" TEXT="Implied Inheritance and Release of Locks ">
+<node CREATED="1395889669514" ID="ID_1515837304" MODIFIED="1395889671565" TEXT="Locks are associated with a process and a file ">
+<node CREATED="1395889751480" ID="ID_113087593" MODIFIED="1395889753384" TEXT="when a process terminates, all its locks are released "/>
+<node CREATED="1395889762656" ID="ID_507404174" MODIFIED="1395889788152" TEXT="whenever a descriptor is closed, any locks on the file referenced by that descriptor for that process are released ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      fd1 = open(pathname, ...);
+    </p>
+    <p>
+      read_lock(fd1, ...);
+    </p>
+    <p>
+      fd2 = dup(fd1);
+    </p>
+    <p>
+      close(fd2);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      fd1 = open(pathname, ...);
+    </p>
+    <p>
+      read_lock(fd1, ...);
+    </p>
+    <p>
+      fd2 = open(pathname, ...)
+    </p>
+    <p>
+      close(fd2);
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node CREATED="1395889802655" ID="ID_1794491889" MODIFIED="1395889804301" TEXT="Locks are never inherited by the child across a fork "/>
+<node CREATED="1395890031021" ID="ID_1564052131" MODIFIED="1395890033883" TEXT="Locks are inherited by a new program across an exec "/>
+</node>
+<node CREATED="1395903058393" ID="ID_1892539294" MODIFIED="1395903065297" TEXT="Locks at End of File ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="messagebox_warning"/>
+<icon BUILTIN="messagebox_warning"/>
 </node>
 </node>
 </node>
