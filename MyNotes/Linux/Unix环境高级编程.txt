@@ -92,3 +92,9 @@ __script and tries to invoke /bin/sh with the filename as input to the shell.---
 		{{./pasted_image020.png}}
 		{{./pasted_image021.png}}
 		{{./pasted_image022.png}}
+
+=====                             Figure 14.8. The FreeBSD data structures for record locking =====
+
+
+	{{./pasted_image023.png}}
+	process has a process table. process table has many file descriptors which point to the file table item.file table entry has v-node pointer which point to v-node table entry.v-node table entry has i-node info and locks.
