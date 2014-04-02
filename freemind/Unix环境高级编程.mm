@@ -5436,7 +5436,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1395736937894" ID="ID_676453084" MODIFIED="1395889575517" TEXT="Record Locking">
+<node CREATED="1395736937894" FOLDED="true" ID="ID_676453084" MODIFIED="1396403957644" TEXT="Record Locking">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -5556,8 +5556,106 @@
 <icon BUILTIN="messagebox_warning"/>
 </node>
 </node>
+<node CREATED="1396327206131" ID="ID_643551871" MODIFIED="1396327211014" TEXT="Advisory versus Mandatory Locking ">
+<node CREATED="1396334372292" ID="ID_1408698956" MODIFIED="1396334375378" TEXT="advisory">
+<node CREATED="1396339266151" ID="ID_34165115" MODIFIED="1396339303976" TEXT="need flock to lock "/>
 </node>
-<node CREATED="1395736945270" ID="ID_898226691" MODIFIED="1395736950188" TEXT="STREAMS"/>
+<node CREATED="1396335894464" ID="ID_1501391546" MODIFIED="1396335968282" TEXT="Mandatory locking ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      On Linux, if you want mandatory locking, you need to enable it on a per file
+    </p>
+    <p>
+      system basis by using the -o mand option to the mount command
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Mandatory locking is enabled for a particular file by turning on the set-group-ID bit and turning off
+    </p>
+    <p>
+      the group-execute bit
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1396335911010" ID="ID_341972030" MODIFIED="1396335912615" TEXT="causes the kernel to check every open, read, and write to verify that the calling process isn&apos;t violating a lock on the file being accessed "/>
+</node>
+</node>
+</node>
+<node CREATED="1395736945270" ID="ID_898226691" MODIFIED="1396404008730" TEXT="STREAMS">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The STREAMS mechanism is provided by System V as a general way to interface communication
+    </p>
+    <p>
+      drivers into the kernel.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1396427969198" ID="ID_499782989" MODIFIED="1396428072057" TEXT="14.13 what">
+<icon BUILTIN="wizard"/>
+<node CREATED="1396427974727" ID="ID_1304989750" MODIFIED="1396427979141" TEXT="stream head"/>
+<node CREATED="1396427980023" ID="ID_375864419" MODIFIED="1396428011491" TEXT="processing modules"/>
+<node CREATED="1396427985360" ID="ID_677337781" MODIFIED="1396427991127" TEXT="driver"/>
+</node>
+<node CREATED="1396428670620" ID="ID_143356050" MODIFIED="1396428671696" TEXT="All STREAMS devices are character special files "/>
+<node CREATED="1396428540896" ID="ID_1057179373" MODIFIED="1396428546652" TEXT="access stream">
+<node CREATED="1396428553685" ID="ID_1215611317" MODIFIED="1396428555152" TEXT="open, close, read, write, and ioctl "/>
+<node CREATED="1396428589113" ID="ID_1102190092" MODIFIED="1396428591433" TEXT="SVR3 ">
+<node CREATED="1396428633548" ID="ID_278807791" MODIFIED="1396428635561" TEXT="getmsg, putmsg, and poll "/>
+</node>
+<node CREATED="1396428589113" ID="ID_1019836750" MODIFIED="1396428603184" TEXT="SVR4">
+<node CREATED="1396428575426" ID="ID_1251682900" MODIFIED="1396428576554" TEXT="getpmsg and putpmsg "/>
+</node>
+</node>
+<node CREATED="1396428713200" ID="ID_319133703" MODIFIED="1396428714491" TEXT="STREAMS Messages ">
+<node CREATED="1396428733602" ID="ID_25573896" MODIFIED="1396428734186" TEXT="All input and output under STREAMS is based on messages "/>
+<node CREATED="1396428760414" ID="ID_136398498" MODIFIED="1396428761495" TEXT="consists of ">
+<node CREATED="1396428769095" ID="ID_416506615" MODIFIED="1396429270832" TEXT="type">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      We'll encounter only three of these message types with
+    </p>
+    <p>
+      the functions we use (read, write, getmsg, getpmsg, putmsg, and putpmsg)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1396429273519" ID="ID_1518082418" MODIFIED="1396429275038" TEXT="M_DATA "/>
+<node CREATED="1396429285838" ID="ID_238739021" MODIFIED="1396429287045" TEXT="M_PROTO "/>
+<node CREATED="1396429312501" ID="ID_1477349973" MODIFIED="1396429312501" TEXT=""/>
+</node>
+<node CREATED="1396428781736" ID="ID_815763198" MODIFIED="1396428783202" TEXT="optional control information, "/>
+<node CREATED="1396428793920" ID="ID_1250687992" MODIFIED="1396428795156" TEXT="optional data "/>
+</node>
+<node CREATED="1396428963414" ID="ID_1531233223" MODIFIED="1396428982140" TEXT=" The control information and data are specified by ">
+<node CREATED="1396428983622" ID="ID_383130990" MODIFIED="1396428984707" TEXT="strbuf structures ">
+<node CREATED="1396429025841" ID="ID_1556661790" MODIFIED="1396429026895" TEXT="int maxlen "/>
+<node CREATED="1396429031143" ID="ID_1269531382" MODIFIED="1396429031964" TEXT="int len; "/>
+<node CREATED="1396429035895" ID="ID_101631997" MODIFIED="1396429036712" TEXT="char *buf; "/>
+</node>
+</node>
+<node CREATED="1396429146908" ID="ID_21788234" MODIFIED="1396429161652" TEXT="Figure 14.15. Type of STREAMS message generated for write, putmsg, and putpmsg ">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+</node>
 <node CREATED="1395736950830" ID="ID_664047134" MODIFIED="1395736962196" TEXT="I/O Multiplexing"/>
 <node CREATED="1395736962862" ID="ID_538848863" MODIFIED="1395736976453" TEXT="Asynchronous I/O"/>
 <node CREATED="1395736977151" ID="ID_816322505" MODIFIED="1395736986021" TEXT="readv and writev Functions"/>
