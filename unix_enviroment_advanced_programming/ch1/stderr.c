@@ -72,6 +72,16 @@ void err_ret(const char *fmt, ...)
 	return;
 }
 
+void err_msg(const char *fmt, ...)
+{
+	va_list ap;
+	va_start(ap, fmt);
+	err_doit(1, 0, fmt, ap);
+	va_end(ap);
+	return;
+}
+
+
 void pr_exit(int status)
 {
 	if (WIFEXITED(status))

@@ -35,3 +35,6 @@ So: we just need deliver one apk Tasks.apk and one patch PID002169 (it's contain
 == Draft Design Proposal: ==
 calendar
 Task.apk
+
+test:
+
