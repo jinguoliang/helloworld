@@ -13,17 +13,20 @@ int main(int argc,char **argv)
 {
 	int 		i,fd;
 
+	puts("start");
 	for(i=1;i<argc;i++){
 		if((fd=open(argv[i],O_RDONLY))<0){
 			err_ret("%s: can't open",argv[i]);
 			continue;
 		}
 
-		if(isastream(fd)==0)
-			err_ret("%s: not a stream");
-		else
-			err_msg("%s is a stream");
+		if(isastream(fd)==0){
+			err_ret("%s: not a stream",argv[i]);
+		}else{
+			err_msg("%s is a stream",argv[i]);
+		}
 	}
+	puts("finish");
 
 	exit(0);
 
