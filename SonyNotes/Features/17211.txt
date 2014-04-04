@@ -5,6 +5,15 @@ Creation-Date: 2013-11-25T09:50:25+08:00
 ====== 17211 ======
 Created Monday 25 November 2013
 
+Email compile:
+[[./email_pre_build_script.sh]]    //add the build_number
+semc-build clean
+semc-build
+aapt d --values resources bin/SemcEmail.apk >tmp
+vi tmp
+find the build_number  is the commit id.
+
+
 Description:
 Email solution Cherry pick from Rhine 1.2
 
@@ -71,5 +80,25 @@ SD card encryption and corresponding EAS policy Email need to do change:
 http://review.sonyericsson.net/429331 (email)
 
 http://review.sonyericsson.net/429326 (exchange)
+==================================================================================================
+BUGFIX:
+[KK][SW] [Stuck on Waiting for sync]: "Unfortunately, Email has stopped" pops up when logging in a email account.
+[Step by step Instruction]
+-------------------------------------------------------------------------
+1. Main Menu->Email.
+2. Log in a Email Account 
+(setest0001@163.com
+se000000).
+3. Press next button->"Waiting for sync" pops up.
+4.Wait a few minutes->The dialog which "Could not create the account, Try again later" pops up.
+5. Click "Cancel" button of the dialog.->Click "Next" button or back key.
+6.Observe that "Unfortunately, Email has stopped" pops up when logging in a email account.
+
+[Actual result]
+------------------------------------------------------------------------
+"Unfortunately, Email has stopped" pops up when logging in a email account.
+Patch:
+Change-Id: I187153da6eeb95c5d4202a041b74c83a9d68e665
+===================================================================================================
 
 

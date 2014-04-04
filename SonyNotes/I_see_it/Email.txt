@@ -47,15 +47,17 @@ emailcommon/
                 │   ├── PackedString.java
                 │   └── Part.java
                 ├── provider
-                │   ├── Account.java
-                │   ├── EmailContent.java
+                │   ├── __Account__.java					---------------->::__EmailContent__
+                │   ├── __EmailContent__.java				---------------->the superclass of the various classes of content stored by [[EmailProvider]]
+														It is intended to include 1) column definitions for use with the Provider, and 2) convenience
+														 methods for saving and retrieving content from the Provider.
                 │   ├── HeaderColumns.java
                 │   ├── Header.java
                 │   ├── HeaderNames.java
                 │   ├── HeaderUtils.java
-                │   ├── HostAuth.aidl
-                │   ├── HostAuth.java
-                │   ├── Mailbox.java
+                │   ├── HostAuth.aidl				
+                │   ├── HostAuth.java				-------------------------->::__EmailContent__
+                │   ├── __Mailbox__.java                                  --------------------------->::__EmailContent__
                 │   ├── OofSettings.aidl
                 │   ├── OofSettings.java
                 │   ├── Policy.aidl
@@ -128,7 +130,8 @@ src
 │   │   │   │   ├── GalContactInformationDialog.java
 │   │   │   │   ├── GalContactLookupTask.java
 │   │   │   │   ├── InsertQuickResponseDialog.java
-│   │   │   │   ├── MailboxFinder.java
+│   │   │   │   ├── __MailboxFinder__.java									------------->A class that finds a mailbox ID by account ID and mailbox type      1
+															--------->nested:__FindMailboxTask__
 │   │   │   │   ├── MailboxFragmentAdapter.java
 │   │   │   │   ├── MailboxListFragment.java
 │   │   │   │   ├── MailboxListItem.java
@@ -166,13 +169,13 @@ src
 │   │   │   │   │   ├── AccountSettingsFragment.java
 │   │   │   │   │   ├── AccountSettings.java
 │   │   │   │   │   ├── AccountSettingsUtils.java
-│   │   │   │   │   ├── AccountSetupAccountType.java
+│   │   │   │   │   ├── __AccountSetupAccountType__.java
 │   │   │   │   │   ├── AccountSetupActivity.java
-│   │   │   │   │   ├── AccountSetupBasics.java
+│   │   │   │   │   ├── __AccountSetupBasics__.java
 │   │   │   │   │   ├── AccountSetupExchangeFragment.java
 │   │   │   │   │   ├── AccountSetupExchange.java
 │   │   │   │   │   ├── AccountSetupIncomingFragment.java
-│   │   │   │   │   ├── AccountSetupIncoming.java
+│   │   │   │   │   ├── __AccountSetupIncoming__.java
 │   │   │   │   │   ├── AccountSetupNames.java
 │   │   │   │   │   ├── AccountSetupOof.java
 │   │   │   │   │   ├── AccountSetupOptions.java
@@ -186,7 +189,7 @@ src
 │   │   │   │   │   ├── PeakTimePreferenceCategory.java
 │   │   │   │   │   ├── PushAccountSetup.java
 │   │   │   │   │   ├── RepeatPreference.java
-│   │   │   │   │   ├── SetupData.java
+│   │   │   │   │   ├── __SetupData.java__					<<Parcelable  ------------persistant object : account password flow ...Policy(?) 
 │   │   │   │   │   └── SpinnerOption.java
 │   │   │   │   ├── ShortcutPickerFragment.java
 │   │   │   │   ├── ShortcutPicker.java
@@ -196,7 +199,7 @@ src
 │   │   │   │   ├── UIControllerOnePane.java
 │   │   │   │   ├── UIControllerTwoPane.java
 │   │   │   │   ├── UiUtilities.java
-│   │   │   │   └── Welcome.java
+│   │   │   │   └── __Welcome.java     ------------------   ok__
 │   │   │   ├── api
 │   │   │   │   └── Intents.java
 │   │   │   ├── AttachmentInfo.java
@@ -242,22 +245,22 @@ src
 │   │   │   │   │   └── ServiceStore.java
 │   │   │   │   ├── Store.java
 │   │   │   │   ├── transport
-│   │   │   │   │   ├── CountingOutputStream.java
-│   │   │   │   │   ├── DiscourseLogger.java
-│   │   │   │   │   ├── EOLConvertingOutputStream.java
+│   │   │   │   │   ├── __CountingOutputStream__.java				--------->A simple OutputStream that does nothing but count how many bytes are written to it and makes that count available to callers
+│   │   │   │   │   ├── __DiscourseLogger__.java						---------->A class to keep last N of lines sent to the server and responses received from the server
+│   │   │   │   │   ├── __EOLConvertingOutputStream__.java
 │   │   │   │   │   ├── ExchangeSender.java
-│   │   │   │   │   ├── MailTransport.java
+│   │   │   │   │   ├── __MailTransport.java							---------->::Transport__
 │   │   │   │   │   ├── SmtpException.java
 │   │   │   │   │   ├── SmtpSender.java
 │   │   │   │   │   └── StatusOutputStream.java
-│   │   │   │   └── Transport.java
+│   │   │   │   └── __Transport.java__										-------->This interface defines a "transport", which is defined here as being one layer below the  specific wire protocols such as POP3, IMAP, or SMTP.
 │   │   │   ├── MessageListContext.java
 │   │   │   ├── MessagingController.java
 │   │   │   ├── MessagingExceptionStrings.java
 │   │   │   ├── MessagingListener.java
 │   │   │   ├── NotificationController.java
 │   │   │   ├── PeekableInputStream.java
-│   │   │   ├── Preferences.java
+│   │   │   ├── __Preferences__.java										-------->wraped the __SharedPreference__
 │   │   │   ├── provider
 │   │   │   │   ├── AccountBackupRestore.java
 │   │   │   │   ├── AccountReconciler.java
@@ -265,7 +268,7 @@ src
 │   │   │   │   ├── AttachmentProvider.java
 │   │   │   │   ├── ContentCache.java
 │   │   │   │   ├── DBHelper.java
-│   │   │   │   ├── EmailProvider.java
+│   │   │   │   ├── __EmailProvider__.java								
 │   │   │   │   ├── EmailSearchSuggestionProvider.java
 │   │   │   │   ├── SearchContent.java
 │   │   │   │   ├── SmimeProvider.java
@@ -512,12 +515,12 @@ src
                 ├── EOLConvertingInputStream.java
                 ├── field
                 │   ├── address
-                │   │   ├── Address.java
+                │   │   ├── Address.java			
                 │   │   ├── AddressList.java
                 │   │   ├── Builder.java
                 │   │   ├── DomainList.java
                 │   │   ├── Group.java
-                │   │   ├── Mailbox.java
+                │   │   ├── __Mailbox__.java				--->::Address      Represents a single e-mail address
                 │   │   ├── MailboxList.java
                 │   │   ├── NamedMailbox.java
                 │   │   └── parser

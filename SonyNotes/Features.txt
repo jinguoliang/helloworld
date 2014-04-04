@@ -5,53 +5,79 @@ Creation-Date: 2013-11-25T09:42:14+08:00
 ====== Features ======
 Created Monday 25 November 2013
 
-porting Note:
-don't port in here:
-* platform/vendor/semc/overlay
-* platform/frameworks/base/core/res
-* platform/vendor/semc/packages/resource/uxp
+[[+16343]] Automatic power off control    ok 			SemcAutoPowerOff.apk 
+FP16344 Automatic power off control for Seagull definition
 
-[[+16343]] Automatic power off control    ok 
-http://review-jdm.sonyericsson.net/#/c/18133/
+[[+16982]] PlayAnywhere 2.5 for Eagle        ok      
+*patch list:
 
-[[+16982]] PlayAnywhere 2.0 for Eagle        ok      
-http://review-jdm.sonyericsson.net/#/c/18867/
+    http://review-jdm.sonyericsson.net/#/c/23320/
+
+*APK and other files:
+
+    SomcPlayAnywhere.apk;
+    SomcConnectivityCenter.apk;
+    com.sonyericsson.dlna.playanywhere.jar;
+    com.sonyericsson.dlna.playanywhere.xml;
+    com.sonymobile.playanywhere.jar;
+    com.sonymobile.playanywhere.xml;
     
-[[+15831]] [[../resouces/FP15831 Email Security Step Up for ODM - Androiki.html|Email Security Step Up for ODM]]                        
+[[+15831]] [[../resouces/FP15831 Email Security Step Up for ODM - Androiki.html|Email Security Step Up for ODM]] 
+*patch list:
+	            PID004818
+		  PID004746
+FP16005 Email Security Step Up for I4 Definition
+patches:
+	PID:004746
+	PID:004817
+	PID:004818
+           
 [[+17211]] [[../resouces/FP15678 Email solution Cherry pick from Rhine 1.1 - Androiki.html|Email solution Cherry pick from Rhine 1.2]]         
 http://review-jdm.sonyericsson.net/#/c/18665/
-phone: 6665
-Email sync settings customization           https://wiki.sonyericsson.net/androiki/FP7782_EmailSyncSettingsCustomization/Definition_Report
+FP[[+16179|16179]] Email solution Cherry pick from Shinano Definition
+
+
+Email sync settings customization     
+	https://wiki.sonyericsson.net/androiki/FP7782_EmailSyncSettingsCustomization/Definition_Report
+	http://review.sonyericsson.net/#/c/188874/   on rhine
 
 [[+15862]] Notification Tray solution for ODM products              
 [[/kk-rhine/frameworks/base/packages/SystemUI/res/values/somc_config.xml]]      [[line:110]]
 new patch get in:    pathid 4235
 	Close Notification panel when turning off Mobile data
 	Light theme should be used on ToolsbarSettings activity
+ Patch list:
+	PID004928
+	PID002318
+	PID004235
+	PID004726
 
 [[+15923]] [[../resouces/FP15923 Backup and restore Solution for Eagle-definition - Androiki.html|Backup and restore Solution for Eagle]]      
+
+
+[[+18188|18188]]	EAS Tasks for Yukon ODM
+FP[[+18207|18207]] EAS Tasks for Yukon ODM Definition
+
+1[[./FP15744 Transparent Status bar and Navigation bar Solution From Rhine 1.1 - Androiki.html]] 					
+	DMS02339145
+
+2[[./FP3877 Set Google sync auto-sync to default OFF for Nicki SS JBMR2 project definition - Androiki001.html]] 
+	patch PID000207 :	platform/vendor/semc/overlay/platform-custom-replacements  						
+	DMS02339624
+3.Custmization of SAT application name        										nothing  to do 					
+	https://wiki.sonyericsson.net/androiki/PatchRequest_DMS00870638
+	unicom is test and ok
+4.Within 'Accounts & sync' menu, the option Auto-sync is disabled.				nothing  to do						
+	DMS02339786
+	Implemented by static overlay
+	push cdf to phone test ok 
+5.FP7782 Email sync settings customization
+	Include in FP11573. The purpose of this feature is to make the value list and the default value customizable. And the value list in CDF should be chosen from the current list. The value list and the default value will be read from CDF first. If there is nothing in CDF, currently value list and default value as above will be used.
+	https://wiki.sonyericsson.net/androiki/FP7782_EmailSyncSettingsCustomization/Definition_Report
+6.DMS00546096	Email Device shows up as Android in exchange server
+http://review.sonyericsson.net/#/c/575949/1 		on rhine
+
 FP[[+15338]]  [[~/shared_with_windows/我的坚果云/resource/html/FP15338 Downloadable themes enabler - Androiki.html|Downloadable themes enabler]]   
-
-	1[[./FP15744 Transparent Status bar and Navigation bar Solution From Rhine 1.1 - Androiki.html]] 					need to view the kk-rhine
-		DMS02339145
-		vendor/semc/frameworks/base/libs/navbar-extensions/com.sonyericsson.navigationbar_impl.jar   no in kk-rhine but in rhine1.1   
-		not ready in house
-		
-		
-	2[[./FP3877 Set Google sync auto-sync to default OFF for Nicki SS JBMR2 project definition - Androiki001.html]] 
-		patch PID000207 :	platform/vendor/semc/overlay/platform-custom-replacements  						
-		DMS02339624
-	3.Custmization of SAT application name        										nothing  to do 					
-		https://wiki.sonyericsson.net/androiki/PatchRequest_DMS00870638
-		unicom is test and ok
-	4.Within 'Accounts & sync' menu, the option Auto-sync is disabled.				nothing  to do						
-		DMS02339786
-		Implemented by static overlay
-		push cdf to phone test ok 
-	5.FP7782 Email sync settings customization
-		Include in FP11573. The purpose of this feature is to make the value list and the default value customizable. And the value list in CDF should be chosen from the current list. The value list and the default value will be read from CDF first. If there is nothing in CDF, currently value list and default value as above will be used.
-		https://wiki.sonyericsson.net/androiki/FP7782_EmailSyncSettingsCustomization/Definition_Report
-
 
 FP14206 HW unique key for File System Encryption 
 	https://wiki.sonyericsson.net/androiki/FP14206_HW_unique_key_for_File_System_Encryption
@@ -60,6 +86,22 @@ FP14206 HW unique key for File System Encryption
 	FP14207 Use AES 256 for file system encryption
 	https://wiki.sonyericsson.net/androiki/FP14207_Use_AES_256_for_file_system_encryption
 	PID002169
-[[+18188|18188]]	EAS Tasks for Yukon ODM
 
+[[+18206|18206]]	Application Black/White listing for Yukon ODM
 
+DMS00916136 Exchange does not work with proxy settings
+*__patch__: PID002139 Fix cannot create EAS account when using a APN with proxy
+
+DMS00549533 EAS set-up failiure
+*git:
+    platform/packages/apps/Exchange
+    /system/app/Exchange2.apk
+*patch:
+    http://review.sonyericsson.net/#/c/579110/
+
+DMS01797827	Stuck on "Waiting for sync"
+*git:
+    platform/packages/apps/Exchange
+    /system/app/Exchange2.apk
+*patch:
+    https://review.sonyericsson.net/#/c/575967/
