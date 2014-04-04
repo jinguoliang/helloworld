@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1388825541958" ID="ID_950708638" MODIFIED="1392030831781" TEXT="Unix&#x73af;&#x5883;&#x9ad8;&#x7ea7;&#x7f16;&#x7a0b;">
+<node CREATED="1388825541958" ID="ID_950708638" MODIFIED="1395889568042" TEXT="Unix">
 <node CREATED="1388825565435" FOLDED="true" ID="ID_545402450" MODIFIED="1391693167740" POSITION="right" TEXT="Unix&#x57fa;&#x7840;&#x77e5;&#x8bc6;">
 <node CREATED="1388825585796" ID="ID_674545421" MODIFIED="1388825635770" TEXT="&#x5f15;&#x8a00;"/>
 <node CREATED="1388825636250" FOLDED="true" ID="ID_1312466121" MODIFIED="1388850164501" TEXT="&#x767b;&#x5f55;">
@@ -4443,8 +4443,8 @@
 <node CREATED="1391446135519" ID="ID_1218700903" MODIFIED="1391446136501" TEXT=" Additional Features "/>
 <node CREATED="1391446140125" ID="ID_1268518014" MODIFIED="1391446142538" TEXT=" Summary "/>
 </node>
-<node CREATED="1392949541994" ID="ID_637081276" MODIFIED="1394689537907" POSITION="right" TEXT="Threads ">
-<node CREATED="1392949564039" FOLDED="true" ID="ID_607133705" MODIFIED="1394689696067" TEXT="Introduction ">
+<node CREATED="1392949541994" FOLDED="true" ID="ID_637081276" MODIFIED="1395043494191" POSITION="right" TEXT="Threads ">
+<node CREATED="1392949564039" FOLDED="true" ID="ID_607133705" MODIFIED="1392963514942" TEXT="Introduction ">
 <node CREATED="1392952883696" ID="ID_278083049" MODIFIED="1392952885737" TEXT="All threads within a single process have access to the same process components, such as file descriptors and memory. "/>
 <node CREATED="1392952924568" ID="ID_446283079" MODIFIED="1392952926761" TEXT="synchronization mechanisms "/>
 </node>
@@ -4498,8 +4498,7 @@
       
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1392963672703" ID="ID_1766691068" MODIFIED="1392963674826" TEXT="pthread_t pthread_self(void); "/>
 </node>
@@ -4512,7 +4511,7 @@
 <node CREATED="1392964324878" ID="ID_1024261863" MODIFIED="1392964327211" TEXT="The per thread copy of errno is provided only for compatibility with existing functions that use it. "/>
 </node>
 </node>
-<node CREATED="1392949595152" FOLDED="true" ID="ID_725018461" MODIFIED="1394691020258" TEXT="Thread Termination ">
+<node CREATED="1392949595152" FOLDED="true" ID="ID_725018461" MODIFIED="1393244018372" TEXT="Thread Termination ">
 <node CREATED="1392971324580" ID="ID_44870007" MODIFIED="1392971327517" TEXT="stopping its flow of control, without terminating the entire process ">
 <node CREATED="1392971339205" ID="ID_1455100013" MODIFIED="1392971340487" TEXT="return "/>
 <node CREATED="1392971351765" ID="ID_1103062992" MODIFIED="1392971353574" TEXT="be canceled by another thread in the same process "/>
@@ -4651,17 +4650,1086 @@
 <node CREATED="1393166235203" ID="ID_1476322396" MODIFIED="1393166236386" TEXT="synchronization primitive attributes"/>
 <node CREATED="1393166261342" ID="ID_1497578395" MODIFIED="1393166262690" TEXT="keep data private from other threads"/>
 </node>
-<node CREATED="1392949634193" ID="ID_1648678860" MODIFIED="1392949635939" TEXT="Thread Limits "/>
-<node CREATED="1392949642274" ID="ID_1407192448" MODIFIED="1392949644371" TEXT="Thread Attributes "/>
-<node CREATED="1392949648930" ID="ID_1313573177" MODIFIED="1392949650748" TEXT="Synchronization Attributes "/>
-<node CREATED="1392949654835" ID="ID_760586738" MODIFIED="1392949657560" TEXT="Reentrancy "/>
-<node CREATED="1392949661331" ID="ID_1980818415" MODIFIED="1392949663224" TEXT="Thread-Specific Data "/>
-<node CREATED="1392949667115" ID="ID_2924296" MODIFIED="1392949668684" TEXT="Cancel Options "/>
-<node CREATED="1392949672987" ID="ID_1928920779" MODIFIED="1392949680405" TEXT="Threads and Signals "/>
-<node CREATED="1392949684652" ID="ID_1903883162" MODIFIED="1392949686049" TEXT="Threads and fork "/>
-<node CREATED="1392949690484" ID="ID_607287955" MODIFIED="1392949691958" TEXT="Threads and I/O "/>
+<node CREATED="1392949620657" FOLDED="true" ID="ID_1461218239" MODIFIED="1395043698582" POSITION="right" TEXT="Thread Control ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<node CREATED="1392949627585" ID="ID_389424779" MODIFIED="1392949629294" TEXT="Introduction "/>
+<node CREATED="1392949634193" FOLDED="true" ID="ID_1648678860" MODIFIED="1393334819101" TEXT="Thread Limits ">
+<node CREATED="1393334067500" FOLDED="true" ID="ID_384298981" MODIFIED="1393334818373" TEXT="sysconf ">
+<node CREATED="1393334076236" ID="ID_1684630493" MODIFIED="1393334786992" TEXT="_SC_THREAD_DESTRUCTOR_ITERATIONS ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      maximum number of times
+    </p>
+    <p>
+      an implementation will try
+    </p>
+    <p>
+      to destroy the thread-
+    </p>
+    <p>
+      specific data when a thread
+    </p>
+    <p>
+      exits
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1393334044981" ID="ID_1154523975" MODIFIED="1393334047510" TEXT="PTHREAD_DESTRUCTOR_ITERATIONS  "/>
+</node>
+<node CREATED="1393334701552" ID="ID_1405100343" MODIFIED="1393334703424" TEXT="_SC_THREAD_KEYS_MAX ">
+<node CREATED="1393334725224" ID="ID_719510300" MODIFIED="1393334726970" TEXT="PTHREAD_KEYS_MAX  "/>
+</node>
+<node CREATED="1393334710312" ID="ID_1306801431" MODIFIED="1393334712512" TEXT="_SC_THREAD_STACK_MIN ">
+<node CREATED="1393334730632" ID="ID_150852235" MODIFIED="1393334732624" TEXT="PTHREAD_STACK_MIN  "/>
+</node>
+<node CREATED="1393334717976" ID="ID_690485633" MODIFIED="1393334720272" TEXT="_SC_THREAD_THREADS_MAX ">
+<node CREATED="1393334736816" ID="ID_837935913" MODIFIED="1393334738494" TEXT="PTHREAD_THREADS_MAX  "/>
+</node>
+</node>
+</node>
+<node CREATED="1392949642274" FOLDED="true" ID="ID_1407192448" MODIFIED="1395043501985" TEXT="Thread Attributes ">
+<node CREATED="1393334821770" ID="ID_1981184389" MODIFIED="1393334828834" TEXT="int pthread_attr_init(pthread_attr_t *attr); "/>
+<node CREATED="1393334843346" ID="ID_1972945719" MODIFIED="1393334845424" TEXT="int pthread_attr_destroy(pthread_attr_t *attr); "/>
+<node CREATED="1393334979469" ID="ID_1785638593" MODIFIED="1393334982383" TEXT="POSIX.1 thread attributes ">
+<node CREATED="1393334988597" ID="ID_404855370" MODIFIED="1393337540471" TEXT="detachstate  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      If we know that we don't need the thread's termination status at the time we create the thread, we
+    </p>
+    <p>
+      can arrange for the thread to start out in the detached state by modifying the detachstate thread
+    </p>
+    <p>
+      attribute in the pthread_attr_t structure.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1393335149407" ID="ID_921642902" MODIFIED="1393335151526" TEXT="PTHREAD_CREATE_DETACHED "/>
+<node CREATED="1393335154695" ID="ID_1725779998" MODIFIED="1393335156549" TEXT="PTHREAD_CREATE_JOINABLE "/>
+<node CREATED="1393335173968" ID="ID_958425655" MODIFIED="1393335175825" TEXT="int pthread_attr_getdetachstate(const pthread_attr_t *restrict attr, int *detachstate); "/>
+<node CREATED="1393335182280" ID="ID_1740583958" MODIFIED="1393335195589" TEXT=" int pthread_attr_setdetachstate(pthread_attr_t *attr, int detachstate); "/>
+</node>
+<node CREATED="1393335005333" FOLDED="true" ID="ID_650464378" MODIFIED="1393337174344" TEXT="guardsize  ">
+<node CREATED="1393336282311" ID="ID_1868016175" MODIFIED="1393336284218" TEXT="int pthread_attr_getguardsize(const pthread_attr_t *restrict attr, size_t *restrict guardsize); "/>
+<node CREATED="1393336289719" ID="ID_1706378451" MODIFIED="1393336291232" TEXT="int pthread_attr_setguardsize(pthread_attr_t *attr , size_t guardsize); "/>
+<node CREATED="1393336298423" ID="ID_298729817" MODIFIED="1393336300497" TEXT="The guardsize thread attribute controls the size of the memory extent after the end of the thread&apos;s stack to protect against stack overflow "/>
+<node CREATED="1393336418161" ID="ID_1838141190" MODIFIED="1393336428452" TEXT="If the thread&apos;s stack pointer overflows into the guard area, the application will receive an error, possibly with a signal. ">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node CREATED="1393335018478" FOLDED="true" ID="ID_1700055919" MODIFIED="1393337173600" TEXT="stackaddr  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      With a process, the amount of virtual address space is fixed. Since there is only one stack, its size
+    </p>
+    <p>
+      usually isn't a problem. With threads, however, the same amount of virtual address space must be
+    </p>
+    <p>
+      shared by all the thread stacks. You might have to reduce your default thread stack size if your
+    </p>
+    <p>
+      application uses so many threads that the cumulative size of their stacks exceeds the available virtual
+    </p>
+    <p>
+      address space. On the other hand, if your threads call functions that allocate large automatic
+    </p>
+    <p>
+      variables or call functions many stack frames deep, you might need more than the default stack size.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1393336348824" ID="ID_772928831" MODIFIED="1393336358364" TEXT="If you run out of virtual address space for thread stacks, you can use malloc or mmap (see Section 14.9) to allocate space for an alternate stack and use pthread_attr_setstack to change the stack location of threads you create "/>
+<node CREATED="1393335905345" ID="ID_1324150062" MODIFIED="1393335908322" TEXT="int pthread_attr_getstack(const pthread_attr_t *restrict attr, void **restrict stackaddr, size_t *restrict stacksize); "/>
+<node CREATED="1393335944490" ID="ID_126227321" MODIFIED="1393335946865" TEXT="int pthread_attr_setstack(const pthread_attr_t *attr, void *stackaddr, size_t *stacksize); "/>
+<node CREATED="1393336185077" ID="ID_1327031316" MODIFIED="1393336187983" TEXT="int pthread_attr_getstacksize(const pthread_attr_t *restrict attr, size_t *restrict stacksize); "/>
+<node CREATED="1393336193133" ID="ID_1114120238" MODIFIED="1393336195045" TEXT="int pthread_attr_setstacksize(pthread_attr_t *attr , size_t stacksize); "/>
+</node>
+<node CREATED="1393335023206" ID="ID_941510198" MODIFIED="1393335024769" TEXT="stacksize  "/>
+<node CREATED="1393337032243" FOLDED="true" ID="ID_1140948262" MODIFIED="1393337176856" TEXT="concurrency level ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The concurrency level controls the number of kernel threads or processes on top of which the user-
+    </p>
+    <p>
+      level threads are mapped. If an implementation keeps a one-to-one mapping between kernel-level
+    </p>
+    <p>
+      threads and user-level threads, then changing the concurrency level will have no effect, since it is
+    </p>
+    <p>
+      possible for all user-level threads to be scheduled. If the implementation multiplexes user-level
+    </p>
+    <p>
+      threads on top of kernel-level threads or processes, however, you might be able to improve
+    </p>
+    <p>
+      performance by increasing the number of user-level threads that can run at a given time. The
+    </p>
+    <p>
+      pthread_setconcurrency function can be used to provide a hint to the system of the desired level of
+    </p>
+    <p>
+      concurrency.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1393337053211" ID="ID_1786423929" MODIFIED="1393337055492" TEXT="int pthread_getconcurrency(void); "/>
+<node CREATED="1393337059363" ID="ID_755854832" MODIFIED="1393337061046" TEXT="int pthread_setconcurrency(int level); ">
+<node CREATED="1393337110004" ID="ID_1161604028" MODIFIED="1393337112148" TEXT="is only a hint to the system "/>
+<node CREATED="1393337122380" ID="ID_204719574" MODIFIED="1393337123998" TEXT="tell the system that you want it to decide for itself what concurrency level to use by passing a level of 0 "/>
+</node>
+</node>
+<node CREATED="1393337150356" ID="ID_1289879451" MODIFIED="1393337158407" TEXT="cancelability  state "/>
+<node CREATED="1393337162597" ID="ID_58702075" MODIFIED="1393337164583" TEXT="cancelability type "/>
+</node>
+</node>
+<node CREATED="1392949648930" FOLDED="true" ID="ID_1313573177" MODIFIED="1393344084097" TEXT="Synchronization Attributes ">
+<node CREATED="1393337301063" ID="ID_1618522153" MODIFIED="1393337303140" TEXT="Mutex Attributes ">
+<node CREATED="1393337310039" ID="ID_423166422" MODIFIED="1393337312008" TEXT="int pthread_mutexattr_init(pthread_mutexattr_t *attr); "/>
+<node CREATED="1393337315111" ID="ID_1480110488" MODIFIED="1393337316905" TEXT="int pthread_mutexattr_destroy(pthread_mutexattr_t *attr); "/>
+<node CREATED="1393337485666" ID="ID_1546128856" MODIFIED="1393337487808" TEXT="attr">
+<node CREATED="1393337489418" ID="ID_27276052" MODIFIED="1393337491678" TEXT="process-shared ">
+<node CREATED="1393337503523" ID="ID_1970388175" MODIFIED="1393337505667" TEXT="int pthread_mutexattr_getpshared(const pthread_mutexattr_t * restrict attr, int *restrict pshared); "/>
+<node CREATED="1393337531827" ID="ID_602661090" MODIFIED="1393337534250" TEXT="int pthread_mutexattr_setpshared (pthread_mutexattr_t *attr, int pshared); "/>
+<node CREATED="1393337556051" ID="ID_1365878857" MODIFIED="1393337558468" TEXT="PTHREAD_PROCESS_SHARED ">
+<node CREATED="1393337713862" ID="ID_900439510" MODIFIED="1393337713862" TEXT=""/>
+</node>
+<node CREATED="1393337562988" ID="ID_1781028386" MODIFIED="1393337565021" TEXT="PTHREAD_PROCESS_PRIVATE ">
+<node CREATED="1393337717175" ID="ID_1080747544" MODIFIED="1393337719541" TEXT="provide more efficient mutex implementations when the attribute is set to PTHREAD_PROCESS_PRIVATE , "/>
+</node>
+</node>
+<node CREATED="1393337740783" ID="ID_473635973" MODIFIED="1393337742181" TEXT="type">
+<node CREATED="1393337747599" ID="ID_1550772012" MODIFIED="1393337749978" TEXT="PTHREAD_MUTEX_NORMAL ">
+<node CREATED="1393337765695" ID="ID_360437437" MODIFIED="1393337767737" TEXT="doesn&apos;t do any special error checking or deadlock detection "/>
+</node>
+<node CREATED="1393337772151" ID="ID_1254219812" MODIFIED="1393337774361" TEXT="PTHREAD_MUTEX_ERRORCHECK ">
+<node CREATED="1393337783240" ID="ID_250512151" MODIFIED="1393337785246" TEXT="provides error checking "/>
+</node>
+<node CREATED="1393337790432" ID="ID_481342882" MODIFIED="1393342394951" TEXT="PTHREAD_MUTEX_RECURSIVE ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Recall from Section 11.6 that a mutex is used to protect the condition that is associated with a
+    </p>
+    <p>
+      condition variable. Before blocking the thread, the pthread_cond_wait and the
+    </p>
+    <p>
+      pthread_cond_timedwait functions release the mutex associated with the condition. This allows other
+    </p>
+    <p>
+      threads to acquire the mutex, change the condition, release the mutex, and signal the condition
+    </p>
+    <p>
+      variable. Since the mutex must be held to change the condition, it is not a good idea to use a
+    </p>
+    <p>
+      recursive mutex. If a recursive mutex is locked multiple times and used in a call to
+    </p>
+    <p>
+      pthread_cond_wait, the condition can never be satisfied, because the unlock done by
+    </p>
+    <p>
+      pthread_cond_wait doesn't release the mutex.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1393337814344" ID="ID_1426871784" MODIFIED="1393337856355" TEXT="allows the same thread to lock it multiple times without first unlocking it. ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      A recursive mutex maintains a lock count and isn't released until it is unlocked the
+    </p>
+    <p>
+      same number of times it is locked.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1393337796200" ID="ID_1076864228" MODIFIED="1393337798354" TEXT="PTHREAD_MUTEX_DEFAULT ">
+<node CREATED="1393337858137" ID="ID_1310282662" MODIFIED="1393337860698" TEXT="be used to request default semantics "/>
+<node CREATED="1393337878721" ID="ID_698320464" MODIFIED="1393337880355" TEXT=" Implementations are free to map this to one of the other types. "/>
+</node>
+<node CREATED="1393337957675" ID="ID_1241486227" MODIFIED="1393337960012" TEXT="int pthread_mutexattr_gettype(const pthread_mutexattr_t * restrict attr, int *restrict type); "/>
+<node CREATED="1393337964219" ID="ID_1641097083" MODIFIED="1393337965897" TEXT="int pthread_mutexattr_settype(pthread_mutexattr_t *attr, int type); "/>
+</node>
+</node>
+</node>
+<node CREATED="1393342451083" ID="ID_1531903843" MODIFIED="1393342453287" TEXT="ReaderWriter Lock Attributes ">
+<node CREATED="1393342511308" ID="ID_1713007530" MODIFIED="1393342529053" TEXT="int pthread_rwlockattr_init(pthread_rwlockattr_t *attr); "/>
+<node CREATED="1393342530388" ID="ID_990031686" MODIFIED="1393342542944" TEXT="int pthread_rwlockattr_destroy (pthread_rwlockattr_t *attr); "/>
+<node CREATED="1393342558100" ID="ID_1988787046" MODIFIED="1393342565027" TEXT="attr">
+<node CREATED="1393342566453" ID="ID_1292966189" MODIFIED="1393342569012" TEXT="process-shared ">
+<node CREATED="1393342620982" ID="ID_1107531878" MODIFIED="1393342622656" TEXT="int pthread_rwlockattr_getpshared(const pthread_rwlockattr_t * restrict attr, int *restrict pshared); "/>
+<node CREATED="1393342636374" ID="ID_1418764185" MODIFIED="1393342638688" TEXT="int pthread_rwlockattr_setpshared (pthread_rwlockattr_t *attr, int pshared); "/>
+</node>
+</node>
+</node>
+<node CREATED="1393342648334" ID="ID_351915335" MODIFIED="1393342651176" TEXT="Condition Variable Attributes ">
+<node CREATED="1393342672223" ID="ID_734370662" MODIFIED="1393342675020" TEXT="int pthread_condattr_init(pthread_condattr_t *attr); "/>
+<node CREATED="1393342680895" ID="ID_305473643" MODIFIED="1393342682961" TEXT="int pthread_condattr_destroy(pthread_condattr_t *attr); "/>
+<node CREATED="1393342717375" ID="ID_1692584588" MODIFIED="1393342718229" TEXT="attr">
+<node CREATED="1393342566453" ID="ID_162373420" MODIFIED="1393342569012" TEXT="process-shared ">
+<node CREATED="1393342735944" ID="ID_1326758282" MODIFIED="1393342738459" TEXT="int pthread_condattr_getpshared(const pthread_condattr_t * restrict attr, int *restrict pshared); "/>
+<node CREATED="1393342750064" ID="ID_783655027" MODIFIED="1393342752099" TEXT="int pthread_condattr_setpshared(pthread_condattr_t *attr, int pshared); "/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1392949654835" FOLDED="true" ID="ID_760586738" MODIFIED="1393375679683" TEXT="Reentrancy ">
+<node CREATED="1393344088531" ID="ID_1210415968" MODIFIED="1393344093352" TEXT="thread-safe">
+<node CREATED="1393344094339" ID="ID_1953306677" MODIFIED="1393344097825" TEXT="If a function can be safely called by multiple threads at the same time, we say that the function is thread-safe.  "/>
+<node CREATED="1393344199453" ID="ID_524461296" MODIFIED="1393344201116" TEXT="Implementations that support thread-safe functions will define the _POSIX_THREAD_SAFE_FUNCTIONS symbol in &lt;unistd.h&gt; "/>
+</node>
+<node CREATED="1393344311016" ID="ID_1880510177" MODIFIED="1393344313160" TEXT="async-signal safe ">
+<node CREATED="1393344323600" ID="ID_1065540167" MODIFIED="1393344325216" TEXT="We say that a function that is safe to be reentered from an asynchronous signal handler is async-signal safe. "/>
+</node>
+<node CREATED="1393344248566" ID="ID_110023770" MODIFIED="1393344253052" TEXT="acstime_r  ">
+<node CREATED="1393344262631" ID="ID_131250469" MODIFIED="1393344271476" TEXT="_r : reentrancy"/>
+</node>
+<node CREATED="1393344385954" ID="ID_890755141" MODIFIED="1393344397402" TEXT="thrad safe functions"/>
+<node CREATED="1393344368025" ID="ID_1116241755" MODIFIED="1393345947592" TEXT="FILE objects ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Although the standard I/O routines might be implemented to be thread-safe from the perspective of
+    </p>
+    <p>
+      their own internal data structures, it is still useful to expose the locking to applications. This allows
+    </p>
+    <p>
+      applications to compose multiple calls to standard I/O functions into atomic sequences. Of course,
+    </p>
+    <p>
+      when dealing with multiple FILE objects, you need to beware of potential deadlocks and to order your
+    </p>
+    <p>
+      locks carefully.
+    </p>
+    <p>
+      If the standard I/O routines acquire their own locks, then we can run into serious performance
+    </p>
+    <p>
+      degradation when doing character-at-a-time I/O. In this situation, we end up acquiring and releasing
+    </p>
+    <p>
+      a lock for every character read or written. To avoid this overhead, unlocked versions of the
+    </p>
+    <p>
+      character-based standard I/O routines are available.
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1393344432715" ID="ID_980821938" MODIFIED="1393344434651" TEXT="int ftrylockfile(FILE *fp); "/>
+<node CREATED="1393344439163" ID="ID_1476006798" MODIFIED="1393344448704" TEXT="void flockfile(FILE *fp); "/>
+<node CREATED="1393344449803" ID="ID_1666400784" MODIFIED="1393344451582" TEXT="void funlockfile(FILE *fp); "/>
+<node CREATED="1393344558557" ID="ID_366993632" MODIFIED="1393344561838" TEXT="int getchar_unlocked(void); "/>
+<node CREATED="1393344566518" ID="ID_636761424" MODIFIED="1393344569037" TEXT="int getc_unlocked(FILE *fp); "/>
+<node CREATED="1393344573318" ID="ID_1555345839" MODIFIED="1393344575143" TEXT="int putchar_unlocked(int c); "/>
+<node CREATED="1393344578398" ID="ID_1102745069" MODIFIED="1393344580927" TEXT="int putc_unlocked(int c, FILE *fp); "/>
+</node>
+</node>
+<node CREATED="1392949661331" FOLDED="true" ID="ID_1980818415" MODIFIED="1395043496218" TEXT="Thread-Specific Data ">
+<node CREATED="1393375682015" ID="ID_155877577" MODIFIED="1393375684990" TEXT="is a mechanism for storing and finding data associated with a particular thread. "/>
+<node CREATED="1393375717127" ID="ID_660362017" MODIFIED="1393375719079" TEXT="we&apos;d like each thread to access its own separate copy of the data, without worrying about synchronizing access with other threads "/>
+<node CREATED="1393375856842" ID="ID_526117908" MODIFIED="1393375859015" TEXT="reason">
+<node CREATED="1393375907851" ID="ID_1478431343" MODIFIED="1393375910018" TEXT="need to maintain data on a per thread basis "/>
+<node CREATED="1393375946164" ID="ID_1570259553" MODIFIED="1393375948573" TEXT="provide a mechanism for adapting process-based interfaces to a multithreaded environment ">
+<node CREATED="1393376048990" ID="ID_957943681" MODIFIED="1393376051291" TEXT="errno"/>
+</node>
+</node>
+<node CREATED="1393376077262" FOLDED="true" ID="ID_1140664147" MODIFIED="1393376146619" TEXT="Recall that all threads in a process have access to the entire address space of the process ">
+<icon BUILTIN="yes"/>
+<icon BUILTIN="yes"/>
+<icon BUILTIN="yes"/>
+<node CREATED="1393376098614" ID="ID_1532138208" MODIFIED="1393376100472" TEXT="Other than using registers, there is no way for one thread to prevent another from accessing its data "/>
+</node>
+<node CREATED="1393376148112" ID="ID_705695650" MODIFIED="1393376240623" TEXT="int pthread_key_create(pthread_key_t *keyp, void (*destructor)(void *)); ">
+<node CREATED="1393376216641" ID="ID_1467498398" MODIFIED="1393376317062" TEXT="keyp">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The same key can be used by
+    </p>
+    <p>
+      all threads in the process, but each thread will associate a different thread-specific data address with
+    </p>
+    <p>
+      the key
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1393376319483" ID="ID_537576709" MODIFIED="1393376362269" TEXT="destructor">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      When the thread exits, if the data address has been set to a non-null value, the destructor
+    </p>
+    <p>
+      function is called with the data address as the only argume
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1393376379812" ID="ID_440340169" MODIFIED="1393376381335" TEXT="pthread_exit or by returning, the destructor is called "/>
+<node CREATED="1393376388780" ID="ID_1697817400" MODIFIED="1393376390135" TEXT="exit, _exit, _Exit, or abort, or otherwise exits abnormally, the destructor is not called "/>
+</node>
+<node CREATED="1393376630193" ID="ID_1938732787" MODIFIED="1393376662401" TEXT="check and check to call destructor">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      After all destructors are called, the system will
+    </p>
+    <p>
+      check whether any non-null thread-specific values were associated with the keys and, if so, call the
+    </p>
+    <p>
+      destructors again. This process will repeat until either all keys for the thread have null thread-specific
+    </p>
+    <p>
+      data values or a maximum of PTHREAD_DESTRUCTOR_ITERATIONS (Figure 12.1) attempts have been
+    </p>
+    <p>
+      made.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1393376667970" ID="ID_748740276" MODIFIED="1393376669830" TEXT="int pthread_key_delete(pthread_key_t *key); ">
+<node CREATED="1393376710939" ID="ID_406308596" MODIFIED="1393376716246" TEXT="will not invoke the destructor function associated with the key ">
+<icon BUILTIN="yes"/>
+<icon BUILTIN="yes"/>
+</node>
+</node>
+<node CREATED="1393376771341" ID="ID_888711625" MODIFIED="1393376786408" TEXT="pthread_once_t initflag = PTHREAD_ONCE_INIT; &#xa;int pthread_once(pthread_once_t *initflag, void (*initfn)(void)); ">
+<node CREATED="1393376801869" ID="ID_1415953503" MODIFIED="1393376803823" TEXT="The initflag must be a nonlocal variable (i.e., global or static) and initialized to PTHREAD_ONCE_INIT. "/>
+<node CREATED="1393376842022" ID="ID_1041071602" MODIFIED="1393376844211" TEXT="the system guarantees that the initialization routine, initfn, will be called only once, on the first call to pthread_once. "/>
+</node>
+<node CREATED="1393376859679" ID="ID_1626425628" MODIFIED="1393376861725" TEXT="void *pthread_getspecific(pthread_key_t key); "/>
+<node CREATED="1393376872567" ID="ID_916616534" MODIFIED="1393376874514" TEXT="int pthread_setspecific(pthread_key_t key, const void *value); "/>
+</node>
+<node CREATED="1392949667115" FOLDED="true" ID="ID_2924296" MODIFIED="1393536283857" TEXT="Cancel Options ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Two thread attributes that are not included in the pthread_attr_t structure are the cancelability state
+    </p>
+    <p>
+      and the cancelability type. These attributes affect the behavior of a thread in response to a call to
+    </p>
+    <p>
+      pthread_cancel
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1393507764359" ID="ID_1601835334" MODIFIED="1393507766317" TEXT="int pthread_setcancelstate(int state, int *oldstate); ">
+<node CREATED="1393507744622" ID="ID_101397328" MODIFIED="1393507746672" TEXT="PTHREAD_CANCEL_DISABLE "/>
+<node CREATED="1393507738873" ID="ID_692801687" MODIFIED="1393507740917" TEXT="PTHREAD_CANCEL_ENABLE "/>
+</node>
+<node CREATED="1393507826384" ID="ID_1072130201" MODIFIED="1393507828186" TEXT="cancellation points ">
+<node CREATED="1393507858032" ID="ID_322193207" MODIFIED="1393507864583" TEXT="occur when a thread calls some functions"/>
+<node CREATED="1393507943002" ID="ID_293693912" MODIFIED="1393507944912" TEXT="void pthread_testcancel(void); ">
+<node CREATED="1393508131597" ID="ID_1621563636" MODIFIED="1393508163542" TEXT="similar with adding a cancelation point"/>
+</node>
+</node>
+<node CREATED="1393508009899" ID="ID_897537435" MODIFIED="1393508012642" TEXT="cancellation type ">
+<node CREATED="1393508040827" ID="ID_1834304076" MODIFIED="1393508241068" TEXT="int pthread_setcanceltype(int type, int *oldtype); ">
+<node CREATED="1393508049556" ID="ID_1272904927" MODIFIED="1393508051261" TEXT="PTHREAD_CANCEL_DEFERRED "/>
+<node CREATED="1393508055908" ID="ID_1637155591" MODIFIED="1393508088122" TEXT="PTHREAD_CANCEL_ASYNCHRONOUS ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The thread doesn't necessarily need to hit a cancellation point for it to be canceled.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1392949672987" FOLDED="true" ID="ID_1928920779" MODIFIED="1395043497722" TEXT="Threads and Signals ">
+<node CREATED="1393508275872" ID="ID_169646208" MODIFIED="1393508278724" TEXT="Each thread has its own signal mask "/>
+<node CREATED="1393508289400" ID="ID_894057609" MODIFIED="1393508292247" TEXT="the signal disposition is shared by all threads in the process "/>
+<node CREATED="1393508339337" ID="ID_360904564" MODIFIED="1393508341488" TEXT="Signals are delivered to a single thread in the process ">
+<node CREATED="1393508390834" ID="ID_1650013813" MODIFIED="1393508393579" TEXT="If the signal is related to a hardware fault or expiring timer, the signal is sent to the thread whose action caused the event "/>
+<node CREATED="1393508404250" ID="ID_630456431" MODIFIED="1393508406431" TEXT="Other signals, on the other hand, are delivered to an arbitrary thread "/>
+</node>
+<node CREATED="1393508461395" ID="ID_719046960" MODIFIED="1393508463429" TEXT="int pthread_sigmask(int how, const sigset_t *restrict set, sigset_t *restrict oset); ">
+<node CREATED="1393508640270" ID="ID_542274787" MODIFIED="1393508642265" TEXT="sigprocmask ">
+<node CREATED="1393508652463" ID="ID_377250896" MODIFIED="1393508654783" TEXT="undefined in a multithreaded process "/>
+</node>
+</node>
+<node CREATED="1393508682895" ID="ID_644404511" MODIFIED="1393510086365" TEXT="int sigwait(const sigset_t *restrict set, int *restrict signop); ">
+<node CREATED="1393508768633" ID="ID_481752813" MODIFIED="1393508770752" TEXT="set ">
+<node CREATED="1393508780913" ID="ID_1378630225" MODIFIED="1393508782896" TEXT="the set of signals for which the thread is waiting "/>
+</node>
+<node CREATED="1393508787417" ID="ID_1953012437" MODIFIED="1393508791487" TEXT="signop">
+<node CREATED="1393508808898" ID="ID_34023008" MODIFIED="1393508827024" TEXT="which delivered"/>
+</node>
+<node CREATED="1393510436600" ID="ID_415275090" MODIFIED="1393510439604" TEXT="If multiple threads are blocked in calls to sigwait for the same signal, only one of the threads will return from sigwait when the signal is delivered. "/>
+</node>
+<node CREATED="1393510392391" ID="ID_1849096093" MODIFIED="1393510395288" TEXT="int pthread_kill(pthread_t thread, int signo); ">
+<node CREATED="1393510450576" ID="ID_744971646" MODIFIED="1393510452659" TEXT="a signo value of 0 to check for existence of the thread "/>
+<node CREATED="1393510527577" ID="ID_1289333112" MODIFIED="1393510529277" TEXT="If the default action for a signal is to terminate the process, then sending the signal to a thread will still kill the entire process. "/>
+</node>
+<node CREATED="1393510614347" ID="ID_914151440" MODIFIED="1393510616358" TEXT="Note ">
+<node CREATED="1393510623323" ID="ID_1043744267" MODIFIED="1393510625341" TEXT="alarm timers are a process resource ">
+<node CREATED="1393510631523" ID="ID_1536480451" MODIFIED="1393510633355" TEXT="all threads share the same set of alarms "/>
+</node>
+</node>
+</node>
+<node CREATED="1392949684652" FOLDED="true" ID="ID_1903883162" MODIFIED="1395043550067" TEXT="Threads and fork ">
+<node CREATED="1393536290549" ID="ID_1829140670" MODIFIED="1393536292862" TEXT="By inheriting a copy of the address space, the child also inherits the state of every mutex, readerwriter lock, and condition variable from the parent process. ">
+<node CREATED="1393536320437" ID="ID_863645029" MODIFIED="1393536322566" TEXT="If the parent consists of more than one thread, the child will need to clean up the lock state if it isn&apos;t going to call exec immediately after fork returns "/>
+</node>
+<node CREATED="1393536339718" ID="ID_952399601" MODIFIED="1393536341631" TEXT="Inside the child process, only one thread exists ">
+<node CREATED="1393536420032" ID="ID_1137878809" MODIFIED="1393536421918" TEXT=" If the threads in the parent process hold any locks, the locks will also be held in the child process.  "/>
+</node>
+<node CREATED="1393536442208" ID="ID_604717499" MODIFIED="1393536444998" TEXT="int pthread_atfork(void (*prepare)(void), void (*parent)(void), void (*child)(void)); ">
+<node CREATED="1393536459104" ID="ID_1666418649" MODIFIED="1393536461566" TEXT="prepare">
+<node CREATED="1393536501361" ID="ID_1156351611" MODIFIED="1393536503213" TEXT="in the parent "/>
+<node CREATED="1393536513874" ID="ID_1913609100" MODIFIED="1393536515880" TEXT="before fork creates the child process "/>
+<node CREATED="1393536527338" ID="ID_1262877861" MODIFIED="1393536529347" TEXT="acquire all locks defined by the parent "/>
+</node>
+<node CREATED="1393536462217" ID="ID_969376360" MODIFIED="1393536465516" TEXT="parent">
+<node CREATED="1393536548130" ID="ID_526774042" MODIFIED="1393536551321" TEXT="in the context of the parent "/>
+<node CREATED="1393536574827" ID="ID_1466726648" MODIFIED="1393537009548" TEXT="after fork has created the child process ">
+<node CREATED="1393536587963" ID="ID_284663457" MODIFIED="1393536591983" TEXT=" but before fork has returned "/>
+</node>
+<node CREATED="1393536639484" ID="ID_809635672" MODIFIED="1393536644159" TEXT="to unlock all the locks acquired by the prepare fork handler ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+</node>
+</node>
+<node CREATED="1393536466313" ID="ID_1303389974" MODIFIED="1393536467559" TEXT="child">
+<node CREATED="1393536655212" ID="ID_1972810455" MODIFIED="1393536657188" TEXT="in the context of the child process "/>
+<node CREATED="1393536666037" ID="ID_1405965070" MODIFIED="1393536667718" TEXT="returning from fork "/>
+<node CREATED="1393536682013" ID="ID_90536746" MODIFIED="1393537004028" TEXT="must release all the locks acquired by the prepare fork handler. ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+</node>
+</node>
+<node CREATED="1393536802111" ID="ID_1201984134" MODIFIED="1393536805542" TEXT="We can call pthread_atfork multiple times to install more than one set of fork handlers. ">
+<node CREATED="1393536846464" ID="ID_452618963" MODIFIED="1393536870543" TEXT="the order in which the handlers are called ">
+<node CREATED="1393536912634" ID="ID_760433903" MODIFIED="1393536914838" TEXT="parent and child fork handlers are called in the order in which they were registered "/>
+<node CREATED="1393536932290" ID="ID_201122589" MODIFIED="1393536934207" TEXT="the prepare fork handlers are called in the opposite order from which they were registered.  "/>
+</node>
+<node CREATED="1393536994555" ID="ID_797774901" MODIFIED="1393537012806" TEXT="This allows multiple modules to register their own fork handlers and still honor the locking hierarchy. ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1392949690484" ID="ID_607287955" MODIFIED="1392949691958" TEXT="Threads and I/O ">
+<node CREATED="1393538763092" ID="ID_847178052" MODIFIED="1393538765508" TEXT="pread(fd, buf1, 100, 300); ">
+<node CREATED="1393538776677" ID="ID_1376385676" MODIFIED="1393538778852" TEXT="lseek(fd, 300, SEEK_SET); "/>
+<node CREATED="1393538784469" ID="ID_1645493069" MODIFIED="1393538786436" TEXT="read(fd, buf1, 100); "/>
+</node>
+</node>
 <node CREATED="1392949694956" ID="ID_1514840687" MODIFIED="1392949697257" TEXT="Summary "/>
-<node CREATED="1392949707205" ID="ID_1112814910" MODIFIED="1392949709056" TEXT="Exercises "/>
+<node CREATED="1392949707205" ID="ID_1112814910" MODIFIED="1395043691531" TEXT="Exercises ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+</node>
+<node CREATED="1393342397162" ID="ID_798185148" MODIFIED="1393510059812" TEXT="problem">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<node CREATED="1393342402866" ID="ID_108058634" MODIFIED="1393342406832" TEXT="Figure 12.8 ">
+<node CREATED="1393342413154" ID="ID_768564597" MODIFIED="1393342414733" TEXT="SECTONSEC  "/>
+</node>
+<node CREATED="1393510021569" ID="ID_911399105" MODIFIED="1393510050719" TEXT="624">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      If one of the signals specified in the set is pending at the time sigwait is called, then sigwait will return without blocking. Before returning, sigwait removes the signal from the set of signals pending for the process. To avoid erroneous behavior, a thread must block the signals it is waiting for before calling sigwait. The sigwait function will atomically unblock the signals and wait until one is delivered. Before returning, sigwait will restore the thread's signal mask. If the signals are not blocked at the time that sigwait is called, then a timing window is opened up w
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1395043596570" FOLDED="true" ID="ID_1610336038" MODIFIED="1395736902617" POSITION="right" TEXT="13Daemon Processes ">
+<node CREATED="1395043636202" ID="ID_820966342" MODIFIED="1395043638029" TEXT="Introduction ">
+<node CREATED="1395043959648" ID="ID_630151807" MODIFIED="1395043975700" TEXT="live for a long time "/>
+<node CREATED="1395043981759" ID="ID_849367339" MODIFIED="1395043983301" TEXT="started when the system is bootstrapped "/>
+<node CREATED="1395043993032" ID="ID_1705348048" MODIFIED="1395043995274" TEXT="terminate only when the system is shut down "/>
+<node CREATED="1395044007169" ID="ID_1776857391" MODIFIED="1395044009133" TEXT="don&apos;t have a controlling terminal "/>
+</node>
+<node CREATED="1395043643642" ID="ID_726448842" MODIFIED="1395631910347" TEXT="Daemon Characteristics ">
+<node CREATED="1395625564293" ID="ID_1208881458" MODIFIED="1395625565917" TEXT="Anything with a parent process ID of 0 is usually a kernel process started as part of the system bootstrap procedure ">
+<node CREATED="1395625578512" ID="ID_1037262374" MODIFIED="1395625579698" TEXT="Anything with a parent process ID of 0 is usually a kernel process started as part of the system bootstrap procedure "/>
+<node CREATED="1395625595961" ID="ID_1178954185" MODIFIED="1395625597760" TEXT="Kernel processes are special and generally exist for the entire lifetime of the system "/>
+<node CREATED="1395625607578" ID="ID_1827463063" MODIFIED="1395625609359" TEXT="They run with superuser privileges  "/>
+</node>
+<node CREATED="1395625648652" ID="ID_857574157" MODIFIED="1395625652170" TEXT="some daemon">
+<node CREATED="1395625657276" ID="ID_716204533" MODIFIED="1395625659468" TEXT="kevenTD ">
+<node CREATED="1395625670725" ID="ID_1470946818" MODIFIED="1395625672520" TEXT="provides process context for running scheduled functions in the kernel "/>
+</node>
+<node CREATED="1395625677309" ID="ID_1556618747" MODIFIED="1395625680696" TEXT="kapmd ">
+<node CREATED="1395625698494" ID="ID_1949381676" MODIFIED="1395625700958" TEXT="provides support for the advanced power management features available with various computer systems "/>
+</node>
+<node CREATED="1395625723959" ID="ID_1478320299" MODIFIED="1395625725689" TEXT="kswapd ">
+<node CREATED="1395625733032" ID="ID_379908992" MODIFIED="1395625734703" TEXT="the pageout daemon "/>
+<node CREATED="1395625831061" ID="ID_1329735009" MODIFIED="1395625832700" TEXT="supports the virtual memory subsystem by writing dirty pages to disk slowly over time, so the pages can be reclaimed "/>
+</node>
+<node CREATED="1395625853766" ID="ID_775659756" MODIFIED="1395625884639" TEXT="bdflush and kupdated  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      flushes cached data to disk using two additional daemons
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1395625884583" ID="ID_1214454604" MODIFIED="1395625886690" TEXT="bdflush ">
+<node CREATED="1395625900192" ID="ID_476442102" MODIFIED="1395625901891" TEXT="flushes dirty buffers from the buffer cache back to disk when available memory reaches a low-water mark "/>
+</node>
+<node CREATED="1395625906753" ID="ID_561046131" MODIFIED="1395625908399" TEXT="kupdated "/>
+</node>
+</node>
+</node>
+<node CREATED="1395043649025" ID="ID_35270725" MODIFIED="1395043650805" TEXT="Coding Rules "/>
+<node CREATED="1395043653816" FOLDED="true" ID="ID_419289991" MODIFIED="1395649398942" TEXT="Error Logging ">
+<node CREATED="1395632201147" ID="ID_213195896" MODIFIED="1395632204274" TEXT="three ways to generate log messages ">
+<node CREATED="1395632212051" ID="ID_1268305665" MODIFIED="1395632214177" TEXT="Kernel routines can call the log function ">
+<node CREATED="1395632266788" ID="ID_15986898" MODIFIED="1395632268653" TEXT="These messages can be read by any user process that opens and reads the /dev/klog device "/>
+</node>
+<node CREATED="1395632244308" ID="ID_196232408" MODIFIED="1395632251298" TEXT="user processes (daemons) call the syslog(3) function ">
+<node CREATED="1395632282645" ID="ID_396526374" MODIFIED="1395632284142" TEXT="This causes the message to be sent to the UNIX domain datagram socket /dev/log "/>
+</node>
+<node CREATED="1395632328118" ID="ID_1082435125" MODIFIED="1395632362638" TEXT="A user process on this host, or on some other host that is connected to this host by a TCP/IP network, can send log messages to UDP port 514 ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Note that the syslog function never
+    </p>
+    <p>
+      generates these UDP datagrams: they require explicit network programming by the process
+    </p>
+    <p>
+      generating the log message.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1395632363569" ID="ID_841521155" MODIFIED="1395632365425" TEXT="syslogd daemon reads all three forms of log messages "/>
+<node CREATED="1395632373177" ID="ID_1991323876" MODIFIED="1395632374615" TEXT="/etc/syslog.conf ">
+<node CREATED="1395632382441" ID="ID_1190501028" MODIFIED="1395632384386" TEXT="determines where different classes of messages are to be sent "/>
+</node>
+<node CREATED="1395632403346" ID="ID_1951340877" MODIFIED="1395632406192" TEXT="functions">
+<node CREATED="1395632414514" FOLDED="true" ID="ID_1025540793" MODIFIED="1395649320483" TEXT="void openlog(const char *ident, int option, int facility); ">
+<node CREATED="1395632457596" ID="ID_1758739606" MODIFIED="1395632459804" TEXT="Calling openlog is optional. "/>
+<node CREATED="1395633414478" ID="ID_922494474" MODIFIED="1395646388871" TEXT="facility ">
+<node CREATED="1395647788984" ID="ID_1888017677" MODIFIED="1395647790978" TEXT="LOG_AUTH  ">
+<node CREATED="1395647971763" ID="ID_1917860494" MODIFIED="1395647973359" TEXT="authorization programs: login, su, getty, ... "/>
+</node>
+<node CREATED="1395647800808" ID="ID_795444700" MODIFIED="1395647802746" TEXT="LOG_CRON  ">
+<node CREATED="1395647943419" ID="ID_155025536" MODIFIED="1395647945332" TEXT="cron and at "/>
+</node>
+<node CREATED="1395647811872" ID="ID_841236029" MODIFIED="1395647813617" TEXT="LOG_DAEMON  ">
+<node CREATED="1395647932771" ID="ID_1433260691" MODIFIED="1395647934910" TEXT="system daemons: inetd, routed, ... "/>
+</node>
+<node CREATED="1395647823265" ID="ID_1190350119" MODIFIED="1395647826212" TEXT="LOG_KERN  ">
+<node CREATED="1395647923129" ID="ID_1351687695" MODIFIED="1395647924829" TEXT="messages generated by the kernel "/>
+</node>
+<node CREATED="1395647868721" ID="ID_1109406014" MODIFIED="1395647870348" TEXT="LOG_LOCAL0  "/>
+<node CREATED="1395647873121" ID="ID_758957645" MODIFIED="1395647874716" TEXT="LOG_LOCAL1  ">
+<node CREATED="1395647911410" ID="ID_1109461549" MODIFIED="1395647913181" TEXT="reserved for local use "/>
+</node>
+<node CREATED="1395647878825" ID="ID_1793229250" MODIFIED="1395647880228" TEXT="LOG_LOCAL2  "/>
+<node CREATED="1395647884938" ID="ID_1996285039" MODIFIED="1395647887044" TEXT="LOG_LOCAL3  "/>
+<node CREATED="1395647901946" ID="ID_1826202520" MODIFIED="1395647903584" TEXT="LOG_MAIL  "/>
+</node>
+<node CREATED="1395633497208" ID="ID_1789049895" MODIFIED="1395633509918" TEXT="option ">
+<node CREATED="1395646315941" ID="ID_1935635515" MODIFIED="1395646319040" TEXT="LOG_CONS  ">
+<node CREATED="1395646306437" ID="ID_1507897072" MODIFIED="1395646309881" TEXT="can&apos;t be sent to syslogd via the UNIX domain datagram "/>
+<node CREATED="1395646414182" ID="ID_359888115" MODIFIED="1395646415720" TEXT="the message is written to the console instead "/>
+</node>
+<node CREATED="1395646326421" ID="ID_454810053" MODIFIED="1395646856491" TEXT="LOG_NDELAY  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Open the UNIX domain datagram socket to the syslogd daemon immediately;
+    </p>
+    <p>
+      don't wait until the first message is logged. Normally, the socket is not opened
+    </p>
+    <p>
+      until the first message is logged
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1395646331397" ID="ID_1986180574" MODIFIED="1395646861864" TEXT="LOG_NOWAIT  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Do not wait for child processes that might have been created in the process of
+    </p>
+    <p>
+      logging the message. This prevents conflicts with applications that catch
+    </p>
+    <p>
+      SIGCHLD, since the application might have retrieved the child's status by the
+    </p>
+    <p>
+      time that syslog calls wait.
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+</node>
+<node CREATED="1395646336701" ID="ID_1071979993" MODIFIED="1395646338496" TEXT="LOG_ODELAY  ">
+<node CREATED="1395646326421" ID="ID_35408599" MODIFIED="1395646856491" TEXT="LOG_NDELAY  ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Open the UNIX domain datagram socket to the syslogd daemon immediately;
+    </p>
+    <p>
+      don't wait until the first message is logged. Normally, the socket is not opened
+    </p>
+    <p>
+      until the first message is logged
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1395646342285" ID="ID_1316936391" MODIFIED="1395647013753" TEXT="LOG_PERROR ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Write the log message to standard error in addition to sending it to syslogd.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1395646346853" ID="ID_1314104382" MODIFIED="1395647041544" TEXT="LOG_PID ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Log the process ID with each message.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+</node>
+<node CREATED="1395632422786" ID="ID_1474741487" MODIFIED="1395632424724" TEXT="void syslog(int priority, const char *format, ...); ">
+<node CREATED="1395648001539" ID="ID_1685861758" MODIFIED="1395648005698" TEXT="priority">
+<node CREATED="1395648011956" ID="ID_1256491163" MODIFIED="1395648014000" TEXT="LOG_EMERG  "/>
+<node CREATED="1395648016788" ID="ID_719434288" MODIFIED="1395648018412" TEXT="LOG_ALERT  "/>
+<node CREATED="1395648021892" ID="ID_858168545" MODIFIED="1395648023412" TEXT="LOG_CRIT  "/>
+<node CREATED="1395648026628" ID="ID_1779751572" MODIFIED="1395648028612" TEXT="LOG_ERR  "/>
+<node CREATED="1395648032236" ID="ID_1055712587" MODIFIED="1395648033749" TEXT="LOG_WARNING "/>
+<node CREATED="1395648036389" ID="ID_1948438021" MODIFIED="1395648037925" TEXT="LOG_NOTICE  "/>
+<node CREATED="1395648041452" ID="ID_967692545" MODIFIED="1395648043597" TEXT="LOG_INFO  "/>
+<node CREATED="1395648047069" ID="ID_1441188114" MODIFIED="1395648048765" TEXT="LOG_DEBUG  "/>
+</node>
+</node>
+<node CREATED="1395632431027" ID="ID_1225722448" MODIFIED="1395632432621" TEXT="void closelog(void); ">
+<node CREATED="1395632518238" ID="ID_1935070618" MODIFIED="1395632519836" TEXT="Calling closelog is also optional "/>
+</node>
+<node CREATED="1395632436859" ID="ID_714182930" MODIFIED="1395632439029" TEXT="int setlogmask(int maskpri); ">
+<node CREATED="1395649041033" ID="ID_143884527" MODIFIED="1395649044929" TEXT="set the log priority mask for the process "/>
+<node CREATED="1395649069137" ID="ID_810144803" MODIFIED="1395649070810" TEXT="When the log priority mask is set, messages are not logged unless their priority is set in the log priority mask. "/>
+<node CREATED="1395649105835" ID="ID_397566865" MODIFIED="1395649107721" TEXT="Note that attempts to set the log priority mask to 0 will have no effect. "/>
+</node>
+<node CREATED="1395649324289" ID="ID_1794320002" MODIFIED="1395649326652" TEXT="void vsyslog(int priority, const char *format, va_list arg); "/>
+</node>
+<node CREATED="1395649125459" ID="ID_1956233976" MODIFIED="1395649127270" TEXT="The logger(1) program is also provided by many systems as a way to send log messages to the syslog facility "/>
+<node CREATED="1395649361930" ID="ID_1946751089" MODIFIED="1395649378999" TEXT="syslogd">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Most syslogd implementations will queue messages for a short time. If a duplicate message arrives
+    </p>
+    <p>
+      during this time, the syslog daemon will not write it to the log. Instead, the daemon will print out a
+    </p>
+    <p>
+      message similar to &quot;last message repeated N times.&quot;
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1395043659850" ID="ID_1167665390" MODIFIED="1395043661599" TEXT="Single-Instance Daemons ">
+<node CREATED="1395650747207" ID="ID_93597519" MODIFIED="1395650756373" TEXT="lockfile"/>
+<node CREATED="1395650757359" ID="ID_424327520" MODIFIED="1395650764093" TEXT="write into pid"/>
+</node>
+<node CREATED="1395043665498" ID="ID_936530780" MODIFIED="1395043667370" TEXT="Daemon Conventions ">
+<node CREATED="1395650794304" ID="ID_1974799489" MODIFIED="1395650796936" TEXT="If the daemon uses a lock file, the file is usually stored in /var/run ">
+<node CREATED="1395650903523" ID="ID_1577111463" MODIFIED="1395650916171" TEXT="name:/var/run/crond.pid "/>
+</node>
+<node CREATED="1395651121489" ID="ID_57308834" MODIFIED="1395651123936" TEXT="If the daemon supports configuration options, they are usually stored in /etc ">
+<node CREATED="1395651132785" ID="ID_1571809065" MODIFIED="1395651136924" TEXT="/etc/syslog.conf "/>
+</node>
+<node CREATED="1395651156146" ID="ID_193157329" MODIFIED="1395651157978" TEXT="Daemons can be started from the command line, but they are usually started from one of the system initialization scripts (/etc/rc* or /etc/init.d/* ).  "/>
+<node CREATED="1395651631631" ID="ID_351365730" MODIFIED="1395651641296" TEXT="If a daemon has a configuration file, the daemon reads it when it starts, but usually won&apos;t look at it again ">
+<node CREATED="1395651649912" ID="ID_1680932652" MODIFIED="1395651657254" TEXT="If an administrator changes the configuration ,need to restart"/>
+<node CREATED="1395651675304" ID="ID_466081214" MODIFIED="1395651676840" TEXT="To avoid this, some daemons will catch SIGHUP and reread their configuration files when they receive the signal "/>
+</node>
+</node>
+<node CREATED="1395043670914" ID="ID_1576879899" MODIFIED="1395043672898" TEXT="ClientServer Model "/>
+<node CREATED="1395043675946" ID="ID_618131736" MODIFIED="1395043677093" TEXT="Summary "/>
+<node CREATED="1395043679850" ID="ID_362605863" MODIFIED="1395043682081" TEXT="Exercises ">
+<node CREATED="1395717042479" ID="ID_1717202845" MODIFIED="1395717044917" TEXT="13.2">
+<node CREATED="1395717046575" HGAP="22" ID="ID_888545915" MODIFIED="1395717606739" TEXT="daemons" VSHIFT="-27">
+<node CREATED="1395717091113" ID="ID_1785171166" MODIFIED="1395717590119" TEXT="kworker">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      <font face="UbuntuRegular, Ubuntu, Bitstream Vera Sans, DejaVu Sans, Tahoma, sans-serif" size="14px" color="rgb(51, 51, 51)"><span http-equiv="content-type" style="color: rgb(51, 51, 51); white-space: normal; font-weight: normal; font-variant: normal; text-align: left; font-family: UbuntuRegular, Ubuntu, Bitstream Vera Sans, DejaVu Sans, Tahoma, sans-serif; line-height: 18px; text-indent: 0px; background-color: rgb(255, 255, 255); word-spacing: 0px; font-size: 14px; display: inline !important; font-style: normal; text-transform: none; float: none; letter-spacing: normal" content="text/html; charset=utf-8">&quot;kworker&quot; is a placeholder process for kernel worker threads, which perform most of the actual processing for the kernel, especially in cases where there are interrupts, timers, I/O, etc. These typically correspond to the vast majority of any allocated &quot;system&quot; time to running processes.</span></font>
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1395734937232" ID="ID_1576365928" MODIFIED="1395734939175" TEXT="winbindd">
+<node CREATED="1395734945496" ID="ID_1917234015" MODIFIED="1395734947438" TEXT="Name Service Switch daemon for resolving names from NT servers"/>
+<node CREATED="1395734953328" ID="ID_183281170" MODIFIED="1395734955271" TEXT="This program is part of the samba(7) suite."/>
+<node CREATED="1395734990818" ID="ID_533574937" MODIFIED="1395734992504" TEXT="provides a number of services to the Name Service Switch capability found in most modern C libraries, to arbitrary applications via PAM and ntlm_auth and to Samba itself"/>
+</node>
+<node CREATED="1395735427695" ID="ID_950921957" MODIFIED="1395735428913" TEXT="whoopsie">
+<node CREATED="1395735414583" ID="ID_1199902489" MODIFIED="1395735416205" TEXT="It&apos;s the &quot;Ubuntu Error Reporting&quot; daemon, and is installed by default in both desktop/server installations."/>
+</node>
+<node CREATED="1395736012344" ID="ID_795109754" MODIFIED="1395736014470" TEXT="cups">
+<node CREATED="1395736313810" ID="ID_1805757600" MODIFIED="1395736315033" TEXT="CUPS is the standards-based, open source printing system developed by Apple Inc"/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1395736904957" ID="ID_668430026" MODIFIED="1395736923299" POSITION="right" TEXT="14Advanted I/O">
+<node CREATED="1395736924798" ID="ID_1511726348" MODIFIED="1395736929148" TEXT="introduction"/>
+<node CREATED="1395736929734" FOLDED="true" ID="ID_1565147501" MODIFIED="1395797334885" TEXT="Nonblocking I/O">
+<node CREATED="1395737426459" ID="ID_568376492" MODIFIED="1395737436625" TEXT="two categories system call">
+<node CREATED="1395737438163" ID="ID_1293348730" MODIFIED="1395737439897" TEXT="slow">
+<node CREATED="1395737511261" ID="ID_415914883" MODIFIED="1395737512339" TEXT="can block forever "/>
+<node CREATED="1395737521214" ID="ID_4398257" MODIFIED="1395737528355" TEXT="includes:">
+<node CREATED="1395738343868" ID="ID_1582513354" MODIFIED="1395738345120" TEXT="Reads that can block the caller forever if data isn&apos;t present with certain file types (pipes, terminal devices, and network devices) "/>
+<node CREATED="1395738354716" ID="ID_1087304928" MODIFIED="1395738357016" TEXT="Writes that can block the caller forever if the data can&apos;t be accepted immediately by these same file types (no room in the pipe, network flow control, etc.) "/>
+<node CREATED="1395738369397" ID="ID_1586806234" MODIFIED="1395738371624" TEXT="Opens that block until some condition occurs on certain file types (such as an open of a terminal device that waits until an attached modem answers the phone, or an open of a FIFO for writing- only when no other process has the FIFO open for reading) "/>
+<node CREATED="1395738379413" ID="ID_1781221064" MODIFIED="1395738382169" TEXT="Reads and writes of files that have mandatory record locking enabled "/>
+<node CREATED="1395738388189" ID="ID_1384275948" MODIFIED="1395738389945" TEXT="Certain ioctl operations "/>
+<node CREATED="1395738394877" ID="ID_807877090" MODIFIED="1395738396714" TEXT="Some of the interprocess communication functions "/>
+</node>
+</node>
+<node CREATED="1395737440371" ID="ID_375742051" MODIFIED="1395737442010" TEXT="other"/>
+</node>
+<node CREATED="1395738497664" ID="ID_1785262359" MODIFIED="1395738500086" TEXT="issue an I/O operation, such as an open, read, or write, and not have it block forever ">
+<node CREATED="1395738516896" ID="ID_1546106735" MODIFIED="1395738519932" TEXT="two ways to specify  it">
+<node CREATED="1395738520865" ID="ID_454492448" MODIFIED="1395738542791" TEXT="open  with O_NONBLOCK "/>
+<node CREATED="1395738621179" ID="ID_247589080" MODIFIED="1395738622345" TEXT="we call fcntl to turn on the O_NONBLOCK file status flag "/>
+</node>
+</node>
+</node>
+<node CREATED="1395736937894" FOLDED="true" ID="ID_676453084" MODIFIED="1396403957644" TEXT="Record Locking">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Record locking is the term normally used to describe the ability of a process to prevent other
+    </p>
+    <p>
+      processes from modifying a region of a file while the first process is reading or modifying that portion
+    </p>
+    <p>
+      of the file
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1395797677081" ID="ID_852701621" MODIFIED="1395797679363" TEXT="history">
+<node CREATED="1395797680193" ID="ID_1857972937" MODIFIED="1395797681487" TEXT="flock">
+<node CREATED="1395797692201" ID="ID_1543729129" MODIFIED="1395797693971" TEXT="locks only entire files, not regions of a file "/>
+</node>
+<node CREATED="1395797708905" ID="ID_900729544" MODIFIED="1395797713687" TEXT="fcntl">
+<node CREATED="1395797717777" ID="ID_881344067" MODIFIED="1395797720249" TEXT="lockf"/>
+</node>
+</node>
+<node CREATED="1395797939502" ID="ID_521638550" MODIFIED="1395803590788" TEXT="fcntl">
+<node CREATED="1395802432013" ID="ID_1102705023" MODIFIED="1395802433372" TEXT="int fcntl(int filedes, int cmd, ... /* struct flock *flockptr */ ); "/>
+<node CREATED="1395802458525" ID="ID_723262708" MODIFIED="1395802459284" TEXT="cmd">
+<node CREATED="1395802463718" ID="ID_365207533" MODIFIED="1395802468247" TEXT="F_GETLK ">
+<node CREATED="1395804069107" ID="ID_1826584241" MODIFIED="1395804122531" TEXT="if the flockptr is prevent by exiting lock,set the lock to lockptr"/>
+<node CREATED="1395804123148" ID="ID_553231375" MODIFIED="1395804148219" TEXT="if no,set the l_type to F_UNLCK"/>
+</node>
+<node CREATED="1395802471246" ID="ID_234739400" MODIFIED="1395802472132" TEXT="F_SETLK ">
+<node CREATED="1395804272903" ID="ID_81546601" MODIFIED="1395804309398" TEXT="if prevent by the compatibility rulefcntl returns immediately with errno set to either EACCES or EAGAIN "/>
+<node CREATED="1395804333424" ID="ID_1034570306" MODIFIED="1395804334358" TEXT="also used to clear the lock described by flockptr (l_type of F_UNLCK). "/>
+</node>
+<node CREATED="1395802475718" ID="ID_455155142" MODIFIED="1395802476604" TEXT="F_SETLKW ">
+<node CREATED="1395804377888" ID="ID_979038791" MODIFIED="1395804379583" TEXT="a blocking version of F_SETLK "/>
+<node CREATED="1395804391409" ID="ID_1893547445" MODIFIED="1395804393116" TEXT="The process wakes up either when the lock becomes available or when interrupted by a signal "/>
+</node>
+</node>
+<node CREATED="1395802503854" ID="ID_1588325115" MODIFIED="1395802504940" TEXT="args">
+<node CREATED="1395802507102" ID="ID_505001678" MODIFIED="1395802516613" TEXT="struct flock">
+<node CREATED="1395802529415" ID="ID_1618735378" MODIFIED="1395802531045" TEXT="l_type ">
+<node CREATED="1395802571624" ID="ID_1284259906" MODIFIED="1395802574662" TEXT="F_RDLCK"/>
+<node CREATED="1395802578376" ID="ID_301673151" MODIFIED="1395802580566" TEXT="F_WRLCK"/>
+<node CREATED="1395802584176" ID="ID_1305021950" MODIFIED="1395802588086" TEXT="F_UNLCK "/>
+</node>
+<node CREATED="1395802536399" ID="ID_413532112" MODIFIED="1395802541357" TEXT="l_start"/>
+<node CREATED="1395802546471" ID="ID_925829669" MODIFIED="1395802548373" TEXT="l_whence ">
+<node CREATED="1395802596808" ID="ID_1819372879" MODIFIED="1395802600550" TEXT="SEEK_SET"/>
+<node CREATED="1395802604472" ID="ID_591908674" MODIFIED="1395802606358" TEXT="SEEK_CUR"/>
+<node CREATED="1395802609736" ID="ID_209969254" MODIFIED="1395802611375" TEXT="SEEK_END "/>
+</node>
+<node CREATED="1395802554031" ID="ID_384979380" MODIFIED="1395802555438" TEXT="l_len ">
+<node CREATED="1395802645913" ID="ID_1066841427" MODIFIED="1395802647863" TEXT="0 means lock to EOF "/>
+</node>
+<node CREATED="1395802558967" ID="ID_621551662" MODIFIED="1395802564510" TEXT="l_pid">
+<node CREATED="1395802668977" ID="ID_125716784" MODIFIED="1395802670641" TEXT="returned with F_GETLK "/>
+</node>
+</node>
+</node>
+</node>
+<node CREATED="1395802752835" ID="ID_105099733" MODIFIED="1395802754503" TEXT="rules about the specification of the region to be locked or unlocked ">
+<node CREATED="1395802821676" ID="ID_1164276218" MODIFIED="1395802823369" TEXT="Locks can start and extend beyond the current end of file, but cannot start or extend before the beginning of the file. "/>
+<node CREATED="1395803262756" ID="ID_1130580565" MODIFIED="1395803279008" TEXT="rdlock and wlock">
+<node CREATED="1395803252100" ID="ID_274215855" MODIFIED="1395803253257" TEXT="The compatibility rule applies to lock requests made from different processes, not to multiple lock requests made by a single process. If a process has an existing lock on a range of a file, a subsequent attempt to place a lock on the same range by the same process will replace the existing lock with the new one "/>
+<node CREATED="1395803292213" ID="ID_1764773874" MODIFIED="1395803294297" TEXT="To obtain a read lock, the descriptor must be open for reading; to obtain a write lock, the descriptor must be open for writing "/>
+</node>
+<node CREATED="1395890562033" ID="ID_37403796" MODIFIED="1395890564257" TEXT="Implied Inheritance and Release of Locks ">
+<node CREATED="1395889669514" ID="ID_1515837304" MODIFIED="1395889671565" TEXT="Locks are associated with a process and a file ">
+<node CREATED="1395889751480" ID="ID_113087593" MODIFIED="1395889753384" TEXT="when a process terminates, all its locks are released "/>
+<node CREATED="1395889762656" ID="ID_507404174" MODIFIED="1395889788152" TEXT="whenever a descriptor is closed, any locks on the file referenced by that descriptor for that process are released ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      fd1 = open(pathname, ...);
+    </p>
+    <p>
+      read_lock(fd1, ...);
+    </p>
+    <p>
+      fd2 = dup(fd1);
+    </p>
+    <p>
+      close(fd2);
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      fd1 = open(pathname, ...);
+    </p>
+    <p>
+      read_lock(fd1, ...);
+    </p>
+    <p>
+      fd2 = open(pathname, ...)
+    </p>
+    <p>
+      close(fd2);
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node CREATED="1395889802655" ID="ID_1794491889" MODIFIED="1395889804301" TEXT="Locks are never inherited by the child across a fork "/>
+<node CREATED="1395890031021" ID="ID_1564052131" MODIFIED="1395890033883" TEXT="Locks are inherited by a new program across an exec "/>
+</node>
+<node CREATED="1395903058393" ID="ID_1892539294" MODIFIED="1395903065297" TEXT="Locks at End of File ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="messagebox_warning"/>
+<icon BUILTIN="messagebox_warning"/>
+</node>
+</node>
+<node CREATED="1396327206131" ID="ID_643551871" MODIFIED="1396327211014" TEXT="Advisory versus Mandatory Locking ">
+<node CREATED="1396334372292" ID="ID_1408698956" MODIFIED="1396334375378" TEXT="advisory">
+<node CREATED="1396339266151" ID="ID_34165115" MODIFIED="1396339303976" TEXT="need flock to lock "/>
+</node>
+<node CREATED="1396335894464" ID="ID_1501391546" MODIFIED="1396335968282" TEXT="Mandatory locking ">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      On Linux, if you want mandatory locking, you need to enable it on a per file
+    </p>
+    <p>
+      system basis by using the -o mand option to the mount command
+    </p>
+    <p>
+      
+    </p>
+    <p>
+      Mandatory locking is enabled for a particular file by turning on the set-group-ID bit and turning off
+    </p>
+    <p>
+      the group-execute bit
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1396335911010" ID="ID_341972030" MODIFIED="1396335912615" TEXT="causes the kernel to check every open, read, and write to verify that the calling process isn&apos;t violating a lock on the file being accessed "/>
+</node>
+</node>
+</node>
+<node CREATED="1395736945270" ID="ID_898226691" MODIFIED="1396404008730" TEXT="STREAMS">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The STREAMS mechanism is provided by System V as a general way to interface communication
+    </p>
+    <p>
+      drivers into the kernel.
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1396427969198" ID="ID_499782989" MODIFIED="1396428072057" TEXT="14.13 what">
+<icon BUILTIN="wizard"/>
+<node CREATED="1396427974727" ID="ID_1304989750" MODIFIED="1396427979141" TEXT="stream head"/>
+<node CREATED="1396427980023" ID="ID_375864419" MODIFIED="1396428011491" TEXT="processing modules"/>
+<node CREATED="1396427985360" ID="ID_677337781" MODIFIED="1396427991127" TEXT="driver"/>
+</node>
+<node CREATED="1396428670620" ID="ID_143356050" MODIFIED="1396428671696" TEXT="All STREAMS devices are character special files "/>
+<node CREATED="1396428540896" ID="ID_1057179373" MODIFIED="1396428546652" TEXT="access stream">
+<node CREATED="1396428553685" ID="ID_1215611317" MODIFIED="1396428555152" TEXT="open, close, read, write, and ioctl "/>
+<node CREATED="1396428589113" ID="ID_1102190092" MODIFIED="1396428591433" TEXT="SVR3 ">
+<node CREATED="1396428633548" ID="ID_278807791" MODIFIED="1396428635561" TEXT="getmsg, putmsg, and poll "/>
+</node>
+<node CREATED="1396428589113" ID="ID_1019836750" MODIFIED="1396428603184" TEXT="SVR4">
+<node CREATED="1396428575426" ID="ID_1251682900" MODIFIED="1396428576554" TEXT="getpmsg and putpmsg "/>
+</node>
+</node>
+<node CREATED="1396428713200" ID="ID_319133703" MODIFIED="1396428714491" TEXT="STREAMS Messages ">
+<node CREATED="1396428733602" ID="ID_25573896" MODIFIED="1396428734186" TEXT="All input and output under STREAMS is based on messages "/>
+<node CREATED="1396428760414" ID="ID_136398498" MODIFIED="1396428761495" TEXT="consists of ">
+<node CREATED="1396428769095" ID="ID_416506615" MODIFIED="1396429270832" TEXT="type">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      We'll encounter only three of these message types with
+    </p>
+    <p>
+      the functions we use (read, write, getmsg, getpmsg, putmsg, and putpmsg)
+    </p>
+  </body>
+</html>
+</richcontent>
+<node CREATED="1396429273519" ID="ID_1518082418" MODIFIED="1396429275038" TEXT="M_DATA "/>
+<node CREATED="1396429285838" ID="ID_238739021" MODIFIED="1396429287045" TEXT="M_PROTO "/>
+<node CREATED="1396429312501" ID="ID_1477349973" MODIFIED="1396429312501" TEXT=""/>
+</node>
+<node CREATED="1396428781736" ID="ID_815763198" MODIFIED="1396428783202" TEXT="optional control information, "/>
+<node CREATED="1396428793920" ID="ID_1250687992" MODIFIED="1396428795156" TEXT="optional data "/>
+</node>
+<node CREATED="1396428963414" ID="ID_1531233223" MODIFIED="1396428982140" TEXT=" The control information and data are specified by ">
+<node CREATED="1396428983622" ID="ID_383130990" MODIFIED="1396428984707" TEXT="strbuf structures ">
+<node CREATED="1396429025841" ID="ID_1556661790" MODIFIED="1396429026895" TEXT="int maxlen "/>
+<node CREATED="1396429031143" ID="ID_1269531382" MODIFIED="1396429031964" TEXT="int len; "/>
+<node CREATED="1396429035895" ID="ID_101631997" MODIFIED="1396429036712" TEXT="char *buf; "/>
+</node>
+</node>
+<node CREATED="1396429146908" ID="ID_21788234" MODIFIED="1396429161652" TEXT="Figure 14.15. Type of STREAMS message generated for write, putmsg, and putpmsg ">
+<icon BUILTIN="wizard"/>
+</node>
+</node>
+</node>
+<node CREATED="1395736950830" ID="ID_664047134" MODIFIED="1395736962196" TEXT="I/O Multiplexing"/>
+<node CREATED="1395736962862" ID="ID_538848863" MODIFIED="1395736976453" TEXT="Asynchronous I/O"/>
+<node CREATED="1395736977151" ID="ID_816322505" MODIFIED="1395736986021" TEXT="readv and writev Functions"/>
+<node CREATED="1395736987319" ID="ID_53986937" MODIFIED="1395736996094" TEXT="readn and writen Functions"/>
+<node CREATED="1395736997175" ID="ID_1813072623" MODIFIED="1395737005070" TEXT="Memory-Mapped I/O"/>
+<node CREATED="1395737006544" ID="ID_903519873" MODIFIED="1395737013734" TEXT="summary"/>
+<node CREATED="1395737016720" ID="ID_567416017" MODIFIED="1395737021718" TEXT="Exercises"/>
 </node>
 </node>
 </map>
