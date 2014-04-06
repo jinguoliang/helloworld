@@ -46,4 +46,6 @@ sudo apt-get install mate-desktop-environment			kill my ubuntu ,it's so bad
 Linux OS    :
 SteamOS
 
+==== Problems ====
+[[+Problems|Problems]] some problems in linux system.
 

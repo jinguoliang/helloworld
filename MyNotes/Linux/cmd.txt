@@ -22,11 +22,11 @@ mplayer 0 9 音量  <>切歌
 加密
 md5sum 计算md5
 
-下载文件
+==== Internet: ====
 curl  url > file
 wget url
-
-浏览器
+Nethogs 是一个终端下的网络流量监控工具，它的特别之处在于可以显示每个进程的带宽占用情况，这样可以更直观获取网络使用情况。它支持 IPv4 和 IPv6 协议、支持本地网卡及 PPP 链接。
+__webclient:__
 lynx
 w3m
 

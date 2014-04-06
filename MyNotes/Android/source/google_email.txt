@@ -5,6 +5,11 @@ Creation-Date: 2014-01-29T11:07:00+08:00
 ====== google email ======
 Created Wednesday 29 January 2014
 
+the FrameWork
+
+{{file:///media/jinux/Soft/email_framework.jpg}}
+
+==== the Souce tree ====
 src/
 ├── com
 │   ├── android

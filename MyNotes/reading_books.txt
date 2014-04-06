@@ -13,6 +13,12 @@ Created 星期六 12 十月 2013
 
 
 小说:
-倾国倾城
-乱世佳人	wind
+倾国倾城 finish
+乱世佳人	wind  finish
 
+成功学：
+激发心灵潜力  finish
+
+编程：
+画家和黑客
+unix环境高级编程  
