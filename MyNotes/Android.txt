@@ -11,7 +11,7 @@ Created 星期六 12 十月 2013
 2.[[+OpenGL ES]]
 3.[[+蓝牙 wifi NFC相关协议]]
 4.Android上线产品开发经验 
-5.Android [[FrameWork开发集成经验]]
+5.Android FrameWork开发集成经验
 6.Linux系统编程经验   
 7.精通脚本编程   Going On
 

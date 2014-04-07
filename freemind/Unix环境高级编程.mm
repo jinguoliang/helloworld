@@ -4448,17 +4448,17 @@
 <node CREATED="1392952883696" ID="ID_278083049" MODIFIED="1392952885737" TEXT="All threads within a single process have access to the same process components, such as file descriptors and memory. "/>
 <node CREATED="1392952924568" ID="ID_446283079" MODIFIED="1392952926761" TEXT="synchronization mechanisms "/>
 </node>
-<node CREATED="1392949577119" FOLDED="true" ID="ID_1904222331" MODIFIED="1392963512960" TEXT="Thread Concepts ">
-<node CREATED="1392952991271" ID="ID_489088662" MODIFIED="1392952993259" TEXT="With multiple threads of control, we can design our programs to do more than one thing at a time within a single process, with each thread handling a separate task.  ">
-<node CREATED="1392953000607" ID="ID_1098757692" MODIFIED="1392953002272" TEXT="benefits. ">
-<node CREATED="1392953019575" ID="ID_989837729" MODIFIED="1392953021608" TEXT="simplify code that deals with asynchronous events by assigning a separate thread to handle each event type "/>
+<node CREATED="1392949577119" FOLDED="true" ID="ID_1904222331" MODIFIED="1394690627152" TEXT="Thread Concepts ">
+<node CREATED="1392952991271" FOLDED="true" ID="ID_489088662" MODIFIED="1394690107340" TEXT="With multiple threads of control, we can design our programs to do more than one thing at a time within a single process, with each thread handling a separate task.  ">
+<node CREATED="1392953000607" ID="ID_1098757692" MODIFIED="1394689801337" TEXT="benefits. ">
+<node CREATED="1392953019575" HGAP="22" ID="ID_989837729" MODIFIED="1394690099995" TEXT="simplify code that deals with asynchronous events by assigning a separate thread to handle each event type " VSHIFT="5"/>
 <node CREATED="1392953050758" ID="ID_503264223" MODIFIED="1392953065731" TEXT="share memory and file descriptors  is more simple"/>
 <node CREATED="1392953076662" ID="ID_504799079" MODIFIED="1392953078575" TEXT="Some problems can be partitioned so that overall program throughput can be improved. "/>
 <node CREATED="1392953331924" ID="ID_1013066132" MODIFIED="1392953333002" TEXT="interactive programs can realize improved response time "/>
 </node>
 </node>
 <node CREATED="1392963275598" ID="ID_633686351" MODIFIED="1392963278852" TEXT="an execution context ">
-<node CREATED="1392963290894" ID="ID_274427657" MODIFIED="1392963292669" TEXT="a thread ID that identifies the thread within a process "/>
+<node CREATED="1392963290894" HGAP="21" ID="ID_274427657" MODIFIED="1394690162274" TEXT="a thread ID that identifies the thread within a process " VSHIFT="16"/>
 <node CREATED="1392963297454" ID="ID_88984796" MODIFIED="1392963299192" TEXT="a set of register values "/>
 <node CREATED="1392963302422" ID="ID_1026856978" MODIFIED="1392963304321" TEXT=" a stack "/>
 <node CREATED="1392963313335" ID="ID_371708530" MODIFIED="1392963315028" TEXT="a scheduling priority and policy "/>
@@ -4467,16 +4467,16 @@
 <node CREATED="1392963335671" ID="ID_1910549876" MODIFIED="1392963339075" TEXT="thread- specific data "/>
 </node>
 <node CREATED="1392963386296" ID="ID_1809520130" MODIFIED="1392963388716" TEXT="sharable among the threads in a process ">
-<node CREATED="1392963396993" ID="ID_825673302" MODIFIED="1392963399266" TEXT="the text of the executable program "/>
-<node CREATED="1392963410993" ID="ID_1765688772" MODIFIED="1392963412522" TEXT="global and heap memory "/>
+<node CREATED="1392963396993" HGAP="16" ID="ID_825673302" MODIFIED="1394690527090" TEXT="the text of the executable program " VSHIFT="2"/>
+<node CREATED="1392963410993" HGAP="23" ID="ID_1765688772" MODIFIED="1394690518883" TEXT="global and heap memory " VSHIFT="2"/>
 <node CREATED="1392963416337" ID="ID_1944851140" MODIFIED="1392963418087" TEXT="the stacks "/>
 <node CREATED="1392963424761" ID="ID_1911902076" MODIFIED="1392963427091" TEXT="the file descriptors "/>
 </node>
 <node CREATED="1392963470714" ID="ID_1899828005" MODIFIED="1392963472961" TEXT="&quot;pthreads&quot; for &quot;POSIX threads,&quot; "/>
 </node>
-<node CREATED="1392949582471" FOLDED="true" ID="ID_822822625" MODIFIED="1392971322640" TEXT="Thread Identification ">
+<node CREATED="1392949582471" FOLDED="true" ID="ID_822822625" MODIFIED="1394690896029" TEXT="Thread Identification ">
 <node CREATED="1392963510043" ID="ID_1707006119" MODIFIED="1392963512441" TEXT="significance only within the context of the process "/>
-<node CREATED="1392963555068" ID="ID_394511809" MODIFIED="1392963669799" TEXT="int pthread_equal(pthread_t tid1, pthread_t tid2) ">
+<node CREATED="1392963555068" ID="ID_394511809" MODIFIED="1394690888631" TEXT="int pthread_equal(pthread_t tid1, pthread_t tid2) ">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -4497,20 +4497,17 @@
     <p>
       
     </p>
-    <p>
-      
-    </p>
   </body>
 </html></richcontent>
 </node>
 <node CREATED="1392963672703" ID="ID_1766691068" MODIFIED="1392963674826" TEXT="pthread_t pthread_self(void); "/>
 </node>
-<node CREATED="1392949589728" FOLDED="true" ID="ID_649255446" MODIFIED="1392971321112" TEXT="Thread Creation ">
+<node CREATED="1392949589728" ID="ID_649255446" MODIFIED="1394690897510" TEXT="Thread Creation ">
 <node CREATED="1392964049312" ID="ID_214400764" MODIFIED="1392964052058" TEXT="int pthread_create(pthread_t *restrict tidp, const pthread_attr_t *restrict attr, void *(*start_rtn)(void), void *restrict arg); "/>
-<node CREATED="1392964216228" ID="ID_650059582" MODIFIED="1392964218230" TEXT="The newly created thread has access to the process address space and inherits the calling thread&apos;s floating-point environment and signal mask ">
+<node CREATED="1392964216228" FOLDED="true" ID="ID_650059582" MODIFIED="1394691512679" TEXT="The newly created thread has access to the process address space and inherits the calling thread&apos;s floating-point environment and signal mask ">
 <node CREATED="1392964223284" ID="ID_474567342" MODIFIED="1392964225588" TEXT="however, the set of pending signals for the thread is cleared. "/>
 </node>
-<node CREATED="1392964315982" ID="ID_440048100" MODIFIED="1392964318298" TEXT="Note that the pthread functions usually return an error code when they fail. They don&apos;t set errno like the other POSIX functions. ">
+<node CREATED="1392964315982" ID="ID_440048100" MODIFIED="1394691510674" TEXT="Note that the pthread functions usually return an error code when they fail. They don&apos;t set errno like the other POSIX functions. ">
 <node CREATED="1392964324878" ID="ID_1024261863" MODIFIED="1392964327211" TEXT="The per thread copy of errno is provided only for compatibility with existing functions that use it. "/>
 </node>
 </node>
@@ -4579,9 +4576,79 @@
 </node>
 </node>
 </node>
-<node CREATED="1392949600936" ID="ID_1649197403" MODIFIED="1392949602245" TEXT="Thread Synchronization "/>
-<node CREATED="1392949604984" ID="ID_1196509855" MODIFIED="1392949606558" TEXT="Summary "/>
-<node CREATED="1392949609496" ID="ID_1749062199" MODIFIED="1392949611953" TEXT="Exercises "/>
+<node CREATED="1392949600936" FOLDED="true" ID="ID_1649197403" MODIFIED="1394689551457" TEXT="Thread Synchronization ">
+<node CREATED="1393077250554" ID="ID_1628759742" MODIFIED="1393077253681" TEXT="Mutexes">
+<node CREATED="1393077325956" ID="ID_195342127" MODIFIED="1393077327466" TEXT="int pthread_mutex_init(pthread_mutex_t *restrict mutex, const pthread_mutexattr_t *restrict attr);"/>
+<node CREATED="1393077332347" ID="ID_686700518" MODIFIED="1393077333991" TEXT="int pthread_mutex_destroy(pthread_mutex_t *mutex);"/>
+<node CREATED="1393077357783" ID="ID_1369051332" MODIFIED="1393077358834" TEXT="int pthread_mutex_lock(pthread_mutex_t *mutex);">
+<node CREATED="1393077503414" ID="ID_64095341" MODIFIED="1393077504661" TEXT="unlocked">
+<node CREATED="1393077507988" ID="ID_1458952808" MODIFIED="1393077509560" TEXT="lock"/>
+</node>
+<node CREATED="1393077511165" ID="ID_828056694" MODIFIED="1393077513458" TEXT="locked">
+<node CREATED="1393077514379" ID="ID_1248968445" MODIFIED="1393077516601" TEXT="wait"/>
+</node>
+</node>
+<node CREATED="1393077369833" ID="ID_1662047500" MODIFIED="1393077371033" TEXT="int pthread_mutex_trylock(pthread_mutex_t *mutex);">
+<node CREATED="1393077496135" ID="ID_854778818" MODIFIED="1393077497535" TEXT="unlocked">
+<node CREATED="1393077523755" ID="ID_1560622401" MODIFIED="1393077525725" TEXT="lock"/>
+</node>
+<node CREATED="1393077527576" ID="ID_1546023562" MODIFIED="1393077529324" TEXT="locked">
+<node CREATED="1393077530179" ID="ID_792939620" MODIFIED="1393077536780" TEXT="failed"/>
+<node CREATED="1393077547058" ID="ID_1082383282" MODIFIED="1393077551976" TEXT="noblock"/>
+</node>
+</node>
+<node CREATED="1393077376234" ID="ID_31244048" MODIFIED="1393077378697" TEXT="int pthread_mutex_unlock(pthread_mutex_t *mutex);"/>
+</node>
+<node CREATED="1393081723286" ID="ID_731045825" MODIFIED="1393086428496" TEXT="Deadlock Avoidance">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      have the potential for a deadlock only when one thread Sometimes, an application's architecture makes it difficult to apply a lock ordering
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1393086459277" ID="ID_1819680063" MODIFIED="1393086461300" TEXT="ReaderWriter Locks">
+<node CREATED="1393086473434" ID="ID_1907645415" MODIFIED="1393086475235" TEXT="int pthread_rwlock_init(pthread_rwlock_t *restrict rwlock, const pthread_rwlockattr_t *restrict attr);"/>
+<node CREATED="1393086485992" ID="ID_203730568" MODIFIED="1393086487470" TEXT="int pthread_rwlock_destroy(pthread_rwlock_t *rwlock);"/>
+<node CREATED="1393151148406" ID="ID_1821852014" MODIFIED="1393151150165" TEXT="int pthread_rwlock_rdlock(pthread_rwlock_t *rwlock);"/>
+<node CREATED="1393151159475" ID="ID_1723791153" MODIFIED="1393151161489" TEXT="int pthread_rwlock_wrlock(pthread_rwlock_t *rwlock);"/>
+<node CREATED="1393151169949" ID="ID_751097395" MODIFIED="1393151172712" TEXT="int pthread_rwlock_unlock(pthread_rwlock_t *rwlock);"/>
+<node CREATED="1393151264244" ID="ID_229617342" MODIFIED="1393151265811" TEXT="int pthread_rwlock_tryrdlock(pthread_rwlock_t *rwlock);"/>
+<node CREATED="1393151273019" ID="ID_345353548" MODIFIED="1393151274536" TEXT="int pthread_rwlock_trywrlock(pthread_rwlock_t *rwlock);"/>
+</node>
+<node CREATED="1393158274618" FOLDED="true" ID="ID_1958996318" MODIFIED="1393160016180" TEXT="Condition Variables">
+<node CREATED="1393158452195" ID="ID_577195859" MODIFIED="1393158454223" TEXT="PTHREAD_COND_INITIALIZER">
+<node CREATED="1393158461927" ID="ID_1922717461" MODIFIED="1393158463495" TEXT="a statically-allocated condition variable"/>
+</node>
+<node CREATED="1393158470094" ID="ID_1507517193" MODIFIED="1393158471380" TEXT="int pthread_cond_init(pthread_cond_t *restrict cond, pthread_condattr_t *restrict attr);"/>
+<node CREATED="1393158476772" ID="ID_723086098" MODIFIED="1393158478145" TEXT="int pthread_cond_destroy(pthread_cond_t *cond);"/>
+<node CREATED="1393158527045" ID="ID_287616110" MODIFIED="1393158528424" TEXT="int pthread_cond_wait(pthread_cond_t *restrict cond, pthread_mutex_t *restrict mutex);"/>
+<node CREATED="1393158535648" ID="ID_771574414" MODIFIED="1393158536713" TEXT="int pthread_cond_timedwait(pthread_cond_t *restrict cond, pthread_mutex_t *restrict mutex, const struct timespec *restrict timeout);"/>
+<node CREATED="1393158960381" ID="ID_806626163" MODIFIED="1393158961806" TEXT="int pthread_cond_signal(pthread_cond_t *cond);"/>
+<node CREATED="1393158966790" ID="ID_379656033" MODIFIED="1393158968794" TEXT="int pthread_cond_broadcast(pthread_cond_t *cond);"/>
+</node>
+</node>
+<node CREATED="1392949604984" FOLDED="true" ID="ID_1196509855" MODIFIED="1394689553167" TEXT="Summary ">
+<node CREATED="1393160019265" ID="ID_1169048077" MODIFIED="1393160020969" TEXT="concept of threads"/>
+<node CREATED="1393160050358" ID="ID_1676063974" MODIFIED="1393160055837" TEXT="create and destroy them"/>
+<node CREATED="1393160064385" ID="ID_190462217" MODIFIED="1393160065649" TEXT="thread synchronization"/>
+</node>
+<node CREATED="1392949609496" ID="ID_1749062199" MODIFIED="1393166209896" TEXT="Exercises ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+</node>
+</node>
+<node CREATED="1392949620657" FOLDED="true" ID="ID_1461218239" MODIFIED="1394689544225" POSITION="right" TEXT="Thread Control ">
+<node CREATED="1392949627585" ID="ID_389424779" MODIFIED="1392949629294" TEXT="Introduction ">
+<node CREATED="1393166217114" ID="ID_1712655516" MODIFIED="1393166218808" TEXT="learn the details of controlling thread behavior"/>
+<node CREATED="1393166226887" ID="ID_1544414118" MODIFIED="1393166228882" TEXT="thread attributes"/>
+<node CREATED="1393166235203" ID="ID_1476322396" MODIFIED="1393166236386" TEXT="synchronization primitive attributes"/>
+<node CREATED="1393166261342" ID="ID_1497578395" MODIFIED="1393166262690" TEXT="keep data private from other threads"/>
 </node>
 <node CREATED="1392949620657" FOLDED="true" ID="ID_1461218239" MODIFIED="1395043698582" POSITION="right" TEXT="Thread Control ">
 <icon BUILTIN="help"/>

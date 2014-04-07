@@ -21,6 +21,8 @@ Ctrl + r  在历史命令中查找 （zsh能自动匹配，更好用）
 Ctrl + p  上翻前面键入的命令
 Ctrl + o  输入完命令后，这个动作相当于按下<ENTER>，不同的是，你在按下CTRL + o时，它会记住上一次你Ctrl+ o的命令
 
+__bash compelement:__
+modify [[/etc/bash.bashrc]]
 
 参数从1开始
 $@ 和 $* 都存储了所有参数，但是有区别，什么区别见-->恶心的地方
