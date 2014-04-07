@@ -19,7 +19,7 @@ Created 星期六 12 十月 2013
 
 [[+make]]
 
-[[ssh]]
+ssh
 
 [[higher-order]]
 
