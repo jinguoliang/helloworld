@@ -49,3 +49,6 @@ $ prebuilts/misc/linux-x86/ccache/ccache -M 50G
 
 ==== Android Make: ====
 LOCAL_MODULE_PATH := $(TARGET_OUT)/vendor/overlay
+
+==== Android Project Construct: ====
+gradle     

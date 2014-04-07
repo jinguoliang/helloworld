@@ -11,6 +11,9 @@ paths need to port:
 	PID004746
 
 
+==== Email Debug Open: ====
+*#*#36245#*#*
+
 ==== S/MIME ====
  (Secure/Multipurpose Internet Mail Extensions)
 
@@ -31,17 +34,28 @@ openssl pkcs12 -export -in cacert.pem -inkey privkey.pem -out privkey.p12 -name 
 
 ==== 163: ====
 {{./pasted_image.bmp}}
-
+exchange :
+	username:setest0001@163.com
+	[[Domain:null]]
+	[[Server:i.163.com]]
+	
 ==== sunmail: ====
 semctest0001@sunmail.cn
 se000000
+jinux111@sunmail.cn
+jin8146999
 Domain: 	sunmail.cn
 Server:   	mail.sunmail.cn
 
 ==== hotmail: ====
-jinguol999[[@hotmail.com]]
-jin8146999
-Domain: 	sunmail.cn
+setest0001@hotmail.com
+se000000
+exchage:
+username:setest0001@hotmail.com
+Domain: 	null
 Server:   	m.hotmail.com
+
+
+
 {{./pasted_image005.bmp}}{{./pasted_image006.bmp}}{{./pasted_image007.bmp}}{{./pasted_image008.bmp}}{{./pasted_image009.bmp}}
 [[+18188|18188]]	EAS Tasks for Yukon ODM
