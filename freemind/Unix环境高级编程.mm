@@ -5131,7 +5131,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1395043596570" FOLDED="true" ID="ID_1610336038" MODIFIED="1395736902617" POSITION="right" TEXT="13Daemon Processes ">
+<node CREATED="1395043596570" FOLDED="true" ID="ID_1610336038" MODIFIED="1396626185809" POSITION="right" TEXT="13Daemon Processes ">
 <node CREATED="1395043636202" ID="ID_820966342" MODIFIED="1395043638029" TEXT="Introduction ">
 <node CREATED="1395043959648" ID="ID_630151807" MODIFIED="1395043975700" TEXT="live for a long time "/>
 <node CREATED="1395043981759" ID="ID_849367339" MODIFIED="1395043983301" TEXT="started when the system is bootstrapped "/>
@@ -5412,7 +5412,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1395736904957" ID="ID_668430026" MODIFIED="1395736923299" POSITION="right" TEXT="14Advanted I/O">
+<node CREATED="1395736904957" FOLDED="true" ID="ID_668430026" MODIFIED="1396626184054" POSITION="right" TEXT="14Advanted I/O">
 <node CREATED="1395736924798" ID="ID_1511726348" MODIFIED="1395736929148" TEXT="introduction"/>
 <node CREATED="1395736929734" FOLDED="true" ID="ID_1565147501" MODIFIED="1395797334885" TEXT="Nonblocking I/O">
 <node CREATED="1395737426459" ID="ID_568376492" MODIFIED="1395737436625" TEXT="two categories system call">
@@ -5582,8 +5582,7 @@
       the group-execute bit
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1396335911010" ID="ID_341972030" MODIFIED="1396335912615" TEXT="causes the kernel to check every open, read, and write to verify that the calling process isn&apos;t violating a lock on the file being accessed "/>
 </node>
 </node>
@@ -5601,8 +5600,7 @@
       drivers into the kernel.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1396427969198" ID="ID_499782989" MODIFIED="1396428072057" TEXT="14.13 what">
 <icon BUILTIN="wizard"/>
 <node CREATED="1396427974727" ID="ID_1304989750" MODIFIED="1396427979141" TEXT="stream head"/>
@@ -5635,8 +5633,7 @@
       the functions we use (read, write, getmsg, getpmsg, putmsg, and putpmsg)
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1396429273519" ID="ID_1518082418" MODIFIED="1396429275038" TEXT="M_DATA "/>
 <node CREATED="1396429285838" ID="ID_238739021" MODIFIED="1396429287045" TEXT="M_PROTO "/>
 <node CREATED="1396429312501" ID="ID_1477349973" MODIFIED="1396429312501" TEXT=""/>
