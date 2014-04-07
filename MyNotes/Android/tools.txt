@@ -16,6 +16,8 @@ adb root  以root权限重启adb服务
 adb remount 以读写权限重新挂载根目录
 adb logcat -c      clear log
 adb logcat *:w     
+Log.e(tag,Log.getStackTraceString(new Throwable()));    
+
 
 在打开虚拟机时，可以存储快照，从而提高打开速度
 
