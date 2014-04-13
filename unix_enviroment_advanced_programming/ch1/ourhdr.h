@@ -21,6 +21,7 @@
 void err_sys (const char *fmt, ...);
 void err_quit (const char *fmt, ...);
 void err_ret (const char *fmt, ...);
+void err_msg(const char *fmt, ...);
 
 //void pr_exit(int status);
 //{

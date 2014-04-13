@@ -31,3 +31,5 @@ aapt即Android Asset Packaging Tool , 在SDK的build-tools目录下. 该工具�
 
 mount -o remount,rw rootfs /   
 adb remount                  - remounts the /system partition on the device read-write
+
+[[+android studio|android studio]]

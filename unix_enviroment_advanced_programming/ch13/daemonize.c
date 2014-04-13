@@ -11,6 +11,7 @@ void daemonize(const char *cmd)
 	pid_t				pid;	
 	struct rlimit 		rl;
 	struct sigaction	sa;	
+	int logfd;
 
 	//clear file creation mask
 	umask(0);
@@ -22,8 +23,11 @@ void daemonize(const char *cmd)
 	//become a session leader to lose controlling TTY
 	if((pid=fork())<0)
 		err_quit("%s: can't fork",cmd);
-	else if(pid!=0)
+	else if(pid!=0){
+		puts("parent die");
 		exit(0);
+	}
+	puts("this is child");
 	setsid();
 
 	//ensure future opens won't allocate controlling TTYs.
@@ -34,50 +38,58 @@ void daemonize(const char *cmd)
 		err_quit("%s: can't ignore SIGHUP");
 	if((pid=fork())<0)
 		err_quit("%s: can't fork",cmd);
-	else if(pid!=0)
+	else if(pid!=0){
+		puts("parent die");
 		exit(0);
+	}
+	puts("this is child");
 	
 	//change the current working directory to the root 
 	if(chdir("/")<0)
 		err_quit("%s: can't change directory to /");
+	puts("chdir to /");
 
+	puts("open log");
 	//chroot
-	if(chroot("/tmp/")<0)
-		perror("err chroot");
-	
-	/*//close all open file descriptors.
-	if(rl.rlim_max==RLIM_INFINITY)
+//	if(chroot("/tmp/")<0)
+//		perror("err chroot");
+
+	//close all open file descriptors.
+	/*if(rl.rlim_max==RLIM_INFINITY)
 		rl.rlim_max=1024;
 	for(i=0;i<rl.rlim_max;i++)
 		close(i);
+	puts("open log");
+	*/
 
 	//attach file descriptors 0,1, and 2 to /dev/null
-	fd0=open("/dev/null",O_RDWR);
+/*	fd0=open("/dev/null",O_RDWR);
 	fd1=dup(0);
 	fd2=dup(0);
 	*/
 
 
+	printf("really openlog?\n");
 	//initialize the log file
-	if(openlog(cmd,LOG_CONS,LOG_DAEMON)<0)
-		perror("oepnlog error");
-	if(fd0!=0||fd1!=1||fd2!=2){
-		syslog(LOG_ERR,"unexpected file descriptors %d %d %d",fd0, fd1, fd2);
-		exit(1);
-	}	
+	openlog(cmd,LOG_CONS,LOG_DAEMON);
+
+	printf("really openlog\n");
 }
 
-void main(void)
+/*void main(void)
 {
+	
 	daemonize("ls");
+	printf("daemonize ok\n");
 
 	FILE *f=fopen("/home/CORPUSERS/xp013796/mygit/unix_enviroment_advanced_programming/ch13/log","w");
 	fprintf(f,"the login name is %s\n",getlogin());
 	fflush(f);
 
 	syslog(LOG_DEBUG,"test it");
+	
 
 	closelog();
 	
 }
-
+*/

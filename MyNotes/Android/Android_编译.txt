@@ -52,3 +52,17 @@ LOCAL_MODULE_PATH := $(TARGET_OUT)/vendor/overlay
 
 ==== Android Project Construct: ====
 gradle     
+简单的build.gradle示例：
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.6.+'
+    }
+}
+apply plugin: 'android'
+android {
+    compileSdkVersion 17
+}
