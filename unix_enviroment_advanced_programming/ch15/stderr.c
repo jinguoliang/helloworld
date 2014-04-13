@@ -1,1 +1,1 @@
-../stderr.c
+../ch1/stderr.c

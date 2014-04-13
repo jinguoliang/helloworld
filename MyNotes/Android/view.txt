@@ -16,6 +16,8 @@ Created Monday 14 October 2013
 
 [[+android window analysis ------UI管理系统]]
 
+[[+Adroid 界面绘制实现|Adroid 界面绘制实现]]
+
 
 ====== 自定义View： ======
 好的自定义类应该：

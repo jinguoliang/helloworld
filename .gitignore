@@ -6,4 +6,6 @@ a.out
 *.o
 *.a
 *.so
-
+.zim/
+.zim/index.db
+.zim/state.conf

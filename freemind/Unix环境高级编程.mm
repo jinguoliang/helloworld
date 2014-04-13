@@ -4443,7 +4443,7 @@
 <node CREATED="1391446135519" ID="ID_1218700903" MODIFIED="1391446136501" TEXT=" Additional Features "/>
 <node CREATED="1391446140125" ID="ID_1268518014" MODIFIED="1391446142538" TEXT=" Summary "/>
 </node>
-<node CREATED="1392949541994" FOLDED="true" ID="ID_637081276" MODIFIED="1395043494191" POSITION="right" TEXT="Threads ">
+<node CREATED="1392949541994" FOLDED="true" ID="ID_637081276" MODIFIED="1396856055415" POSITION="right" TEXT="Threads ">
 <node CREATED="1392949564039" FOLDED="true" ID="ID_607133705" MODIFIED="1392963514942" TEXT="Introduction ">
 <node CREATED="1392952883696" ID="ID_278083049" MODIFIED="1392952885737" TEXT="All threads within a single process have access to the same process components, such as file descriptors and memory. "/>
 <node CREATED="1392952924568" ID="ID_446283079" MODIFIED="1392952926761" TEXT="synchronization mechanisms "/>
@@ -4643,17 +4643,15 @@
 <icon BUILTIN="help"/>
 </node>
 </node>
-<node CREATED="1392949620657" FOLDED="true" ID="ID_1461218239" MODIFIED="1394689544225" POSITION="right" TEXT="Thread Control ">
-<node CREATED="1392949627585" ID="ID_389424779" MODIFIED="1392949629294" TEXT="Introduction ">
+<node CREATED="1392949620657" FOLDED="true" ID="ID_1461218239" MODIFIED="1396856108204" POSITION="right" TEXT="Thread Control ">
+<icon BUILTIN="help"/>
+<icon BUILTIN="help"/>
+<node CREATED="1392949627585" ID="ID_1665434540" MODIFIED="1396856080142" TEXT="Introduction ">
 <node CREATED="1393166217114" ID="ID_1712655516" MODIFIED="1393166218808" TEXT="learn the details of controlling thread behavior"/>
 <node CREATED="1393166226887" ID="ID_1544414118" MODIFIED="1393166228882" TEXT="thread attributes"/>
 <node CREATED="1393166235203" ID="ID_1476322396" MODIFIED="1393166236386" TEXT="synchronization primitive attributes"/>
 <node CREATED="1393166261342" ID="ID_1497578395" MODIFIED="1393166262690" TEXT="keep data private from other threads"/>
 </node>
-<node CREATED="1392949620657" FOLDED="true" ID="ID_1461218239" MODIFIED="1395043698582" POSITION="right" TEXT="Thread Control ">
-<icon BUILTIN="help"/>
-<icon BUILTIN="help"/>
-<node CREATED="1392949627585" ID="ID_389424779" MODIFIED="1392949629294" TEXT="Introduction "/>
 <node CREATED="1392949634193" FOLDED="true" ID="ID_1648678860" MODIFIED="1393334819101" TEXT="Thread Limits ">
 <node CREATED="1393334067500" FOLDED="true" ID="ID_384298981" MODIFIED="1393334818373" TEXT="sysconf ">
 <node CREATED="1393334076236" ID="ID_1684630493" MODIFIED="1393334786992" TEXT="_SC_THREAD_DESTRUCTOR_ITERATIONS ">
@@ -5046,7 +5044,7 @@
 <node CREATED="1393376859679" ID="ID_1626425628" MODIFIED="1393376861725" TEXT="void *pthread_getspecific(pthread_key_t key); "/>
 <node CREATED="1393376872567" ID="ID_916616534" MODIFIED="1393376874514" TEXT="int pthread_setspecific(pthread_key_t key, const void *value); "/>
 </node>
-<node CREATED="1392949667115" FOLDED="true" ID="ID_2924296" MODIFIED="1393536283857" TEXT="Cancel Options ">
+<node CREATED="1392949667115" FOLDED="true" ID="ID_2924296" MODIFIED="1396856079684" TEXT="Cancel Options ">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -5198,7 +5196,8 @@
 </node>
 </node>
 </node>
-<node CREATED="1395043596570" FOLDED="true" ID="ID_1610336038" MODIFIED="1396626185809" POSITION="right" TEXT="13Daemon Processes ">
+<node CREATED="1392949620657" ID="ID_848421843" MODIFIED="1396856106457" POSITION="right" TEXT="Thread Control "/>
+<node CREATED="1395043596570" FOLDED="true" ID="ID_1610336038" MODIFIED="1396856120109" POSITION="right" TEXT="13Daemon Processes ">
 <node CREATED="1395043636202" ID="ID_820966342" MODIFIED="1395043638029" TEXT="Introduction ">
 <node CREATED="1395043959648" ID="ID_630151807" MODIFIED="1395043975700" TEXT="live for a long time "/>
 <node CREATED="1395043981759" ID="ID_849367339" MODIFIED="1395043983301" TEXT="started when the system is bootstrapped "/>
@@ -5479,7 +5478,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1395736904957" FOLDED="true" ID="ID_668430026" MODIFIED="1396626184054" POSITION="right" TEXT="14Advanted I/O">
+<node CREATED="1395736904957" ID="ID_668430026" MODIFIED="1396856194611" POSITION="right" TEXT="14Advanted I/O">
 <node CREATED="1395736924798" ID="ID_1511726348" MODIFIED="1395736929148" TEXT="introduction"/>
 <node CREATED="1395736929734" FOLDED="true" ID="ID_1565147501" MODIFIED="1395797334885" TEXT="Nonblocking I/O">
 <node CREATED="1395737426459" ID="ID_568376492" MODIFIED="1395737436625" TEXT="two categories system call">
@@ -5654,7 +5653,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1395736945270" ID="ID_898226691" MODIFIED="1396404008730" TEXT="STREAMS">
+<node CREATED="1395736945270" FOLDED="true" ID="ID_898226691" MODIFIED="1396856196701" TEXT="STREAMS">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -5727,6 +5726,169 @@
 <node CREATED="1395736997175" ID="ID_1813072623" MODIFIED="1395737005070" TEXT="Memory-Mapped I/O"/>
 <node CREATED="1395737006544" ID="ID_903519873" MODIFIED="1395737013734" TEXT="summary"/>
 <node CREATED="1395737016720" ID="ID_567416017" MODIFIED="1395737021718" TEXT="Exercises"/>
+</node>
+<node CREATED="1396856199859" ID="ID_1113076248" MODIFIED="1396856228309" POSITION="right" TEXT="15interprocess communication">
+<node CREATED="1396856306466" ID="ID_557861759" MODIFIED="1396856310544" TEXT="introduction">
+<node CREATED="1396856591560" ID="ID_1249803854" MODIFIED="1396856593245" TEXT="before">
+<node CREATED="1396856597883" HGAP="28" ID="ID_1948904058" MODIFIED="1396856660709" TEXT="exchange information is by passing open files across a fork or an exec or through the file system" VSHIFT="-17"/>
+</node>
+</node>
+<node CREATED="1396856310994" ID="ID_724453476" MODIFIED="1396856317116" TEXT="pipe">
+<node CREATED="1396856694837" ID="ID_822861641" MODIFIED="1396856843464" TEXT="two limitations">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Despite these limitations, half-duplex pipes are still the most commonly used form of IPC
+    </p>
+  </body>
+</html></richcontent>
+<node CREATED="1396856710368" ID="ID_280666452" MODIFIED="1396856763882" TEXT="half duplex">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Some systems
+    </p>
+    <p>
+      now provide full-duplex pipes, but for maximum portability, we should never assume that this is
+    </p>
+    <p>
+      the case.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+<node CREATED="1396856765937" ID="ID_1125391698" MODIFIED="1396856785049" TEXT="only between processes that have a common ancestor">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Normally, a pipe is
+    </p>
+    <p>
+      created by a process, that process calls fork , and the pipe is used between the parent and the
+    </p>
+    <p>
+      child.
+    </p>
+  </body>
+</html></richcontent>
+</node>
+</node>
+<node CREATED="1396856844637" ID="ID_1933324128" MODIFIED="1396856846037" TEXT="int pipe(int filedes[2])">
+<node CREATED="1396856857253" ID="ID_983447146" MODIFIED="1396856858705" TEXT="filedes[0] is open for reading,"/>
+<node CREATED="1396856867017" ID="ID_1903590043" MODIFIED="1396856868211" TEXT="filedes[1] is open for writing"/>
+</node>
+<node CREATED="1396857152691" ID="ID_1139268985" MODIFIED="1396857154055" TEXT="one end of a pipe is closed">
+<node CREATED="1396858561060" ID="ID_1791435590" MODIFIED="1396858562954" TEXT="If we read from a pipe whose write end has been closed, read returns 0 to indicate an end of file after all the data has been read."/>
+<node CREATED="1396858576239" ID="ID_1672117479" MODIFIED="1396858578187" TEXT="If we write to a pipe whose read end has been closed, the signal SIGPIPE is generated"/>
+</node>
+</node>
+<node CREATED="1396856322603" ID="ID_97124084" MODIFIED="1396856326755" TEXT="popen and pclose">
+<node CREATED="1396858780902" ID="ID_1991048390" MODIFIED="1396858782395" TEXT="FILE *popen(const char *cmdstring, const char *type);">
+<node CREATED="1396858819279" ID="ID_215887286" MODIFIED="1396858820665" TEXT="The cmdstring is executed by the Bourne shell, as in">
+<node CREATED="1396858829583" ID="ID_1225467346" MODIFIED="1396858830736" TEXT="sh -c cmdstring"/>
+</node>
+</node>
+<node CREATED="1396858792839" ID="ID_1728390411" MODIFIED="1396858793894" TEXT="int pclose(FILE *fp);"/>
+</node>
+<node CREATED="1396856327368" ID="ID_620384280" MODIFIED="1396856337114" TEXT="coprocess">
+<node CREATED="1396873940811" ID="ID_558978513" MODIFIED="1396873942170" TEXT="filter">
+<node CREATED="1396873948914" ID="ID_1514090408" MODIFIED="1396873951080" TEXT="a program that reads from standard input and writes to standard output"/>
+</node>
+<node CREATED="1396873981393" ID="ID_1992922380" MODIFIED="1396873982699" TEXT="A filter becomes a coprocess when the same program generates the filter&apos;s input and reads the filter&apos;s output"/>
+</node>
+<node CREATED="1396856340738" FOLDED="true" ID="ID_1389069427" MODIFIED="1396907936528" TEXT="FIFO">
+<node CREATED="1396873766662" ID="ID_357154251" MODIFIED="1396873768239" TEXT="named pipes"/>
+<node CREATED="1396874297013" ID="ID_1517340385" MODIFIED="1396874297999" TEXT="unrelated processes can exchange data"/>
+<node CREATED="1396874353165" ID="ID_58438713" MODIFIED="1396874354238" TEXT="int mkfifo(const char *pathname, mode_t mode);">
+<node CREATED="1396874690937" ID="ID_344413747" MODIFIED="1396874707519" TEXT="call mknod"/>
+</node>
+<node CREATED="1396874945701" ID="ID_1304583484" MODIFIED="1396874947207" TEXT="O_NONBLOCK">
+<node CREATED="1396874948575" ID="ID_949016937" MODIFIED="1396874950860" TEXT="not set">
+<node CREATED="1396874965975" ID="ID_1394741766" MODIFIED="1396874967759" TEXT="open for read-only blocks until some other process opens the FIFO for writing"/>
+<node CREATED="1396874974694" ID="ID_1921369664" MODIFIED="1396874975988" TEXT="open for write-only blocks until some other process opens the FIFO for reading"/>
+</node>
+<node CREATED="1396874983512" ID="ID_1340036212" MODIFIED="1396874984730" TEXT="set">
+<node CREATED="1396874995018" ID="ID_747576394" MODIFIED="1396874996665" TEXT="an open for read-only returns immediately."/>
+<node CREATED="1396875002303" ID="ID_195320393" MODIFIED="1396875004164" TEXT="an open for write-only returns 1 with errno set to ENXIO if no process has the FIFO open for reading"/>
+</node>
+</node>
+<node CREATED="1396875132358" ID="ID_1332246005" MODIFIED="1396875134587" TEXT="As with a pipe,">
+<node CREATED="1396875141238" ID="ID_1357535905" MODIFIED="1396875142581" TEXT="if we write to a FIFO that no process has open for reading, the signal SIGPIPE is generated."/>
+<node CREATED="1396875147448" ID="ID_1455430770" MODIFIED="1396875148519" TEXT="When the last writer for a FIFO closes the FIFO, an end of file is generated for the reader of the FIFO."/>
+</node>
+<node CREATED="1396875420898" ID="ID_358970138" MODIFIED="1396875423603" TEXT="PIPE_BUF">
+<node CREATED="1396875438748" ID="ID_483688035" MODIFIED="1396875440775" TEXT="specifies the maximum amount of data that can be written atomically to a FIFO"/>
+</node>
+<node CREATED="1396875502116" ID="ID_1259270702" MODIFIED="1396875503342" TEXT="two uses for FIFOs">
+<node CREATED="1396875669787" ID="ID_1154122452" MODIFIED="1396875671523" TEXT="by shell commands to pass data from one shell pipeline to another without creating intermediate temporary files"/>
+<node CREATED="1396875685361" ID="ID_1158398697" MODIFIED="1396875686576" TEXT="used as rendezvous points in clientserver applications to pass data between the clients and the servers."/>
+</node>
+</node>
+<node CREATED="1396856349839" ID="ID_94091044" MODIFIED="1396856352727" TEXT="XSI IPC">
+<node CREATED="1396907966971" ID="ID_1830369657" MODIFIED="1396907969302" TEXT="three types">
+<node CREATED="1396907977012" ID="ID_725583958" MODIFIED="1396907979407" TEXT="message queues"/>
+<node CREATED="1396907984181" ID="ID_930326776" MODIFIED="1396907985855" TEXT="semaphores,"/>
+<node CREATED="1396907990655" ID="ID_1650087031" MODIFIED="1396907992936" TEXT="shared memory"/>
+</node>
+<node CREATED="1396908085708" FOLDED="true" ID="ID_1100416128" MODIFIED="1396909225816" TEXT="Identifiers and Keys">
+<node CREATED="1396908205131" ID="ID_253763571" MODIFIED="1396908212303" TEXT="identifiers">
+<node CREATED="1396908213473" ID="ID_539323055" MODIFIED="1396908215689" TEXT="Unlike file descriptors, IPC identifiers are not small integers. Indeed, when a given IPC structure is created and then removed, the identifier associated with that structure continually increases until it reaches the maximum positive value for an integer, and then wraps around to 0"/>
+<node CREATED="1396908150034" ID="ID_601794084" MODIFIED="1396908151808" TEXT="Each IPC structure (message queue, semaphore, or shared memory segment) in the kernel is referred to by a non-negative integer identifier"/>
+<node CREATED="1396908237370" ID="ID_1125690814" MODIFIED="1396908238324" TEXT="is an internal name for an IPC object"/>
+</node>
+<node CREATED="1396908273738" ID="ID_76591613" MODIFIED="1396908275268" TEXT="keys">
+<node CREATED="1396908276560" ID="ID_1275196578" MODIFIED="1396908282922" TEXT="acts as an external name"/>
+<node CREATED="1396908303775" ID="ID_385194304" MODIFIED="1396908304653" TEXT="Whenever an IPC structure is being created (by calling msgget , semget , or shmget ), a key must be specified"/>
+<node CREATED="1396908355376" ID="ID_1148197613" MODIFIED="1396908356526" TEXT="key_t">
+<node CREATED="1396908376318" ID="ID_1190642084" MODIFIED="1396908377614" TEXT="This key is converted into an identifier by the kernel."/>
+</node>
+<node CREATED="1396908417161" ID="ID_897262026" MODIFIED="1396908418414" TEXT="a key of IPC_PRIVATE">
+<node CREATED="1396908431814" ID="ID_1115327150" MODIFIED="1396908451126" TEXT="guarantees  creating a new IPC structure">
+<node CREATED="1396909103154" ID="ID_749954077" MODIFIED="1396909124003" TEXT="key&#xa;is not currently associated with an IPC structure of the particular type and the IPC_CREAT bit of flag is&#xa;specified"/>
+<node CREATED="1396909207057" ID="ID_803770894" MODIFIED="1396909208884" TEXT="making sure that we don&apos;t reference an existing one with the same identifier, we must specify a flag with both the IPC_CREAT and IPC_EXCL bits set"/>
+</node>
+</node>
+<node CREATED="1396908524629" ID="ID_622143303" MODIFIED="1396908525774" TEXT="The client and the server can agree on a key by defining the key in a common header,">
+<node CREATED="1396908541352" ID="ID_152700311" MODIFIED="1396908543321" TEXT="it&apos;s possible for the key to already be associated with an IPC structure"/>
+</node>
+<node CREATED="1396908576608" ID="ID_395745305" MODIFIED="1396908577793" TEXT="agree on a pathname and project ID (the project ID is a character value between 0 and 255) and call the function ftok to convert these two values into a key">
+<node CREATED="1396908585902" ID="ID_1502711714" MODIFIED="1396908587475" TEXT="key_t ftok(const char *path, int id);"/>
+</node>
+</node>
+</node>
+<node CREATED="1396909221259" ID="ID_99271023" MODIFIED="1396909223356" TEXT="Permission Structure">
+<node CREATED="1396909238893" ID="ID_422014861" MODIFIED="1396909240291" TEXT="ipc_perm">
+<node CREATED="1396909395657" ID="ID_1706546123" MODIFIED="1396909398295" TEXT="uid;"/>
+<node CREATED="1396909403023" ID="ID_210259379" MODIFIED="1396909404296" TEXT="gid;"/>
+<node CREATED="1396909408054" ID="ID_1583753984" MODIFIED="1396909409031" TEXT="cuid;"/>
+<node CREATED="1396909414450" ID="ID_611606217" MODIFIED="1396909415648" TEXT="cgid;"/>
+<node CREATED="1396909420485" ID="ID_453646733" MODIFIED="1396909422153" TEXT="mode;">
+<node CREATED="1396909441070" ID="ID_629665531" MODIFIED="1396909442775" TEXT="user-read 0400"/>
+<node CREATED="1396909450032" ID="ID_464607907" MODIFIED="1396909451584" TEXT="user-write (alter) 0200"/>
+<node CREATED="1396909459519" ID="ID_213359232" MODIFIED="1396909461046" TEXT="group-read 0040"/>
+<node CREATED="1396909468614" ID="ID_1242652535" MODIFIED="1396909470033" TEXT="group-write (alter) 0020"/>
+<node CREATED="1396909512614" ID="ID_1159127190" MODIFIED="1396909514207" TEXT="other-read 0004"/>
+<node CREATED="1396909521394" ID="ID_836665034" MODIFIED="1396909523177" TEXT="other-write (alter) 0002"/>
+</node>
+</node>
+</node>
+<node CREATED="1396909613077" ID="ID_1344177333" MODIFIED="1396909637398" TEXT="Advantages and Disadvantages"/>
+</node>
+<node CREATED="1396856358252" ID="ID_1993498335" MODIFIED="1396856365070" TEXT="Message Queue"/>
+<node CREATED="1396856371690" ID="ID_589262248" MODIFIED="1396856375245" TEXT="Semaphor"/>
+<node CREATED="1396856379591" ID="ID_773292387" MODIFIED="1396856388759" TEXT="Shared Memory"/>
+<node CREATED="1396856391542" ID="ID_317608578" MODIFIED="1396856412447" TEXT="ClientServer Properties"/>
+<node CREATED="1396856415469" ID="ID_1515189847" MODIFIED="1396856418759" TEXT="Summary"/>
+<node CREATED="1396856424168" ID="ID_1385348602" MODIFIED="1396856430503" TEXT="Excercises"/>
 </node>
 </node>
 </map>

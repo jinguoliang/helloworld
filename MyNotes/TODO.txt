@@ -12,10 +12,17 @@ man source.list
 
 ==== TODownload: ====
 	APP:
-		perldoc
+	
 	Music:
 	
 	Movie:
 	
-
+NS编程辅助工具
 [[+N-S diagram|N-S diagram]]
+
+===== 做个有心人 =====
+	1.整理明确自己的方法
+	2.整理自己的电脑(公司和家里的) 各每天一个番茄钟
+	3.整理自己的知识
+	4.整理自己的家					一周拿出一个番茄钟
+	5.整理自己的关系
