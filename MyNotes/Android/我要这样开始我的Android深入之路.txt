@@ -13,7 +13,7 @@ android OSAP [[~/android_source/working_directory|源码目录]]  [[~/Nutstore/r
 https://android-review.googlesource.com/#/c/19337/
 
 OSAP [[~/android_source/working_directory/docs/source.android.com/out/index.html|主页]] （要想看好看的，去所在目录看README） 或者执行如下命令来启动一个mini 服务器
-python ~/android_source/working_directory/docs/source.android.com/scripts/[[micro-httpd.py]]
+python ~/android_source/working_directory/docs/source.android.com/scripts/micro-httpd.py
 [[~/shared_with_windows/我的坚果云/resource/AndroidÊÖ»úÎÄ¼þÄ¿Â¼ËµÃ÷.txt|Android System Dirteris Struct]]
 
 [[~/shared_with_windows/我的坚果云/resource/html/Using Eclipse   Android Developers.html|Using Eclipse]] ----Android platform develop

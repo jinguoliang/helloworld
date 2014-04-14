@@ -10,7 +10,7 @@ ctrl+f  indent 格式化C代码
 ==== add a addition ====
 .vim/plugin
 .vim/autoload
-.vim/doc				[[:helptags]] [[~/.vim/doc]]   add tags or can't find the tags
+.vim/doc				:helptags [[~/.vim/doc]]   add tags or can't find the tags
 
 
 ==== Additions::q ====
