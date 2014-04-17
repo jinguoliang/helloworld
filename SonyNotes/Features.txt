@@ -105,3 +105,6 @@ DMS01797827	Stuck on "Waiting for sync"
     /system/app/Exchange2.apk
 *patch:
     https://review.sonyericsson.net/#/c/575967/
+
+
+

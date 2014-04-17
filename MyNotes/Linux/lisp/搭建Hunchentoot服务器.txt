@@ -28,7 +28,7 @@ http://beta.quicklisp.org/quicklisp.lisp
 重新进入sbcl
 加载hunchentoot
 (ql:quickload "hunchentoot")
-(use-package [[:hunchentoot)]]	相当于导入包名
+(use-package :hunchentoot)	相当于导入包名
 加载刚才的测试文件
 (load "~/workspace/lisp/hunchentoot.lisp")
 

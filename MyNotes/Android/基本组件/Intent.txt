@@ -31,7 +31,7 @@ Created Tuesday 15 October 2013
 	
 	判断返回结果成功与否：Activity.RESULT_OK   Activity.RESULT_CANCEL 	
 	
-Power off
+Power ohhhjljkjkjkjkjkjkjkjkjjkjkjkjk
     public void shutdownSystem() {
         Intent shutDownIntent = new Intent(Intent.ACTION_REQUEST_SHUTDOWN);
         shutDownIntent.putExtra(Intent.EXTRA_KEY_CONFIRM, false);
