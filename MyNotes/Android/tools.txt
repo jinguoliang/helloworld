@@ -15,7 +15,7 @@ adb -e install -r bin/MyAndroid.apk  	-e 表示在安装到模拟器 -d 表示�
 adb root  以root权限重启adb服务
 adb remount 以读写权限重新挂载根目录
 adb logcat -c      clear log
-adb logcat *:w     
+adb logcat *:W     
 Log.e(tag,Log.getStackTraceString(new Throwable()));    
 
 
@@ -23,6 +23,9 @@ Log.e(tag,Log.getStackTraceString(new Throwable()));
 
 
 adb shell am 可以用来发送intent打开activity，service，关闭等等
+adb shell pm package manager 查看package信息
+adb shell procmem
+adb shell procrank
 
 模拟器的电话号码默认为1555521+端口号
 
