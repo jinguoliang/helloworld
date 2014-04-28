@@ -50,6 +50,10 @@ $ prebuilts/misc/linux-x86/ccache/ccache -M 50G
 ==== Android Make: ====
 LOCAL_MODULE_PATH := $(TARGET_OUT)/vendor/overlay
 
+# enable vm tracing in files for now to __help track__
+__# the cause of ANRs__ in the content process
+ADDITIONAL_BUILD_PROPERTIES += dalvik.vm.stack-trace-file=/data/anr/traces.txt
+
 ==== Android Project Construct: ====
 gradle     
 简单的build.gradle示例：

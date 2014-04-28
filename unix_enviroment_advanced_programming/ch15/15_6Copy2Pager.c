@@ -7,17 +7,35 @@
 
 #include "ourhdr.h"
 #include <sys/wait.h>
+#include <stdlib.h>
+#include <math.h>
 
 #define DEF_PAGER "/bin/more"
 
+#define LINE_NO_WIDTH 4
+#define LINE_MAX	(MAXLINE-LINE_NO_WIDTH) 
+
+void setlinenum(char *line,int lineno,int lineonwid)
+{
+	int i=0;
+
+	if(lineno>=pow(2,lineonwid-2))
+		err_quit("lineno is too big");
+
+
+	sprintf(line,"%d",lineno);
+	for(i=strlen(line);i<lineonwid;i++) *(line+i)=' ';
+}
+
 int main(int argc,char *argv[])
 {
-	int n;
-	int fd[2];
-	pid_t pid;
-	char *pager,*argv0;
-	char line[MAXLINE];
-	FILE *fp;
+	int 	n;
+	int 	fd[2];
+	pid_t 	pid;
+	char 	*pager,*argv0;
+	char 	line[MAXLINE],*line_head;
+	FILE 	*fp;
+	int 	line_no=0;
 
 	if(argc!=2)
 		err_quit("usage: a.out <pathname>");
@@ -32,9 +50,11 @@ int main(int argc,char *argv[])
 	else if(pid>0){
 		close(fd[0]);
 
-		while(fgets(line,MAXLINE,fp)!=NULL){
-			n=strlen(line);
-			if(write(fd[1],line,n)!=n)
+		line_head=line+LINE_NO_WIDTH;
+		while(fgets(line_head,LINE_MAX,fp)!=NULL){
+			setlinenum(line,++line_no,LINE_NO_WIDTH);
+			n=strlen(line_head);
+			if(write(fd[1],line,n+LINE_NO_WIDTH)!=n+LINE_NO_WIDTH)
 				err_sys("write error to pipe");
 		}
 		if(ferror(fp))
