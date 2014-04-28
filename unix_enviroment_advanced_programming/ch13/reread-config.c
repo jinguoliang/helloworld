@@ -45,6 +45,7 @@ int main(int argc,char * argv[])
 	char		*cmd;
 	struct sigaction	sa;
 
+	//get the program name
 	if((cmd=strrchr(argv[0],'/'))==NULL)
 		cmd=argv[0];
 	else

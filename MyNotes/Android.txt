@@ -57,6 +57,8 @@ Created 星期六 12 十月 2013
 
 [[+source|source]]
 
+[[+Android Log|Android Log]]
+
 frameworks/base/core/res/res/values/config.xml     config the __default value__ of sync,data trasaction,wifi etc.
 runtime overlay      example:[[./auto-sync.tar.gz]]           
 项目目录
