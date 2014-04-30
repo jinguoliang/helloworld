@@ -6,6 +6,7 @@
 */
 
 #include "ourhdr.h"
+#include <string.h>
 
 int main(int argc,char *argv[])
 {
@@ -13,9 +14,11 @@ int main(int argc,char *argv[])
 	char line[MAXLINE];
 
 	while(fgets(line,MAXLINE,stdin)!=NULL){
-		if(sscanf(line,"%d%d",&int1,&int2)==2){
-			if(printf("%d\n",int1+int2)==EOF)
+		if(sscanf(line,"%d %d",&int1,&int2)==2){
+			if(printf("%d\n",int1+int2)==EOF){
 				err_sys("printf error");
+			}
+			fflush(stdout);
 		}else{
 			if(printf("invalid args\n")==EOF)
 				err_sys("printf error");

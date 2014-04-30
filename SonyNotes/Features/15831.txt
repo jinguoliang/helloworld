@@ -10,6 +10,7 @@ DMS02339156		Verified	Zhang, Gina	Email APK and some patches, Should get the exa
 paths need to port:
 	PID004746
 
+__DMS05407328  Maybe have solutions.__
 
 ==== Email Debug Open: ====
 *#*#36245#*#*
@@ -39,6 +40,7 @@ exchange :
 	[[Domain:null]]
 	[[Server:i.163.com]]
 	
+
 ==== sunmail: ====
 semctest0001@sunmail.cn
 se000000
