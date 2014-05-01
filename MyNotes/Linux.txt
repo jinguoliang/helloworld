@@ -48,3 +48,4 @@ SteamOS
 ==== Problems ====
 [[+Problems|Problems]] some problems in linux system.
 
+[[+心得|心得]]
