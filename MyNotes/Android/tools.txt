@@ -46,3 +46,10 @@ mount -o remount,rw rootfs /
 adb remount                  - remounts the /system partition on the device read-write
 
 [[+android studio|android studio]]
+
+==== signapk.jar ====
+export kk_path=/home/CORPUSERS/xp010717/Falcon/ref_project/kk-falcon-int_git
+export cert_kk=${kk_path}/build/target/product/security
+export cert_type=shared 或 testkey
+export keystore=${cert_kk}/${cert_type}
+java -jar ${kk_path}/prebuilts/sdk/tools/lib/signapk.jar ${keystore}.x509.pem ${keystore}.pk8 SemcContactsProvider.apk shared_signed_SemcContactsProvider.apk

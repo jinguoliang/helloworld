@@ -25,6 +25,12 @@ CTRL-o -> 回到上一次的jump (go back)
 CTRL-i -> 跳回下一个 (go forward)
 :ju -> 显示所有的可以跳跃的地方 (print jump list)
 
+==== vi 查找忽略大小写 ====
+第一种方法：
+/abc\c
+第二种方法：
+set ignorecase （或者简写 set ic）
+
 ==== ctags ====
 ctags -R –c-kinds=+p –fields=+iaS –extra=+q .	generate a file ctags containing the tags in current dir
 in vim:
