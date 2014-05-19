@@ -1,10 +1,8 @@
-FLAGS=-I./include/ -Wall #-fPIC
+FLAGS=-I./include/ -Wall -g#-fPIC
 CC=gcc
 
 test: testdb
 	./testdb
-	cat db4.idx
-	cat db4.dat
 
 testdb: test_db.o libourhdr_db.a
 	${CC} -o $@ $^
@@ -32,4 +30,5 @@ stderr.o: stderr.c include/ourhdr.h
 filelock.o: filelock.c include/ourhdr.h
 	${CC} -o $@ -c $< ${FLAGS} 
 
-
+clean:
+	rm *.o *.a *.so.* 
