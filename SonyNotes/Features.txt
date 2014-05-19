@@ -106,5 +106,9 @@ DMS01797827	Stuck on "Waiting for sync"
 *patch:
     https://review.sonyericsson.net/#/c/575967/
 
+FP16970	Ellis Proximity Unlock
+patch:
+http://review.sonyericsson.net/#/c/805181/
+http://review.sonyericsson.net/#/c/831921/23
 
 
