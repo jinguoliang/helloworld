@@ -1,0 +1,92 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC=gcc$/;"	m
+COUNT	db.c	/^typedef unsigned long COUNT;	\/* unsigned counter *\/$/;"	t	file:
+DATLEN_MAX	include/ourhdr_db.h	31;"	d
+DATLEN_MIN	include/ourhdr_db.h	30;"	d
+DB	db.c	/^} DB;$/;"	t	typeref:struct:__anon1	file:
+DBHANDLE	include/ourhdr_db.h	/^typedef 	void * 	DBHANDLE;$/;"	t
+DBHASH	db.c	/^typedef unsigned long DBHASH;	\/* hash values *\/$/;"	t	file:
+DB_INSERT	include/ourhdr_db.h	22;"	d
+DB_REPLACE	include/ourhdr_db.h	23;"	d
+DB_STORE	include/ourhdr_db.h	24;"	d
+FILE_MODE	test_db.c	6;"	d	file:
+FLAGS	Makefile	/^FLAGS=-I.\/include\/ -Wall -g#-fPIC$/;"	m
+FREE_OFF	db.c	24;"	d	file:
+HASH_OFF	db.c	25;"	d	file:
+IDXLEN_MAX	include/ourhdr_db.h	29;"	d
+IDXLEN_MIN	include/ourhdr_db.h	28;"	d
+IDXLEN_SZ	db.c	13;"	d	file:
+MAXLINE	include/ourhdr.h	19;"	d
+NEWLINE	db.c	16;"	d	file:
+NHASH_DEF	db.c	23;"	d	file:
+PTR_MAX	db.c	22;"	d	file:
+PTR_SZ	db.c	21;"	d	file:
+SEP	db.c	14;"	d	file:
+SPACE	db.c	15;"	d	file:
+__OURHDR_DB_H__	include/ourhdr_db.h	9;"	d
+__OURHDR_H__	include/ourhdr.h	9;"	d
+_db_alloc	db.c	/^static DB * _db_alloc(int namelen)$/;"	f	file:
+_db_find_and_lock	db.c	/^static int _db_find_and_lock(DB *db, const char *key, int writelock)$/;"	f	file:
+_db_free	db.c	/^static void _db_free(DB *db)$/;"	f	file:
+_db_hash	db.c	/^static DBHASH _db_hash(DB *db, const char *key)$/;"	f	file:
+_db_readdat	db.c	/^static char * _db_readdat(DB *db)$/;"	f	file:
+_db_readidx	db.c	/^static off_t _db_readidx(DB *db, off_t offset)$/;"	f	file:
+_db_readptr	db.c	/^static off_t _db_readptr(DB *db, off_t offset)$/;"	f	file:
+chainoff	db.c	/^	off_t	chainoff;	\/* offset of hash chain for this index record *\/$/;"	m	struct:__anon1	file:
+cnt_delerr	db.c	/^	COUNT	cnt_delerr;	\/* delete error *\/$/;"	m	struct:__anon1	file:
+cnt_delok	db.c	/^	COUNT	cnt_delok;	\/* delete OK *\/$/;"	m	struct:__anon1	file:
+cnt_fetcherr	db.c	/^	COUNT	cnt_fetcherr;	\/* fetch error *\/$/;"	m	struct:__anon1	file:
+cnt_fetchok	db.c	/^	COUNT	cnt_fetchok;	\/* fetch OK *\/$/;"	m	struct:__anon1	file:
+cnt_nextrec	db.c	/^	COUNT	cnt_nextrec;	\/* nextrec *\/$/;"	m	struct:__anon1	file:
+cnt_stor1	db.c	/^	COUNT	cnt_stor1;	\/* store: DB_INSERT, no empty, appended *\/$/;"	m	struct:__anon1	file:
+cnt_stor2	db.c	/^	COUNT	cnt_stor2;	\/* store: DB_INSERT, found empty, reused *\/$/;"	m	struct:__anon1	file:
+cnt_stor3	db.c	/^	COUNT	cnt_stor3;	\/* store: DB_REPLACE, diff len, appended *\/$/;"	m	struct:__anon1	file:
+cnt_stor4	db.c	/^	COUNT	cnt_stor4;	\/* store: DB_REPLACE, same len, overwrote *\/$/;"	m	struct:__anon1	file:
+cnt_storerr	db.c	/^	COUNT	cnt_storerr;	\/* store error *\/$/;"	m	struct:__anon1	file:
+datbuf	db.c	/^	char	*datbuf;	\/* malloc'ed buffer for data record *\/$/;"	m	struct:__anon1	file:
+datfd	db.c	/^	int		datfd;		\/* fd for data file *\/$/;"	m	struct:__anon1	file:
+datlen	db.c	/^	size_t	datlen;		\/* length of data record$/;"	m	struct:__anon1	file:
+datoff	db.c	/^	off_t	datoff;		\/* offset in data file of data record *\/$/;"	m	struct:__anon1	file:
+db_close	db.c	/^void db_close(DBHANDLE db)$/;"	f
+db_delete	db.c	/^int db_delete(DBHANDLE db, const char *key)$/;"	f
+db_fetch	db.c	/^char *db_fetch(DBHANDLE h, const char *key)$/;"	f
+db_nextrec	db.c	/^char *db_nextrec(DBHANDLE db, char *key)$/;"	f
+db_open	db.c	/^DBHANDLE db_open(const char *pathname,int oflag, ...\/*int mode*\/)$/;"	f
+db_rewind	db.c	/^void db_rewind(DBHANDLE db)$/;"	f
+db_store	db.c	/^int db_store(DBHANDLE db,const char *key, const char *data, int flag)$/;"	f
+err_doit	stderr.c	/^static void err_doit(int merrnoflag, int merrno, const char *fmt, va_list ap)$/;"	f	file:
+err_dump	stderr.c	/^void err_dump(const char *fmt, ...)$/;"	f
+err_exit	stderr.c	/^void err_exit(int merrno, const char *fmt, ...)$/;"	f
+err_msg	stderr.c	/^void err_msg(const char *fmt, ...)$/;"	f
+err_quit	stderr.c	/^void err_quit(const char *fmt, ...)$/;"	f
+err_ret	stderr.c	/^void err_ret(const char *fmt, ...)$/;"	f
+err_sys	stderr.c	/^void err_sys(const char *fmt, ...)$/;"	f
+hashoff	db.c	/^	off_t	hashoff;	\/* offset in index file of hash table *\/$/;"	m	struct:__anon1	file:
+idxbuf	db.c	/^	char	*idxbuf;	\/* malloc'ed buffer for index record *\/$/;"	m	struct:__anon1	file:
+idxfd	db.c	/^	int		idxfd;		\/* fd for index file *\/$/;"	m	struct:__anon1	file:
+idxlen	db.c	/^	size_t	idxlen;		\/* length of index record $/;"	m	struct:__anon1	file:
+idxoff	db.c	/^	off_t	idxoff;		\/* offset in index file of index record $/;"	m	struct:__anon1	file:
+is_read_lockable	include/ourhdr.h	60;"	d
+is_write_lockable	include/ourhdr.h	62;"	d
+lock_reg	filelock.c	/^int lock_reg(int fd, int cmd, int type, off_t offset, int whence, off_t len)$/;"	f
+lock_test	filelock.c	/^pid_t lock_test(int fd, int type, off_t offset, int whence, off_t len)$/;"	f
+lockfile	filelock.c	/^int lockfile(int fd)$/;"	f
+main	test.c	/^int main(int argc,char *argv[])$/;"	f
+main	test_db.c	/^int main(void)$/;"	f
+name	db.c	/^	char	*name;		\/* name db was opened under *\/$/;"	m	struct:__anon1	file:
+nhash	db.c	/^	DBHASH	nhash;		\/* current hash table size *\/$/;"	m	struct:__anon1	file:
+pname	stderr.c	/^char *pname = NULL;$/;"	v
+pr_exit	stderr.c	/^void pr_exit(int status)$/;"	f
+ptroff	db.c	/^	off_t	ptroff;		\/* chain ptr offset pointing to this idx record *\/$/;"	m	struct:__anon1	file:
+ptrval	db.c	/^	off_t	ptrval;		\/* contents of chain ptr in index record *\/$/;"	m	struct:__anon1	file:
+read_lock	include/ourhdr.h	49;"	d
+readw_lock	include/ourhdr.h	51;"	d
+set_fl	filelock.c	/^void set_fl(int fd, int flags)$/;"	f
+un_lock	include/ourhdr.h	57;"	d
+write_lock	include/ourhdr.h	53;"	d
+writew_lock	include/ourhdr.h	55;"	d

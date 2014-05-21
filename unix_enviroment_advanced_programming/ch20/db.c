@@ -254,7 +254,6 @@ static int _db_find_and_lock(DB *db, const char *key, int writelock)
 	 * offset in the hash table for this key.
 	 */
 	db->chainoff = (_db_hash(db, key) * PTR_SZ) + db->hashoff;
-	printf("chainoff = %d\n",db->chainoff);
 	db->ptroff = db->chainoff;
 
 	/*We lock the hash chain here. The caller must unlock it
@@ -272,7 +271,6 @@ static int _db_find_and_lock(DB *db, const char *key, int writelock)
 	 * Get the offset in the index file of first record
 	 * on the hash chain (can be 0).
 	 */
-	printf("ptroff = %d\n", db->ptroff);
 	offset = _db_readptr(db, db->ptroff);
 	while(offset != 0) {
 		nextoffset = _db_readidx(db, offset);
@@ -339,7 +337,6 @@ static off_t _db_readidx(DB *db, off_t offset)
 	char 			asciiptr[PTR_SZ + 1], asciilen[IDXLEN_SZ + 1];
 	struct iovec	iov[2];	
 
-	printf("offset = %d\n",offset);
 	/*
 	 * Position index file and record the offset. db_nextrec
 	 * calls us with offset==0, meaning read from current offset.
@@ -371,8 +368,6 @@ static off_t _db_readidx(DB *db, off_t offset)
 	db->ptrval = atol(asciiptr);
 
 	asciiptr[IDXLEN_SZ] = 0;
-	printf("length = %s ",asciilen);
-	printf("val = %s\n",asciiptr);
 	if ((db->idxlen = atoi(asciilen)) < IDXLEN_MIN || db->idxlen > IDXLEN_MAX)
 		err_dump("_db_readidx: invalid length");
 
@@ -782,11 +777,70 @@ static int _db_findfree(DB *db, int keylen, int datlen)
 	return rc;
 }
 
-void db_rewind(DBHANDLE db)
+/*
+ * Rewind the index file for db_nextrec().
+ * Automatically called by db_open().
+ * Must be called before first db_nextrec().
+ */
+void db_rewind(DBHANDLE h)
 {
+	DB 			*db = h;
+	off_t		offset;
+
+	offset = (db->nhash + 1) * PTR_SZ;		/* +1 for free list ptr */
+
+	/* 
+	 * We're just setting the file offset for this process
+	 * to the start of the index records; no need to lock.
+	 * +1 below for newline at end of hash table.
+	 */
+	if ((db->idxoff = lseek(db->idxfd, offset + 1, SEEK_SET)) == -1)
+		err_dump("db_rewind: lseek error");
 }
 
-char *db_nextrec(DBHANDLE db, char *key)
+/*
+ * Return the next sequential record.
+ * We just step our way through the index file, ignoring deleted
+ * records. db_rewind must be called before this function is called
+ * the first time.
+ */
+char *db_nextrec(DBHANDLE h, char *key)
 {
-	return 0;
+	DB 		*db = h;
+	char	c;
+	char	*ptr;
+
+	/*
+	 * We read lock the free list so that we don't read 
+	 * a record in the middle of its being deleted.
+	 */
+	if (readw_lock(db->idxfd, FREE_OFF, SEEK_SET, 1) < 0)
+		err_dump("db_nextrec: readw_lock error");
+
+	do {
+		/*
+		 * Read next sequential index record.
+		 */
+		if (_db_readidx(db, 0) < 0) {
+			ptr == NULL;		/* end of index file, EOF */
+			goto doreturn;
+		}
+
+		/*
+		 * Check if key is all blank (empty record).
+		 */
+		ptr = db->idxbuf;
+		while ((c = *ptr++) != 0 && c == SPACE)
+			;	/* skip until null byte or nonblank */
+	}while (c == 0);	/* loop until a nonblank key is found */
+
+	if (key != NULL)
+		strcpy(key, db->idxbuf);	/* return key */
+	ptr = _db_readdat(db); /* return pointer to data buffer */
+	db->cnt_nextrec++;
+
+doreturn:
+	if (un_lock(db->idxfd, FREE_OFF, SEEK_SET, 1) < 0)
+		err_dump("db_nextrec: un_lock error");
+	return ptr;
 }
