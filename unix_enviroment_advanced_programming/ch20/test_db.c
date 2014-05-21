@@ -9,15 +9,15 @@ int main(void)
 {
 	DBHANDLE db;
 
-	if((db = db_open("db4", O_RDWR)) == NULL)
+	if((db = db_open("db4", O_RDONLY)) == NULL)
 		err_sys("db_open error");
 
-	if (db_store(db, "Alpha", "jin", DB_REPLACE) != 0)
-		err_quit("db_store error for alpha");
-	if (db_store(db, "beta", "Data for guo", DB_REPLACE) != 0)
-		err_quit("db_store error for beta");
-	if (db_store(db, "gamma", "liang", DB_REPLACE) != 0)
-		err_quit("db_store error for gamma");
+//	if (db_store(db, "Alpha", "jin", DB_REPLACE) != 0)
+//		err_quit("db_store error for alpha");
+//	if (db_store(db, "beta", "Data for guo", DB_REPLACE) != 0)
+//		err_quit("db_store error for beta");
+//	if (db_store(db, "gamma", "liang", DB_REPLACE) != 0)
+//		err_quit("db_store error for gamma");
 
 
 //	test_db_readptr(db,4);;
@@ -25,6 +25,14 @@ int main(void)
 	printf("-------the first is %s\n",db_fetch(db, "Alpha"));
 	printf("-------the second is %s\n",db_fetch(db, "beta"));
 	printf("-------the third is %s\n",db_fetch(db, "gamma"));
+
+	
+	char *ptr;
+	char key[1024];
+	db_rewind(db);
+
+	while ((ptr = db_nextrec(db,key)) != NULL)
+		printf("key = %s, data = %s\n", key, ptr);
 
 	db_close(db);
 

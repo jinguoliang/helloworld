@@ -822,7 +822,7 @@ char *db_nextrec(DBHANDLE h, char *key)
 		 * Read next sequential index record.
 		 */
 		if (_db_readidx(db, 0) < 0) {
-			ptr == NULL;		/* end of index file, EOF */
+			ptr = NULL;		/* end of index file, EOF */
 			goto doreturn;
 		}
 
