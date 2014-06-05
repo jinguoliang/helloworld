@@ -55,4 +55,19 @@ Redis是一个开源的使用ANSI C语言编写、支持网络、可基于内存
 （发音同 engine x）是一款轻量级的Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个BSD-like 协议下发行。由俄罗斯的程序设计师Igor Sysoev所开发，供俄国大型的入口网站及搜索引擎Rambler（俄文：Рамблер）使用。其特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：新浪、网易、 腾讯等。
 
 === Jenkins ===
-，之前叫做Hudson，是基于Java开发的一种持续集成工具，用于监控秩序重复的工作
+之前叫做Hudson，是基于Java开发的一种持续集成工具，用于监控秩序重复的工作
+
+=== ISO ===
+ISO is the measurement of how sensitive a digital camera's sensor is to light. The speed or light-sensitivity of a digital camera's sensor is rated in ISO numbers -- the lower the number, the slower the response to light.
+Higher ISO numbers indicate a higher sensitivity to light, so less time is needed to expose a picture. Most digital cameras let you control the ISO setting to allow the use of higher shutter speeds and/or smaller apertures, according to circumstances.
+Many digital cameras offer high ISO settings (e.g. 1600, 2000, 3200, even up to 6400!) While this allows photos to be taken in low light, you will generally find that the higher the ISO setting, the noisier your image will -- depending on how much noise there is, it might look like your photo is covered in a layer of sand (that would mean a lot of noise).
+Unless you really need to use an ISO of 1600 or more to capture your subject, I'd stick to the lower end of the spectrum -- hesitant to go higher than ISO 800.
+General Rules and tips for ISO Camera Settings:
+•Use an ISO of 100 or 200 when taking photographs outside in sunny conditions.
+•If the sky is overcast or it is evening time, then use an ISO within the range of 400 to 800.
+•Night time or in cases of low light you might need to set your digital camera ISO to 1600. If you don't then your photo will appear too dark if at all.
+How does the ISO speed affect the photographs end result?
+If you set your digital camera to a low ISO, for example 100, the resulting photograph will be better quality than one set at 1600. The higher the ISO the more grainy the photo will look. Therefore go for a low ISO number whenever possible.
+However there are circumstances where a lower quality photograph is better than none at all. For example taking photographs of fish in a dark aquarium would normally be out of range for most point and shoot cameras. As you can see by the image below, setting my DSLR camera to a high 1600 ISO made this task possible. Otherwise there would not have been enough light let in to the sensor and the image would have turned out totally black.
+ 
+Of course I could have chosen a lower ISO camera setting and used the inbuilt flash. However this would have resulted in unwanted flash glare bouncing off the glass. With this in mind a higher ISO (say 800) is also recommended if you want to take photographs of people inside in the evening without using a flash.

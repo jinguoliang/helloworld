@@ -57,6 +57,8 @@ sed 's:hello:jin:' file  把文件内的每一行的hello替换为jin
 
 awk -v RS=" " -v ORS=" " '/^-.*$/'           -v  assign a program var    RS: record sign default(\n)  ORS: out record sign default(\n)
 	here divide record by " " and filter the record prefix "-"
+	
+let n=2+3		这个样子？？！！
 
 恶心的地方
 $@ 和 $* 都存储了所有参数,肯定有区别，但是还没测试出来

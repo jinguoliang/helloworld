@@ -399,7 +399,7 @@ bash:
 
 	tr '\n' ' '|		将多行连接为一行
 	tr 'A-Z' 'a-z'|		转化大写字母为小写
-	sed 's/^/# 		将每行变为注释
+	sed 's/^/# '		将每行变为注释
 	sed -n -e 2p|		显示第 2 行	-n表示不显示pattern space -e 表示后边是要执行的script       
 	head -n 2 -|
 	tail -n 2 -|
@@ -616,6 +616,7 @@ Samba
 			xmodmap -e "pointer = 3 2 1"	设置鼠标为左手惯用
 			xev   				
 
+
 ==== font ====
 	Fontconfig 应 该能 直接 获得 字体 信息“fc-list”能列出你的新字体。
 	,
@@ -624,6 +625,7 @@ Samba
 	如果你在 X 中手动安装了新的一个 TrueTyep 字体,而没有使用 Ubuntu 的软件包,运行
 	# xset fp rehash
 	让 xorg 重新检查目录下面的内容并找到新的字体。
+
 
 ===== SSH =====
 	SSH(Secure SHell) 在 Internet 中建立连接的安全途径。是OpenSSH 是一个自由的 SSH 实现软件,它包含 在 Debian 的 ssh 软件包中。
