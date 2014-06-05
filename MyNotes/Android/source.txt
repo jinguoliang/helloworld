@@ -294,7 +294,7 @@ frameworks 目录        （核心框架——java及C++语言）
 |   |-- media                （媒体相关库）
 |   |-- obex                （蓝牙传输库）
 |   |-- opengl                （2D-3D加速库）
-|   |-- packages        （设置、TTS、VPN程序）
+|   |-- packages        （设置、TTS、VPN程序,[[+keyguard|keyguard]]）
 |   |-- sax                （XML解析器）
 |   |-- services        （各种服务程序）
 |   |-- telephony        （电话通讯管理）
