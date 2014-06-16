@@ -42,8 +42,9 @@ $(space)									echo a apace
 $(subst hello,world,helloworld) 			substitute hello with world in (helloworld)
 __$(eval p+=a) $(eval p+=b) echo $p  		reference ---->foreach__
 $(sort c b a)---->a b c
+$(dir <file>)  get the dir of the file
 
-===  Makefile中include、-include、sinclude的区别 ===
+=== Makefile中include、-include、sinclude的区别 ===
  
 
 如果指示符“__include__”指定的文件不是以斜线开始（绝对路径，如/usr/src/Makefile...），而且当前目录下也不存在此文件；make将根据文件名试图在以下几个目录下查找：首先，查找使用命令行选项“-I”或者“--include-dir”指定的目录，如果找到指定的文件，则使用这个文件；否则继续依此搜索以下几个目录（如果其存在）：“/usr/gnu/include”、“/usr/local/include”和“/usr/include”。

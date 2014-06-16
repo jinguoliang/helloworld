@@ -25,6 +25,7 @@ md5sum 计算md5
 ==== Internet: ====
 curl  url > file
 wget url
+wget -r -p -k -np http://hi.baidu.com/phps   下载整个网站
 Nethogs 是一个终端下的网络流量监控工具，它的特别之处在于可以显示每个进程的带宽占用情况，这样可以更直观获取网络使用情况。它支持 IPv4 和 IPv6 协议、支持本地网卡及 PPP 链接。
 __webclient:__
 lynx
@@ -78,11 +79,16 @@ plog
 == File: ==
 lsof   查看打开的文件
 
-Find:
+=== Find ===
+:
 	 function cgrep()
 	 {
 	     find . -name .repo -prune -o -name .git -prune -o -type f \( -name '*.c' -o -name '*.cc' -o -name '*.cpp' -o -name '*.h' \) -print0 | xargs -0 grep --color -n "$@"                                 
 	}
+	
+	__grep__:
+		grep -o -e <正则>  file   -o 表示只显示匹配的部分
+		echo helloworld |grep -o -e 'l\S*r'   输出llowor
 
 
 == High order: ==
