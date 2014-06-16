@@ -1,0 +1,26 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-06-14T15:12:05+08:00
+
+====== deliver to arima ======
+Created Saturday 14 June 2014
+
+[[./getpatchfile.sh]] 
+
+
+以前eagle tina是这样：
+1. 使用getpatchfile.sh
+              本地代码sync到最新
+              获取时间戳 repo manifest –r –o W46.3_201311131112.xml
+               ./getpatchfile.sh  start.xml  end.xml
+2. Delivery的规范问题
+              参见Eagle项目组的deliver，\\semcw24948\tina_share\Eagle TMO\Delever_to_CCI
+现在mtk的话，Arima不使用git，需要直接deliver修改的文件给他们，参考falcon组，需要和Jakel sync一下。
+以前eagle tina是这样：
+1. 使用getpatchfile.sh
+              本地代码sync到最新
+              获取时间戳 repo manifest –r –o W46.3_201311131112.xml
+               ./getpatchfile.sh  start.xml  end.xml
+2. Delivery的规范问题
+              参见Eagle项目组的deliver，\\semcw24948\tina_share\Eagle TMO\Delever_to_CCI
+现在mtk的话，Arima不使用git，需要直接deliver修改的文件给他们，参考falcon组，需要和Jakel sync一下。

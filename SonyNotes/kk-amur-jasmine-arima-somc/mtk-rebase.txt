@@ -21,9 +21,9 @@ Rebase 过程：
 	对于branchout的project，因为mtk与我们都可能修改，所以需要merge。
 	得到一个新的manifest
 3.通过新的manifest下载的code再与Vn merge解决冲突得到我们的最新版本
-
 Note:
 	1.在manifest中，sha1我们branchout出来的project的sha1号为我们的branch 名
 	2.我们只能修改branch out出来的project
 	3.mtk可以修改所有代码，所以可能会与我们的修改冲突，并且集中在我们branch out出来的projects，这就是第二的原因
 
+[[./rebasetool_mtk.sh]] 

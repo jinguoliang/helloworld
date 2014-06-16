@@ -23,3 +23,48 @@ Option 2: Only Speed prioritized
 Option 3: Only Quality prioritized 
 3.1 Quality prioritized, enable post processing(NR/IS). No dependency on Calablog or QCT platform.
 3.2 Off
+
+My definition
+18875	Camera for e1 II - legacy 1 - Burst mode
+18877	Camera for e1 II - legacy 3 - Super resolution zoom
+18878	Camera for e1 II - legacy 4 - Video smile capture
+18879	Camera for e1 II - legacy 5 - Auto scene recognition
+18880	Camera for e1 II - legacy 6 - Video stabilization
+
+
+1.Legacy from Lagan: in house reference FP12517
+2.Camera UI ver 4.0: in house reference FP12852
+3. Modeless camera 2.0: in house reference FP12853 (this feature has caladblog related part and that part could be ignored for EU3)
+4. Camera OTA plug in framework: in house reference FP12866.
+5.FP14666  Camera add on plan
+6.FP14667  Time-shift 1.0 for EU3
+7.FP15813  Camera - Steady shot for products no calablog for E3
+8.FP15842  HDR video for E3 no Calablog
+
+{{./pasted_image.bmp}}
+{{./pasted_image001.bmp}}
+platform/vendor/semc/frameworks/base/semc-camera-client
+platform/vendor/semc/hardware/libcamera
+platform/vendor/semc/system/caladbolg
+platform/vendor/qcom/proprietary-8974
+kernel/msm
+platform/bionic
+platform/device/semc/products
+vendor/semc/packages/apps/camera-ui
+vendor/semc/packages/apps/camera-3d
+vendor/semc/packages/apps/camera-addons
+vendor/semc/frameworks/base/libs/camera-common
+vendor/semc/frameworks/base/libs/camera-extension
+
+
+{{./pasted_image002.bmp}}
+- platform/vendor/semc/frameworks/base/semc-camera-client
+- platform/vendor/semc/hardware/libcamera
+- platform/vendor/semc/system/caladbolg
+- platform/vendor/semc/packages/apps/camera-u
+
+
+
+
+E1-II   reference kk-mr1-shinano2
+[[CameraExtensionPermission]]	vendor/semc/frameworks/base/api/private/governed/com.sonyericsson.cameraextension/permission/ 

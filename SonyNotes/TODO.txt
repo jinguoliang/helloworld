@@ -5,8 +5,7 @@ Creation-Date: 2013-12-10T17:43:43+08:00
 ====== TODO ======
 Created Tuesday 10 December 2013
 
-flash and inspect the email and exchange
-tracking Exchange
-tracking Backup 
+1.camera
+
 
 

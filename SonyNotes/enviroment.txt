@@ -27,10 +27,10 @@ tosemc_preb_sys
 1.get the latest version of branche
 	repository latestlabel jb-mr2-rhine
 2.download SDK
-	sdkdownload -l 14.2.A.0.81  
+	sdkdownload -l 23.0.A.0.310   
 
 3.How to download source code?
-	1.	repo init -u git://review-jdm.sonyericsson.net/platform/manifest.git -b kk-yukonodm-eagle-tina-somc
+	1.	repo init -u [[git://review-jdm.sonyericsson.net/platform/manifest.git|git]][[://review-jdm.sonyericsson.net/platform/manifest.git]] -b kk-yukonodm-eagle-tina-somc
 	2.	repo init -u git://review-jdm.sonyericsson.net/platform/manifest.git -b kk-yukonodm-eagle-tina-somc -m 002.xml
 	3.	repo sync
 4.download decouple
