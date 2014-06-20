@@ -68,3 +68,5 @@ vendor/semc/frameworks/base/libs/camera-extension
 
 E1-II   reference kk-mr1-shinano2
 [[CameraExtensionPermission]]	vendor/semc/frameworks/base/api/private/governed/com.sonyericsson.cameraextension/permission/ 
+							vendor/semc/frameworks/base/libs/camera-common
+							

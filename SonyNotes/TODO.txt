@@ -5,7 +5,22 @@ Creation-Date: 2013-12-10T17:43:43+08:00
 ====== TODO ======
 Created Tuesday 10 December 2013
 
-1.camera
+
+w.2 jikens build ; create deliver patch  
+
+w.3
+1. Arima release
+2. Code sync complete by 9:00  
+
+w.4
+rebase
+
+1.calculator :
+__send email__
+
+
+
+
 
 
 

@@ -1,0 +1,16 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-06-19T09:55:56+08:00
+
+====== android ======
+Created Thursday 19 June 2014
+
+=== -bash: /usr/bin/aapt: No such file or directory ===
+sudo dpkg --add-architecture i386
+sudo apt-get update
+Then I could install ia32-libs just fine!
+
+=== 这种和用context.getService()有什么区别？ ===
+KeyguardViewBase.java：
+210         IAudioService audioService = IAudioService.Stub.asInterface(
+211                 ServiceManager.checkService(Context.AUDIO_SERVICE));

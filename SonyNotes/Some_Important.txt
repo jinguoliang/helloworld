@@ -26,3 +26,10 @@ DON’T patch for below gits.
 
 
 
+==== deliver patch path ====
+\\semcw24948\tina_share\Jasmine\1 DEV\Delivery patch
+
+
+=== Repo upload  ===
+git push ssh://john.jin@review-jdm.sonyericsson.net:29418/platform/manifest HEAD:refs/for/kk-amur-jasmine-arima-somc
+repo upload . --re=jakel.xu2@sonymobile.com,miro.wang@sonymobile.com,jason.chen2@sonymobile.com
