@@ -7,6 +7,8 @@ Created Friday 08 November 2013
 
 [[+3D]]
 [[动画]]
+
+[[+布局单位|布局单位]]
 高效的显示bitmap
 	加载大图片
 可以用BitmapFactory来只解析图片的大小
