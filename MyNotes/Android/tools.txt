@@ -15,6 +15,9 @@ adb -e install -r bin/MyAndroid.apk  	-e 表示在安装到模拟器 -d 表示�
 adb root  以root权限重启adb服务
 adb remount 以读写权限重新挂载根目录
 
+
+[[+MonkeyRunner|MonkeyRunner]]
+
 ==== Logcat ====
 adb logcat -c      clear log
 adb logcat *:W     
@@ -39,8 +42,8 @@ adb shell procrank
 
 模拟器的电话号码默认为1555521+端口号
 
-aapt即Android Asset Packaging Tool , 在SDK的build-tools目录下. 该工具可以查看, 创建, 更新ZIP格式的文档附件(zip, jar, apk). 也可将资源文件编译成二进制文件
- aapt d[ump] --values permissions SemcPhone.apk       view the permissions
+[[+aapt|aapt]]即Android Asset Packaging Tool , 在SDK的build-tools目录下. 该工具可以查看, 创建, 更新ZIP格式的文档附件(zip, jar, apk). 也可将资源文件编译成二进制文件
+
 
 mount -o remount,rw rootfs /   
 adb remount                  - remounts the /system partition on the device read-write
