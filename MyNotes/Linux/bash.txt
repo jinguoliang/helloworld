@@ -41,6 +41,7 @@ $@ 和 $* 都存储了所有参数，但是有区别，什么区别见-->恶心�
 扩展：
 	 Parameter Expansion:
 		1.remove the match strs
+		hello=hello/jin/guo
 		echo ${hello__##__*/}		guo		
 		 echo ${hello__#__*/}			jin/guo
 		echo ${hello__%%__/*}		hello
@@ -61,6 +62,8 @@ awk -v RS=" " -v ORS=" " '/^-.*$/'           -v  assign a program var    RS: rec
 	here divide record by " " and filter the record prefix "-"
 	
 let n=2+3		这个样子？？！！
+
+echo 颜色菜单
 
 === 正则表达式 regular ===
 \s 空字符

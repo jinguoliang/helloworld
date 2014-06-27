@@ -30,4 +30,30 @@ Created Friday 20 June 2014
 1427        try {
 1428            return IWindowManager.Stub.asInterface(
 1429                    ServiceManager.getService("window")).isSafeModeEnabled();
+	5.reportFailedUnlockAttempt()
+	6.void showPrimarySecurityScreen(boolean turningOff)
+	7.showBackupSecurityScreen()
+	8.      __hostView.mViewStateManager.showBouncer?__
+	9.
+	1350         // Don't show camera or search in navbar when SIM or Account screen is showing
+	1351         setSystemUiVisibility(isSimOrAccount ?
+	1352                 (getSystemUiVisibility() | View.STATUS_BAR_DISABLE_SEARCH)
+	1353                 : (getSystemUiVisibility() & ~View.STATUS_BAR_DISABLE_SEARCH))
+	10.K__eyguardWidgetPager__
+	11.__mInsets?__
+	
+=== 2.KeyguardViewManager ===
+Manages creating, showing, hiding and resetting the keyguard    包装了一些KeyguardViewHost的方法
+----------->ViewManagerHost   好像只是设置了一下背景
+
+=== 3.KeyguardViewMediator ===
+ 81  * Mediates requests related to the keyguard.  This includes queries about the
+  82  * state of the keyguard, power management events that effect whether the keyguard
+  83  * should be shown or reset, callbacks to the phone window manager to notify
+  84  * it of when the keyguard is showing, and events from the keyguard view itself
+  85  * stating that the keyguard was succesfully unlocked.
+	1.AlarmManager    AudioManager    StatusBarManager    PowerManager  UserManager    SearchManager  KeyguardViewManager  KeyguardDisplayManager 的确是一个中介
+	
+=== 4.KeyguardUpdaterMonitor ===
+
 
