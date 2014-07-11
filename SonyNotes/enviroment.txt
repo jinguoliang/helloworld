@@ -6,8 +6,6 @@ Creation-Date: 2013-11-25T15:53:02+08:00
 Created Monday 25 November 2013
 
 
-Dayly build 
-\\semcw21685\Big_share\Eagle TMO\DailyBuild\w50.2
 
 [[+Guile]]
 

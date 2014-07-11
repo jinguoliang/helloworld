@@ -24,12 +24,13 @@ DON’T patch for below gits.
 * platform/frameworks/base/core/res
 * platform/vendor/semc/packages/resource/uxp
 
-
+repository latestlabel kk-mr1-shinano2-dsds  找对应branch最新的sdk
 
 ==== deliver patch path ====
 \\semcw24948\tina_share\Jasmine\1 DEV\Delivery patch
 
+ftp://cnbjlx10673/ftp_share/E1-II/Jasmine_Dailybuild
 
-=== Repo upload  ===
+=== Repo upload ===
 git push ssh://john.jin@review-jdm.sonyericsson.net:29418/platform/manifest HEAD:refs/for/kk-amur-jasmine-arima-somc
 repo upload . --re=jakel.xu2@sonymobile.com,miro.wang@sonymobile.com,jason.chen2@sonymobile.com

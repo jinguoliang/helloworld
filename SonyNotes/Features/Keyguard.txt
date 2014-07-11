@@ -42,6 +42,7 @@ Created Friday 20 June 2014
 	10.K__eyguardWidgetPager__
 	11.__mInsets?__
 	
+
 === 2.KeyguardViewManager ===
 Manages creating, showing, hiding and resetting the keyguard    包装了一些KeyguardViewHost的方法
 ----------->ViewManagerHost   好像只是设置了一下背景
@@ -54,6 +55,8 @@ Manages creating, showing, hiding and resetting the keyguard    包装了一些K
   85  * stating that the keyguard was succesfully unlocked.
 	1.AlarmManager    AudioManager    StatusBarManager    PowerManager  UserManager    SearchManager  KeyguardViewManager  KeyguardDisplayManager 的确是一个中介
 	
-=== 4.KeyguardUpdaterMonitor ===
 
+=== 4.KeyguardUpdaterMonitor ===
+Watches for updates that may be interesting to the keyguard, and provides the up to date information as well as a registration for callbacks that care
+ to be updated.
 
