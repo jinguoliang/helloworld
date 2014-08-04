@@ -65,6 +65,8 @@ let n=2+3		这个样子？？！！
 
 echo 颜色菜单
 
+read -p "Input the value [$OLD_PRODUCT_TYPE]: " PRODUCT_TYPE     -p   prompt
+
 === 正则表达式 regular ===
 \s 空字符
 \S 非空字符
