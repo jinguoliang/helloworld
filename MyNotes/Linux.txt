@@ -22,7 +22,7 @@ pygtk-demo  好的学习材料
 [[+mono]]
 [[+chrome extention ----terminal]]
 [[+php]]
-
+[[+perl|perl]]
 [[+必须工具]]
 
 [[+make]]

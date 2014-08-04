@@ -1,0 +1,14 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-07-31T13:54:17+08:00
+
+====== makemtk.mk ======
+Created Thursday 31 July 2014
+
+=== 定义所有的target ===
+
+检查out目录
+
+include mediatek/build/Makefile 
+
+

@@ -1,0 +1,39 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-07-28T16:19:49+08:00
+
+====== mk ======
+Created Monday 28 July 2014
+
+ 41 setBuildEnvVars("./mbldenv.sh");   设置build环境变量
+ 42 setCacheEnvVars() if (uc($ENV{"MTK_INTERNAL"}) eq "TRUE");    //__????__
+
+检查代码路径是否有空个或者特殊字符
+
+@chkDirs = qw(mediatek mediatek/config mediatek/build/tools);     检查这几个目录
+
+__根据单双卡选项复制默认配置__
+131   # Arima Rockyang added 20140514 - for single/dual SIM switch
+132   elsif ($ARGV[0] =~ /^-s|ss/)
+133   {
+134     use File::Copy;
+135     use strict;
+136     copy("mediatek/config/arima82_wet_kk/ProjectConfig_SS.mk","mediatek/config/arima82_wet_kk/ProjectConfig.mk")||warn "could not copy files :$!";
+137     print "\n****************** You are building image for SS product !!!******************\n\n";
+138   }
+139   elsif ($ARGV[0] =~ /^-d|ds/)
+140   {
+141     use File::Copy;                                                                                                                                                                                      
+142     use strict;
+143     copy("mediatek/config/arima82_wet_kk/ProjectConfig_DS.mk","mediatek/config/arima82_wet_kk/ProjectConfig.mk")||warn "could not copy files :$!";
+144     print "\n****************** You are building image for DS product !!!******************\n\n";
+145   }
+146   # Arima Rockyang added end
+
+listproject -->mediatek/build/tools/listP.pl
+chkMustEnv -->mediatek/build/tools/checkEnv.py
+
+处理参数
+
+读取配置
+foreach $prj ("mediatek/config/${project}/ProjectConfig.mk", "mediatek/config/common/ProjectConfig.mk")

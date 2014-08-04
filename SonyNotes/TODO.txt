@@ -31,3 +31,8 @@ enterprise
 livekey          keycode 映射
 
 
+rebase
+frameworks/base --- services/java/com/android/server/power/ShutdownAnimation.java
+
+
+
