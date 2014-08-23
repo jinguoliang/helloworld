@@ -96,6 +96,8 @@ chroot: Run a command with a different root directory
 syslinux    在u盘上做系统
 exec cmd     不单单执行cmd，会用cmd的内核代替当前bash的内核，不会创建新进程
 
-
-
+电脑传感器：
+sudo apt-get install lm-sensors
+sudo sh -c "yes|sensors-detect"
+sensors
 

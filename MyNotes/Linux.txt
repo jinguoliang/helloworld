@@ -49,4 +49,6 @@ SteamOS
 ==== Problems ====
 [[+Problems|Problems]] some problems in linux system.
 
+
+[[+Raspberry|Raspberry]]
 [[+心得|心得]]
