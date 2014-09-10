@@ -43,6 +43,9 @@ $project = lc($ARGV[0]);  __？？__
 761         # ignore for special server/user
 762     }
 
+72     (-e $crc32) or die("Error: crc32 not found, run 'sudo apt-get install libarchive-zip-perl' to install it");
+
+
 === 循环： ===
 730   __map__
 731     {

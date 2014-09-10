@@ -18,6 +18,8 @@ Created Monday 14 October 2013
 
 [[+Adroid 界面绘制实现|Adroid 界面绘制实现]]
 
+=== SpannableStringBuilder ===
+用SpannableStringBuilder包装一个字符串，然后用setSpan来设置样式，最后把SpannableStringBuilder放进TextView
 
 ====== 自定义View： ======
 好的自定义类应该：
