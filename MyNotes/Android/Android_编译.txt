@@ -70,3 +70,7 @@ apply plugin: 'android'
 android {
     compileSdkVersion 17
 }
+
+
+=== Log 查错： ===
+搜：Error\Space     error:    make[1]...[3] 

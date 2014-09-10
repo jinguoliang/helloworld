@@ -1,0 +1,13 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-08-07T10:38:39+08:00
+
+====== Settings ======
+Created Thursday 07 August 2014
+
+=== Memory ===
+
+  Panel showing storage usage on disk for known [[StorageVolume]] returned  by  StorageManager. Calculates and displays usage of data types.
+	
+	== preference ==
+	: res/xml/device_info_memory.xml

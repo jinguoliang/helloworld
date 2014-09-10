@@ -60,3 +60,23 @@ Manages creating, showing, hiding and resetting the keyguard    包装了一些K
 Watches for updates that may be interesting to the keyguard, and provides the up to date information as well as a registration for callbacks that care
  to be updated.
 
+=== 5.KeyguardService ===
+一个接口，通过KeyguardViewMediator做中介来实现功能
+
+=== 6.KeyguardViewStateManager ===
+
+=== 7.ChallengeLayout ===
+19/**
+20 * Interface implemented by __ViewGroup-derived__ layouts that implement
+21 * special logic for__ presenting security challenges to the user__.
+22 */
+
+=== 8.SlidingChallengeLayout ===
+extends ViewGroup implements ChallengeLayout
+47 * This layout handles __interaction with the sliding security challenge views__
+48 * that __overlay/resize other keyguard contents__.
+
+=== 9.KeyguardActivityLauncher ===
+laucher activity like camera, widget and so on
+
+o

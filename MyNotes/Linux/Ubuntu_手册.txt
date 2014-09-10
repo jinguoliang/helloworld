@@ -457,7 +457,7 @@ nice 命令
 		5 4 * * __sun__ echo "run at 04:05 every sunday"
 		# run at 03:40 on the first Monday of each month
 		40 3 __1-7__ * * [ __"$(date +%a)"__ ==== "Mon" ] && command -args	------------??????
-
+		__@reboot /home/pi/your_program_here__		在启动时执行
 网络测试基础
 	ping yahoo.com		# 检查 Internet 连接
 

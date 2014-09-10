@@ -112,9 +112,10 @@ http://review.sonyericsson.net/#/c/805181/
 http://review.sonyericsson.net/#/c/831921/23
 http://review.sonyericsson.net/#/c/792860/
 
-[[+Keyguard|Keyguard]] 
+[[+Keyguard|Keyguard]]
+[[+Statusbar|Statusbar]] 
 [[+Camera feature|Camera feature]]
-
+[[+Settings|Settings]]
 calculator feature
 PID005179 
 change the name :

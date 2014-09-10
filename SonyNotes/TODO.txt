@@ -9,30 +9,39 @@ Created Tuesday 10 December 2013
 === Need to learn: ===
 1.Parcelable
 
-w.2 jikens build ; create deliver   
 
-w.3
-1. Arima release
-2. Code sync complete by 9:00  
+=== TODO: ===
+1.keyguard 
+2.livekey          keycode 映射   
 
-w.4
-rebase
+ALARM1:
+livekey upload
 
-
-{{./pasted_image.png}}
-
-2.keyguard
-3.calculator
+ALARM2:
+rebase doc
 
 
 
-
-enterprise 
-livekey          keycode 映射
-
-
-rebase
-frameworks/base --- services/java/com/android/server/power/ShutdownAnimation.java
+[[/home/CORPUSERS/xp013796/source/kk-mr2-amur-jasmine-somc-newest-notmodify/vendor/semc/packages/apps/credential-manager-service]]
 
 
 
+
+libasb
+
+
+
+
+f7caa6b
+
+b152b31
+
+9869226
+
+19d5767
+
+6bad947
+
+06041c0
+
+b163dfc
