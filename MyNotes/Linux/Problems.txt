@@ -9,3 +9,5 @@ Created 星期日 06 四月 2014
 
 [[+Ubuntu 64bit with Android ADT...|Ubuntu 64bit with Android ADT...]]  
 
+无线不能上网，发现是/etc/resolv.conf 但是又改不了（是改了又被改回去），应该是修改 [[/etc/resolvconf/resolv.conf.d/tail]]
+在里边添加自己想要的
