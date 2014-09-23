@@ -13,3 +13,7 @@ Created Friday 08 November 2013
 getWindow().setSoftInputMode(
 WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE
 | WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE);
+
+全屏
+requestWindowFeature(Window.FEATURE_NO_TITLE);
+this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);//去掉信息栏

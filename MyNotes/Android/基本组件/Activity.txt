@@ -5,6 +5,9 @@ Creation-Date: 2013-10-16T20:47:44+08:00
 ====== Activity ======
 Created Wednesday 16 October 2013
 
+强制横屏
+setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
 [[+Loader|Loader]] 
 {{./pasted_image.png}}
 基本生命周期
@@ -25,9 +28,6 @@ create -> start
 系统在onstart（）后调用onRestoreInstanceState()并且只有需要恢复状态是才调用，所以不需要像onCreate内一样检查Bundle是否为空 
 
 Activity的顶层布局ID=android.R.id.content
-
-不显示title
-requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 === 相应按键事件 ===
 ：
