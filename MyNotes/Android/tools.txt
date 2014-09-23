@@ -62,3 +62,5 @@ Android Studio
 
 alt+insert     generate code    （getter or setter ...)
 ctrl+insert    选中一行
+
+[[+ivy|ivy]]
