@@ -71,7 +71,7 @@ aapt package -m -J <R.java目录> -S <res目录> -I <android.jar目录>  -M <And
 
 aapt package -f  -S <res目录> -I <android.jar目录> -A<assert目录>  -M <AndroidManifest.xml目录> -F <输出的包目录>
 
-4.  打包好的apk中移除文件
+4. 打包好的apk中移除文件
 
 aapt r[emove] [-v] file.{zip,jar,apk} file1 [file2 ...]
 
@@ -83,8 +83,16 @@ aapt r[emove] [-v] file.{zip,jar,apk} file1 [file2 ...]
 
 例如：aapt a <你的apk文件> <要添加的文件路径>， 这个就是将文件添加到打包好的apk文件中
 
-6.  显示aapt的版本
+6. 显示aapt的版本
 
 aapt v[ersion]
 
 例如：aapt v， 就是打印这个结果 Android Asset Packaging Tool, v0.2
+
+
+Android apk 打包
+{{./pasted_image.png}}
+
+
+
+

@@ -50,6 +50,8 @@ adb remount                  - remounts the /system partition on the device read
 
 [[+android studio|android studio]]
 
+Genymotion  Android虚拟机 快
+
 ==== signapk.jar ====
 export kk_path=/home/CORPUSERS/xp010717/Falcon/ref_project/kk-falcon-int_git
 export cert_kk=${kk_path}/build/target/product/security
@@ -64,3 +66,5 @@ alt+insert     generate code    （getter or setter ...)
 ctrl+insert    选中一行
 
 [[+ivy|ivy]]
+[[+gradle|gradle]]
+mvn  		mvnrepository.com

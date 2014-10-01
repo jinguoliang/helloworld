@@ -54,23 +54,6 @@ LOCAL_MODULE_PATH := $(TARGET_OUT)/vendor/overlay
 __# the cause of ANRs__ in the content process
 ADDITIONAL_BUILD_PROPERTIES += dalvik.vm.stack-trace-file=/data/anr/traces.txt
 
-==== Android Project Construct: ====
-gradle     
-简单的build.gradle示例：
-
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:0.6.+'
-    }
-}
-apply plugin: 'android'
-android {
-    compileSdkVersion 17
-}
-
 
 === Log 查错： ===
 搜：Error\Space     error:    make[1]...[3] 

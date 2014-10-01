@@ -1,0 +1,144 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-09-23T20:43:41+08:00
+
+====== gradle ======
+Created 星期二 23 九月 2014
+
+gradle     
+简单的build.gradle示例：
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.6.+'
+    }
+}
+apply plugin: 'android'
+android {
+    compileSdkVersion 17
+}
+
+
+==== gradle太好用了 ====
+
+一、寻找gradle的历程
+
+一开始的时候，我们只有一个工程，所有要用到的jar包都放到工程目录下面，时间长了，工程越来越大，使用到的jar包也越来越多，难以理解jar之间的依赖关系。再后来我们把旧的工程拆分到不同的工程里，靠ide来管理工程之间的依赖关系，各工程下的jar包依赖是杂乱的。一段时间后，我们发现用ide来管理项程很不方便，比如不方便脱离ide自动构建，于是我们写自己的ant脚本。再后来，维护ant脚本变得痛苦，管理jar包更加痛苦。svn能管理源码的版本，却不能管理构建出的部署部件的版本。于是我们决定用maven，然而pom.xml的配置实在太繁了！最后，我找到了神器，gradle!
+二、为什么是gradle?
+1. groovy 比 xml好用
+
+Gradle用groovy来做为build脚本，比xml要易读易用得多。用过ant的人都知道，要在ant里面表达一个if分支功能有多么的麻烦，不直观。由于gradle的build脚本就是groovy程序，所以做分支循环等非常方便自然。
+2. Convention over Configuration 比写大量ant基础脚本方便
+
+用ant的时候，要得定义哪里放源码，哪里放jar包，哪里放编译出的class文件等等，每个项目都要这样做，非常麻烦。gradle和maven一样，都定义了一个默认的目录结构，只要按要这个默认的规则来做，就不需要多写一行代码。而且gradle的目录的结构规范和maven是一样的。
+3. 支付定义task，比maven灵活
+
+maven可以帮助管理依赖关系，但是要在maven里实现一个简单的自定义功能，就很麻烦，要得写maven插件，而在gradle里，task是一等公民，可以轻易的添加自己的功能。
+4. 灵活的依赖管理
+
+ant没有依赖管理的功能，都要自己手动做，maven的依赖管理很死板，只能依赖于标准的maven artifact，不能依赖本地的某个jar文件或者其它的源码。而gradle则可以混合地同时支持这些依赖方法，这样可以让旧项目的迁移容易得多。
+5. 默认就具有丰富的功能
+
+只要安装好gradle，默认就支持java项目,war项目，ear项目，做单元测试，生成jar包，上传jar包到maven服务器，等等功能。一般的项目都已经够用了。
+三、简单举例
+
+安装完gradle之后，在一个目录里时建一个叫build.gradle的文件，一个工程就配好了。要支持生成jar包的jar工程，只要在build.gradle里面添加一行：
+1
+	
+apply plugin: 'java'
+
+现在在这个目录的命令行里运行gradle jar就可以自动完成把/src/main/java下的java文件编译，自动单元测试/src/test/java下的类，自动生成jar的功能了，太方便了。
+
+让它依赖于spring，也很简单：
+
+apply plugin: 'java'
+dependencies {
+    compile 'org.springframework:spring-context:3.0.4.RELEASE'
+}
+
+gradle便会自动地到maven服务器下载spring-context-3.0.4.RELEASE.jar，以及它所依赖的jar包。
+
+还可以直接依赖本地jar包，如：
+
+apply plugin: 'java'
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+}
+
+这样就可以直接依赖/libs/目录下所有的jar文件了。
+
+再比如自定义一个task:
+apply plugin: 'java'
+task myTask << {
+    if (System.properties['love']) {
+        println "I love you! Gradle!"
+    }
+}
+
+在命令行执行gradle myTask就会运行这个myTask任务了。
+
+
+
+
+==== 使用gradle打包jar包 ====
+
+最近用android studio来做android开发的IDE，它是使用gradle来构建的，于是开始学习gradle.
+
+现在有一个项目，里面有一个android-library的模块。我想在做release的时候，把这个模块中我写的代码编译并打包成jar包，并且和依赖的jar包拷贝出来，但android studio对android-library的管理是把其与依赖包打包成一个aar的包的，显示这不是我要的，于是便想用gradle来实现。
+
+首先我找到的第一种方法是在模块中的build.gradle增加一个编译jar包的task.代码如下：
+[html] view plaincopy在CODE上查看代码片派生到我的代码片
+
+    task releaseJar(type:Jar) {  
+        from sourceSet.main.java  
+        destinationDir = file('build/libs')  
+    }  
+
+
+但是执行的时候，却提示里面的Log类找不到。显示用这种方法只能编译一般的java文件，无法编译用到了android库的源文件。可能是还要在哪里添加依赖吧。
+
+
+第二种方法是在stackoverflow中找到的，它也确实能打包成jar包。代码如下：
+
+[html] view plaincopy在CODE上查看代码片派生到我的代码片
+
+    android.libraryVariants.all { variant ->  
+        def name = variant.buildType.name  
+        if (name.equals(com.android.builder.BuilderConstants.DEBUG)) {  
+            return; // skip debug builds  
+        }  
+        def task = project.tasks.create "jar${name.capitalize()}, Jar  
+        task.from variant.javaCompile.destinationDir  
+        artifacts.add('archives', task)  
+    }  
+
+
+然后执行gradle jarRelease就可以了。
+
+但是它会把我的R.java也编译进去，而且这个文件又很大。我原来的代码编译之后打包才不到13K，加上编译这个文件的话，要28K。
+
+
+第三种方法就比较取巧了。这是因为gradle在构建的时候，会对这个模块的class文件先打包成classes.jar并放在build/bundles/release。于是我只需要把它拷出来，并重命名就可以了。
+
+于是代码如下：
+
+[html] view plaincopy在CODE上查看代码片派生到我的代码片
+
+    task releaseJar(type: Copy) {  
+        from( 'build/bundles/release')  
+        into( 'build/libs')  
+        include('classes.jar')  
+        rename('calsses.jar', 'superlog' + VERSION_NAME + '.jar')  
+    }  
+      
+    task releaseLib(type: Copy, dependsOn: releaseJar) {  
+        into "../../release"  
+        from 'libs'  
+        from 'build/libs'  
+    }  
+
+
+其中VERSION_NAME是我定义的一个变量，在gradle.properties文件中。该文件与gradle.build在同级目录
