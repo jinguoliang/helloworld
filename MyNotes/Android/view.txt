@@ -18,6 +18,10 @@ Created Monday 14 October 2013
 
 [[+Adroid 界面绘制实现|Adroid 界面绘制实现]]
 
+==== tools:context=".MainActivity"的作用 ====
+tools:context="activity name"这一句不会被打包进APK。只是ADT的Layout Editor在你当前的Layout文件里面设置对应的渲染上下文，说明你当前的Layout所在的渲染上下文是activity name对应的那个activity，如果这个activity在manifest文件中设置了Theme，那么ADT的Layout Editor会根据这个Theme来渲染你当前的Layout。就是说如果你设置的MainActivity设置了一个Theme.Light（其他的也可以），那么你在可视化布局管理器里面看到的背景阿控件阿什么的就应该是Theme.Light的样子。仅用于给你看所见即所得的效果而已。
+
+
 === SpannableStringBuilder ===
 用SpannableStringBuilder包装一个字符串，然后用setSpan来设置样式，最后把SpannableStringBuilder放进TextView
 
