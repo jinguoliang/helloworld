@@ -46,7 +46,8 @@ NS编程辅助工具
 9. layout onclick 如何调用？
 10. 混淆
 11. https
-12. http://douban.fm/j/mine/playlist?type=n&channel=1   就拿它来两年http
+12. http://douban.fm/j/mine/playlist?type=n&channel=1   就拿它来练习http
+13. 各种输入输出流的关系
 
 那人客户端
 登录用户名： jinguol999@163.com
