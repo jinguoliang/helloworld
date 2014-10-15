@@ -17,3 +17,8 @@ WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE
 全屏
 requestWindowFeature(Window.FEATURE_NO_TITLE);
 this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);//去掉信息栏
+
+获得屏幕的大小：
+Display display=getWindowManager().getDefaultDisplay()；
+getMetrics(dm)  详细信息，密度，宽高等等
+getHeight（）
