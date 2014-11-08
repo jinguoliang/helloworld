@@ -24,9 +24,11 @@ KeyguardViewBase.java：
 211                 ServiceManager.checkService(Context.AUDIO_SERVICE));
 
 
-=== error: insufficient permissions for device  ===
+=== error: insufficient permissions for device ===
 sudo chown root:root adb
 sudo chmod u+s adb
 ls -l adb
 __-rwsr-xr-x__ 1 root root   341694 2010-05-11 05:46 adb
 这样无论哪个用户启动adb 使用的都是root权限，就不会提示权限不足的错误了
+
+=== 当从全屏页面跳到非全屏页面时，布局会有下降的问题？ ===
