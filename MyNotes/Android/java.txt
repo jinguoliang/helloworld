@@ -41,8 +41,13 @@ flag指定显示什么 DateUtils.FORMAT_SHOW_YEAR
      yyyy-MM-dd'T'HH:mm:ss.SSSZ 1969-12-31T16:00:00.000-0800
      yyyy-MM-dd'T'HH:mm:ss.SSSZ 1970-01-01T00:00:00.000+0000
 
-
+        /** 输出格式: 2006-01-01 00:00:00 */
+        java.text.DateFormat format1 = new java.text.SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        s = format1.format(new Date());
+        System.out.println(s);
 
 内部类的全名表示	
 		包名.类名$内部类名
+		
+		
 

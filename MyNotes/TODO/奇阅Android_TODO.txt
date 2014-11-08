@@ -1,0 +1,40 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2014-10-30T09:54:14+08:00
+
+====== 奇阅Android TODO ======
+Created 星期四 30 十月 2014
+1. 目录页
+2. 书籍详情：
+	a. 界面完成 ok
+	b. 分类 ok 
+	c. 收藏 __字段没有__
+	d. 免费试读功能 ok --> 存在同步问题，文章还没下来，就去读了，报错
+	e. 加入书架功能 ok
+	f. 查看目录 ok  ---> 另一个目录页 ok
+	g. 总章数  ok
+	h. 查看所有 ok
+	i. 去书架功能  ok
+	j. 推荐阅读  --> __wait remote  interface__
+		a. ui ok
+	k. 评论
+		1. item ui  ok
+		2. ui ok and wait interface
+		3. remote interface： hotReviewForBook(aid)      replyReview(aid, reviewId)      reviewForBook(aid,uid)  replayReview(uid,aid)
+		4. 头像显示圆形 ok
+		5. 热门有了，还有最新评论
+	l. 导航条不应该被收缩 ok 
+4. addToShelf and [[FreeReading]]   async operation!!! 
+5. 登录注册
+	a. 首次登录，手机登录
+		1. UI ok
+		2. 发送验证码功能 ok
+	b. 奇阅登录 ok
+	c. sina
+		a. 获取数据
+	d. qq
+5.修改目录页UI
+5. 书城界面
+
+ 
+ 

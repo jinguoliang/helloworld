@@ -12,11 +12,7 @@ man source.list
 
 ==== TODownload: ====
 	APP:
-
-	
 	Music:
-
-	
 	Movie:
 
 	
@@ -59,6 +55,8 @@ NS编程辅助工具
 登录密码：065481
 
  
+[[+奇阅Android TODO|奇阅Android TODO]]：
+
 
 
 
