@@ -24,9 +24,21 @@ KeyguardViewBase.java：
 211                 ServiceManager.checkService(Context.AUDIO_SERVICE));
 
 
-=== error: insufficient permissions for device  ===
+=== error: insufficient permissions for device ===
 sudo chown root:root adb
 sudo chmod u+s adb
 ls -l adb
 __-rwsr-xr-x__ 1 root root   341694 2010-05-11 05:46 adb
 这样无论哪个用户启动adb 使用的都是root权限，就不会提示权限不足的错误了
+
+TODO:
+1. ContentValues contentValues = new ContentValues(2);
+                contentValues.put(MediaStore.Images.Media.DISPLAY_NAME,titleEditText.getText().toString());
+                contentValues.put(MediaStore.Images.Media.DESCRIPTION,descriptionEditText.getText().toString());
+                try {
+                    getContentResolver().update(imageFileUri, contentValues, null, null);
+                }catch (Throwable e){
+                    System.out.print(e.toString());
+                }
+2.                        ei = new ExifInterface(filePath);
+                        loge("description =" + ei.getAttribute("ImageDescription")); 写图片信息也不行
