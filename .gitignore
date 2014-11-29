@@ -9,3 +9,5 @@ a.out
 .zim/
 .zim/index.db
 .zim/state.conf
+.*.swp
+
