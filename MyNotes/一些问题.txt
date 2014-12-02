@@ -10,3 +10,11 @@ foo 什么意思
 [[+java|java]]
 
 [[+android|android]]
+
+=== ubuntu vim 安装失败 ===
+先卸载vim-common
+再装vim
+
+当在RadioGroup动态添加RadioButton时，要设置它的LayoutParams，是它的（RadioGroup.LayoutParams)
+设LinearLayout的应该也可以，但是却不可以，？？？？？？
+

@@ -14,3 +14,4 @@ zim		 desktop wiki
 
 virtual box
 [[vi]]
+[[+git|git]]

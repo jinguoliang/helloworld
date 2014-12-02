@@ -14,7 +14,18 @@ Created Monday 14 October 2013
 [[window]]
 [[+dialog]]
 
+[[+InputMethod|InputMethod]]
+
 [[+android window analysis ------UI管理系统]]
+
+=== RadioButton&RadioGroup ===
+group.setOnCheckedChangeListener(new OnCheckedChangeListener() {
+     
+ @Override
+ public void onCheckedChanged(RadioGroup group, int viewId) {}
+
+==== ViewTreeObserver ====
+A view tree observer is used to register listeners that can be notified of global changes in the view tree. Such global events include, but are not limited to, layout of the whole tree, beginning of the drawing pass, touch mode change.... A ViewTreeObserver should never be instantiated by applications as it is provided by the views hierarchy. Refer to getViewTreeObserver() for more information.
 
 [[+Adroid 界面绘制实现|Adroid 界面绘制实现]]
 

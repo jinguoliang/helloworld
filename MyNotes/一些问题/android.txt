@@ -40,5 +40,7 @@ TODO:
                 }catch (Throwable e){
                     System.out.print(e.toString());
                 }
-2.                        ei = new ExifInterface(filePath);
+2. ei = new ExifInterface(filePath);
                         loge("description =" + ei.getAttribute("ImageDescription")); 写图片信息也不行
+
+=== 当从全屏页面跳到非全屏页面时，布局会有下降的问题？ ===

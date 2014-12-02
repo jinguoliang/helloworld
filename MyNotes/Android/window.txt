@@ -17,3 +17,25 @@ WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE
 全屏
 requestWindowFeature(Window.FEATURE_NO_TITLE);
 this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);//去掉信息栏
+
+获得屏幕的大小：
+Display display=getWindowManager().getDefaultDisplay()；
+getMetrics(dm)  详细信息，密度，宽高等等
+getHeight（）
+
+
+android activity设置背景色为透明
+method 1:
+android:theme="@android:style/Theme.Translucent" 
+
+method 2:
+再在res/values/下建styles.xml,设置程序的风格
+　　<?xmlversion="1.0"encoding="utf-8"?>
+　　<resources>
+　　<stylename="Transparent">
+　　<itemname="android:windowBackground">@color/transparent</item>
+　　<itemname="android:windowIsTranslucent">true</item>
+　　<itemname="android:windowAnimationStyle">@+android:style/Animation.Translucent</item>
+　　</style>
+　　</resources>
+　　
