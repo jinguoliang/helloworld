@@ -11,6 +11,7 @@ import (
 	"fmt"
 	"net/http"
 	"io/ioutil"
+	"os"
 	"path/filepath"
 )
 
@@ -43,6 +44,26 @@ func htmlHandler(w http.ResponseWriter, r *http.Request){
 	filename := http_root + r.URL.Path
 	fileext := filepath.Ext(filename)
 	fmt.Printf(filename)
+
+	file,err := os.Lstat(filename)
+	if err != nil{
+		fmt.Fprintf(w," 404 Not Found!\n")
+		w.WriteHeader(http.StatusNotFound)
+		return
+	}
+
+	if file.IsDir() {
+		println("this is a dir")
+		w.Header().Set("Content-Type", "text/html")
+		files, _ := ioutil.ReadDir(filename)
+		fmt.Fprintf(w, "<html><head><title>hello world</title></head><body>")
+		for _, f := range files {
+
+			fmt.Fprintf(w, "<a href=\""+r.URL.Path+"/" + f.Name()+"\">"+f.Name()+"</a><br/>")
+		}
+		fmt.Fprintf(w, "</body>")
+		return
+	}
 
 	content, err := ioutil.ReadFile(filename)
 	if err != nil{
