@@ -12,10 +12,9 @@ man source.list
 
 ==== TODownload: ====
 	APP:
-	
 	Music:
-	
 	Movie:
+
 	
 NS编程辅助工具
 [[+N-S diagram|N-S diagram]]
@@ -26,12 +25,14 @@ NS编程辅助工具
 	3.整理自己的知识
 	4.整理自己的家					一周拿出一个番茄钟
 	5.整理自己的关系
+
 	
 
 ==== 树莓派大项目 ====
 	1. 激光打印机
 	2. 平板的屏幕给它弄上
 	3. 六足机器人
+
 
 ==== 要精通： ====
 
@@ -54,7 +55,9 @@ NS编程辅助工具
 登录密码：065481
 
  
-{{./pasted_image.png}}
+[[+奇阅Android TODO|奇阅Android TODO]]：
+
+
 
 
 antialias
