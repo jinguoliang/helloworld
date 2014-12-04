@@ -32,3 +32,20 @@ __-rwsr-xr-x__ 1 root root   341694 2010-05-11 05:46 adb
 这样无论哪个用户启动adb 使用的都是root权限，就不会提示权限不足的错误了
 
 === 当从全屏页面跳到非全屏页面时，布局会有下降的问题？ ===
+可以设置状态栏覆盖activity
+private void hideStatusBar() {
+WindowManager.LayoutParams attrs = getWindow().getAttributes();
+attrs.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;
+getWindow().setAttributes(attrs);
+}
+
+private void showStatusBar() {
+WindowManager.LayoutParams attrs = getWindow().getAttributes();
+attrs.flags &= ~WindowManager.LayoutParams.FLAG_FULLSCREEN;
+getWindow().setAttributes(attrs);
+}
+关键是，在做了该Activity的全屏设置的前提下，还要在onCreate()方法中加入如下语句：
+getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
+getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
+此方案我已经试过了，可行，且不会导致Activity重排。

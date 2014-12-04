@@ -52,3 +52,7 @@ SteamOS
 
 [[+Raspberry|Raspberry]]
 [[+心得|心得]]
+
+[[+程序开机自启动|程序开机自启动]]
+
+
