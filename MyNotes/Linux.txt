@@ -24,6 +24,7 @@ pygtk-demo  好的学习材料
 [[+php]]
 [[+perl|perl]]
 [[+必须工具]]
+[[+Tomcat7|Tomcat7]]
 
 [[+make]]
 
@@ -44,7 +45,11 @@ sudo apt-get update
 sudo apt-get install mate-desktop-environment			kill my ubuntu ,it's so bad
 
 Linux OS    :
-SteamOS
+[[SteamOS]]
+
+Sync tools
+rsync 
+bup  ---based on git
 
 ==== Problems ====
 [[+Problems|Problems]] some problems in linux system.
