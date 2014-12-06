@@ -19,3 +19,8 @@ foo 什么意思
 设LinearLayout的应该也可以，但是却不可以，？？？？？？
 
 wifi 
+
+__eclipse too many opened files__
+这是linux打开的文件有限制。
+[[/etc/security/limits.conf]]   nofile → max number of opened file
+
