@@ -25,6 +25,7 @@ pygtk-demo  好的学习材料
 [[+perl|perl]]
 [[+必须工具]]
 [[+Tomcat7|Tomcat7]]
+[[+git|git]]
 
 [[+make]]
 
