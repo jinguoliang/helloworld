@@ -13,10 +13,7 @@ Created Monday 14 October 2013
 [[+view:widget]]
 [[window]]
 [[+dialog]]
-<<<<<<< HEAD
 [[+PopupWindow|PopupWindow]]
-=======
->>>>>>> origin/master
 
 [[+InputMethod|InputMethod]]
 
@@ -108,11 +105,7 @@ tools:context="activity name"这一句不会被打包进APK。只是ADT的Layout
 	
 	 setMeasuredDimension(w, h);作为onMeasure（）的返回结果，不掉用它会抛出异常
 	（3） 正式画
-<<<<<<< HEAD
 	画得东西一般就这些：
-=======
-	画得东西一般就这写：
->>>>>>> origin/master
 		文本：		drawText()	setTypeface() setColor()
 		基本图像：	drawRect（） drawOval() drawArc（） 设置他们的填充，轮廓用setStyle（）
 		Path：		drawPath（）		setStyle（）
