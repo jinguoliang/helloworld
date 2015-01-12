@@ -44,6 +44,7 @@ TODO:
                         loge("description =" + ei.getAttribute("ImageDescription")); 写图片信息也不行
 
 === 当从全屏页面跳到非全屏页面时，布局会有下降的问题？ ===
+<<<<<<< HEAD
 可以设置状态栏覆盖activity
 private void hideStatusBar() {
 WindowManager.LayoutParams attrs = getWindow().getAttributes();
@@ -61,3 +62,5 @@ getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
 getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
 此方案我已经试过了，可行，且不会导致Activity重排。
+=======
+>>>>>>> origin/master

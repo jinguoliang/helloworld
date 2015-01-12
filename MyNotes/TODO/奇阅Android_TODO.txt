@@ -28,6 +28,7 @@ Created 星期四 30 十月 2014
 	m. 导航条不应该被收缩 ok 
 m. addToShelf and [[FreeReading]]   async operation!!!    ----> __书籍阅读页做同步处理__
 n. 登录注册
+
 	a. 首次登录，手机登录
 		1. UI ok
 		2. 发送验证码功能 ok
@@ -35,7 +36,7 @@ n. 登录注册
 	c. sina
 		a. 获取数据
 	d. qq
-o. 修改目录页UI
+a. 修改目录页UI
 	a. ui changed ok
 	b. __item context menu__ 
 
@@ -170,3 +171,16 @@ Pager:
 1. 坐标（行，列） 
 	a. 行从1开始
 	b. 列从1开始 
+5.修改目录页UI
+5. 书城界面
+
+w02.7
+已知问题：
+	1. 订单逻辑，同时弹多个订单框
+	2. 新浪登录授权 delay
+	3. 书架自动打开侧滑栏
+	4. 有时退出不了
+	5. 文章加密
+
+
+

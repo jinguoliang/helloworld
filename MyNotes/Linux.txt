@@ -25,6 +25,10 @@ pygtk-demo  好的学习材料
 [[+perl|perl]]
 [[+必须工具]]
 [[+Tomcat7|Tomcat7]]
+<<<<<<< HEAD
+=======
+[[+git|git]]
+>>>>>>> origin/master
 
 [[+make]]
 
@@ -57,7 +61,10 @@ bup  ---based on git
 
 [[+Raspberry|Raspberry]]
 [[+心得|心得]]
+<<<<<<< HEAD
 
 [[+程序开机自启动|程序开机自启动]]
 
 
+=======
+>>>>>>> origin/master
