@@ -5,16 +5,22 @@ Creation-Date: 2013-12-02T12:41:55+08:00
 ====== recording ======
 Created Monday 02 December 2013
 
+郭栋 vps
+54.64.154.241   pptp  加密方式mschap-v2   mppe-128
+jinguol999
+8146999
+
+
 ===== Git can do =====
 :
  
-• Examine the state of your project at earlier points in time
-• Show the differences among various states of the project
-• Split the project development into multiple independent
+* Examine the state of your project at earlier points in time
+* Show the differences among various states of the project
+* Split the project development into multiple independent
 lines, called “branches,” which can evolve separately
-• Periodically recombine branches in a process called “merg‐
+* Periodically recombine branches in a process called “merg‐
 ing,” reconciling the changes made in two or more branches
-• Allow many people to work on a project simultaneously,
+* Allow many people to work on a project simultaneously,
 sharing and combining their work as needed
 and much more
 
@@ -49,3 +55,130 @@ project, and then collaborate among themselves to main‐
 tain the overall project state.
 
 
+01-22 17:02:08.171    1947-2212/? I/SurfaceFlinger﹕ id=12426 Removed Uoast (7/8)
+01-22 17:02:08.171   1947-24912/? I/SurfaceFlinger﹕ id=12426 Removed Uoast (-2/8)
+01-22 17:02:08.181    3747-3889/? D/PowerManagerService﹕ [api] [s] userActivity : event: 0 flags: 0 (uid: 1000 pid: 3747)
+01-22 17:02:08.186    3747-3889/? D/PowerManagerService﹕ [api] release WakeLock flags=0x2000000a tag=WindowManager uid=1000 pid=3747 (0x0)
+01-22 17:02:08.186    3747-3889/? D/PowerManagerService﹕ [api] applyWakeLockFlagsOnReleaseLocked : userActivityNoUpdateLocked is called : SCREEN_BRIGHT_WAKE_LOCK        'WindowManager' ON_AFTER_RELEASE (uid=1000, pid=3747, ws=WorkSource{10175}) (elapsedTime=2521)
+01-22 17:02:08.206    3747-4745/? D/SSRMv2:Monitor﹕ SIOP:: AP = 310, Prev AP = 310, Duration = 10012
+01-22 17:02:08.546    3747-3930/? D/InputReader﹕ Input event: value=1 when=163979030583000
+01-22 17:02:08.546    3747-3930/? V/VibratorService﹕ useVibetonz: true
+01-22 17:02:08.551    3747-3930/? V/Vibrator﹕ vibrateImmVibe - PUID: 1000, PackageName: android, type: 14, magType: TouchMagnitude
+01-22 17:02:08.551    3747-3930/? V/VibratorService﹕ vibrateImmVibeMagnitudeType - package: android, type: 14, magnitudeType: TouchMagnitude
+01-22 17:02:08.576    3747-4040/? D/lights﹕ button : 1 +
+01-22 17:02:08.576    3747-3929/? I/InputDispatcher﹕ Delivering key to: action: 0x0 (0)
+01-22 17:02:08.581    3747-4040/? D/lights﹕ button : 1 -
+01-22 17:02:08.596    3747-8450/? I/power﹕ *** acquire_dvfs_lock : lockType : 1  freq : 1200000
+01-22 17:02:08.596    3747-8450/? D/SSRMv2:CustomFrequencyManagerService﹕ acquireDVFSLockLocked : type : DVFS_MIN_LIMIT  frequency : 1200000  uid : 1000  pid : 3747  pkgName : ACTIVITY_RESUME_BOOSTER@5
+01-22 17:02:08.601    3747-8450/? W/ActivityManager﹕ mDVFSHelper.acquire()
+01-22 17:02:08.676    3747-3930/? D/InputReader﹕ Input event: value=0 when=163979160782000
+01-22 17:02:08.676    3747-3929/? D/InputDispatcher﹕ Waiting for application to become ready for input: xxxx Reason: Waiting because the focused window has not finished processing the input events that were previously delivered to it.
+01-22 17:02:08.796    3747-8450/? D/dalvikvm﹕ GC_FOR_ALLOC freed 2225K, 17% free 62168K/74504K, paused 117ms, total 117ms
+01-22 17:02:08.806    3747-4247/? D/WindowManager﹕ computeScreenConfigurationLocked() set config.orientation=1 dw=720 dh=1280 Callers=com.android.server.wm.WindowManagerService.updateOrientationFromAppTokensLocked:5181 com.android.server.wm.WindowManagerService.updateOrientationFromAppTokens:5152 com.android.server.am.ActivityStack.realStartActivityLocked:1022
+01-22 17:02:08.806    3747-4247/? D/PowerManagerService﹕ setKeyboardVisibility: false
+01-22 17:02:08.811    3747-3929/? D/InputDispatcher﹕ Waiting for application to become ready for input: xxxx Reason: Waiting because the focused window is paused.
+01-22 17:02:08.811    3747-4247/? I/InputDispatcher﹕ Delivering key to: action: 0x1 (0)
+01-22 17:02:08.811    3747-3889/? D/PointerIcon﹕ setHoveringSpenIconStyle1 pointerType: 10001iconType:1 flag:0
+01-22 17:02:08.811    3747-3889/? D/PointerIcon﹕ setHoveringSpenCustomIcon IconType is same.1
+01-22 17:02:08.846  30348-30348/? D/AbsListView﹕ Get MotionRecognitionManager
+01-22 17:02:08.851    3747-4306/? D/MotionRecognitionService﹕ ssp status : true
+01-22 17:02:08.861  30348-30348/? D/AbsListView﹕ Get MotionRecognitionManager
+01-22 17:02:08.871  30348-30348/? D/AbsListView﹕ Get MotionRecognitionManager
+01-22 17:02:08.921  30348-30348/? D/AbsListView﹕ onVisibilityChanged() is called, visibility : 4
+01-22 17:02:08.921  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:08.921  30348-30348/? D/AbsListView﹕ onVisibilityChanged() is called, visibility : 4
+01-22 17:02:08.921  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:08.921  30348-30348/? D/AbsListView﹕ onVisibilityChanged() is called, visibility : 4
+01-22 17:02:08.921  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:08.931  30348-30348/? D/AbsListView﹕ onVisibilityChanged() is called, visibility : 0
+01-22 17:02:08.931  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:08.931  30348-30348/? D/AbsListView﹕ onVisibilityChanged() is called, visibility : 0
+01-22 17:02:08.931  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:08.931  30348-30348/? D/AbsListView﹕ onVisibilityChanged() is called, visibility : 0
+01-22 17:02:08.931  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:08.941  30348-30399/? E/RetryHandler.retryRequest(L:91)﹕ retry error, curr request is null
+01-22 17:02:09.001  30348-30367/? D/dalvikvm﹕ GC_FOR_ALLOC freed 3734K, 10% free 73420K/81392K, paused 42ms, total 42ms
+01-22 17:02:09.001  30348-30402/? E/RetryHandler.retryRequest(L:91)﹕ retry error, curr request is null
+01-22 17:02:09.026    1947-2032/? I/SurfaceFlinger﹕ id=12427 createSurf (1x1),1 flag=4, CookShelfFr
+01-22 17:02:09.026    3747-8456/? D/SPenGesture﹕ SpenGestureView: setFocusedWindow
+01-22 17:02:09.031    3747-3888/? D/STATUSBAR-StatusBarManagerService﹕ manageDisableList what=0x0 pkg=WindowManager.LayoutParams
+01-22 17:02:09.046    3747-3929/? I/InputDispatcher﹕ Delivering key to: action: 0x1 (0)
+01-22 17:02:09.051    3747-3889/? D/PointerIcon﹕ setHoveringSpenIconStyle1 pointerType: 10001iconType:1 flag:0
+01-22 17:02:09.051    3747-3889/? D/PointerIcon﹕ setHoveringSpenCustomIcon IconType is same.1
+01-22 17:02:09.106  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:09.106  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:09.106  30348-30348/? I/sliding﹕ onScroll changed
+01-22 17:02:09.116    1947-2032/? I/SurfaceFlinger﹕ id=12428 createSurf (720x1230),1 flag=4, TurfaceView
+01-22 17:02:09.206  30348-30348/? D/dalvikvm﹕ GC_FOR_ALLOC freed 646K, 9% free 74651K/81392K, paused 37ms, total 37ms
+01-22 17:02:09.216  30348-31303/? V/ARC﹕ 调用onSurfaceChanged
+01-22 17:02:09.221    3747-4306/? D/SPenGesture﹕ SpenGestureView: setFocusedWindow
+01-22 17:02:09.226    3747-3889/? D/PointerIcon﹕ setHoveringSpenIconStyle1 pointerType: 10001iconType:1 flag:0
+01-22 17:02:09.226    3747-3889/? D/PointerIcon﹕ setHoveringSpenCustomIcon IconType is same.1
+01-22 17:02:09.226  30348-30348/? I/System.out﹕ ###################### 在书架
+01-22 17:02:09.256  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:09.286    1947-2032/? I/SurfaceFlinger﹕ id=12429 createSurf (1x1),1 flag=4, CookShelfFr
+01-22 17:02:09.321  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:09.321  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:09.321  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:09.321    3747-8446/? E/EnterpriseContainerManager﹕ ContainerPolicy Service is not yet ready!!!
+01-22 17:02:09.321    3747-8446/? D/EnterpriseDeviceManager﹕ ContainerId: 0
+01-22 17:02:09.326    3747-3977/? W/LicenseLogService﹕ log() is called by non admin
+01-22 17:02:09.336    3747-4248/? E/EnterpriseContainerManager﹕ ContainerPolicy Service is not yet ready!!!
+01-22 17:02:09.336    3747-4248/? D/EnterpriseDeviceManager﹕ ContainerId: 0
+01-22 17:02:09.336    3747-3977/? W/LicenseLogService﹕ log() is called by non admin
+01-22 17:02:09.336    3747-4212/? D/SPenGesture﹕ SpenGestureView: setFocusedWindow
+01-22 17:02:09.341    3747-3889/? D/PointerIcon﹕ setHoveringSpenIconStyle1 pointerType: 10001iconType:1 flag:0
+01-22 17:02:09.341    3747-3889/? D/PointerIcon﹕ setHoveringSpenCustomIcon IconType is same.1
+01-22 17:02:09.386  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:09.386  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:09.451  30348-30348/? D/dalvikvm﹕ GC_FOR_ALLOC freed 950K, 7% free 75736K/81392K, paused 39ms, total 40ms
+01-22 17:02:09.466    3747-3889/? V/WindowManager﹕ Window{430979a0 u0 Keyguard}mOrientationRequetedFromKeyguard=false
+01-22 17:02:09.476    1947-2032/? I/SurfaceFlinger﹕ id=12430 createSurf (1x1),1 flag=4, Uoast
+01-22 17:02:09.476    3747-4213/? V/WindowManager﹕ Window{430979a0 u0 Keyguard}mOrientationRequetedFromKeyguard=false
+01-22 17:02:09.496  30348-30348/? E/ViewRootImpl﹕ sendUserActionEvent() mView == null
+01-22 17:02:09.496    3747-4213/? D/PowerManagerService﹕ [api] acquire WakeLock flags=0x2000000a tag=WindowManager uid=1000 pid=3747
+01-22 17:02:09.501  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:09.501  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:09.501  30348-30348/? D/AbsListView﹕ unregisterIRListener() is called
+01-22 17:02:09.501    3747-3760/? E/EnterpriseContainerManager﹕ ContainerPolicy Service is not yet ready!!!
+01-22 17:02:09.501    3747-3760/? D/EnterpriseDeviceManager﹕ ContainerId: 0
+01-22 17:02:09.501    3747-3977/? W/LicenseLogService﹕ log() is called by non admin
+01-22 17:02:09.506  30348-30348/? E/ViewRootImpl﹕ sendUserActionEvent() mView == null
+01-22 17:02:09.556    3747-8446/? V/WindowManager﹕ Window{430979a0 u0 Keyguard}mOrientationRequetedFromKeyguard=false
+01-22 17:02:09.831    3747-3890/? D/SSRMv2:CustomFrequencyManagerService﹕ acquireDVFSLockLocked : type : DVFS_MIN_LIMIT  frequency : 1200000  uid : 1000  pid : 3747  pkgName : ACTIVITY_RESUME_BOOSTER@8
+01-22 17:02:09.831    3747-3889/? I/power﹕ *** acquire_dvfs_lock : lockType : 1  freq : 1200000
+01-22 17:02:09.831    3747-3889/? D/SSRMv2:CustomFrequencyManagerService﹕ releaseDVFSLockLocked : Getting Lock type frm List : DVFS_MIN_LIMIT  frequency : 1200000  uid : 1000  pid : 3747  tag : ACTIVITY_RESUME_BOOSTER@5
+01-22 17:02:09.836    1947-2212/? I/SurfaceFlinger﹕ id=12429 Removed CookShelfFr (5/11)
+01-22 17:02:09.836    1947-1947/? I/SurfaceFlinger﹕ id=12429 Removed CookShelfFr (-2/11)
+01-22 17:02:09.836    1947-2092/? I/SurfaceFlinger﹕ id=12425 Removed CookCityAct (2/10)
+01-22 17:02:09.836   1947-24912/? I/SurfaceFlinger﹕ id=12425 Removed CookCityAct (-2/10)
+01-22 17:02:09.836    3747-3889/? D/SSRMv2:CustomFrequencyManagerService﹕ FrequencyrequestList.getNextMaxCPUCoreRequest, index: 1
+01-22 17:02:09.836    3747-3889/? W/ActivityManager﹕ mDVFSHelper.release()
+01-22 17:02:09.896   7112-31316/? D/dalvikvm﹕ GC_EXPLICIT freed 1794K, 28% free 18542K/25464K, paused 2ms+4ms, total 48ms
+01-22 17:02:10.076    3747-4040/? D/lights﹕ button : 0 +
+01-22 17:02:10.076    3747-4040/? D/lights﹕ button : 0 -
+01-22 17:02:10.131    3747-3887/? I/power﹕ *** release_dvfs_lock : lockType : 1
+01-22 17:02:10.131    3747-3887/? D/SSRMv2:CustomFrequencyManagerService﹕ releaseDVFSLockLocked : Getting Lock type frm List : DVFS_MIN_LIMIT  frequency : 1200000  uid : 1000  pid : 3747  tag : ACTIVITY_RESUME_BOOSTER@8
+01-22 17:02:10.711    3747-4745/? D/SSRMv2:Monitor﹕ SIOP:: AP = 310 (read only)
+01-22 17:02:12.696    3747-4225/? V/WindowManager﹕ Window{430979a0 u0 Keyguard}mOrientationRequetedFromKeyguard=false
+01-22 17:02:12.726    1947-2032/? I/SurfaceFlinger﹕ id=12431 createSurf (1x1),1 flag=4, Uoast
+01-22 17:02:12.731    3747-4735/? V/WindowManager﹕ Window{430979a0 u0 Keyguard}mOrientationRequetedFromKeyguard=false
+01-22 17:02:13.216    1947-2211/? I/SurfaceFlinger﹕ id=12430 Removed Uoast (8/10)
+01-22 17:02:13.216    1947-1947/? I/SurfaceFlinger﹕ id=12430 Removed Uoast (-2/10)
+01-22 17:02:13.216    3747-4745/? D/SSRMv2:Monitor﹕ SIOP:: AP = 330 (read only)
+01-22 17:02:15.241    1947-2212/? I/SurfaceFlinger﹕ id=12431 Removed Uoast (8/9)
+01-22 17:02:15.241    1947-2092/? I/SurfaceFlinger﹕ id=12431 Removed Uoast (-2/9)
+01-22 17:02:15.251    3747-3889/? D/PowerManagerService﹕ [api] [s] userActivity : event: 0 flags: 0 (uid: 1000 pid: 3747)
+01-22 17:02:15.256    3747-3889/? D/PowerManagerService﹕ [api] release WakeLock flags=0x2000000a tag=WindowManager uid=1000 pid=3747 (0x0)
+01-22 17:02:15.256    3747-3889/? D/PowerManagerService﹕ [api] applyWakeLockFlagsOnReleaseLocked : userActivityNoUpdateLocked is called : SCREEN_BRIGHT_WAKE_LOCK        'WindowManager' ON_AFTER_RELEASE (uid=1000, pid=3747, ws=WorkSource{10175}) (elapsedTime=5761)
+01-22 17:02:15.721    3747-4745/? D/SSRMv2:Monitor﹕ SIOP:: AP = 330 (read only)
+01-22 17:02:18.231    3747-4745/? D/SSRMv2:Monitor﹕ SIOP:: AP = 330, Prev AP = 310, Duration = 10020
+01-22 17:02:19.506    3747-3904/? D/BatteryService﹕ update start
+01-22 17:02:19.516    3747-3904/? E/BatteryService﹕ Could not open /efs/FactoryApp/batt_cable_count
+01-22 17:02:19.516    3747-3904/? D/BatteryService﹕ level:81, scale:100, status:2, health:2, present:true, voltage: 4067, temperature: 300, technology: Li-ion, AC powered:false, USB powered:true, Wireless powered:false, icon:17303554, invalid charger:0, online:4, charge type:1, current avg:460
+01-22 17:02:19.516    3747-3887/? D/BatteryService﹕ Sending ACTION_BATTERY_CHANGED.
+01-22 17:02:19.521    4044-4044/? D/STATUSBAR-BatteryController﹕ onReceive() - ACTION_BATTERY_CHANGED
+01-22 17:02:19.521    4044-4044/? D/STATUSBAR-BatteryController﹕ onReceive() - BATTERY_STATUS_CHARGING:
+01-22 17:02:19.526    3747-3888/? D/LockPatternUtils﹕ isPcwEnable = null
+01-22 17:02:19.526    4044-4044/? D/STATUSBAR-PhoneStatusBar﹕ mBrightnessEnablebySettings = true mBrightnessEnablebyBattery = true mBrightnessEnablebyDisableFlag = true
+01-22 17:02:20.736    3747-4745/? D/SSRMv2:Monitor﹕ SIOP:: AP = 330 (read only)
