@@ -15,6 +15,15 @@ import (
 	"path/filepath"
 )
 
+<<<<<<< HEAD
+const http_root = "/var/www/"
+
+
+func main() {
+	http.HandleFunc("/", rootHandler)
+	http.HandleFunc("/view/", viewHandler)
+	http.HandleFunc("/html/", htmlHandler)
+=======
 var	http_root string = "/var/www/"
 
 
@@ -31,6 +40,7 @@ func main() {
 
 	http.HandleFunc("/view/", viewHandler)
 	http.HandleFunc("/", htmlHandler)
+>>>>>>> origin/master
 
 	http.ListenAndServe(":8080", nil)
 }
@@ -63,6 +73,14 @@ func htmlHandler(w http.ResponseWriter, r *http.Request){
 
 	if file.IsDir() {
 		println("this is a dir")
+<<<<<<< HEAD
+		w.Header().Set("Content-Type", "text/html")
+		files, _ := ioutil.ReadDir(filename)
+		fmt.Fprintf(w, "<html><head><title>hello world</title></head><body>")
+		for _, f := range files {
+
+			fmt.Fprintf(w, "<a href=\""+r.URL.Path+"/" + f.Name()+"\">"+f.Name()+"</a><br/>")
+=======
 		w.Header().Set("Content-Type", "text/html;charset=utf-8")
 		files, _ := ioutil.ReadDir(filename)
 		fmt.Fprintf(w, "<html><head><title>hello world</title></head><body>")
@@ -72,6 +90,7 @@ func htmlHandler(w http.ResponseWriter, r *http.Request){
 				pref = ""
 			}
 			fmt.Fprintf(w, "<a href=\""+pref+"/" + f.Name()+"\">"+f.Name()+"</a><br/>")
+>>>>>>> origin/master
 		}
 		fmt.Fprintf(w, "</body>")
 		return
@@ -103,7 +122,11 @@ func htmlHandler(w http.ResponseWriter, r *http.Request){
 	}
 	fmt.Printf("ext %s, ct = %s\n", fileext, contype)
 
+<<<<<<< HEAD
+	w.Header().Set("Content-Type", contype)
+=======
 	w.Header().Set("Content-Type", contype+";charset=utf-8")
+>>>>>>> origin/master
 	fmt.Fprintf(w, "%s", content)
 }
 

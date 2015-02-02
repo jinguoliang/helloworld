@@ -40,3 +40,5 @@ bup  ---based on git
 [[+Problems|Problems]] some problems in linux system.
 [[+Raspberry|Raspberry]]
 [[+心得|心得]]
+
+[[+程序开机自启动|程序开机自启动]]

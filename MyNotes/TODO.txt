@@ -60,8 +60,10 @@ NS编程辅助工具
 
 
 
-antialias
-
+1. 网站 
+	a. ui amase ui   inkscape
+	b. 后台 go
+	c. mongodb 
 
 这不是说说而已:
 1. 买个一加
