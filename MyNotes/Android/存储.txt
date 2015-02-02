@@ -22,7 +22,8 @@ editor.commit();
 sharedPref.getInt(getString(R.string.saved_high_score), defaultValue);
 
 文件
-
+文件解析
+json
 manifest属性android:installLocation设置应用存储数据位置
 访问外存需要权限
 保存在内部存储空间和通过getExternalFilesDir()获取的外部存储的目录的文件会在卸载程序时一同删掉.
@@ -35,6 +36,8 @@ FileOutputStream outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
 String fileName = Uri.parse(url).getLastPathSegment();
 file = File.createTempFile(fileName, null, context.getCacheDir());//网页缓存
 
+数据库
+[[+orm|orm]]
 sqlite 
 
 [[+sqlite SQL]]

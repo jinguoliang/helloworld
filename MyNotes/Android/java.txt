@@ -5,6 +5,9 @@ Creation-Date: 2013-11-08T03:53:44+08:00
 ====== java ======
 Created Friday 08 November 2013
 
+ant 的java 类 doc  http://javadoc.haefelinger.it/org.apache.ant/1.7.1/org/apache/tools/ant/package-summary.html
+
+
 时间
 android.text.format.DateFormat.format(formatstr,long);
 DateUtils.formatDateTime(this.getContext(), date, flag)  

@@ -11,6 +11,8 @@ foo 什么意思
 
 [[+android|android]]
 
+[[+linux|linux]]
+
 === ubuntu vim 安装失败 ===
 先卸载vim-common
 再装vim

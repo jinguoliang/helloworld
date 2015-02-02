@@ -22,7 +22,7 @@ Created 星期六 12 十月 2013
 
 
 [[+C++]]
-
+[[+JAVA|JAVA]]
 [[+Android 编译]]
 
 [[file:///usr/local/adt-bundle-linux-x86_64-20130219/sdk/docs/guide/topics/ui/dialogs.html|Android Google Officail Document]]
