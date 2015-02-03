@@ -21,3 +21,6 @@ thunder bird
 imap.163.com
 smtp.163.com
 姓名：jinguol999
+[[+make]]
+[[+ssh]]
+

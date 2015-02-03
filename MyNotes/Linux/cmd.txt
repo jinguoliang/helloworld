@@ -47,6 +47,9 @@ poff
 od: 		dump files in octal and other formats
 od -c    char
 
+==== little tools: ====
+realpath	relative path → absolute path
+
 ==== xwindow: ====
 Xorg  -configure   		generate a new config file
 gnome-screenshot -c -a		-c send the grab to clipboard   -a     area of screen            ------------>   shift+ctrl+0
@@ -91,6 +94,11 @@ lsof   查看打开的文件
 		echo helloworld |grep -o -e 'l\S*r'   输出llowor
 
 
+=== Disk: ===
+1. 查看分区的uuid
+	sudo blkid   or  ll /dev/disk/by-uuibad
+
+
 == High order: ==
 chroot: Run a command with a different root directory
 syslinux    在u盘上做系统
@@ -100,4 +108,6 @@ exec cmd     不单单执行cmd，会用cmd的内核代替当前bash的内核，
 sudo apt-get install lm-sensors
 sudo sh -c "yes|sensors-detect"
 sensors
+开关触摸板
+synclient touchpadoff=1
 
