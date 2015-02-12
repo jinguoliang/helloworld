@@ -30,7 +30,7 @@ Nethogs 是一个终端下的网络流量监控工具，它的特别之处在于
 __webclient:__
 lynx
 w3m
-
+[[+nmap|nmap]] 
 画图
 gnuplot  命令行画图
 
