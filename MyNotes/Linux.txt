@@ -17,6 +17,10 @@ Created 星期六 12 十月 2013
 [[+Tomcat7|Tomcat7]]
 [[+Linux OS structur]][[+Linux OS structure|e]]
 桌面环境
+FVWM 虚拟桌面，占内存少，可配置
+http://docs.huihoo.com/homepage/shredderyin/fvwm_frame.html
+Sawfish  使用lisp和scheme配置
+http://docs.huihoo.com/homepage/shredderyin/wiki/SawfishWindowManager.html
 gnome 2.0
 [[+gnome 3.0]]
 kde
