@@ -10,7 +10,7 @@ foo 什么意思
 [[+java|java]]
 
 [[+android|android]]
-
+[[+gtk|gtk]]
 [[+linux|linux]]
 
 === ubuntu vim 安装失败 ===
