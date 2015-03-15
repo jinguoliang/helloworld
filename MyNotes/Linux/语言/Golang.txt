@@ -65,7 +65,7 @@ Created 星期一 09 二月 2015
 ├── errors
 ├── expvar
 ├── flag
-├── fmt
+├── __fmt ok__
 ├── go
 │   ├── ast
 │   ├── build
@@ -133,12 +133,12 @@ Created 星期一 09 二月 2015
 │   ├── pprof
 │   └── race
 ├── sort
-├── strconv
-├── strings
+├── __strconv ok__
+├── __strings ok__
 ├── sync
 │   └── atomic
 ├── syscall
-├── testing
+├── testing ok
 │   ├── iotest
 │   └── quick
 ├── text
