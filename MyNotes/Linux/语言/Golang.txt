@@ -5,6 +5,10 @@ Creation-Date: 2015-02-09T20:11:32+08:00
 ====== Golang ======
 Created 星期一 09 二月 2015
 
+[[+liteide|liteide]]
+基础
+Generality ？
+
 ==== 包 ====
 ├── archive
 │   ├── __tar ok__ 
@@ -146,7 +150,7 @@ Created 星期一 09 二月 2015
 │   ├── tabwriter
 │   └── template
 │       ├── parse
-├── time
+├── __time ok__
 ├── unicode
 │   ├── utf16
 │   └── utf8

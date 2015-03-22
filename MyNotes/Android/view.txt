@@ -5,6 +5,8 @@ Creation-Date: 2013-10-14T21:17:32+08:00
 ====== view ======
 Created Monday 14 October 2013
 
+{{./pasted_image.png}}
+
 [[+menu]]
 [[+AdapterView]]
 [[+event]]
@@ -14,9 +16,9 @@ Created Monday 14 October 2013
 [[window]]
 [[+dialog]]
 [[+PopupWindow|PopupWindow]]
-
+[[+Graphic|Graphic]]
 [[+InputMethod|InputMethod]]
-
+__android 的skia 图形引擎库__
 [[+android window analysis ------UI管理系统]]
 
 === RadioButton&RadioGroup ===
