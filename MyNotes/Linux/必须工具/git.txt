@@ -5,6 +5,51 @@ Creation-Date: 2014-10-16T13:51:38+08:00
 ====== git ======
 Created 星期四 16 十月 2014
 
+===== Git can do =====
+:
+ 
+* Examine the state of your project at earlier points in time
+* Show the differences among various states of the project
+* Split the project development into multiple independent
+lines, called “branches,” which can evolve separately
+* Periodically recombine branches in a process called “merg‐
+ing,” reconciling the changes made in two or more branches
+* Allow many people to work on a project simultaneously,
+sharing and combining their work as needed
+and much more
+
+===== Some particular strengths of Git are: =====
+1.Git is a member of the newer generation of distributed
+version control systems,Network access is only needed occasionally, to
+share sets of changes among people working on the same
+project
+2.In some systems, notably CVS and Subversion, branches
+are slow and difficult to use in practice, which discourages
+their use. Branches in Git, on the other hand, are very fast
+and easy to use. Effective branching and merging allows
+more people to work on a project in parallel, relying on Git
+to combine their separate contributions
+3.Applying changes to a repository is a two-step process: you
+add the changes to a staging area called the “index,” then
+commit those changes to the repository. The extra step al‐
+lows you to easily apply just some of the changes in your
+current working files (including a subset of changes to a
+single file), rather than being forced to apply them all at
+once, or undoing some of those changes yourself before
+committing and then redoing them by hand. This encour‐
+ages splitting changes up into better organized, more co‐
+herent and reusable sets.
+4.Git’s distributed nature and flexibility allow for many dif‐
+ferent styles of use, or “workflows.” Individuals can share
+work directly between their personal repositories. Groups
+can coordinate their work through a single central 
+repository. Hybrid schemes permit several people to orga‐
+nize the contributions of others to different areas of a
+project, and then collaborate among themselves to main‐
+tain the overall project state.
+
+
+
 git server 搭建
 1.cd empt/path.git
 2. git init --bare

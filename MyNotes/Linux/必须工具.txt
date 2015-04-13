@@ -2,7 +2,7 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.4
 Creation-Date: 2013-11-10T23:16:47+08:00
 
-====== 必须工具 ======
+====== 工具 ======
 Created Sunday 10 November 2013
 
 翻墙工具：
