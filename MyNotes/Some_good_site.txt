@@ -12,3 +12,5 @@ github.com
 bitbucket.org
 
 csdn.cn
+chrome 插件
+http://www.codeceo.com/article/15-chrome-extension.html

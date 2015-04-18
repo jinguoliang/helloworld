@@ -69,7 +69,7 @@ Generality ？
 ├── errors
 ├── expvar
 ├── flag
-├── fmt
+├── __fmt ok__
 ├── go
 │   ├── ast
 │   ├── build
@@ -142,7 +142,7 @@ Generality ？
 ├── sync
 │   └── atomic
 ├── syscall
-├── testing
+├── testing ok
 │   ├── iotest
 │   └── quick
 ├── text
