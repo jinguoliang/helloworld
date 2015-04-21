@@ -69,12 +69,12 @@ Created 星期五 10 四月 2015
         │   │   ├── DbModelSelector.java
         │   │   ├── FinderLazyLoader.java
         │   │   ├── ForeignLazyLoader.java
-        │   │   ├── Selector.java
+        │   │   ├── Selector.java   
         │   │   ├── SqlInfoBuilder.java
         │   │   ├── SqlInfo.java
         │   │   └── WhereBuilder.java
         │   └── table
-        │       ├── Column.java
+        │       ├── Column.java  字段
         │       ├── ColumnUtils.java
         │       ├── DbModel.java
         │       ├── Finder.java
@@ -84,7 +84,8 @@ Created 星期五 10 四月 2015
         │       ├── Table.java
         │       └── TableUtils.java
         ├── DbUtils.java
-        ├── exception
+
+=== ├── exception   ok ===
         │   ├── BaseException.java
         │   ├── DbException.java
         │   └── HttpException.java
@@ -135,7 +136,7 @@ Created 星期五 10 四月 2015
         │   └── SyncHttpHandler.java
         ├── HttpUtils.java
 
-=== ├── task ===
+=== ├── task   ok ===
         │   ├── PriorityAsyncTask.java  实现了一个AsyncTask, 默认使用PriorityExecutor
         │   ├── PriorityExecutor.java   使用了PriorityObjectBlockingQueue的Executor
         │   ├── Priority.java  enum  7个优先级
@@ -153,7 +154,7 @@ Created 星期五 10 四月 2015
         │   ├── OtherUtils.java
         │   └── PreferencesCookieStore.java   __not ok__
 
-=== ├── view ===
+=== ├── view  ok ===
         │   ├── annotation  ok 定义了好多注释
         │   │   ├── ContentView.java  
         │   │   ├── event 
