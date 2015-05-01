@@ -19,6 +19,7 @@ Created Tuesday 15 October 2013
 
 [[Android Menafest.xml]]
 
+[[+Notification|Notification]]
 
     Stop a Component:
     public void disableComponent() {
