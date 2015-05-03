@@ -20,6 +20,7 @@ Created Monday 14 October 2013
 [[+InputMethod|InputMethod]]
 __android 的skia 图形引擎库__
 [[+android window analysis ------UI管理系统]]
+[[+widget attr|widget attr]]
 
 === RadioButton&RadioGroup ===
 group.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -76,6 +77,7 @@ tools:context="activity name"这一句不会被打包进APK。只是ADT的Layout
 	（3）在代码里获取属性值
 	牵扯到AttributeSet		是对xml解析的到值，没有引用值解析，没有应用style
 		  TypedArray		对引用解析，应用了style
+		TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.MyView);
 	TypedArray a = context.getTheme().obtainStyledAttributes(
         attrs,		//传入AttributeSet
         R.styleable.PieChart,

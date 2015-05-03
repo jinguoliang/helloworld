@@ -57,6 +57,7 @@ M=echo hello  把echo存入M，把后边hello当命令执行 ，error ，Wrong
 
 sed：
 sed 's:hello:jin:' file  把文件内的每一行的hello替换为jin
+sed  "/.*UMENG_CHANNEL.*/ s/\(.*value=\"\)[^\"]\+\(\".*\)/\1${channel}\2/ " AndroidManifest.xml.bak > AndroidManifest.xml   __替换模式匹配的字符串__
 
 awk -v RS=" " -v ORS=" " '/^-.*$/'           -v  assign a program var    RS: record sign default(\n)  ORS: out record sign default(\n)
 	here divide record by " " and filter the record prefix "-"
@@ -66,6 +67,43 @@ let n=2+3		这个样子？？！！
 echo 颜色菜单
 
 read -p "Input the value [$OLD_PRODUCT_TYPE]: " PRODUCT_TYPE     -p   prompt
+
+替换字符串
+ 10 replace() {
+ 11 fileName=$1
+ 12 OldWord=$2
+ 13 NewWord=$3
+ 14 
+ 15 ed - $fileName <<!
+ 16 s/$OldWord/$NewWord/g
+ 17 w
+ 18 q
+ 19 !
+ 20 }
+
+=== 分割字符串对每个字段依次处理 ===
+ while IFS=',' read -ra ADDR; do  # IFS为分隔符,  把$ChannelIds值作为标准输入,用read读取,
+      for i in "${ADDR[@]}"; do
+      	#process $i
+      done
+ done <<< "$ChannelIds"
+
+=== 重定向 ===
+1. cat <<a   用一个标识符作为开始和结束,之间的文本作为标准输入
+helloworld
+$a
+www
+"helo"
+a
+输出
+helloworld
+$a
+www
+"helo"
+a
+2. cat <<<$a  把$a的值作为标准输入
+输出
+$a的值
 
 === 正则表达式 regular ===
 \s 空字符

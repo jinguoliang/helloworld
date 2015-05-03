@@ -29,6 +29,8 @@ Ubuntu 软件包命名约定:
 
 	下面的命令可以列出一个软件包中包含那些默认配置文件:
 	dpkg --status package
+查看某个库属于那个包：
+	dpkg-query -S lib
 Ubuntu 维护脚本:
 	所有的管理文件都存放在/var/lib/dpkg/info 目录。与 foo 软件包相关的文件,名字以“foo”打头,以 “preinst”、“postinst”等为扩展名。目录中的 foo.list 文件列出了 foo 软件包安装的所有文件
 软件包优先级:

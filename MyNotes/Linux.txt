@@ -14,7 +14,7 @@ Created 星期六 12 十月 2013
 [[+cmd|cmd]]
 [[+语言|语言]]
 [[+必须工具|工具]]
-[[+Tomcat7|Tomcat7]]
+[[+HTTP|HTTP]]
 [[+Linux OS structur]][[+Linux OS structure|e]]
 桌面环境
 FVWM 虚拟桌面，占内存少，可配置
@@ -35,10 +35,10 @@ sudo apt-get install mate-desktop-environment			kill my ubuntu ,it's so bad
 Linux OS    :
 [[SteamOS]]
 
-Sync tools
-rsync 
-bup  ---based on git
-[[+tmux|tmux]] 可以在一个终端打开多个终端，类似vi
+有点意思:
+[[+怎样将zip文件保存在图片中|怎样将zip文件保存在图片中]]
+
+
 
 ==== Problems ====
 [[+Problems|Problems]] some problems in linux system.
