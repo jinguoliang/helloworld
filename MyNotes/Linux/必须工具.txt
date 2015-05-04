@@ -2,7 +2,7 @@ Content-Type: text/x-zim-wiki
 Wiki-Format: zim 0.4
 Creation-Date: 2013-11-10T23:16:47+08:00
 
-====== 必须工具 ======
+====== 工具 ======
 Created Sunday 10 November 2013
 
 翻墙工具：
@@ -28,6 +28,9 @@ smtp.163.com
 screen  可以同时多个终端公用一个session
 试一下就知道了:  打开两个终端,一个运行session
 另一个运行session -x   于是乎,你在一个终端里打字另一个终端也同时打字	这样子,我的树莓派就可以随便找个手机当屏幕了
+<<<<<<< HEAD
+pyroom  With the goal of staying out of your way while writing creatively, PyRoom has a very specialized featureset
+=======
 百度网盘
 pip3 install cssselect
 pip3 install bcloud
@@ -44,3 +47,7 @@ mount --bind dir1 dir2 两个目录互为镜像
 enca  filename 查看文件的编码
 enconv -L zh_CN -x UTF-8  filename  转换文件编码:由gbk转为utf-8
 enconv --list lanuages 列出所有的语言编码
+<<<<<<< HEAD
+=======
+>>>>>>> 2b86c137d8516154b20d3a5ec97e5e7e12bd1f85
+>>>>>>> fc841a1079fd5cb3cf71bd3f92daa060d33dfe04

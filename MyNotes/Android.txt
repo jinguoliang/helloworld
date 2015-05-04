@@ -13,7 +13,7 @@ Created 星期六 12 十月 2013
 4.Android上线产品开发经验 
 5.Android FrameWork开发集成经验
 6.Linux系统编程经验   
-7. 精通脚本编程   Going On
+7. 精通脚本编程   Going On  — ok
 8. 精通Android view系统及其绘制流程；
 9. 精通Android 事件传递流程；
 10. 精通Android 资源架构和资源加载流程；
@@ -21,6 +21,11 @@ Created 星期六 12 十月 2013
 12. 熟悉Android编译系统，能熟练编写makefile；
 13. 熟悉ActivityManager、PackageManager、InputManager、WindowManager等；
 14. 曾从事中间件开发相关工作者、对android性能优化有经验与见解者优先。
+15. -熟悉插件化开发模式 Going On
+16. 熟悉Android开发技术，包括UI、网络等方面
+17. 熟悉Android开发工具和相关开发测试工具的使用 ok
+18. 精通多线程和网络编程，对高性能程序设计、架构有较多的工程经验 
+19. 热爱互联网，对移动产品研发有浓厚兴趣 
 
 
 {{./pasted_image003.png}}
