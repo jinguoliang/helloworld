@@ -14,7 +14,7 @@ Created 星期六 12 十月 2013
 [[+cmd|cmd]]
 [[+语言|语言]]
 [[+必须工具|工具]]
-
+[[+HTTP|HTTP]]
 [[+Linux OS structur]][[+Linux OS structure|e]]
 桌面环境
 FVWM 虚拟桌面，占内存少，可配置
@@ -35,6 +35,9 @@ sudo apt-get install mate-desktop-environment			kill my ubuntu ,it's so bad
 Linux OS    :
 [[SteamOS]]
 
+有点意思:
+[[+怎样将zip文件保存在图片中|怎样将zip文件保存在图片中]]
+
 
 
 ==== Problems ====
@@ -43,3 +46,5 @@ Linux OS    :
 [[+心得|心得]]
 
 [[+程序开机自启动|程序开机自启动]]
+
+[[+LinuxMint17 init|LinuxMint17 init]]

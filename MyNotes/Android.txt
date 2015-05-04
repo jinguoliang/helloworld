@@ -70,6 +70,11 @@ Created 星期六 12 十月 2013
 [[+Android 环境搭建|Android 环境搭建]]
 
 [[+内存优化|内存优化]]
+
+[[+包信息|包信息]]
+
+[[+linux 连接adb|linux 连接adb]]
+
 frameworks/base/core/res/res/values/config.xml     config the __default value__ of sync,data trasaction,wifi etc.
 runtime overlay      example:[[./auto-sync.tar.gz]]           
 项目目录

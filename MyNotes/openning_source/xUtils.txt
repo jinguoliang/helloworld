@@ -5,7 +5,6 @@ Creation-Date: 2015-04-10T11:17:49+08:00
 ====== xUtils ======
 Created 星期五 10 四月 2015
 
-
 === ├── bitmap ===
         │   ├── BitmapCacheListener.java  ok   监听对内存的操作
         │   ├── BitmapCommonUtils.java   ok   获取view的任意属性, 计算最佳图片的大小
@@ -191,3 +190,10 @@ Created 星期五 10 四月 2015
         │   ├── ViewFinder.java 各种方式找view
         │   └── ViewInjectInfo.java 包含一个对象和一个parentId
         └── ViewUtils.java  injectObject 注入各种东西 __注入方法比较复杂__
+
+==== 难题 ====
+1. viewutils 设置代理方法监听控件
+2. http  
+	a. cookiestore
+3. db
+	a. convertor
