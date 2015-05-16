@@ -45,7 +45,3 @@ mount --bind dir1 dir2 两个目录互为镜像
 enca  filename 查看文件的编码
 enconv -L zh_CN -x UTF-8  filename  转换文件编码:由gbk转为utf-8
 enconv --list lanuages 列出所有的语言编码
-<<<<<<< HEAD
-=======
->>>>>>> 2b86c137d8516154b20d3a5ec97e5e7e12bd1f85
->>>>>>> fc841a1079fd5cb3cf71bd3f92daa060d33dfe04

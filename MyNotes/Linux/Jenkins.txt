@@ -8,10 +8,10 @@ Created 星期二 14 四月 2015
 支持好多插件啊,功能强大啊
 
 参数化配置:
-多选框需要下插件
+多选框需要下插件  Extended Choice Parameter plugin
 
 支持git:
-需要下载git插件
+需要下载git插件  Git Client Plugin |Git Plugin	
 
 添加git库,会报host key verify failed
 切换到jenkins用户, 如果第一次 用sudo passwd jenkins修改密码
