@@ -24,5 +24,10 @@ wifi
 
 __eclipse too many opened files__
 这是linux打开的文件有限制。
-[[/etc/security/limits.conf]]   nofile → max number of opened file
+[[/etc/security/limits.conf]]   nofile → max number of opened filehhh
+
+==== retext installiation ====
+python3-pip
+python3-markups
+markdowns
 

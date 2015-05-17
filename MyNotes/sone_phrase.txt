@@ -120,7 +120,7 @@ BLOB (binary large object)，二进制大对象，是一个可以存储二进制
 BLOB是一个大文件，典型的BLOB是一张图片或一个声音文件，由于它们的尺寸，必须使用特殊的方式来处理（例如：上传、下载或者存放到一个数据库）。
 根据Eric Raymond的说法，处理BLOB的主要思想就是让文件处理器（如数据库管理器）不去理会文件是什么，而是关心如何去处理它。
 
-=== Duck typing  ===
+=== Duck typing ===
 的准则是 “If you can do it, you can be used here”。Wikipeida 上的一个非常形象的解释是:
 When I see a bird that walks like a duck and swims like a duck and quacks like a duck, I call that bird a duck.
 一般来讲，使用 duck typing 的编程语言往往被归类到“动态类型语言”或者“解释型语言”里，比如 Python, Javascript, Ruby 等等；而其它的类型系统往往被归到“静态类型语言“中，比如 C/C++/Java。
@@ -128,6 +128,7 @@ When I see a bird that walks like a duck and swims like a duck and quacks like a
 === 无念编辑 ===
 无念则刚，让你心无杂念的全屏文本编辑软件2010-03-02, 发表于: it数码, 思维励志 · 标签:效率工具, 注意力, 纯文本, 软件 · 评论:0
 专注，专注，集中精神。是否体验过全神贯注的时候，整个视野中只剩下眼前关注的文字，四周的声响完全被自己的思绪所笼罩，整个人就象坠入空灵的宇宙中，没有干扰、没有杂念，灵感如行云流水源源不绝。有一些软件可以帮你达到这样的境界。
+
 === 创意经济 ===
 创意经济也称创意产业、创新经济、创意工业、创造性产业等。指那些从个人的创造力、技能和天分中获取发展动力的企业，以及那些通过对知识产权的开发可创造潜在财富和就业机会的活动。它通常包括广告、建筑艺术、艺术和古董市场、手工艺品等等。它最先由英国提出，随着社会的不断发展，它的内涵外延越来越宽泛。相关书籍、相关链接也越来越多，而且成为美学成就的品牌。
 创意经济通常包括时尚设计、电影与录像、交互式互动软件、音乐、表演艺术、出版业、软件及计算机服务、电视和广播等等。此外，还包括旅游、博物馆和美术馆、遗产和体育等。
@@ -155,3 +156,39 @@ DAO模式是标准的J2EE设计模式之一.开发人员使用这个模式把底
 事务划分：
 关于DAO要记住的一件重要事情是它们是事务性对象。每个被DAO执行的操作(对象创建，更新、或删除数据)都是和事务相关联的。同样的，事务划分(transaction demarcation)的概念是特别重要的。
 {{./pasted_image.png}}
+
+==== Mercurial  ====
+是一种轻量级分布式版本控制系统，采用 Python 语言实现，易于学习和使用，扩展性强。其是基于 GNU General Public License (GPL) 授权的开源项目。
+使用同git
+
+==== jekyll ====
+jekyll是一个简单的免费的Blog生成工具，类似WordPress。但是和WordPress又有很大的不同，原因是jekyll只是一个生成静态网页的工具，不需要数据库支持。但是可以配合第三方服务,例如Disqus。最关键的是jekyll可以免费部署在Github上，而且可以绑定自己的域名。
+
+==== Disqus ====
+Disqus是一家第三方社会化评论系统，主要为网站主提供评论托管服务。Disqus由Danniel Ha于2007年5月5日创办，和Dropbox、Reddit等知名网站一样，是Y Combinator孵化的一家公司。创办至今已获得Y-Combinator、Union Square Ventures、North Bridge等投资机构共计1450万美元投资。
+
+==== Gem ====
+Gem是一个管理Ruby库和程序的标准包，它通过Ruby Gem（如 http://rubygems.org/ ）源来查找、安装、升级和卸载软件包，非常的便捷。
+
+==== GitHub Pages ====
+免费的静态站点，三个特点：免费托管、自带主题、支持自制页面和Jekyll。
+
+==== YAML ====
+YAML是“另一种标记语言”的外语缩写[1] （见前方参考资料原文内容）；但为了强调这种语言以数据做为中心，而不是以置标语言为重点，而用返璞词重新命名。它是一种直观的能够被电脑识别的数据序列化格式，是一个可读性高并且容易被人类阅读，容易和脚本语言交互，用来表达资料序列的编程语言。
+
+==== pip ====
+The PyPA recommended tool for installing Python packages.
+
+==== PyPA ====
+PyPa stands for Python Parser. 
+The main goal of PyPa is to allow the creation of dynamic web sites by completely separating content from logic. 
+Template syntax is very simple and all logic is handled by Python code. 
+It can be used stand-alone for your cgi-scripts (be it through cgi, fastcgi, scgi, pcgi, wsgi) or as your templating system within web frameworks like Django, Pylons or Turbogears. 
+
+==== easy_install ====
+easy_install是由PEAK(Python Enterprise Application Kit)开发的setuptools包里带的一个命令，所以使用easy_install实际上是在调用setuptools来完成安装模块的工作。 Perl 用户比较熟悉 CPAN，而 Ruby 用户则比较熟悉 Gems；引导 setuptools 的ez_setup工具和随之而生的扩展后的easy_install 与 “Cheeseshop”（Python Package Index，也称为 “PyPI”）一起工作来实现相同的功能。它可以很方便的让您自动下载，编译，安装和管理Python包。[1] 
+
+
+
+
+

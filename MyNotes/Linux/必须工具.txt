@@ -42,12 +42,17 @@ bup  ---based on git
 [[+tmux|tmux]] 可以在一个终端打开多个终端，类似vi
 mount --bind dir1 dir2 两个目录互为镜像
 
-编码
+=== 编码 ===
 enca  filename 查看文件的编码
 enconv -L zh_CN -x UTF-8  filename  转换文件编码:由gbk转为utf-8
 enconv --list lanuages 列出所有的语言编码
 
-=== network  ===
+==== 文本编辑 ====
+Retext markdown编辑
+
+=== network ===
 httpie    http get url
 
-
+=== version control tool ===
+git
+mercurial  hg
