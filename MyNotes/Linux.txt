@@ -16,21 +16,8 @@ Created 星期六 12 十月 2013
 [[+必须工具|工具]]
 [[+HTTP|HTTP]]
 [[+Linux OS structur]][[+Linux OS structure|e]]
-桌面环境
-FVWM 虚拟桌面，占内存少，可配置
-http://docs.huihoo.com/homepage/shredderyin/fvwm_frame.html
-Sawfish  使用lisp和scheme配置
-http://docs.huihoo.com/homepage/shredderyin/wiki/SawfishWindowManager.html
-gnome 2.0
-[[+gnome 3.0]]
-kde
-unity
-mate --gnome2-like
-sudo add-apt-repository "deb http://packages.mate-desktop.org/repo/ubuntu precise main"
-sudo apt-get update
-sudo apt-get install mate-archive-keyring
-sudo apt-get update
-sudo apt-get install mate-desktop-environment			kill my ubuntu ,it's so bad
+[[+桌面环境|桌面环境]]
+[[+github|github]]
 
 Linux OS    :
 [[SteamOS]]

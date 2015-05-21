@@ -26,5 +26,3 @@ fcitx-modules					install
 fcitx-table					install
 fcitx-table-wubi-large				install
 fcitx-ui-classic				install
-
-最后下载搜狗for linux安装

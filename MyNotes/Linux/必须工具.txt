@@ -23,12 +23,12 @@ thunder bird
 imap.163.com
 smtp.163.com
 姓名：jinguol999
+
 [[+make]]
 [[+ssh]]
 screen  可以同时多个终端公用一个session
 试一下就知道了:  打开两个终端,一个运行session
 另一个运行session -x   于是乎,你在一个终端里打字另一个终端也同时打字	这样子,我的树莓派就可以随便找个手机当屏幕了
-pyroom  With the goal of staying out of your way while writing creatively, PyRoom has a very specialized featureset
 百度网盘
 pip3 install cssselect
 pip3 install bcloud
@@ -41,7 +41,18 @@ bup  ---based on git
 [[+tmux|tmux]] 可以在一个终端打开多个终端，类似vi
 mount --bind dir1 dir2 两个目录互为镜像
 
-编码
+=== 编码 ===
 enca  filename 查看文件的编码
 enconv -L zh_CN -x UTF-8  filename  转换文件编码:由gbk转为utf-8
 enconv --list lanuages 列出所有的语言编码
+
+==== 文本编辑 ====
+Retext markdown编辑
+__pyroom__  With the goal of staying out of your way while writing creatively, PyRoom has a very specialized featureset
+
+=== network ===
+httpie    http get url
+
+=== version control tool ===
+git
+mercurial  hg

@@ -174,3 +174,34 @@ Linux Container提供了在单一可控主机节点上支持多个相互隔离�
 === PAAS ===
 PaaS是Platform-as-a-Service的缩写，意思是平台即服务。[1]  把服务器平台作为一种服务提供的商业模式。通过网络进行程序提供的服务称之为SaaS(Software as a Service)，而云计算时代相应的服务器平台或者开发环境作为服务进行提供就成为了PaaS(Platform as a Service)。
 所谓PaaS实际上是指将软件研发的平台（计世资讯定义为业务基础平台）作为一种服务，以SaaS的模式提交给用户。因此，PaaS也是SaaS模式的一种应用。但是，PaaS的出现可以加快SaaS的发展，尤其是加快SaaS应用的开发速度。在2007年国内外SaaS厂商先后推出自己的PAAS平台。 
+==== Mercurial  ====
+是一种轻量级分布式版本控制系统，采用 Python 语言实现，易于学习和使用，扩展性强。其是基于 GNU General Public License (GPL) 授权的开源项目。
+使用同git
+
+==== jekyll ====
+jekyll是一个简单的免费的Blog生成工具，类似WordPress。但是和WordPress又有很大的不同，原因是jekyll只是一个生成静态网页的工具，不需要数据库支持。但是可以配合第三方服务,例如Disqus。最关键的是jekyll可以免费部署在Github上，而且可以绑定自己的域名。
+
+==== Disqus ====
+Disqus是一家第三方社会化评论系统，主要为网站主提供评论托管服务。Disqus由Danniel Ha于2007年5月5日创办，和Dropbox、Reddit等知名网站一样，是Y Combinator孵化的一家公司。创办至今已获得Y-Combinator、Union Square Ventures、North Bridge等投资机构共计1450万美元投资。
+
+==== Gem ====
+Gem是一个管理Ruby库和程序的标准包，它通过Ruby Gem（如 http://rubygems.org/ ）源来查找、安装、升级和卸载软件包，非常的便捷。
+
+==== GitHub Pages ====
+免费的静态站点，三个特点：免费托管、自带主题、支持自制页面和Jekyll。
+
+==== YAML ====
+YAML是“另一种标记语言”的外语缩写[1] （见前方参考资料原文内容）；但为了强调这种语言以数据做为中心，而不是以置标语言为重点，而用返璞词重新命名。它是一种直观的能够被电脑识别的数据序列化格式，是一个可读性高并且容易被人类阅读，容易和脚本语言交互，用来表达资料序列的编程语言。
+
+==== pip ====
+The PyPA recommended tool for installing Python packages.
+
+==== PyPA ====
+PyPa stands for Python Parser. 
+The main goal of PyPa is to allow the creation of dynamic web sites by completely separating content from logic. 
+Template syntax is very simple and all logic is handled by Python code. 
+It can be used stand-alone for your cgi-scripts (be it through cgi, fastcgi, scgi, pcgi, wsgi) or as your templating system within web frameworks like Django, Pylons or Turbogears. 
+
+==== easy_install ====
+easy_install是由PEAK(Python Enterprise Application Kit)开发的setuptools包里带的一个命令，所以使用easy_install实际上是在调用setuptools来完成安装模块的工作。 Perl 用户比较熟悉 CPAN，而 Ruby 用户则比较熟悉 Gems；引导 setuptools 的ez_setup工具和随之而生的扩展后的easy_install 与 “Cheeseshop”（Python Package Index，也称为 “PyPI”）一起工作来实现相同的功能。它可以很方便的让您自动下载，编译，安装和管理Python包。[1] 
+
