@@ -132,3 +132,4 @@ Ctrl+B 快速打开光标处的类或方法
 30.Ctrl＋Alt＋Up /Ctrl＋Alt＋Down可以快速跳转搜索结果
 31.Ctrl＋Shift＋J可以整合两行
 32.Alt＋F8是计算变量值
+33. ctrl+F12 显示所有当前的方法
