@@ -18,12 +18,6 @@ virtual box
 [[+git|git]]
 zsh
 
-thunder bird 
-163配置：
-imap.163.com
-smtp.163.com
-姓名：jinguol999
-
 [[+make]]
 [[+ssh]]
 screen  可以同时多个终端公用一个session
