@@ -174,7 +174,8 @@ Linux Container提供了在单一可控主机节点上支持多个相互隔离�
 === PAAS ===
 PaaS是Platform-as-a-Service的缩写，意思是平台即服务。[1]  把服务器平台作为一种服务提供的商业模式。通过网络进行程序提供的服务称之为SaaS(Software as a Service)，而云计算时代相应的服务器平台或者开发环境作为服务进行提供就成为了PaaS(Platform as a Service)。
 所谓PaaS实际上是指将软件研发的平台（计世资讯定义为业务基础平台）作为一种服务，以SaaS的模式提交给用户。因此，PaaS也是SaaS模式的一种应用。但是，PaaS的出现可以加快SaaS的发展，尤其是加快SaaS应用的开发速度。在2007年国内外SaaS厂商先后推出自己的PAAS平台。 
-==== Mercurial  ====
+
+==== Mercurial ====
 是一种轻量级分布式版本控制系统，采用 Python 语言实现，易于学习和使用，扩展性强。其是基于 GNU General Public License (GPL) 授权的开源项目。
 使用同git
 
@@ -205,3 +206,12 @@ It can be used stand-alone for your cgi-scripts (be it through cgi, fastcgi, scg
 ==== easy_install ====
 easy_install是由PEAK(Python Enterprise Application Kit)开发的setuptools包里带的一个命令，所以使用easy_install实际上是在调用setuptools来完成安装模块的工作。 Perl 用户比较熟悉 CPAN，而 Ruby 用户则比较熟悉 Gems；引导 setuptools 的ez_setup工具和随之而生的扩展后的easy_install 与 “Cheeseshop”（Python Package Index，也称为 “PyPI”）一起工作来实现相同的功能。它可以很方便的让您自动下载，编译，安装和管理Python包。[1] 
 
+==== Scala ====
+一门多范式的编程语言，设计初衷是要整合面向对象编程和函数式编程的各种特性。
+发音为/ˈskɑːlə
+ˈskeɪlə/
+
+=== Spark：一个高效的分布式计算系统 ===
+
+=== glob模式 ===
+所谓的 glob 模式是指 shell 所使用的简化了的正则表达式。星号（*）匹配零个或多个任意字符；[abc]匹配任何一个列在方括号中的字符（这个例子要么匹配一个 a，要么匹配一个 b，要么匹配一个 c）；问号（?）只匹配一个任意字符；如果在方括号中使用短划线分隔两个字符，表示所有在这两个字符范围内的都可以匹配（比如 [0-9] 表示匹配所有 0 到 9 的数字）。
