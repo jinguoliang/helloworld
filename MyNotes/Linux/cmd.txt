@@ -80,7 +80,8 @@ poff
 plog
 
 == File: ==
-lsof   查看打开的文件
+lsof   查看所有打开的文件
+fuser  查看使用某个文件或socket的进程
 
 === Find ===
 :

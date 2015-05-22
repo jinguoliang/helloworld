@@ -69,17 +69,17 @@ echo 颜色菜单
 read -p "Input the value [$OLD_PRODUCT_TYPE]: " PRODUCT_TYPE     -p   prompt
 
 替换字符串
- 10 replace() {
- 11 fileName=$1
- 12 OldWord=$2
- 13 NewWord=$3
- 14 
- 15 ed - $fileName <<!
- 16 s/$OldWord/$NewWord/g
- 17 w
- 18 q
- 19 !
- 20 }
+replace() {
+ fileName=$1
+ OldWord=$2
+ NewWord=$3
+ 
+ ed - $fileName <<!
+ s/$OldWord/$NewWord/g
+ w
+ q
+ !
+}
 
 === 分割字符串对每个字段依次处理 ===
  while IFS=',' read -ra ADDR; do  # IFS为分隔符,  把$ChannelIds值作为标准输入,用read读取,

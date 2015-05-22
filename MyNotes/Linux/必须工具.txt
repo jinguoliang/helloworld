@@ -23,7 +23,6 @@ zsh
 screen  可以同时多个终端公用一个session
 试一下就知道了:  打开两个终端,一个运行session
 另一个运行session -x   于是乎,你在一个终端里打字另一个终端也同时打字	这样子,我的树莓派就可以随便找个手机当屏幕了
-__pyroom__  With the goal of staying out of your way while writing creatively, PyRoom has a very specialized featureset
 百度网盘
 pip3 install cssselect
 pip3 install bcloud
@@ -43,6 +42,7 @@ enconv --list lanuages 列出所有的语言编码
 
 ==== 文本编辑 ====
 Retext markdown编辑
+__pyroom__  With the goal of staying out of your way while writing creatively, PyRoom has a very specialized featureset
 
 === network ===
 httpie    http get url

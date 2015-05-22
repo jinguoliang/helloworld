@@ -34,4 +34,5 @@ echo 'xinput set-prop 12 "Device Enabled" 0' >> .zshrc
 5. [[./.config/VirtualBox]]
 6. ./VirtualBox VMs
 7. .zsh
-8. /etc/gitconfig
+8. [[/etc/gitconfig]]
+9. .jenkins

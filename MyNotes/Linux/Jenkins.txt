@@ -8,13 +8,13 @@ Created 星期二 14 四月 2015
 支持好多插件啊,功能强大啊
 
 参数化配置:
-多选框需要下插件
+多选框需要下插件  Extended Choice Parameter plugin
 
 支持git:
-需要下载git插件
+需要下载git插件  Git Client Plugin |Git Plugin	
 
 添加git库,会报host key verify failed
-切换到jenkins用户, 如果第一次刻意用sudo passwd jenkins修改密码
+切换到jenkins用户, 如果第一次 用sudo passwd jenkins修改密码
 ssh-keygen 生成密钥,添加到git仓库的托管网站
 然后输入一下命令
 git -c core.askpass=true ls-remote -h git@git.oschina.net:wytt/liuhaizi.gi HEAD

@@ -67,7 +67,7 @@ git reflog expire --expire=now --all
 git gc --prune=now
 git gc --aggressive --prune=now
 
-=== CRLF   ===
+=== CRLF ===
 一、AutoCRLF
 #提交时转换为LF，检出时转换为CRLF，适合windows
 git config --global core.autocrlf true   
@@ -87,3 +87,8 @@ git config --global core.safecrlf false
 
 #提交包含混合换行符的文件时给出警告
 git config --global core.safecrlf warn
+
+#git文件路径中文乱码
+git config --system core.quotepath false
+
+[[+gitignore|.gitignore]]
