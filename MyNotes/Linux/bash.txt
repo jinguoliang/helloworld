@@ -48,7 +48,7 @@ $@ 和 $* 都存储了所有参数，但是有区别，什么区别见-->恶心�
 		echo ${hello__%__/*}			hello/jin
 		${var:start:len} 截取字符串的一部分	var是个变量，直接用字符串不行
 	${ls} 	同 `ls` 输出到标准输出的数据作为值	
-	
+	echo ${x//?1/z3}  替换
 易混点：
 echo hello 输出hello到标准输出
 echo的返回值存在$?

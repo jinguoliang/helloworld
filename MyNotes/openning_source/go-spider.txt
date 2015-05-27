@@ -1,0 +1,74 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-05-25T10:53:05+08:00
+
+====== go-spider ======
+Created Monday 25 May 2015
+
+├── core 核心
+│   ├── common 
+│   │   ├── com_interfaces
+│   │   │   └── com_interfaces.go
+│   │   ├── config
+│   │   │   └── config.go
+│   │   ├── etc_config
+│   │   │   └── etc_config.go
+│   │   ├── mlog
+│   │   │   ├── filelog.go
+│   │   │   ├── mlog.go
+│   │   │   └── strace.go
+│   │   ├── page
+│   │   │   └── page.go
+│   │   ├── page_items
+│   │   │   └── page_items.go
+│   │   ├── request
+│   │   │   └── request.go
+│   │   ├── resource_manage
+│   │   │   ├── resource_manage_chan.go
+│   │   │   ├── resource_manage.go
+│   │   │   └── resource_manage_test.go
+│   │   └── util
+│   │       └── util.go
+│   ├── downloader   下载器  request ——> downloader ——> page
+│   │   ├── downloader.go
+│   │   ├── downloader_http.go
+│   │   └── downloader_test.go
+│   ├── page_processer  定义了一个接口Process，结构处理
+│   │   └── page_processer.go
+│   ├── pipeline  管道，定义了一个接口将pageitem和task传入
+│   │   ├── collect_pipeline_page_items.go
+│   │   ├── pipeline_console.go
+│   │   ├── pipeline_file.go
+│   │   └── pipeline.go
+│   ├── scheduler  调度器，简单的定义了一个接口有加入和取出，还有计数
+│   │   ├── scheduler.go
+│   │   ├── scheduler_queue.go
+│   │   ├── scheduler_simple.go
+│   │   └── scheduler_test.go
+│   └── spider
+│       └── spider.go
+├── example  示例
+│   ├── baidu_baike_page_processor
+│   │   └── main.go
+│   ├── github_repo_page_processor
+│   │   └── main.go
+│   ├── login_profile_page_processor
+│   │   └── main.go
+│   ├── sina_stock_json_processor
+│   │   └── main.go
+│   ├── sohu_gossip_page_json_processor
+│   │   └── main.go
+│   └── weixin_sogou_cookie_processor
+│       ├── main.go
+│       └── weixin.sogou.com.json
+├── extension   扩展
+│   ├── downloader
+│   │   └── contribution_downloader_extension_here
+│   ├── other
+│   │   └── contribution_other_tool_here
+│   ├── pipeline
+│   │   └── contribution_pipeline_extension_here
+│   └── scheduler
+│       └── contribution_scheduler_extension_here
+├── LICENSE
+└── README.md
