@@ -5,6 +5,9 @@ Creation-Date: 2015-04-27T11:14:55+08:00
 ====== HTTP ======
 Created 星期一 27 四月 2015
 
+[[+状态码|状态码]]
+
+
 === User-Agent ===
 The format of the User-Agent string in HTTP is a list of product tokens (keywords) with optional comments.
 一系列的带有注释的产品关键字
@@ -27,7 +30,7 @@ Mozilla/[version] ([system and browser information]) [platform] ([platform detai
 	Mobile/7B405: This is used by the browser to indicate specific enhancements that are available directly in the browser or through third parties. An example of this is Microsoft Live Meeting which registers an extension so that the Live Meeting service knows if the software is already installed, which means it can provide a streamlined experience to joining meetings.
 
 
-==== Header  ====
+==== Header ====
 
 The header fields are transmitted after the request or response line, which is the first line of a message. Header fields are colon-separated name-value pairs in clear-text string format, terminated by a carriage return (CR) and line feed (LF) character sequence. The end of the header section is indicated by an empty field, resulting in the transmission of two consecutive CR-LF pairs. Historically, long lines could be folded into multiple lines; continuation lines are indicated by the presence of a space (SP) or horizontal tab (HT) as the first character on the next line. This folding is now deprecated.[1]
 
