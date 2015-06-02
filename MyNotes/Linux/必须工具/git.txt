@@ -7,8 +7,7 @@ Created 星期四 16 十月 2014
 
 ===== Git can do =====
 :
- 
-* Examine the state of your project at earlier points in time
+ • Examine the state of your project at earlier points in time
 * Show the differences among various states of the project
 * Split the project development into multiple independent
 lines, called “branches,” which can evolve separately
@@ -92,3 +91,5 @@ git config --global core.safecrlf warn
 git config --system core.quotepath false
 
 [[+gitignore|.gitignore]]
+
+[[+tag 操作|tag 操作]]

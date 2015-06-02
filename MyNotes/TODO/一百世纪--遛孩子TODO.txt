@@ -122,3 +122,21 @@ Created 星期二 24 三月 2015
 71. 模糊效果  ok
 72. jenkins搭建 ok
 73. jenkins 切换branch ok
+74. __handler looper Message __
+75. __Activity生命周期 和 Fragment生命周期__
+76. ~~AndroidTag~~
+77. Android Unit Test
+78. 状态显示（无网还是空数据)
+79. 搜索例示实时更新 ok
+80. 联想列表 ok
+81. 搜索结果 ok
+82. topbar触点区域 ok
+83. 加载信息 ok
+84. 返回码处理 ok
+85. 清空按钮 ok
+86. 过滤或者叫排序
+87. 抽出搜索方法,添加热词和联想词的点击搜索事件
+
+
+
+
