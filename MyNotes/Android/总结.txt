@@ -1,0 +1,71 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-06-01T21:47:43+08:00
+
+====== 总结 ======
+Created Monday 01 June 2015
+
+1. [[BaseActivity]]  
+	a. 埋点
+2. 统一的未登录，网页报错,加载,空数据提示
+3. [[ListView]] 充分利用header and footer, 由于item的重用,每次getview(),view的改变的属性都要初始化,改变的状态都要保存在model中
+4. [[+版本的命名规则|版本的命名规则]]借鉴linux内核
+5. ViewAdapter里使用LayoutInflater,使用inflate（resid，parent,false)  这样可以保证生成正确的layoutparamater
+
+
+
+[ ] 如何获取资源的
+
+    /** 
+	* 计算已使用内存的百分比，并返回。 
+	* @param context 
+	* 可传入应用程序上下文。 
+	* @return 已使用内存的百分比，以字符串形式返回。 
+     */  
+    public static String getUsedPercentValue(Context context) {  
+        String dir = "/proc/meminfo";  
+        try {  
+            FileReader fr = new FileReader(dir);  
+            BufferedReader br = new BufferedReader(fr, 2048);  
+            String memoryLine = br.readLine();  
+            String subMemoryLine = memoryLine.substring(memoryLine  
+                    .indexOf("MemTotal:"));  
+            br.close();  
+            long totalMemorySize = Integer.parseInt(subMemoryLine.replaceAll(  
+                    "\\D+", ""));  
+            long availableSize = getAvailableMemory(context) / 1024;  
+            int percent = (int) ((totalMemorySize - availableSize)  
+                    / (float) totalMemorySize * 100);  
+            return percent + "%";  
+        } catch (IOException e) {  
+            e.printStackTrace();  
+        }  
+        return "悬浮窗";  
+    }  
+
+    /** 
+	* 获取当前可用内存，返回数据以字节为单位。 
+	* @param context 
+	* 可传入应用程序上下文。 
+	* @return 当前可用内存。 
+     */  
+    private static long getAvailableMemory(Context context) {  
+        ActivityManager.MemoryInfo mi = new ActivityManager.MemoryInfo();  
+        getActivityManager(context).getMemoryInfo(mi);  
+        return mi.availMem;  
+    } 
+
+                launcherParams = new LayoutParams();  
+                launcherParams.x = screenWidth / 2 - RocketLauncher.width / 2;  
+                launcherParams.y = screenHeight - RocketLauncher.height;  
+                launcherParams.type = LayoutParams.TYPE_PHONE;  
+                launcherParams.format = PixelFormat.RGBA_8888;  
+                launcherParams.gravity = Gravity.LEFT | Gravity.TOP;  
+                launcherParams.width = RocketLauncher.width;  
+                launcherParams.height = RocketLauncher.height;  
+windowManager.addView(rocketLauncher, launcherParams);
+windowManager.updateViewLayout(FloatWindowSmallView.this, mParams); 
+windowManager.removeView(rocketLauncher);
+
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />  
+<uses-permission android:name="android.permission.GET_TASKS" /> 

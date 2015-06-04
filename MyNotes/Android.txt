@@ -83,13 +83,8 @@ Created 星期六 12 十月 2013
 [[+android性能优化|android性能优化]]
 
 [[+知识点|知识点]]
+[[+总结|总结]]
 
-==== 总结 ====
-1. [[BaseActivity]]  
-	a. 埋点
-2. 统一的未登录，网页报错,加载,空数据提示
-3. [[ListView]] 充分利用header and footer, 由于item的重用,每次getview(),view的改变的属性都要初始化,改变的状态都要保存在model中
-4. [[+版本的命名规则|版本的命名规则]]借鉴linux内核
 
 frameworks/base/core/res/res/values/config.xml     config the __default value__ of sync,data trasaction,wifi etc.
 runtime overlay      example:[[./auto-sync.tar.gz]]           
