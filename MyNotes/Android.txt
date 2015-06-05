@@ -82,6 +82,8 @@ Created 星期六 12 十月 2013
 
 [[+android性能优化|android性能优化]]
 
+[[+知识点|知识点]]
+
 ==== 总结 ====
 1. [[BaseActivity]]  
 	a. 埋点

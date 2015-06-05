@@ -1,0 +1,45 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-06-05T10:26:14+08:00
+
+====== Android 测试 ======
+Created Friday 05 June 2015
+
+==== 测试基础 ====
+Android的测试框架是开发环境的一部分, 提供了一个框架和一些强大的工具,可以帮助你去测试应用从单元测试到框架测试的每个方面.
+测试框架有以下特性:
+1. Android测试套件是基于JUnit.你可以只使用JUnit去测试一个类而不调用Android API, 或者使用Android的JUnit扩展去测试Android的组件.如果你初识Android测试,你可以从通用目的的测试用例开始,比如AndroidTestCase,然后你可以使用更复杂的类
+2. Android Junit扩展提供特定组件的测试用例类.使用他们可以创建mock 对象和方法来控制组件的生命周期.
+3. 测试套件被包含与应用包相似的测试包中,这样你就不必学习新的工具或技术来设计和构建测试了.
+4. 构建和测试的SDK工具既支持ADT,也支持命令行.这些工具从测试应用项目获取信息,进而自动创建构建文件,manifest文件和测试包的目录结构.
+5. SDK也提供了monkeyrunner(一个测试设备的python Api)和UI/Application Exerciser Monkey(一个命令行工具,通过向设备发送虚拟随机事件来进行对UI的压力测试)
+
+这个文档描述了Android 测试框架的功能,包括测试框架, 编写测试的api,运行和查看结果的工具. 文档假设你有android应用开发和单元测试的基础知识.
+下图是测试框架的概览:
+{{./pasted_image.png}}
+
+=== 测试框架 ===
+1. Android构建和测试工具都假定测试项目是以标准结构来组织测试,测试案例的类,测试包,测试项目.
+2. JUnit测试是一个方法,它声明去测试应用的一部分.测试方法被组织到类里,叫做测试case或者测试 suilts.
+
+=== 测试项目 ===
+你应该总是使用Adnroid tools去创建测试项目
+
+=== 测试Api ===
+android测试Api是基于JUnit API,添加了instrumentation框架和android特定的测试类
+
+=== JUnit ===
+
+=== Instrumentation ===
+=== Test case classes ===
+=== Assertion classes ===
+=== Mock object classes ===
+=== 测试的上下文 ===
+
+=== 运行测试 ===
+1. 测试用例通过测试runner类来加载测试用例,set ups,runs, tears down.
+2. Android测试runner必须是可以instrumented, 以便于系统去打开应用,控制组件的运行
+3. 在manifest的<instrumentation>声明InstrumentationTestRunner或其子类.InstrumentationTestRunner的代码在共享库android.test.runner中,需要通过<uses-library>来引入.这些工作实际adt或者命令行工具都会自动给你做
+4. 系统加载并启动测试包,杀死被测试的应用的进程,加载一个新的应用实例.然后把控制权交给InstrumentationTestRunner去运行测试用例.你也可以配置来运行特定的测试用例.
+5. 系统和InstrumentationTestRunner都不会运行被测试的应用,那是测试用例的事.此时应用完全在测试用例的控制之下
+Working With Package names ?????
