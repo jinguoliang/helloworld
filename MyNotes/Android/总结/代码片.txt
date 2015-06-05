@@ -1,0 +1,19 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-06-04T22:45:12+08:00
+
+====== 代码片 ======
+Created Thursday 04 June 2015
+
+=== view做滚动动画 ===
+Scroller  帮助收集信息来做一个滚动动画
+	scroller.smoothScrollTo(startx,starty,deltaX,deltaY, duration)
+	scroller.computeScrollOffset()
+	scroller.getCurrX()
+	配合：  View.onComputeScroll（）   View.inValidate()  View.getScrollX()  View.scrollTo() View.ScrollBy() 滚动一个View内容
+	
+
+
+
+
+
