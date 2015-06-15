@@ -35,6 +35,7 @@ android测试Api是基于JUnit API,添加了instrumentation框架和android特�
 === Assertion classes ===
 === Mock object classes ===
 === 测试的上下文 ===
+Android提供了两个上下文
 
 === 运行测试 ===
 1. 测试用例通过测试runner类来加载测试用例,set ups,runs, tears down.
