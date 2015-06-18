@@ -12,3 +12,5 @@ TODO:
 	[ ] git add -i
 	[ ] [[+Android Gradle 构建|Android Gradle 构建]]
 	[ ] [[+Android 测试|Android 测试]]
+	[ ] [[ScaleDrawable]]
+	[ ] [[ApplicationInfo]]

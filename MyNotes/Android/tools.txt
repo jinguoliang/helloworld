@@ -15,6 +15,16 @@ adb -e install -r bin/MyAndroid.apk  	-e 表示在安装到模拟器 -d 表示�
 adb root  以root权限重启adb服务
 adb remount 以读写权限重新挂载根目录
 
+==== 内存分析工具 ====
+1. mat
+2. LeakCanary 可以用更加直白的方式将内存泄露展现在我们的面前。
+	以下是我找到的学习资料，写的非常棒： 
+		1、LeakCanary: [[http://www.liaohuqiu.net/cn/posts/leak-canary/|让内存泄露无所遁形]] 
+		2、LeakCanary [[http://www.liaohuqiu.net/cn/posts/leak-canary-read-me/|中文使用说明]]
+	AndroidStudio 上使用LeakCanary 请移步： 
+	https://github.com/square/leakcanary
+
+
 
 [[+MonkeyRunner|MonkeyRunner]]
 

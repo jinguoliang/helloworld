@@ -9,6 +9,10 @@ Created 星期一 09 二月 2015
 基础
 Generality ？
 
+godoc安装:
+	golang-doc  文档html
+	golang-go.tools 工具包括godoc命令
+	
 ==== 包 ====
 ├── archive
 │   ├── __tar ok__ 

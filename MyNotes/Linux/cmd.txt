@@ -67,6 +67,9 @@ apt-cache showsrc mypackagename,查看“Directory:”行获知每个软件包�
 apt-get source mypackagename
 __dselect a package manages frontend.__
 
+apt-file update
+apt-file show packagename
+
 setup gnome advanced settting:
 sudo add-apt-repository ppa:ricotz/testing
 sudo apt-get update
