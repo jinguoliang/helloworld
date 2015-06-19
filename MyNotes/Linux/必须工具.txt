@@ -45,6 +45,7 @@ enconv --list lanuages 列出所有的语言编码
 ==== 文本编辑 ====
 Retext markdown编辑
 __pyroom__  With the goal of staying out of your way while writing creatively, PyRoom has a very specialized featureset
+[[+sublime-text-2|sublime-text-2]]
 
 === network ===
 httpie    http get url

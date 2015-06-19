@@ -13,8 +13,10 @@ Created 星期四 16 十月 2014
 	d. Format
 	e. Clean
 	f. Refactor
-	g. BulidConfig
+	g. BuildConfig
 
+=== GUI 工具 ===
+git-cola 非常灵活的提交部分改动
 
 ===== Git can do =====
 :
