@@ -5,12 +5,11 @@ Creation-Date: 2014-04-07T15:26:39+08:00
 ====== android studio ======
 Created 星期一 07 四月 2014
 
-
- Android Studio常用快捷键、Android Studio快捷键大全
-
-Android Studio 是谷歌基于IntelliJ IDEA开发的安卓开发工具，有点类似 eclipse ADT，Android Studio 提供了集成的 Android 开发工具用于开发和调试，基于Gradle的构建支持。
-
-Android Studio常用快捷键
+乱码:
+	IDE乱码:
+		File > Settings > Appearance & Behavior > Appearance，将default fonts改为Microsoft YaHei（改成其它SimHei,SimSun也行，但个人觉得雅黑好看些）
+	代码里中文
+		File > Settings > Editor > File Encodings 
 
 1. Ctrl+D： 集合了复制和粘贴两个操作，如果有选中的部分就复制选中的部分，并在选中部分的后面
 粘贴出来，如果没有选中的部分，就复制光标所在的行，并在此行的下面粘贴出来。
@@ -101,7 +100,7 @@ Ctrl+B 快速打开光标处的类或方法
 1.Ctrl＋E，可以显示最近编辑的文件列表
 2.Shift＋Click可以关闭文件
 3.Ctrl＋[或]可以跳到大括号的开头结尾
-4.Ctrl＋Shift＋Backspace可以跳转到上次编辑的地方
+__4.Ctrl＋Shift＋Backspace可以跳转到上次编辑的地方__
 5.Ctrl＋F12，可以显示当前文件的结构
 6.Ctrl＋F7可以查询当前元素在当前文件中的引用，然后按F3可以选择
 7.Ctrl＋N，可以快速打开类
