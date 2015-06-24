@@ -100,7 +100,7 @@ Ctrl+B 快速打开光标处的类或方法
 1.Ctrl＋E，可以显示最近编辑的文件列表
 2.Shift＋Click可以关闭文件
 3.Ctrl＋[或]可以跳到大括号的开头结尾
-4.Ctrl＋Shift＋Backspace可以跳转到上次编辑的地方
+__4.Ctrl＋Shift＋Backspace可以跳转到上次编辑的地方__
 5.Ctrl＋F12，可以显示当前文件的结构
 6.Ctrl＋F7可以查询当前元素在当前文件中的引用，然后按F3可以选择
 7.Ctrl＋N，可以快速打开类
