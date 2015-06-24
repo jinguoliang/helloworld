@@ -36,30 +36,3 @@ and __User Mode__.
 	4.硬件层的分页是什么样的？
 	5.linux中的分页是什么样的？
 	6.fix-maped linear address?
-
-
-
-mediatek/trustzone  没更新
-
-platform/frameworks/av  1 -1
-platform/frameworks/base 1 -1																								
-platform/packages/providers/MediaProvider 1 -1
-
-platform/mediatek/custom/arima82_wet_kk 1 -1 
-platform/mediatek/config/arima82_wet_kk 2 -2
-platform/mediatek/config/mt6582 1 -1
-platform/system/core 1 -1
-
-platform/manifest 1 -1
-platform/build 1 -1 
-
-
-platform/vendor/mediatek/arima82_wet_kk 1   no patch
-platform/vendor/sony/trustlets 1  no
-mediatek/trustzone 1   no patch
-platform/vendor/semc/system/core/libasb 1  no
-platform/vendor/semc/frameworks/libkeyctrl 1  ?
-mediatek/external/mobicore 1 no
-platform/vendor/semc/s1/s1certificate 1 no
-platform/vendor/semc/s1/s1securitymanager 1 no
-mediatek/platform/mt6582/trustzone/vendor/trustonic 1 no
