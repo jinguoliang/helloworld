@@ -32,6 +32,8 @@ Created 星期四 16 十月 2014
 	merge.tool=meld
 
 
+提取前一周的commit
+git log --oneline --committer=jinguoliang --since="one week"
 
 === GUI 工具 ===
 git-cola 非常灵活的提交部分改动
