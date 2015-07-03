@@ -18,11 +18,12 @@ Created 星期四 16 十月 2014
 		7. [[BuildConfig]]
 	b. 博客：
 		1. Post
+		2. Book
 		2. Format 格式问题
 		3. Config 
 		4. Revise 校正，错别字，等其他错误
 		5. UI 显示效果 显示模板内容
-2. 配置
+3. 配置
 	a. 全设置成system 
 	user.email=jinguol999@163.com
 	user.name=jinux
@@ -32,7 +33,7 @@ Created 星期四 16 十月 2014
 	merge.tool=meld
 
 
-提取前一周的commit
+=== 提取前一周的commit ===
 git log --oneline --committer=jinguoliang --since="one week"
 
 === GUI 工具 ===

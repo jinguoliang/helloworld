@@ -5,6 +5,36 @@ Creation-Date: 2013-10-12T22:18:25+08:00
 ====== reading books ======
 Created 星期六 12 十月 2013
 
+TODO:
+[ ] Rework @Book
+[ ] 如何阅读一本书 @Book
+[ ] The Way To Go @Book
+[ ] 思考,快与慢 @Book
+[ ] 理解专业程序员 @Book
+[ ] 卓有成效的程序员 @Book
+[ ] 情人 @Book
+[ ] 你的灯亮着吗 @Book
+[ ] 35岁前要上的33堂理财课 @Book
+[ ] 三体 @Book
+[ ] 迷男方法 @Book
+[ ] 青铜时代 @Book
+[ ] 1988 @Book
+
+重读:
+悟空传
+拆掉思维里的墙
+把时间当朋友
+遇见未知的自己
+大话数据结构
+just for fun
+已读:
+沉默的大多数
+异类
+人生元编程
+怦然心动的人生整理魔法
+王尔德童话
+
+
 心理学：
 [[+积极心理学]]    finish
 和时间做朋友   finish

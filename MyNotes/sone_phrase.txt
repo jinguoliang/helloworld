@@ -229,5 +229,20 @@ AJAX 是一种用于创建快速动态网页的技术。
 JSONP(JSON with Padding)是JSON的一种“使用模式”，可用于解决主流浏览器的跨域数据访问的问题。由于同源策略，一般来说位于 server1.example.com 的网页无法与不是 server1.example.com的服务器沟通，而 HTML 的<script> 元素是一个例外。利用 <script> 元素的这个开放策略，网页可以得到从其他来源动态产生的 JSON 资料，而这种使用模式就是所谓的 JSONP。用 JSONP 抓到的资料并不是 JSON，而是任意的JavaScript，用 JavaScript 直译器执行而不是用 JSON 解析器解析
 
 ==== npm ====
+是什么: javascript 的 包管理命令行工具(依赖管理,Node.js应用下载)
+怎么用: 在包含package.json的目录下执行npm link会给当前的js添加可执行权限并添加它的连接到path目录里从而可以可以直接执行命令
+为什么: 方便用户,通过配置,来管理依赖,提供一些应用的元信息,如版本,官网,等等
 
+=== Benchmark Testing ===
+是什么:  基准测试, 
+为什么: 评估某个对象的性能
+怎么做:
+Benchmark testing is the process of load testing a component or an entire end to end IT system to determine the performance characteristics of the application. The benchmark test is repeatable in that the performance measurements captured will vary only a few percent each time the test is run. This enables single changes to be made to the application or infrastructure in an attempt to determine if there is a performance improvement or degradation.
 
+Benchmark testing can combine aspects of security testing.- An example in case is benchmark testing  firewalls. This requires system and or user loads combined with security violations concurrently executed against the component to determine its performance benchmark.
+
+The goals of benchmark testing typically fall into two categories;
+
+To test the system to measure how a change affects its performance characteristics.
+
+To test and tune the system to reach a performance requirement or service level agreement  (SLA). In this case a series of benchmark tests are conducted in conjunction with iterative cycles of performance tuning.
