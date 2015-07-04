@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-07-02T22:14:05+08:00
+
+====== Plan30 ======
+Created Thursday 02 July 2015
+
+[ ] 首页
+	[*] 设置按钮
+[ ] 详情页
+	[*] 标题缩小不放在头里
+	[ ] 左上为返回
+	[ ] 右上为完成
+	[ ] 设置显示仿照Morning Routine
+	[ ] 评价换成自定义的那个
+	[ ] 今日总结使用Materail
+[ ] 新计划页
+	[ ] 添加头
+	[ ] 新计划
+	[ ] 左上为返回
+	[ ] 右上为完成
+	[ ] materail化
+		[ ] 时间设置仿照Morning Routine的Settings，有解释，前面是值，后面是按钮（“修改”）
+[*] 设置页返回按钮
