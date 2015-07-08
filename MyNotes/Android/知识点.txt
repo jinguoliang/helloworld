@@ -18,3 +18,5 @@ Created Tuesday 02 June 2015
 4. notifyDataSetChanged 和 notifyDataSetInvalidated区别
 	a. 一个通知listview数据改变了,一个是通知listview无效了
 	b. 具体表现是数据改变了当前的滚动位置不变,适用于添加了数据.无效了就要重新刷新整个listview,滚动到开始位置
+5. 使用系统的一些配置,如ViewConfiguration.get(context).getScaledTouchSlop()可以用于区分点击和滑动行为
+	a. [[ViewConfiguration]] 包含了一些在UI中使用的标准常量,如timeouts, sizes, and distances.
