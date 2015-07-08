@@ -25,6 +25,8 @@ Created 星期四 16 十月 2014
 		5. Revise 校正，错别字，等其他错误
 		6. UI 显示效果 显示模板内容
 		7. Git
+	c. zim 笔记
+		1. w27.2-[home-gujiazhuang]-liuhaizi
 2. 配置
 	a. 全设置成system 
 	user.email=jinguol999@163.com

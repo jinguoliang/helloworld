@@ -5,42 +5,14 @@ Creation-Date: 2013-11-23T18:56:34+08:00
 ====== TODO ======
 Created Saturday 23 November 2013
 
-
-[ ] 陈浩算法题
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 [[+奇阅Android TODO|奇阅Android TODO]]：
 [[+一百世纪--遛孩子TODO|一百世纪--遛孩子TODO]]
 [[+Android 学习 TODO|Android 学习 TODO]]
 [[+网页学习|网页学习]]
 [[+Blog]]
 [[+Material Demo|Material Demo]]
+[[+Plan30|Plan30]]
+
 
 [[:TODO:那本书对程序员影响最大]]
 [[~/shared_with_windows/我的坚果云/resource/html/s.html|编程面试的10大算法概念汇总]]
