@@ -98,7 +98,6 @@ page_processer.PageProcesser 定义了一个__Process__(p *page.Page)
 这里添加一个Pipeline,而他要求一个Process()方法,Process(items *page_items.PageItems, t com_interfaces.Task)
 我们穿了一个默认的PipelineConsole,它输出到控制台
 最后的run()实现也是比较复杂,后面详解
-
 ----
 run()里做了什么呢? 它从schedule里拿出一个请求准备提交,然后从ResourceManageChan里使用一个chan来运行goruntine
 如何取得请求? 通过poll.

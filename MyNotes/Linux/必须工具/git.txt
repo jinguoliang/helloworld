@@ -7,7 +7,7 @@ Created 星期四 16 十月 2014
 
 === 我的git 约定 ===
 
-1. commit 分类 标题开头用一下标出 如 "Fixbug 搜索框图片压扁"
+1. commit 分类 标题开头用一下标出 如 "[Fixbug] 搜索框图片压扁" 
 	a. android项目
 		1. Fixbug
 		2. Function
@@ -16,14 +16,16 @@ Created 星期四 16 十月 2014
 		5. Clean
 		6. Refactor
 		7. [[BuildConfig]]
+		8. Git
 	b. 博客：
 		1. Post
 		2. Book
-		2. Format 格式问题
-		3. Config 
-		4. Revise 校正，错别字，等其他错误
-		5. UI 显示效果 显示模板内容
-3. 配置
+		3. Format 格式问题
+		4. Config 
+		5. Revise 校正，错别字，等其他错误
+		6. UI 显示效果 显示模板内容
+		7. Git
+2. 配置
 	a. 全设置成system 
 	user.email=jinguol999@163.com
 	user.name=jinux
