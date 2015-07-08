@@ -14,3 +14,7 @@ TODO:
 	[ ] [[+Android 测试|Android 测试]]
 	[ ] [[ScaleDrawable]]
 	[ ] [[ApplicationInfo]]
+	[ ] 显示go项目的依赖 →  go list → gotools
+	[ ] vimgo学习
+
+[[openning source:GoInk]]分析

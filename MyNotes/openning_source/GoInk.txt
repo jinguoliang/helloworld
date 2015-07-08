@@ -1,0 +1,59 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-07-04T22:44:11+08:00
+
+====== GoInk ======
+Created Saturday 04 July 2015
+
+__package__ github.com/fuxiaohei/GoInk
+
+一个简单的web框架 使用golang
+
+调server起来：
+
+app.New()
+app.Get("/", homeHandler)
+app.Run()
+
+来看New（）
+创建一个app： 它包含路由器router， 路由cache？  middle（处理器handler）？ inter？ 配置， view的目录
+
+然后是Get（）
+设置针对某个路径的get方法如何处理。如果只有第一个参数，（妈的）意思完全变了，只是从配置文件里获取某个键值，否则设置路由器的处理器
+里面直接把handler给了路由器的get
+
+最后是Run（）
+通过配置设置ip和端口，输出运行信息，并且设置app为处理器 >> app 实现了 ServeHTTP(ResponseWriter, *Request)，接受请求处理返回数据
+
+《猜想》
+app在ServeHTTP里调用将request里的url做匹配找到路由器然后由它处理
+
+先来看路由器如何设置的
+路由器的get做了什么工作呢？
+他会分析url成一个regex和url参数，构造一个对应的路由器添加到路由器slice里 这里作者有点蛋疼，router和route，router存了一个route的slice
+
+然后看如何调用路由器的ServeHTTP（） 
+根据源码，app里的ServeHTTP（）调用了app的handler（），这个handler（）做了大量的工作：
+1. 将请求和回应以及app的信息包到一个上下文里（Context）
+2. 设置一个defer用于处理错误，在这里，根据配置，如果有<recover>的处理器就由它处理
+3. 由static处理器处理
+4. 如果有middle，遍历每一个处理请求
+5. 查找相应的路由器处理，先查找路由器缓存，然后是调用router的find（）查找
+
+如何设置一个handler：
+1. (app *App) Get(key string, fn ...Handler) → (rt *Router) Get(pattern string, fn ...Handler) → 构造一个Route添加到Router
+2. Router 里放了好多Route
+3. Route 里放了 一个url的模板，参数， 请求方法（get/post），处理器
+
+如何找到一个url的处理器呢？
+1. (app *App) ServeHTTP(res http.ResponseWriter, req *http.Request) → (app *App) handler(res http.ResponseWriter, req *http.Request)
+2. → (rt *Router) Find(url string, method string) (params map[string]string,     fn []Handler) 正则匹配找到Route 
+
+如何输出到client的？
+(ctx *Context) End() → (ctx *Context) Send() → ctx.Response.WriteHeader(ctx.Status);ctx.Response.Write(ctx.Body)
+
+
+
+
+
+
