@@ -250,3 +250,87 @@ To test and tune the system to reach a performance requirement or service level 
 ==== CSV（逗号分隔值文件格式） ====
 逗号分隔值（Comma-Separated Values，CSV，有时也称为字符分隔值，因为分隔字符也可以不是逗号），其文件以纯文本形式存储表格数据（数字和文本）。纯文本意味着该文件是一个字符序列，不含必须像二进制数字那样被解读的数据。CSV文件由任意数目的记录组成，记录间以某种换行符分隔；每条记录由字段组成，字段间的分隔符是其它字符或字符串，最常见的是逗号或制表符。通常，所有记录都有完全相同的字段序列。
 CSV文件格式的通用标准并不存在，但是在RFC 4180中有基础性的描述。使用的字符编码同样没有被指定，但是7-bitASCII是最基本的通用编码。
+
+=== 协程 ===
+没有啥复杂的东西，考虑清楚需求，就可以很自然的衍生出这些解决方案。
+一开始大家想要同一时间执行那么三五个程序，大家能一块跑一跑。特别是UI什么的，别一上计算量比较大的玩意就跟死机一样。于是就有了并发，从程序员的角度可以看成是多个独立的逻辑流。内部可以是多cpu并行，也可以是单cpu时间分片，能快速的切换逻辑流，看起来像是大家一块跑的就行。
+
+但是一块跑就有问题了。我计算到一半，刚把多次方程解到最后一步，你突然插进来，我的中间状态咋办，我用来储存的内存被你覆盖了咋办？所以跑在一个cpu里面的并发都需要处理上下文切换的问题。进程就是这样抽象出来个一个概念，搭配虚拟内存、进程表之类的东西，用来管理独立的程序运行、切换。
+
+后来一电脑上有了好几个cpu，好咧，大家都别闲着，一人跑一进程。就是所谓的并行。
+
+因为程序的使用涉及大量的计算机资源配置，把这活随意的交给用户程序，非常容易让整个系统分分钟被搞跪。所以核心的操作需要陷入内核(kernel)，切换到操作系统，让老大帮你来做。
+
+有的时候碰着I/O访问，阻塞了后面所有的计算。空着也是空着，老大就直接把CPU切换到其他进程，让人家先用着。当然除了I\O阻塞，还有时钟阻塞等等。一开始大家都这样弄，后来发现不成，太慢了。为啥呀，一切换进程得反复进入内核，置换掉一大堆状态。进程数一高，大部分系统资源就被进程切换给吃掉了。后来搞出线程的概念，大致意思就是，这个地方阻塞了，但我还有其他地方的逻辑流可以计算，这些逻辑流是共享一个地址空间的，不用特别麻烦的切换页表、刷新TLB，只要把寄存器刷新一遍就行，能比切换进程开销少点。
+
+行，故事讲到这里，我们来看看并发的好处：
+该干嘛干嘛，多逻辑流先天符合人类描述问题的习惯；
+对于I/O密集的应用，被I/O阻塞的时候能切换到计算中去，可以显著的提升程序的响应速度。
+我们看到阻塞、切换到其他进程（线程）的操作，都会交由操作系统来完成。所以不管是进程还是线程，每次阻塞、切换都需要陷入系统调用(system call)，先让CPU跑操作系统的调度程序，然后再由调度程序决定该跑哪一个进程(线程)。
+
+如果我们不要这些功能了，我自己在进程里面写一个逻辑流调度的东西，碰着i\o我就用非阻塞式的。那么我们即可以利用到并发优势，又可以避免反复系统调用，还有进程切换造成的开销，分分钟给你上几千个逻辑流不费力。这就是协程。
+
+本质上协程就是用户空间下的线程。
+
+=== first class object ===
+In short, it means there are no restrictions on the object's use. It's the same as any other object.
+
+A first class object is an entity that can be dynamically created, destroyed, passed to a function, returned as a value, and have all the rights as other variables in the programming language have.
+
+Depending on the language, this can imply:
+
+being expressible as an anonymous literal value
+being storable in variables
+being storable in data structures
+having an intrinsic identity (independent of any given name)
+being comparable for equality with other entities
+being passable as a parameter to a procedure/function
+being returnable as the result of a procedure/function
+being constructible at runtime
+being printable
+being readable
+being transmissible among distributed processes
+being storable outside running processes
+Source.
+
+In C++ functions themselves are not first class objects, however:
+
+You can override the '()' operator making it possible to have an object function, which is first class.
+Function pointers are first class.
+boost bind, lambda and function do offer first class functions
+In C++, classes are not first class objects but instances of those classes are. In Python both the classes and the objects are first class objects. (See this answer for more details about classes as objects).
+
+Here is an example of Javascript first class functions:
+
+// f: function that takes a number and returns a number
+// deltaX: small positive number
+// returns a function that is an approximate derivative of f
+function makeDerivative( f, deltaX )
+{
+    var deriv = function(x)
+    { 
+       return ( f(x + deltaX) - f(x) )/ deltaX;
+    }
+    return deriv;
+}
+var cos = makeDerivative( Math.sin, 0.000001);
+// cos(0)     ~> 1
+// cos(pi/2)  ~> 0
+Source.
+
+Entities that are not first class objects are referred to as second-class objects. Functions in C++ are second class because they can't be dynamically created.
+
+Regarding the edit:
+
+EDIT. When one says "everything is an object" (like in Python), does he indeed mean that "everything is first-class"?
+The term object can be used loosely and doesn't imply being first class. And it would probably make more sense to call the whole concept 'first class entities'. But in Python they do aim to make everything first class. I believe the intent of the person who made your statement meant first class.
+
+=== PO ===
+属于L10n方案。“po”是: portable Object(可跨平台对象)的缩写。po与mo模式的转变过程PO是 Portable Object (可移植对象)的缩写形式；MO是 Machine Object (机器对象) 的缩写形式。
+PO 文件是面向翻译人员的、提取于源代码的一种资源文件。当软件升级的时候，通过使用 gettext 软件包处理 PO 文件，可以在一定程度上使翻译成果得以继承，减轻翻译人员的负担。MO 文件是面向计算机的、由 PO 文件通过 gettext 软件包编译而成的二进制文件。程序通过读取 MO 文件使自身的界面转换成用户使用的语言。
+GNUgettext 是一个软件包，是为了使软件实现国际化支持而产生的。
+I18N是 internationalization 的缩写形式，意即在 i 和 n 之间有 18 个字母，本意是指软件的“国际化”.
+L10N是 localization 的缩写形式，意即在 l 和 n 之间有 10 个字母，本意是指软件的“本地化”。
+按照软件开发的惯例，最初的软件只有英文版本，根据需要，作者再把软件界面和文档翻译成不同国家、地区的语言版本。但是由于实现翻译的途径、翻译的工作效率、翻译的可重用性等因素各不相同，使翻译工作面临很大困境，也阻碍了软件的推广和应用。为了方便地将软件翻译成不同语言的版本，就需要一套翻译规范和通用工具，这就导致了“国际化”机制的出现。仅仅翻译是不够的，同一种语言在不同国家、地区可能存在多个支系，它们在表达习惯、语法结构甚至文字种类和编码上都有不同，方言更是千奇百怪，通用的翻译其质量肯定是不高的。涉及到计算机领域，还存在操作习惯上的差别，而且对某种语言提供完美的输入、显示、打印、保存、传输并非一件轻而易举的事，这就导致了“本地化”机制的出现。简而言之，“国际化”是“本地化”的一部分，主要是指国际化的实现机制和翻译工作， “本地化”包含“国际化”，是对“国际化”的补充和完善，它还包括为实现对某种特定语言良好的支持而进行的有针对性的翻译调整以及对软件进行的打补丁工作。
+I18N 和 L10N 的国际组织是 Openi18n 组织，其前身是 li18nux 组织。它原来是制定GNU/Linux 自由操作系统上软件全球化标准的国际计划，后来扩充到GNU/Linux 之外所有开放源代码的技术领域，因而更名为 Open Internationalization Initiative，由非营利组织 Free Standards Group 赞助，并为世界各大厂商所支持，对于GNU/Linux 系统上的多国语言文字处理技术和环境有决定性的影响。各个开源软件开发组织通常都有负责“国际化”和“本地化”工作的分支机构。ajax
+I18N 主要使用 gettext 软件包使软件实现国际化支持。

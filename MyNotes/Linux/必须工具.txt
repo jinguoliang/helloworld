@@ -55,3 +55,10 @@ git
 mercurial  hg
 
 === 包管理软件 ===
+
+=== Docker ===
+1. http://shengxiang.me/article/38/write-android-program-with-golang.html   [[+用golang写android|用golang写android]]
+2. docker pull codeskyblue/docker-goandroid
+3. docker run ---rm -ti codeskyblue/docker-goandroid bash
+4. sudo docker run -v ~/dockerDir:/gopath/src/golang.org/x/mobile/hostdir --rm -ti codeskyblue/docker-goandroid bash 共享目录
+5. 有什么不会的看命令,docker
