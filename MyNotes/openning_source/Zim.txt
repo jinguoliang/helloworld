@@ -1,0 +1,9 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-07-16T17:18:16+08:00
+
+====== Zim ======
+Created Thursday 16 July 2015
+
+[[/home/jinux/Project/zim]]
+

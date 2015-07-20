@@ -6,11 +6,11 @@ Creation-Date: 2015-06-02T20:52:18+08:00
 Created Tuesday 02 June 2015
 
 1. 速度 手机一系列点计算出速度
-        VelocityTracker tracker = VelocityTracker.obtain();
-        tracker.addMovement(event);  添加对事件的跟踪
-        tracker.computeCurrentVelocity(1000);  计算  参数为单位1时是p/ms  1000时是pixel/s 
-        tracker.getXVelocity();
-        tracker.recycle();
+		VelocityTracker tracker = VelocityTracker.obtain();
+		tracker.addMovement(event);  添加对事件的跟踪
+		tracker.computeCurrentVelocity(1000);  计算  参数为单位1时是p/ms  1000时是pixel/s 
+		tracker.getXVelocity();
+		tracker.recycle();
 2. [[OnScrollListener]] [[ListView]] 
 	a. onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount)
 	b. listView.getLastVisiblePosition()
@@ -25,4 +25,7 @@ Created Tuesday 02 June 2015
 	scroller.computeScrollOffset()
 	scroller.getCurrX()
 	配合：  View.onComputeScroll（）   View.inValidate()  View.getScrollX()  View.scrollTo() View.ScrollBy() 滚动一个View内容
-7. helllo
+7. 获取手机的sdk版本: android.os.Build.VERSION.SDK_INT;
+8. 调地图: Intent.ACTION_VIEW Uri.parse("geo:" + position.lat + "," + position.lon + "?q=" + name);
+9. 在某个操作需要登录时,使用startActivityForResult(),然后在登录成功后设置result,最后在onActivityResult里更具result继续操作
+10. 打电话: Intent.ACTION_CALL    Uri.parse("tel:" + phoneNo) 

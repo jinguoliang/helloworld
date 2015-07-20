@@ -40,8 +40,19 @@ Created 星期四 16 十月 2014
 === 提取前一周的commit ===
 git log --oneline --committer=jinguoliang --since="one week"
 
+=== 显示一个分支里有,另一个分支没有的commit ===
+git log one-branch..another-branch
+
 === GUI 工具 ===
 git-cola 非常灵活的提交部分改动
+
+=== 传输协议 ===
+ssh
+https
+git协议
+	git daemon --reuseaddr --base-path=/home/git   
+	建个空文件touch  git-daemon-export-ok标识可以使用git协议	
+
 
 ===== Git can do =====
 :

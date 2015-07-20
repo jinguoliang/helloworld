@@ -1,0 +1,12 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-07-20T15:45:06+08:00
+
+====== 验证手机 ======
+Created Monday 20 July 2015
+
+1. initView
+	a. 绑定各种控件
+	b. 如果有绑定的手机号则设置要发送的手机号,并且设置为不可编辑
+2. 验证验证码:
+	a. 如果输入错误的验证码则返回空
