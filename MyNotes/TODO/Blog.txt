@@ -15,6 +15,11 @@ TODO:
 	[ ] [[ScaleDrawable @Blog]]
 	[ ] [[+完全了解Android Touch Mode和Focus|完全了解Android Touch Mode和Focus @Blog]]
 
+	[ ] [[ApplicationInfo]]
+	[ ] 显示go项目的依赖 →  go list → gotools
+	[ ] vimgo学习
+[[openning source:GoInk]]分析
+
 学习
 	[ ] Git Hook @Blog
 	[ ] 为了弄懂协程要去看本书,学个语言<Programming in Lua>
