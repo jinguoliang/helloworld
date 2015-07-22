@@ -731,7 +731,7 @@ Created Thursday 16 July 2015
 │               │   ├── TestWebActivity.java
 │               │   ├── UserCenterActivity.java
 │               │   ├── UserInfoActivity.java
-│               │   ├── __VerifyPhoneActivity.java __[[+验证手机|验证手机]]
+│               │   ├── __VerifyPhoneActivity.java __[[+验证手机|验证手机]]  __VerifyNewPhoneActivity.java__
 │               │   ├── WebActivity.java
 │               │   ├── WelcomeActivity.java
 │               │   └── WriteCommentActivity.java

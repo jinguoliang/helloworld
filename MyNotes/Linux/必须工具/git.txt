@@ -115,6 +115,9 @@ git reflog expire --expire=now --all
 git gc --prune=now
 git gc --aggressive --prune=now
 
+用push, 删除远程tag
+git push origin :refs/tags/Remote_Systems_Operation
+
 === CRLF ===
 一、AutoCRLF
 #提交时转换为LF，检出时转换为CRLF，适合windows
