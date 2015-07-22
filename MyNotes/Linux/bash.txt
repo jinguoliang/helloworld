@@ -24,6 +24,8 @@ Ctrl + o  输入完命令后，这个动作相当于按下<ENTER>，不同的是
 __bash compelement:__
 modify [[/etc/bash.bashrc]]
 
+__输入不可打印字符如回车符'\r' 在shell里显示是^M__
+__但是直接输入不对应该是ctrl+v,ctrl+M__
 
 
 参数从1开始
@@ -83,9 +85,9 @@ replace() {
 
 === 分割字符串对每个字段依次处理 ===
  while IFS=',' read -ra ADDR; do  # IFS为分隔符,  把$ChannelIds值作为标准输入,用read读取,
-      for i in "${ADDR[@]}"; do
-      	#process $i
-      done
+	  for i in "${ADDR[@]}"; do
+	  	#process $i
+	  done
  done <<< "$ChannelIds"
 
 === 重定向 ===
