@@ -10,6 +10,8 @@ Created 星期一 07 四月 2014
 		File > Settings > Appearance & Behavior > Appearance，将default fonts改为Microsoft YaHei（改成其它SimHei,SimSun也行，但个人觉得雅黑好看些）
 	代码里中文
 		File > Settings > Editor > File Encodings 
+导入本地aar
+	new → import aar
 
 1. Ctrl+D： 集合了复制和粘贴两个操作，如果有选中的部分就复制选中的部分，并在选中部分的后面
 粘贴出来，如果没有选中的部分，就复制光标所在的行，并在此行的下面粘贴出来。
@@ -54,6 +56,7 @@ __17.Ctrl+shift+F7__：以高亮的形式标志处一些相关的东西，这里
 32.Ctrl+Tab：打开界面切换窗口，保持按住Ctrl键，选中相应的要打开的窗口。
 33.Ctrl+W：选中光标所在的所在的单词（一个成员变量或者是一个方法名），多按一次会选中所在的语句，
 再多按一次会选中所在的代码块。。。依次类推，每增加一次会扩大一级选中的范围。
+34. alt+shift+left: 移动光标到上次位置(菜单navigation里的<)
 
 Alt+回车 导入包,自动修正
 

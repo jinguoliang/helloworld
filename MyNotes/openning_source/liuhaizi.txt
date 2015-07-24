@@ -1,0 +1,1117 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2015-07-16T17:15:06+08:00
+
+====== liuhaizi ======
+Created Thursday 16 July 2015
+
+[[/]][[/home/jinux/Project/liuhaizi/liuhaizi|home]][[/jinux/Project/liuhaizi/liuhaizi]]
+
+.
+├── AndroidManifest.xml
+├── ant.properties
+├── assets
+│   ├── sample.html
+│   └── ShareSDK.xml
+├── build.gradle
+├── build.xml
+├── DimensTools.bat
+├── DimensTools.class
+├── DimensTools.java
+├── gradle
+│   └── wrapper
+│       ├── gradle-wrapper.jar
+│       └── gradle-wrapper.properties
+├── gradle-app.setting
+├── gradlew
+├── gradlew.bat
+├── keystore
+├── keystore_pwd.txt
+├── libs
+│   ├── alipaysdk.jar
+│   ├── alipaysecsdk.jar
+│   ├── android-support-v4.jar
+│   ├── armeabi
+│   │   ├── libcocklogic.so
+│   │   ├── liblocSDK4d.so
+│   │   └── libtnet-1.1.5.so
+│   ├── BaiduLBS_Android.jar
+│   ├── com.umeng.message.lib_v2.0.0.jar
+│   ├── fastjson-1.2.4.jar
+│   ├── gson-2.2.4.jar
+│   ├── libammsdk.jar
+│   ├── mframework.jar
+│   ├── ShareSDK-Core-2.5.9.jar
+│   ├── ShareSDK-Email-2.5.9.jar
+│   ├── ShareSDK-QQ-2.5.9.jar
+│   ├── ShareSDK-QZone-2.5.9.jar
+│   ├── ShareSDK-SinaWeibo-2.5.9.jar
+│   ├── ShareSDK-Wechat-2.5.9.jar
+│   ├── ShareSDK-Wechat-Core-2.5.9.jar
+│   ├── ShareSDK-Wechat-Moments-2.5.9.jar
+│   ├── umeng-analytics-v5.5.3.jar
+│   ├── universal-image-loader-1.9.3-with-sources.jar
+│   └── x86
+│       ├── libcocklogic.so
+│       └── libtnet-1.1.5.so
+├── liuhaizi.iml
+├── local.properties
+├── proguard-project.txt
+├── project.properties
+├── res
+│   ├── anim
+│   │   ├── activity_alpha_action_in.xml
+│   │   ├── anim_loading_circle.xml
+│   │   ├── anim_loading.xml
+│   │   ├── anim_rotate2.xml
+│   │   ├── anim_rotate.xml
+│   │   ├── pb_default.xml
+│   │   ├── popup_hide.xml
+│   │   ├── popup_show.xml
+│   │   ├── translate_down_current.xml
+│   │   ├── translate_down.xml
+│   │   ├── translate_left_current.xml
+│   │   ├── translate_right_current.xml
+│   │   ├── translate_up_current.xml
+│   │   └── translate_up.xml
+│   ├── color
+│   │   ├── main_tab_text_color.xml
+│   │   └── order_tab_text_color.xml
+│   ├── drawable
+│   │   ├── ab_background.9.png
+│   │   ├── arrow_down_gray.png
+│   │   ├── arrow_dropdown_orange.png
+│   │   ├── arrow_dropdown_white.png
+│   │   ├── arrow_right.png
+│   │   ├── arrow_up_orange.png
+│   │   ├── backgroud_update_progressbar.xml
+│   │   ├── bg_album_border.9.png
+│   │   ├── bg_apply_refund.png
+│   │   ├── bg_back_arrow_white_selector.xml
+│   │   ├── bg_back.png
+│   │   ├── bg_back_white.png
+│   │   ├── bg_be_carefull.png
+│   │   ├── bg_buy.png
+│   │   ├── bg_catogery_1.png
+│   │   ├── bg_catogery_2.png
+│   │   ├── bg_catogery_3.png
+│   │   ├── bg_catogery_4.png
+│   │   ├── bg_checkbox_checked.png
+│   │   ├── bg_checkbox_unchecked.png
+│   │   ├── bg_coupon_blue.png
+│   │   ├── bg_coupon_foot.png
+│   │   ├── bg_coupon_red.png
+│   │   ├── bg_coupon_yellow.png
+│   │   ├── bg_dark_translucent.png
+│   │   ├── bg_distance_orange.xml
+│   │   ├── bg_empty_comment.png
+│   │   ├── bg_favorite_checked.png
+│   │   ├── bg_favorite_unchecked.png
+│   │   ├── bg_minus_clicked.png
+│   │   ├── bg_minus_normal.png
+│   │   ├── bg_navigate_btn.png
+│   │   ├── bg_plus_clicked.png
+│   │   ├── bg_plus_normal.png
+│   │   ├── bg_qq_login_normal.png
+│   │   ├── bg_qq_login_pressed.png
+│   │   ├── bg_qq_login.xml
+│   │   ├── bg_qrcode.png
+│   │   ├── bg_share.png
+│   │   ├── bg_tag_blue.png
+│   │   ├── bg_tag_green.xml
+│   │   ├── bg_tag_light_green.png
+│   │   ├── bg_tag_red.png
+│   │   ├── bg_tag_yellow.png
+│   │   ├── bg_take_photo.png
+│   │   ├── bg_weibo_login_normal.png
+│   │   ├── bg_weibo_login_pressed.png
+│   │   ├── bg_weibo_login.xml
+│   │   ├── bg_weixin_login_normal.png
+│   │   ├── bg_weixin_login_pressed.png
+│   │   ├── bg_weixin_login.xml
+│   │   ├── border_1.png
+│   │   ├── border_2.png
+│   │   ├── border_3.png
+│   │   ├── border_4.png
+│   │   ├── btn_checkbox_selector.xml
+│   │   ├── btn_search_orange.png
+│   │   ├── btn_search.png
+│   │   ├── calendar.png
+│   │   ├── circle_gray.xml
+│   │   ├── circle_red.xml
+│   │   ├── classic_platform_corners_bg.xml
+│   │   ├── coupon_help.png
+│   │   ├── custom_checkbox_checked.png
+│   │   ├── custom_checkbox_normal.png
+│   │   ├── default_avatar.png
+│   │   ├── delete.png
+│   │   ├── dialog_bg.xml
+│   │   ├── dialog_button_bg.xml
+│   │   ├── dialog_left_button_bg.xml
+│   │   ├── dialog_right_button_bg.xml
+│   │   ├── dot.png
+│   │   ├── empty_drawable.png
+│   │   ├── error.png
+│   │   ├── exchange_recored.png
+│   │   ├── gray_round_rect.xml
+│   │   ├── header.9.png
+│   │   ├── ic_back_arrow_white_normal.png
+│   │   ├── ic_back_arrow_white_pressed.png
+│   │   ├── ic_cash_coupon.png
+│   │   ├── ic_checkbox_normal.9.png
+│   │   ├── ic_checkbox_pressed.9.png
+│   │   ├── ic_choice_green.png
+│   │   ├── ic_loading_white.png
+│   │   ├── ic_load.png
+│   │   ├── icon_activity.png
+│   │   ├── icon_filter.png
+│   │   ├── icon_liuhaizi.png
+│   │   ├── icon_subject.png
+│   │   ├── icon_weixin.png
+│   │   ├── icon_zhifubao.png
+│   │   ├── ic_picture_loadfailed.png
+│   │   ├── ic_picture_loading.png
+│   │   ├── ic_public_welfare.png
+│   │   ├── ic_pulltorefresh_arrow.png
+│   │   ├── ic_pulltorefresh_arrow_up.png
+│   │   ├── ic_score.png
+│   │   ├── item_bg.9.png
+│   │   ├── item_bg_with_bottom_line.9.png
+│   │   ├── item_bg_with_top_line.9.png
+│   │   ├── listitem_selector.xml
+│   │   ├── loading_1.png
+│   │   ├── loading_2.png
+│   │   ├── loading_img_discovery.9.png
+│   │   ├── loading_small_img.9.png
+│   │   ├── mycomment_item_commentnode.png
+│   │   ├── my_favorite.png
+│   │   ├── my_head.png
+│   │   ├── my_recent_view.png
+│   │   ├── my_recomment_app.png
+│   │   ├── my_review.png
+│   │   ├── my_settings.png
+│   │   ├── my_wallet.png
+│   │   ├── navigation.png
+│   │   ├── ny.png
+│   │   ├── orange_edge_whilte_round_rect.xml
+│   │   ├── orange_round_rect.xml
+│   │   ├── phone_no.png
+│   │   ├── point_red.xml
+│   │   ├── point_white.xml
+│   │   ├── pull_refresh_header.xml
+│   │   ├── ratingbar_big_empty.png
+│   │   ├── ratingbar_big_filled.png
+│   │   ├── ratingbar_big.xml
+│   │   ├── ratingbar_small_empty.png
+│   │   ├── ratingbar_small_filled.png
+│   │   ├── score_store.png
+│   │   ├── selector_add_favorite.xml
+│   │   ├── selector_btn_add_orders.xml
+│   │   ├── selector_btn_minus_orders.xml
+│   │   ├── selector_checkbox.xml
+│   │   ├── selector_common.xml
+│   │   ├── selector_custom_checkbox.xml
+│   │   ├── selector_item_category_.xml
+│   │   ├── shape_bg_category_normal.xml
+│   │   ├── shape_bg_category_selected.xml
+│   │   ├── shape_bg_hot_city.xml
+│   │   ├── shape_bg_my_login.xml
+│   │   ├── shape_bg_order_count.xml
+│   │   ├── shape_bg_search_city.xml
+│   │   ├── shape_bg_search_edittext.xml
+│   │   ├── shape_bottom_corner_round_rect.xml
+│   │   ├── shape_left_bottom_corner_round_rect.xml
+│   │   ├── shape_right_bottom_corner_round_rect.xml
+│   │   ├── shareicon.png
+│   │   ├── skyblue_platform_list_item_selected.xml
+│   │   ├── skyblue_platform_list_item.xml
+│   │   ├── skyblue_platform_list_selector.xml
+│   │   ├── tab_discover.xml
+│   │   ├── tab_home.xml
+│   │   ├── tab_my.xml
+│   │   ├── tab_order.xml
+│   │   ├── whilte_round_rect.xml
+│   │   └── write_comment.png
+│   ├── drawable-hdpi
+│   │   ├── icon.png
+│   │   └── ssdk_oks_ptr_ptr.png
+│   ├── drawable-ldpi
+│   │   └── icon.png
+│   ├── drawable-mdpi
+│   │   ├── bg1.png
+│   │   ├── bg2.jpg
+│   │   ├── btn_search_white.png
+│   │   ├── home_title.png
+│   │   ├── icon.png
+│   │   ├── search_clear.png
+│   │   ├── search_empty.png
+│   │   ├── search_item_icon.png
+│   │   ├── splash.jpg
+│   │   ├── umeng_push_notification_default_large_icon.png
+│   │   ├── umeng_push_notification_default_small_icon.png
+│   │   └── windmill.png
+│   ├── drawable-xhdpi
+│   │   ├── auth_follow_cb_chd.png
+│   │   ├── auth_follow_cb_unc.png
+│   │   ├── auth_title_back.png
+│   │   ├── blue_point.png
+│   │   ├── btn_back_nor.9.png
+│   │   ├── edittext_back.9.png
+│   │   ├── icon.png
+│   │   ├── img_cancel.png
+│   │   ├── light_blue_point.png
+│   │   ├── logo_bluetooth.png
+│   │   ├── logo_douban.png
+│   │   ├── logo_dropbox.png
+│   │   ├── logo_email.png
+│   │   ├── logo_evernote.png
+│   │   ├── logo_facebookmessenger.png
+│   │   ├── logo_facebook.png
+│   │   ├── logo_flickr.png
+│   │   ├── logo_foursquare.png
+│   │   ├── logo_googleplus.png
+│   │   ├── logo_instagram.png
+│   │   ├── logo_instapaper.png
+│   │   ├── logo_kaixin.png
+│   │   ├── logo_kakaostory.png
+│   │   ├── logo_kakaotalk.png
+│   │   ├── logo_laiwangmoments.png
+│   │   ├── logo_laiwang.png
+│   │   ├── logo_line.png
+│   │   ├── logo_linkedin.png
+│   │   ├── logo_mingdao.png
+│   │   ├── logo_pinterest.png
+│   │   ├── logo_pocket.png
+│   │   ├── logo_qq.png
+│   │   ├── logo_qzone.png
+│   │   ├── logo_renren.png
+│   │   ├── logo_shortmessage.png
+│   │   ├── logo_sinaweibo.png
+│   │   ├── logo_sohusuishenkan.png
+│   │   ├── logo_tencentweibo.png
+│   │   ├── logo_tumblr.png
+│   │   ├── logo_twitter.png
+│   │   ├── logo_vkontakte.png
+│   │   ├── logo_wechatfavorite.png
+│   │   ├── logo_wechatmoments.png
+│   │   ├── logo_wechat.png
+│   │   ├── logo_whatsapp.png
+│   │   ├── logo_yixinmoments.png
+│   │   ├── logo_yixin.png
+│   │   ├── logo_youdao.png
+│   │   ├── pull_refresh_header_0.png
+│   │   ├── pull_refresh_header_1.png
+│   │   ├── pull_refresh_header1.png
+│   │   ├── pull_refresh_header_2.png
+│   │   ├── pull_refresh_header2.png
+│   │   ├── skyblue_actionbar_back_btn.png
+│   │   ├── skyblue_actionbar_ok_btn.png
+│   │   ├── skyblue_editpage_bg.9.png
+│   │   ├── skyblue_editpage_close.png
+│   │   ├── skyblue_editpage_divider.9.png
+│   │   ├── skyblue_editpage_image_bg.9.png
+│   │   ├── skyblue_editpage_image_remove.png
+│   │   ├── skyblue_logo_baidutieba_checked.png
+│   │   ├── skyblue_logo_baidutieba.png
+│   │   ├── skyblue_logo_bluetooth_checked.png
+│   │   ├── skyblue_logo_bluetooth.png
+│   │   ├── skyblue_logo_douban_checked.png
+│   │   ├── skyblue_logo_douban.png
+│   │   ├── skyblue_logo_dropbox_checked.png
+│   │   ├── skyblue_logo_dropbox.png
+│   │   ├── skyblue_logo_email_checked.png
+│   │   ├── skyblue_logo_email.png
+│   │   ├── skyblue_logo_evernote_checked.png
+│   │   ├── skyblue_logo_evernote.png
+│   │   ├── skyblue_logo_facebook_checked.png
+│   │   ├── skyblue_logo_facebookmessenger_checked.png
+│   │   ├── skyblue_logo_facebookmessenger.png
+│   │   ├── skyblue_logo_facebook.png
+│   │   ├── skyblue_logo_flickr_checked.png
+│   │   ├── skyblue_logo_flickr.png
+│   │   ├── skyblue_logo_foursquare_checked.png
+│   │   ├── skyblue_logo_foursquare.png
+│   │   ├── skyblue_logo_googleplus_checked.png
+│   │   ├── skyblue_logo_googleplus.png
+│   │   ├── skyblue_logo_instagram_checked.png
+│   │   ├── skyblue_logo_instagram.png
+│   │   ├── skyblue_logo_instapaper_checked.png
+│   │   ├── skyblue_logo_instapaper.png
+│   │   ├── skyblue_logo_kaixin_checked.png
+│   │   ├── skyblue_logo_kaixin.png
+│   │   ├── skyblue_logo_kakaostory_checked.png
+│   │   ├── skyblue_logo_kakaostory.png
+│   │   ├── skyblue_logo_kakaotalk_checked.png
+│   │   ├── skyblue_logo_kakaotalk.png
+│   │   ├── skyblue_logo_laiwangmoments_checked.png
+│   │   ├── skyblue_logo_laiwangmoments.png
+│   │   ├── skyblue_logo_line_checked.png
+│   │   ├── skyblue_logo_line.png
+│   │   ├── skyblue_logo_linkedin_checked.png
+│   │   ├── skyblue_logo_linkedin.png
+│   │   ├── skyblue_logo_mingdao_checked.png
+│   │   ├── skyblue_logo_mingdao.png
+│   │   ├── skyblue_logo_neteasemicroblog_checked.png
+│   │   ├── skyblue_logo_neteasemicroblog.png
+│   │   ├── skyblue_logo_pinterest_checked.png
+│   │   ├── skyblue_logo_pinterest.png
+│   │   ├── skyblue_logo_pocket_checked.png
+│   │   ├── skyblue_logo_pocket.png
+│   │   ├── skyblue_logo_qq_checked.png
+│   │   ├── skyblue_logo_qq.png
+│   │   ├── skyblue_logo_qzone_checked.png
+│   │   ├── skyblue_logo_qzone.png
+│   │   ├── skyblue_logo_renren_checked.png
+│   │   ├── skyblue_logo_renren.png
+│   │   ├── skyblue_logo_shortmessage_checked.png
+│   │   ├── skyblue_logo_shortmessage.png
+│   │   ├── skyblue_logo_sinaweibo_checked.png
+│   │   ├── skyblue_logo_sinaweibo.png
+│   │   ├── skyblue_logo_sohumicroblog_checked.png
+│   │   ├── skyblue_logo_sohumicroblog.png
+│   │   ├── skyblue_logo_sohusuishenkan_checked.png
+│   │   ├── skyblue_logo_sohusuishenkan.png
+│   │   ├── skyblue_logo_tencentweibo_checked.png
+│   │   ├── skyblue_logo_tencentweibo.png
+│   │   ├── skyblue_logo_tumblr_checked.png
+│   │   ├── skyblue_logo_tumblr.png
+│   │   ├── skyblue_logo_twitter_checked.png
+│   │   ├── skyblue_logo_twitter.png
+│   │   ├── skyblue_logo_vkontakte_checked.png
+│   │   ├── skyblue_logo_vkontakte.png
+│   │   ├── skyblue_logo_wechat_checked.png
+│   │   ├── skyblue_logo_wechatfavorite_checked.png
+│   │   ├── skyblue_logo_wechatfavorite.png
+│   │   ├── skyblue_logo_wechatmoments_checked.png
+│   │   ├── skyblue_logo_wechatmoments.png
+│   │   ├── skyblue_logo_wechat.png
+│   │   ├── skyblue_logo_whatsapp_checked.png
+│   │   ├── skyblue_logo_whatsapp.png
+│   │   ├── skyblue_logo_yixin_checked.png
+│   │   ├── skyblue_logo_yixinmoments_checked.png
+│   │   ├── skyblue_logo_yixinmoments.png
+│   │   ├── skyblue_logo_yixin.png
+│   │   ├── skyblue_logo_youdao_checked.png
+│   │   ├── skyblue_logo_youdao.png
+│   │   ├── skyblue_platform_checked_disabled.png
+│   │   ├── skyblue_platform_checked.png
+│   │   ├── ssdk_auth_title_back.png
+│   │   ├── ssdk_back_arr.png
+│   │   ├── ssdk_oks_shake_to_share_back.xml
+│   │   ├── ssdk_oks_yaoyiyao.png
+│   │   ├── ssdk_title_div.png
+│   │   ├── tab_discovery_gray.png
+│   │   ├── tab_discovery_orange.png
+│   │   ├── tab_home_gray.png
+│   │   ├── tab_home_orange.png
+│   │   ├── tab_my_gray.png
+│   │   ├── tab_my_orange.png
+│   │   ├── tab_order_gray.png
+│   │   ├── tab_order_orange.png
+│   │   ├── title_back.png
+│   │   └── title_shadow.png
+│   ├── layout
+│   │   ├── activity_about.xml
+│   │   ├── activity_appliy_refund.xml
+│   │   ├── activity_choose_date.xml
+│   │   ├── activity_citylist.xml
+│   │   ├── activity_commit_order.xml
+│   │   ├── activity_confirm_order.xml
+│   │   ├── activity_cooperation.xml
+│   │   ├── activity_detail.xml
+│   │   ├── activity_feedback.xml
+│   │   ├── activity_find.xml
+│   │   ├── activity_home.xml
+│   │   ├── activity_login.xml
+│   │   ├── activity_main.xml
+│   │   ├── activity_my_coupon.xml
+│   │   ├── activity_my_favorite.xml
+│   │   ├── activity_my_review.xml
+│   │   ├── activity_my_score.xml
+│   │   ├── activity_my_wallet.xml
+│   │   ├── activity_no_consumed_order_detail.xml
+│   │   ├── activity_orders.xml
+│   │   ├── activity_photopreview.xml
+│   │   ├── activity_photoselector.xml
+│   │   ├── activity_purchase_success.xml
+│   │   ├── activity_rename.xml
+│   │   ├── activity_review_success.xml
+│   │   ├── activity_review.xml
+│   │   ├── activity_search.xml
+│   │   ├── activity_settings_for_push.xml
+│   │   ├── activity_settings.xml
+│   │   ├── activity_splash.xml
+│   │   ├── activity_subcategory.xml
+│   │   ├── activity_user_center.xml
+│   │   ├── activity_user_info.xml
+│   │   ├── activity_verify_phone.xml
+│   │   ├── activity_web.xml
+│   │   ├── activity_welcome.xml
+│   │   ├── activity_write_comment.xml
+│   │   ├── choose_avatar.xml
+│   │   ├── date_pick_head.xml
+│   │   ├── detail_merchandise_comment.xml
+│   │   ├── detail_merchandise_header.xml
+│   │   ├── detail_merchandise_info.xml
+│   │   ├── detail_merchandise_related.xml
+│   │   ├── detail_recommend_reason.xml
+│   │   ├── dialog_loading_circle_with_title.xml
+│   │   ├── dialog_loading_circle.xml
+│   │   ├── dialog_ok_cancel.xml
+│   │   ├── dialog_update_tips.xml
+│   │   ├── dropdown_item_category.xml
+│   │   ├── dropdown_item_subcategory.xml
+│   │   ├── footer_order_detail_vochers.xml
+│   │   ├── footer_search_history.xml
+│   │   ├── fragment_orders.xml
+│   │   ├── header_hot_city.xml
+│   │   ├── header.xml
+│   │   ├── item_album.xml
+│   │   ├── item_association.xml
+│   │   ├── item_chosen_photo_common.xml
+│   │   ├── item_chosen_photo_tail.xml
+│   │   ├── item_city.xml
+│   │   ├── item_combo.xml
+│   │   ├── item_comment_image.xml
+│   │   ├── item_comment.xml
+│   │   ├── item_coupon.xml
+│   │   ├── item_detail_tag.xml
+│   │   ├── item_favorite.xml
+│   │   ├── item_filter.xml
+│   │   ├── item_find.xml
+│   │   ├── item_home_categories.xml
+│   │   ├── item_hot_city.xml
+│   │   ├── item_merchandise.xml
+│   │   ├── item_my_comment.xml
+│   │   ├── item_order.xml
+│   │   ├── item_photoitem.xml
+│   │   ├── item_related.xml
+│   │   ├── item_score.xml
+│   │   ├── item_search_auto_complete.xml
+│   │   ├── item_search_history.xml
+│   │   ├── item_setting_checkbox.xml
+│   │   ├── item_setting.xml
+│   │   ├── item_voucher.xml
+│   │   ├── layout_home_top_part.xml
+│   │   ├── layout_message_box.xml
+│   │   ├── layout_search_empty.xml
+│   │   ├── merchandise_item_tag.xml
+│   │   ├── notification_view.xml
+│   │   ├── play_view_item.xml
+│   │   ├── popwindow_subcategory.xml
+│   │   ├── refresh_footer.xml
+│   │   ├── refresh_header.xml
+│   │   ├── search_hot_keyword.xml
+│   │   ├── skyblue_editpage_at_layout.xml
+│   │   ├── skyblue_editpage_inc_image_layout.xml
+│   │   ├── skyblue_editpage.xml
+│   │   ├── skyblue_share_actionbar.xml
+│   │   ├── skyblue_share_platform_list_item.xml
+│   │   ├── skyblue_share_platform_list.xml
+│   │   ├── sub_item_find.xml
+│   │   ├── topbar_common.xml
+│   │   ├── topbar_home.xml
+│   │   ├── topbar_search.xml
+│   │   ├── topbar_with_dropdown.xml
+│   │   ├── topbar_with_text.xml
+│   │   ├── view_empty_data.xml
+│   │   ├── view_loading.xml
+│   │   ├── view_network_error.xml
+│   │   ├── view_photopreview.xml
+│   │   ├── view_tag.xml
+│   │   └── widget_rotate_textview.xml
+│   ├── raw
+│   │   └── umeng_push_notification_default_sound.mp3
+│   ├── values-nodpi
+│   │   ├── arrays.xml
+│   │   ├── attrs.xml
+│   │   ├── colors.xml
+│   │   ├── dimens.xml
+│   │   ├── __do_not_modify_dimens.xml
+│   │   ├── ids.xml
+│   │   ├── instapaper_strings.xml
+│   │   ├── oks_strings.xml
+│   │   ├── ssdk_strings.xml
+│   │   ├── strings.xml
+│   │   ├── styles.xml
+│   │   └── themes.xml
+│   ├── values-nodpi-1024x575
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1024x600
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1024x720
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1152x648
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1196x720
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1196x768
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1200x720
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1203x676
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1216x684
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1220x690
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1228x691
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1241x698
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1267x712
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1278x718
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1280x656
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1280x672
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1280x719
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1280x720
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1280x736
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1280x800
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1366x768
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1776x1080
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1794x1080
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1820x1030
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1832x1028
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1840x1060
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1916x1076
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1916x1080
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1920x1008
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1920x1080
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-1920x1128
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-2048x1460
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-2560x1440
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-2560x1600
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-3840x2160
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-480x320
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-791x480
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-800x432
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-800x444
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-800x480
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-854x480
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   ├── values-nodpi-960x540
+│   │   ├── __do_not_modify_dimens.xml
+│   │   └── __do_not_modify_strings.xml
+│   └── values-nodpi-960x640
+│       ├── __do_not_modify_dimens.xml
+│       └── __do_not_modify_strings.xml
+├── settings.gradle
+├── src
+│   ├── cn
+│   │   └── sharesdk
+│   │       └── onekeyshare
+│   │           ├── CustomerLogo.java
+│   │           ├── EditPageFakeActivity.java
+│   │           ├── FollowerListFakeActivity.java
+│   │           ├── OnekeyShare.java
+│   │           ├── OnekeyShareTheme.java
+│   │           ├── PicViewer.java
+│   │           ├── PlatformListFakeActivity.java
+│   │           ├── Shake2Share.java
+│   │           ├── ShareContentCustomizeCallback.java
+│   │           ├── ShareCore.java
+│   │           ├── theme
+│   │           │   ├── classic
+│   │           │   │   ├── EditPage.java
+│   │           │   │   ├── FollowListPage.java
+│   │           │   │   ├── PlatformGridView.java
+│   │           │   │   └── PlatformListPage.java
+│   │           │   └── skyblue
+│   │           │       ├── EditPage.java
+│   │           │       ├── FollowListPage.java
+│   │           │       ├── PlatformGridViewAdapter.java
+│   │           │       └── PlatformListPage.java
+│   │           └── ThemeShareCallback.java
+│   └── com
+│       └── onehundredcentury
+│           └── liuhaizi
+│               ├── activity
+│               │   ├── AboutUsActivity.java
+│               │   ├── ApplyRefundActivity.java
+│               │   ├── BaseActivity.java
+│               │   ├── BasePhotoPreviewActivity.java
+│               │   ├── ChooseDateActivity.java
+│               │   ├── CityListActivity.java
+│               │   ├── CommitOrderActivity.java
+│               │   ├── ConfirmOrderActivity.java
+│               │   ├── CooperationActivity.java
+│               │   ├── __DetailActivity.java __[[+详情|详情]]
+│               │   ├── FeedbackActivity.java
+│               │   ├── FindActivity.java
+│               │   ├── __HomeActivity.java  __[[+首页|首页]]
+│               │   ├── __LoginActivity.java__   [[+登录|登录]]
+│               │   ├── MainActivity.java
+│               │   ├── MyCouponActivity.java
+│               │   ├── MyFavoriteActivity.java
+│               │   ├── MyReviewActivity.java
+│               │   ├── MyScoreActivity.java
+│               │   ├── MyWalletActivity.java
+│               │   ├── OrderDetailActivity.java
+│               │   ├── __OrdersActivity.java__ 订单
+│               │   ├── __PhotoPreviewActivity.java __[[+查看图片|查看图片]]
+│               │   ├── PhotoSelectorActivity.java
+│               │   ├── PurchaseSuccessActivity.java
+│               │   ├── RenameActivity.java
+│               │   ├── ReviewActivity.java
+│               │   ├── ReviewSuccessActivity.java
+│               │   ├── SearchActivity.java
+│               │   ├── SettingsActivity.java
+│               │   ├── SettingsForPushActivity.java
+│               │   ├── SplashActivity.java
+│               │   ├── __SubCategoryActivity.java__ [[+子分类|子分类]]
+│               │   ├── TestWebActivity.java
+│               │   ├── UserCenterActivity.java
+│               │   ├── UserInfoActivity.java
+│               │   ├── __VerifyPhoneActivity.java __[[+验证手机|验证手机]]  __VerifyNewPhoneActivity.java__
+│               │   ├── WebActivity.java
+│               │   ├── WelcomeActivity.java
+│               │   └── WriteCommentActivity.java
+│               ├── adapter
+│               │   ├── AbViewPagerAdapter.java
+│               │   ├── AlbumAdapter.java
+│               │   ├── CategoriesAdapter.java
+│               │   ├── CheckboxAdapter.java
+│               │   ├── CheckedChangedCallback.java
+│               │   ├── ChoosenPhotoAdapter.java
+│               │   ├── CityAdapter.java
+│               │   ├── ComboAdapter.java
+│               │   ├── CommentAdapter.java
+│               │   ├── ContactListAdapter.java
+│               │   ├── CouponAdapter.java
+│               │   ├── FindAdapter.java
+│               │   ├── HomeCategoryAdapter.java
+│               │   ├── HotCitysAdapter.java
+│               │   ├── MBaseAdapter.java
+│               │   ├── MerchandiseAdapter.java
+│               │   ├── MyCommentAdapter.java
+│               │   ├── order
+│               │   │   ├── OrderAdapter.java
+│               │   │   ├── OrderConsumedAdapter.java
+│               │   │   ├── OrderNoConsumedAdapter.java
+│               │   │   ├── OrderNoPayAdapter.java
+│               │   │   ├── OrderRefundOrderAdapter.java
+│               │   │   └── OrderVouchersAdapter.java
+│               │   ├── PhotoSelectorAdapter.java
+│               │   ├── PhotoViewTypeConfig.java
+│               │   ├── RelatedAdapter.java
+│               │   ├── ScoresAdapter.java
+│               │   └── SubCategoriesAdapter.java
+│               ├── callback
+│               │   ├── NetworkErrorCallback.java
+│               │   ├── QRcodeCallback.java
+│               │   └── WebDataCallback.java
+│               ├── Constants.java
+│               ├── fragment
+│               │   ├── BaseFragment.java
+│               │   └── OrderFragment.java
+│               ├── http
+│               │   └── RequestCallBackForJson.java
+│               ├── JSInterFace.java
+│               ├── LiuhaiziApp.java
+│               ├── model
+│               │   ├── AlbumModel.java
+│               │   ├── Calendars.java
+│               │   ├── CategoryDataResult.java
+│               │   ├── Category.java
+│               │   ├── CityData.java
+│               │   ├── CityD.java
+│               │   ├── CityItem.java
+│               │   ├── CityResult.java
+│               │   ├── Combo.java
+│               │   ├── Comment.java
+│               │   ├── CommentResult.java
+│               │   ├── CommonHttpResult.java
+│               │   ├── Coupon.java
+│               │   ├── CouponResult.java
+│               │   ├── DatepickerParam.java
+│               │   ├── DetailResult.java
+│               │   ├── FavorateData.java
+│               │   ├── FavorateResult.java
+│               │   ├── GpsData.java
+│               │   ├── GpsResponse.java
+│               │   ├── GuessResult.java
+│               │   ├── HomeData.java
+│               │   ├── HomeResult.java
+│               │   ├── Menus.java
+│               │   ├── Merchandise.java
+│               │   ├── NearBy.java
+│               │   ├── order
+│               │   │   └── OrderDeleteResult.java
+│               │   ├── OrderDetailResult.java
+│               │   ├── Order.java
+│               │   ├── OrderResult.java
+│               │   ├── Orders.java
+│               │   ├── OrdersResult.java
+│               │   ├── PayResult.java
+│               │   ├── PhotoModel.java
+│               │   ├── Position.java
+│               │   ├── Purpose.java
+│               │   ├── Related.java
+│               │   ├── RelatedResult.java
+│               │   ├── Score.java
+│               │   ├── ScoreResult.java
+│               │   ├── SearchAssociationKeywordResult.java
+│               │   ├── SearchHistory.java
+│               │   ├── SearchHotKeyResult.java
+│               │   ├── SearchKeyword.java
+│               │   ├── SearchResult.java
+│               │   ├── SubItem.java
+│               │   ├── Update.java
+│               │   ├── UpdateResult.java
+│               │   ├── UploadAvatarResult.java
+│               │   ├── UserCanBuyResult.java
+│               │   ├── UserInfo.java
+│               │   ├── User.java
+│               │   └── WxPrepayResult.java
+│               ├── update
+│               │   ├── DownloadTask.java
+│               │   ├── UpdateInfo.java
+│               │   ├── UpdateManager.java
+│               │   ├── UpdateService.java
+│               │   ├── UpdateState.java
+│               │   └── UpdateUtil.java
+│               ├── UrlContainer.java
+│               ├── utils
+│               │   ├── AbToastUtil.java
+│               │   ├── AlbumController.java
+│               │   ├── AliPayUtil.java
+│               │   ├── AnimationUtil.java
+│               │   ├── Base64.java
+│               │   ├── CommonUtils.java
+│               │   ├── DateTimeUtils.java
+│               │   ├── DebugUtils.java
+│               │   ├── DeleteFileUtil.java
+│               │   ├── DeviceUtils.java
+│               │   ├── DialogUtil.java
+│               │   ├── FastBlurUtils.java
+│               │   ├── FileSizeUtil.java
+│               │   ├── GpsUtils.java
+│               │   ├── JsonUtils.java
+│               │   ├── MD5.java
+│               │   ├── MD5Util.java
+│               │   ├── NetType.java
+│               │   ├── NetworkUtils.java
+│               │   ├── NotificationUtils.java
+│               │   ├── PayResult.java
+│               │   ├── PhotoSelectorDomain.java
+│               │   ├── ResultChecker.java
+│               │   ├── SearchHistoryManger.java
+│               │   ├── ShareePrefUtil.java
+│               │   ├── SignUtils.java
+│               │   ├── UserDataManager.java
+│               │   └── WxPayTask.java
+│               ├── widget
+│               │   ├── AbInnerViewPager.java
+│               │   ├── AbSlidingPlayView.java
+│               │   ├── citylist
+│               │   │   ├── ContactItemComparator.java
+│               │   │   ├── ContactItemException.java
+│               │   │   ├── ContactItemInterface.java
+│               │   │   ├── ContactListViewImpl.java
+│               │   │   ├── ContactListView.java
+│               │   │   ├── ContactsSectionIndexer.java
+│               │   │   ├── HanziToPinyin3.java
+│               │   │   ├── IndexScroller.java
+│               │   │   └── PinYin.java
+│               │   ├── CustomScrollView.java
+│               │   ├── CustomWebview.java
+│               │   ├── LoadingView.java
+│               │   ├── MessageBox.java
+│               │   ├── MyGridView.java
+│               │   ├── MyListView.java
+│               │   ├── MyRatingBar.java
+│               │   ├── photoselector
+│               │   │   ├── AlbumItem.java
+│               │   │   ├── common
+│               │   │   │   ├── Animation.java
+│               │   │   │   ├── Animator.java
+│               │   │   │   ├── FlingAnimation.java
+│               │   │   │   ├── FlingAnimationListener.java
+│               │   │   │   ├── FlingListener.java
+│               │   │   │   ├── GestureImageViewListener.java
+│               │   │   │   ├── GestureImageViewTouchListener.java
+│               │   │   │   ├── MathUtils.java
+│               │   │   │   ├── MoveAnimation.java
+│               │   │   │   ├── MoveAnimationListener.java
+│               │   │   │   ├── VectorF.java
+│               │   │   │   ├── ZoomAnimation.java
+│               │   │   │   └── ZoomAnimationListener.java
+│               │   │   ├── GestureImageView.java
+│               │   │   ├── PhotoItem.java
+│               │   │   └── PhotoPreview.java
+│               │   ├── PullToRefreshView.java
+│               │   ├── PullToRefreshViewWindMill.java
+│               │   ├── RoundedDrawable.java
+│               │   ├── RoundedImageView.java
+│               │   ├── TagGroup.java
+│               │   ├── TextViewRorateable.java
+│               │   └── UpdateDialog.java
+│               └── wxapi
+│                   ├── WXEntryActivity.java
+│                   └── WXPayEntryActivity.java
+├── test
+│   └── com
+│       └── onehundredcentury
+│           └── liuhaizi
+│               └── TestSearchHistory.java
+└── xutils
+	├── build.gradle
+	├── src
+	│   └── main
+	│       ├── AndroidManifest.xml
+	│       └── java
+	│           └── com
+	│               └── lidroid
+	│                   └── xutils
+	│                       ├── bitmap
+	│                       │   ├── BitmapCacheListener.java
+	│                       │   ├── BitmapCommonUtils.java
+	│                       │   ├── BitmapDisplayConfig.java
+	│                       │   ├── BitmapGlobalConfig.java
+	│                       │   ├── callback
+	│                       │   │   ├── BitmapLoadCallBack.java
+	│                       │   │   ├── BitmapLoadFrom.java
+	│                       │   │   ├── BitmapSetter.java
+	│                       │   │   └── DefaultBitmapLoadCallBack.java
+	│                       │   ├── core
+	│                       │   │   ├── AsyncDrawable.java
+	│                       │   │   ├── BitmapCache.java
+	│                       │   │   ├── BitmapDecoder.java
+	│                       │   │   └── BitmapSize.java
+	│                       │   ├── download
+	│                       │   │   ├── DefaultDownloader.java
+	│                       │   │   └── Downloader.java
+	│                       │   ├── factory
+	│                       │   │   └── BitmapFactory.java
+	│                       │   └── PauseOnScrollListener.java
+	│                       ├── BitmapUtils.java
+	│                       ├── cache
+	│                       │   ├── FileNameGenerator.java
+	│                       │   ├── KeyExpiryMap.java
+	│                       │   ├── LruDiskCache.java
+	│                       │   ├── LruMemoryCache.java
+	│                       │   └── MD5FileNameGenerator.java
+	│                       ├── db
+	│                       │   ├── annotation
+	│                       │   │   ├── Check.java
+	│                       │   │   ├── Column.java
+	│                       │   │   ├── Finder.java
+	│                       │   │   ├── Foreign.java
+	│                       │   │   ├── Id.java
+	│                       │   │   ├── NoAutoIncrement.java
+	│                       │   │   ├── NotNull.java
+	│                       │   │   ├── Table.java
+	│                       │   │   ├── Transient.java
+	│                       │   │   └── Unique.java
+	│                       │   ├── converter
+	│                       │   │   ├── BooleanColumnConverter.java
+	│                       │   │   ├── ByteArrayColumnConverter.java
+	│                       │   │   ├── ByteColumnConverter.java
+	│                       │   │   ├── CharColumnConverter.java
+	│                       │   │   ├── ColumnConverterFactory.java
+	│                       │   │   ├── ColumnConverter.java
+	│                       │   │   ├── DateColumnConverter.java
+	│                       │   │   ├── DoubleColumnConverter.java
+	│                       │   │   ├── FloatColumnConverter.java
+	│                       │   │   ├── IntegerColumnConverter.java
+	│                       │   │   ├── LongColumnConverter.java
+	│                       │   │   ├── ShortColumnConverter.java
+	│                       │   │   ├── SqlDateColumnConverter.java
+	│                       │   │   └── StringColumnConverter.java
+	│                       │   ├── sqlite
+	│                       │   │   ├── ColumnDbType.java
+	│                       │   │   ├── CursorUtils.java
+	│                       │   │   ├── DbModelSelector.java
+	│                       │   │   ├── FinderLazyLoader.java
+	│                       │   │   ├── ForeignLazyLoader.java
+	│                       │   │   ├── Selector.java
+	│                       │   │   ├── SqlInfoBuilder.java
+	│                       │   │   ├── SqlInfo.java
+	│                       │   │   └── WhereBuilder.java
+	│                       │   └── table
+	│                       │       ├── Column.java
+	│                       │       ├── ColumnUtils.java
+	│                       │       ├── DbModel.java
+	│                       │       ├── Finder.java
+	│                       │       ├── Foreign.java
+	│                       │       ├── Id.java
+	│                       │       ├── KeyValue.java
+	│                       │       ├── Table.java
+	│                       │       └── TableUtils.java
+	│                       ├── DbUtils.java
+	│                       ├── exception
+	│                       │   ├── BaseException.java
+	│                       │   ├── DbException.java
+	│                       │   └── HttpException.java
+	│                       ├── http
+	│                       │   ├── callback
+	│                       │   │   ├── DefaultHttpRedirectHandler.java
+	│                       │   │   ├── FileDownloadHandler.java
+	│                       │   │   ├── HttpRedirectHandler.java
+	│                       │   │   ├── RequestCallBackHandler.java
+	│                       │   │   ├── RequestCallBack.java
+	│                       │   │   └── StringDownloadHandler.java
+	│                       │   ├── client
+	│                       │   │   ├── DefaultSSLSocketFactory.java
+	│                       │   │   ├── entity
+	│                       │   │   │   ├── BodyParamsEntity.java
+	│                       │   │   │   ├── DecompressingEntity.java
+	│                       │   │   │   ├── FileUploadEntity.java
+	│                       │   │   │   ├── GZipDecompressingEntity.java
+	│                       │   │   │   ├── InputStreamUploadEntity.java
+	│                       │   │   │   └── UploadEntity.java
+	│                       │   │   ├── HttpRequest.java
+	│                       │   │   ├── multipart
+	│                       │   │   │   ├── content
+	│                       │   │   │   │   ├── AbstractContentBody.java
+	│                       │   │   │   │   ├── ByteArrayBody.java
+	│                       │   │   │   │   ├── ContentBody.java
+	│                       │   │   │   │   ├── ContentDescriptor.java
+	│                       │   │   │   │   ├── FileBody.java
+	│                       │   │   │   │   ├── InputStreamBody.java
+	│                       │   │   │   │   └── StringBody.java
+	│                       │   │   │   ├── FormBodyPart.java
+	│                       │   │   │   ├── HttpMultipart.java
+	│                       │   │   │   ├── HttpMultipartMode.java
+	│                       │   │   │   ├── MIME.java
+	│                       │   │   │   ├── MinimalFieldHeader.java
+	│                       │   │   │   ├── MinimalField.java
+	│                       │   │   │   └── MultipartEntity.java
+	│                       │   │   ├── RetryHandler.java
+	│                       │   │   └── util
+	│                       │   │       ├── MD5Util.java
+	│                       │   │       ├── URIBuilder.java
+	│                       │   │       └── URLEncodedUtils.java
+	│                       │   ├── HttpCache.java
+	│                       │   ├── HttpHandler.java
+	│                       │   ├── RequestParams.java
+	│                       │   ├── ResponseInfo.java
+	│                       │   ├── ResponseStream.java
+	│                       │   └── SyncHttpHandler.java
+	│                       ├── HttpUtils.java
+	│                       ├── task
+	│                       │   ├── PriorityAsyncTask.java
+	│                       │   ├── PriorityExecutor.java
+	│                       │   ├── Priority.java
+	│                       │   ├── PriorityObjectBlockingQueue.java
+	│                       │   ├── PriorityObject.java
+	│                       │   ├── PriorityRunnable.java
+	│                       │   └── TaskHandler.java
+	│                       ├── util
+	│                       │   ├── CharsetUtils.java
+	│                       │   ├── DoubleKeyValueMap.java
+	│                       │   ├── IOUtils.java
+	│                       │   ├── LogUtils.java
+	│                       │   ├── MimeTypeUtils.java
+	│                       │   ├── OtherUtils.java
+	│                       │   └── PreferencesCookieStore.java
+	│                       ├── view
+	│                       │   ├── annotation
+	│                       │   │   ├── ContentView.java
+	│                       │   │   ├── event
+	│                       │   │   │   ├── EventBase.java
+	│                       │   │   │   ├── OnChildClick.java
+	│                       │   │   │   ├── OnClick.java
+	│                       │   │   │   ├── OnCompoundButtonCheckedChange.java
+	│                       │   │   │   ├── OnFocusChange.java
+	│                       │   │   │   ├── OnGroupClick.java
+	│                       │   │   │   ├── OnGroupCollapse.java
+	│                       │   │   │   ├── OnGroupExpand.java
+	│                       │   │   │   ├── OnItemClick.java
+	│                       │   │   │   ├── OnItemLongClick.java
+	│                       │   │   │   ├── OnItemSelected.java
+	│                       │   │   │   ├── OnKey.java
+	│                       │   │   │   ├── OnLongClick.java
+	│                       │   │   │   ├── OnNothingSelected.java
+	│                       │   │   │   ├── OnPreferenceChange.java
+	│                       │   │   │   ├── OnPreferenceClick.java
+	│                       │   │   │   ├── OnProgressChanged.java
+	│                       │   │   │   ├── OnRadioGroupCheckedChange.java
+	│                       │   │   │   ├── OnScroll.java
+	│                       │   │   │   ├── OnScrollStateChanged.java
+	│                       │   │   │   ├── OnStartTrackingTouch.java
+	│                       │   │   │   ├── OnStopTrackingTouch.java
+	│                       │   │   │   ├── OnTabChange.java
+	│                       │   │   │   └── OnTouch.java
+	│                       │   │   ├── PreferenceInject.java
+	│                       │   │   ├── ResInject.java
+	│                       │   │   └── ViewInject.java
+	│                       │   ├── EventListenerManager.java
+	│                       │   ├── ResLoader.java
+	│                       │   ├── ResType.java
+	│                       │   ├── ViewFinder.java
+	│                       │   └── ViewInjectInfo.java
+	│                       └── ViewUtils.java
+	└── xutils.iml
+
+120 directories, 984 files
+

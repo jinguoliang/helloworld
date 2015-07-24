@@ -20,4 +20,6 @@ TODO:
 	[ ] vimgo学习
 	[ ] Git Hook @Blog
 	[ ] 自定义控件，属性的解析，获取资源id
+	[ ] 为了弄懂协程要去看本书,学个语言<Programming in Lua>
+	[ ] [[+repo|repo]]
 
