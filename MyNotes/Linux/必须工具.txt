@@ -38,7 +38,7 @@ bup  ---based on git
 mount --bind dir1 dir2 两个目录互为镜像
 
 === 编码 ===
-enca  filename 查看文件的编码
+enca -L zh_CN filename 查看文件的编码
 enconv -L zh_CN -x UTF-8  filename  转换文件编码:由gbk转为utf-8
 enconv --list lanuages 列出所有的语言编码
 

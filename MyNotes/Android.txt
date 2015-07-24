@@ -64,6 +64,8 @@ Created 星期六 12 十月 2013
 
 [[+图像]]
 
+[[+网络|网络]]
+
 [[+xml parser]]
 
 [[+game]]
@@ -102,11 +104,11 @@ runtime overlay      example:[[./auto-sync.tar.gz]]
 	test 				copies of most of the above
 	
 apk是一个zip解压后是：
-    AndroidManifest.xml，  
-    classes.dex，  
-    resources.arsc，  
-    META-INF，  
-    res，  
+	AndroidManifest.xml，  
+	classes.dex，  
+	resources.arsc，  
+	META-INF，  
+	res，  
 编译成apk
 {{./pasted_image.png}}
 1)所有的XML文件，都会被aapt解析成二进制格式，准确地说，这样的二进制格式，是可以被直接映射到内存里的二进制树
@@ -118,13 +120,13 @@ apk是一个zip解压后是：
 
 4)      最后，.apk文件，会通过jarsigner工具进行校验，这一校验值会需要一个数字签名。如果我们申请了Android开发者帐号，这一数字签名就是Android所分发的那个数字证书；如果没有，我们则使用debug模式，使用本地生成的一个随机的数字证书，这一文件位于~/.android/debug.keystore。
 
-            虽然我们只是下载了SDK，通过一行脚本创建了Android应用程序工程，通过另一行完成了编译。但也许还是会被认为过于麻烦，因为需要进行字符界面的操作，而且这种开发方式也不是常用的方式，在Java环境下，我们有Eclipse可用。我们可以使用Eclipse的图形化开发工具，配合ADT插件使用。
+			虽然我们只是下载了SDK，通过一行脚本创建了Android应用程序工程，通过另一行完成了编译。但也许还是会被认为过于麻烦，因为需要进行字符界面的操作，而且这种开发方式也不是常用的方式，在Java环境下，我们有Eclipse可用。我们可以使用Eclipse的图形化开发工具，配合ADT插件使用。
 
 
 重新看Activity
 [java] view plaincopy
 
-    super.onCreate(savedInstanceState);  
+	super.onCreate(savedInstanceState);  
 
 从字面上看，这种方式相当于我们继承了父类方法，然后又回调到父类的onCreate()来进行处理。这种方式貌似很怪，但这是设计模式（Design Pattern）里鼎鼎大名的一种，叫IoC ( Inversion of Control)。通过这样的设计模式，我们可以同时提供可维护性与可调试性，我们可以在通过覆盖的方法提供功能更丰富的子类，实际上每次调用子类的onCreate()方法，都将调用到各个Activity拓展类的onCreate()方法。而这个方法一旦进入，又会回调到父类的onCreate()方法，在父类的onCreate()方法里，我们可以提供更多针对诸多子类的通用功能（比如启动时显示的上下文状态的恢复，关闭时一些清理性工作），以及在这里面插入调试代码。
 

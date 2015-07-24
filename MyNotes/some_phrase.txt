@@ -5,6 +5,8 @@ Creation-Date: 2013-12-24T16:19:05+08:00
 ====== some phrase ======
 Created Tuesday 24 December 2013
 
+[[+一些有趣的词|一些有趣的词]]
+
 === cold boot ===
       
 	The start-up of a computer from a powered-down, or off, state.

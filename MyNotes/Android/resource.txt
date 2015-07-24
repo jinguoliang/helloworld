@@ -21,14 +21,14 @@ anim	以XML文件保存在res/anim目录下，用来描述__补间动画__。补
 		{{./pasted_image.png}}
 	
 
-==== String resource	 ====
+==== String resource ====
  getResources().getString(R.string.hello_world);
 Arrays.asList(array）	//把array转化为list
 context.getString(resId,args)		//格式化字符串，不过从资源获取格式字符串
 <string name="html_fmt">hello world __&lt;__b>__%1$s__&lt;/b> &lt;i>haha&lt;/i> &lt;u>nini&lt;/u></string>
-                    String str=getResources().__getString__(R.string.html_fmt,"jinguol999");   //参数
+					String str=getResources().__getString__(R.string.html_fmt,"jinguol999");   //参数
 		CharSequence cs=Html.fromHtml(str);		//带格式的
-                    et.append(cs);
+					et.append(cs);
 
 
 
@@ -36,11 +36,11 @@ context.getString(resId,args)		//格式化字符串，不过从资源获取格�
 Corlor Resources 		
 	1. res/color/filename.xml
 	2. selector 		item  
-	3. 	  #RGB
+	3. #RGB
 		#ARGB
 		#RRGGBB
 		#AARRGGBB
 [[+Animation Resources|Animation Resources]]
 
-
+[[+TextView|TextView]]
 

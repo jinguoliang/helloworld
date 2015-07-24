@@ -12,7 +12,7 @@ Created Saturday 23 November 2013
 [[+Blog]]
 [[+Material Demo|Material Demo]]
 [[+Plan30|Plan30]]
-
+用go写一个查看gbk编码文件的应用
 
 [[:TODO:那本书对程序员影响最大]]
 [[~/shared_with_windows/我的坚果云/resource/html/s.html|编程面试的10大算法概念汇总]]
