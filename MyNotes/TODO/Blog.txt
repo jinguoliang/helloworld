@@ -18,8 +18,6 @@ TODO:
 	[ ] [[ApplicationInfo]]
 	[ ] 显示go项目的依赖 →  go list → gotools
 	[ ] vimgo学习
-[[openning source:GoInk]]分析
-
-学习
 	[ ] Git Hook @Blog
+	[ ] 自定义控件，属性的解析，获取资源id
 
