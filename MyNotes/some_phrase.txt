@@ -274,6 +274,38 @@ CSV文件格式的通用标准并不存在，但是在RFC 4180中有基础性的
 
 本质上协程就是用户空间下的线程。
 
+=== Git： ===
+Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。
+
+=== Repo: ===
+Repo是谷歌用Python脚本写的调用git的一个脚本。主要是用来下载、管理Android项目的软件仓库（也就是说Repo是用来管理给Git管理的一个个仓库的）
+
+=== Reflection: ===
+反射, 是计算机程序在运行时查看和修改自己的结构体和行为的能力.
+使用:
+Reflection can be used for observing and modifying program execution at runtime. A reflection-oriented program component can monitor the execution of an enclosure of code and can modify itself according to a desired goal related to that enclosure. This is typically accomplished by dynamically assigning program code at runtime.
+In object oriented programming languages such as Java, reflection allows inspection of classes, interfaces, fields and methods at runtime without knowing the names of the interfaces, fields, methods at compile time. It also allows instantiation of new objects and invocation of methods.
+Reflection can also be used to adapt a given program to different situations dynamically. For example, consider an application that uses two different classes X and Y interchangeably to perform similar operations. Without reflection-oriented programming, the application might be hard-coded to call method names of class X and class Y. However, using the reflection-oriented programming paradigm, the application could be designed and written to utilize reflection in order to invoke methods in classes X and Y without hard-coding method names. Reflection-oriented programming almost always requires additional knowledge, framework, relational mapping, and object relevance in order to take advantage of more generic code execution. Hard-coding can be avoided to the extent that reflection-oriented programming is used.
+Reflection is often used as part of software testing, such as for the runtime creation/instantiation of mock objects.
+Reflection is also a key strategy for metaprogramming.
+In some object-oriented programming languages, such as C# and Java, reflection can be used to override member accessibility rules. For example, reflection makes it possible to change the value of a field marked "private" in a third-party library's class.
+实现:
+A language supporting reflection provides a number of features available at runtime that would otherwise be difficult to accomplish in a lower-level language. Some of these features are the abilities to:
+	Discover and modify source code constructions (such as code blocks, classes, methods, protocols, etc.) as a first-class object at runtime.
+	Convert a string matching the symbolic name of a class or function into a reference to or invocation of that class or function.
+	Evaluate a string as if it were a source code statement at runtime.
+	Create a new interpreter for the language's bytecode to give a new meaning or purpose for a programming construct.
+
+=== 元编程 metaprogramming ===
+元编程是一种计算机编程过程,特点是把计算机程序作为它的数据.这意味着程序被设计去读,生成,分析或者转换其他程序,甚至在运行时动态修改自己.使用元编程,有时候可以使用最少的代码来表达一个解决方案;有时候它让应用具有很大的灵活性去处理新的情况而不用重新编译
+元编程使用的语言叫做元语言, 被操作的语言叫做对象语言, 一个语言是自己的元语言的能力叫做__反射__. 
+元编程以三种方式运作:
+	1. 以api的形式暴露运行时引擎的内部给编程语言
+	2. 动态的执行表达式,	通常是字符串
+	3. 第三种是完全脱离某种语言, 通用目的的编程转换系统如编译器.
+First-class citizen
+在变成语言中, First-class citizen是一个实体, 它和其他实体一样, 支持各种操作. 这些操作包括作为函数参数传递,返回.付给一个变量
+
 === first class object ===
 In short, it means there are no restrictions on the object's use. It's the same as any other object.
 
@@ -336,9 +368,3 @@ L10N是 localization 的缩写形式，意即在 l 和 n 之间有 10 个字母�
 按照软件开发的惯例，最初的软件只有英文版本，根据需要，作者再把软件界面和文档翻译成不同国家、地区的语言版本。但是由于实现翻译的途径、翻译的工作效率、翻译的可重用性等因素各不相同，使翻译工作面临很大困境，也阻碍了软件的推广和应用。为了方便地将软件翻译成不同语言的版本，就需要一套翻译规范和通用工具，这就导致了“国际化”机制的出现。仅仅翻译是不够的，同一种语言在不同国家、地区可能存在多个支系，它们在表达习惯、语法结构甚至文字种类和编码上都有不同，方言更是千奇百怪，通用的翻译其质量肯定是不高的。涉及到计算机领域，还存在操作习惯上的差别，而且对某种语言提供完美的输入、显示、打印、保存、传输并非一件轻而易举的事，这就导致了“本地化”机制的出现。简而言之，“国际化”是“本地化”的一部分，主要是指国际化的实现机制和翻译工作， “本地化”包含“国际化”，是对“国际化”的补充和完善，它还包括为实现对某种特定语言良好的支持而进行的有针对性的翻译调整以及对软件进行的打补丁工作。
 I18N 和 L10N 的国际组织是 Openi18n 组织，其前身是 li18nux 组织。它原来是制定GNU/Linux 自由操作系统上软件全球化标准的国际计划，后来扩充到GNU/Linux 之外所有开放源代码的技术领域，因而更名为 Open Internationalization Initiative，由非营利组织 Free Standards Group 赞助，并为世界各大厂商所支持，对于GNU/Linux 系统上的多国语言文字处理技术和环境有决定性的影响。各个开源软件开发组织通常都有负责“国际化”和“本地化”工作的分支机构。ajax
 I18N 主要使用 gettext 软件包使软件实现国际化支持。
-
-=== Git： ===
-Git是一个开源的分布式版本控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。
-
-=== Repo: ===
-Repo是谷歌用Python脚本写的调用git的一个脚本。主要是用来下载、管理Android项目的软件仓库（也就是说Repo是用来管理给Git管理的一个个仓库的）

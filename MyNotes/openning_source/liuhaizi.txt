@@ -709,7 +709,7 @@ Created Thursday 16 July 2015
 │               │   ├── FindActivity.java
 │               │   ├── __HomeActivity.java  __[[+首页|首页]]
 │               │   ├── __LoginActivity.java__   [[+登录|登录]]
-│               │   ├── MainActivity.java
+│               │   ├── MainActivity.java	[[+主界面|主界面]]
 │               │   ├── MyCouponActivity.java
 │               │   ├── MyFavoriteActivity.java
 │               │   ├── MyReviewActivity.java
@@ -914,7 +914,7 @@ Created Thursday 16 July 2015
 │               │   ├── RoundedImageView.java
 │               │   ├── TagGroup.java
 │               │   ├── TextViewRorateable.java
-│               │   └── UpdateDialog.java
+│               │   └── UpdateDialog.java   [[+更新的dialog|更新的dialog]]
 │               └── wxapi
 │                   ├── WXEntryActivity.java
 │                   └── WXPayEntryActivity.java

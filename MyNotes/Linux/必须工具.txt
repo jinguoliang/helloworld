@@ -54,6 +54,9 @@ httpie    http get url
 git
 mercurial  hg
 
+=== 作为服务运行 ===
+nohup   cmd&  
+
 === 包管理软件 ===
 
 === Docker ===

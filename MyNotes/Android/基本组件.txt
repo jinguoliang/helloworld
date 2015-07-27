@@ -21,10 +21,11 @@ Created Tuesday 15 October 2013
 
 [[+Notification|Notification]]
 
-    Stop a Component:
-    public void disableComponent() {
-        PackageManager pm = mContext.getPackageManager();
-        pm.setComponentEnabledSetting(new ComponentName(mContext, BootCompletedReceiver.class),
-                PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
-    }
+	Stop a Component:
+	public void disableComponent() {
+		PackageManager pm = mContext.getPackageManager();
+		pm.setComponentEnabledSetting(new ComponentName(mContext, BootCompletedReceiver.class),
+				PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
+	}
 
+[[+Application|Application]]

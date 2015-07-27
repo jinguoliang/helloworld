@@ -90,7 +90,7 @@ fuser  查看使用某个文件或socket的进程
 :
 	 function cgrep()
 	 {
-	     find . -name .repo -prune -o -name .git -prune -o -type f \( -name '*.c' -o -name '*.cc' -o -name '*.cpp' -o -name '*.h' \) -print0 | xargs -0 grep --color -n "$@"                                 
+		 find . -name .repo -prune -o -name .git -prune -o -type f \( -name '*.c' -o -name '*.cc' -o -name '*.cpp' -o -name '*.h' \) -print0 | xargs -0 grep --color -n "$@"                                 
 	}
 	
 	__grep__:
@@ -102,6 +102,9 @@ fuser  查看使用某个文件或socket的进程
 1. 查看分区的uuid
 	sudo blkid   or  ll /dev/disk/by-uuibad
 
+
+=== 排序 ===
+sort -n -k2 file 根据第二个关键字来排序, -n 表示按数字排序
 
 == High order: ==
 chroot: Run a command with a different root directory
