@@ -700,15 +700,15 @@ Created Thursday 16 July 2015
 │               │   ├── BaseActivity.java
 │               │   ├── BasePhotoPreviewActivity.java
 │               │   ├── ChooseDateActivity.java
-│               │   ├── [[+CityListActivity|CityListActivity]]__.java 城市列表__
+__│               │   ├──__ [[+CityListActivity|CityListActivity]]__.java 城市列表__
 │               │   ├── CommitOrderActivity.java
 │               │   ├── ConfirmOrderActivity.java
 │               │   ├── CooperationActivity.java
-│               │   ├── __DetailActivity.java __[[+详情|详情]]
+__│               │   ├── DetailActivity.java __[[+详情|详情]]
 │               │   ├── FeedbackActivity.java
 │               │   ├── FindActivity.java
-│               │   ├── __HomeActivity.java  __[[+首页|首页]]
-│               │   ├── __LoginActivity.java__   [[+登录|登录]]
+__│               │   ├── HomeActivity.java  __[[+首页|首页]]
+__│               │   ├── LoginActivity.java__   [[+登录|登录]]
 │               │   ├── MainActivity.java	[[+主界面|主界面]]
 │               │   ├── MyCouponActivity.java 
 │               │   ├── MyFavoriteActivity.java 
@@ -716,8 +716,8 @@ Created Thursday 16 July 2015
 │               │   ├── MyScoreActivity.java 
 │               │   ├── MyWalletActivity.java 
 │               │   ├── OrderDetailActivity.java
-│               │   ├── __OrdersActivity.java__ 订单
-│               │   ├── __PhotoPreviewActivity.java __[[+查看图片|查看图片]]
+__│               │   ├── OrdersActivity.java__ 订单
+__│               │   ├── PhotoPreviewActivity.java __[[+查看图片|查看图片]]
 │               │   ├── PhotoSelectorActivity.java
 │               │   ├── PurchaseSuccessActivity.java
 │               │   ├── RenameActivity.java
@@ -727,11 +727,11 @@ Created Thursday 16 July 2015
 │               │   ├── SettingsActivity.java
 │               │   ├── SettingsForPushActivity.java
 │               │   ├── SplashActivity.java
-│               │   ├── __SubCategoryActivity.java__ [[+子分类|子分类]]
+__│               │   ├── SubCategoryActivity.java__ [[+子分类|子分类]]
 │               │   ├── TestWebActivity.java
 │               │   ├── UserCenterActivity.java
 │               │   ├── UserInfoActivity.java
-│               │   ├── __VerifyPhoneActivity.java __[[+验证手机|验证手机]]  __VerifyNewPhoneActivity.java__
+__│               │   ├── VerifyPhoneActivity.java __[[+验证手机|验证手机]]  __VerifyNewPhoneActivity.java__
 │               │   ├── WebActivity.java
 │               │   ├── WelcomeActivity.java
 │               │   └── WriteCommentActivity.java
@@ -776,7 +776,7 @@ Created Thursday 16 July 2015
 │               ├── http
 │               │   └── RequestCallBackForJson.java
 │               ├── JSInterFace.java
-│               ├── LiuhaiziApp.java   [[+Application实例|Application实例]]
+__│               ├── LiuhaiziApp.java__   [[+Application实例|Application实例]]
 │               ├── model
 │               │   ├── AlbumModel.java
 │               │   ├── Calendars.java
