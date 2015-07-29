@@ -26,6 +26,7 @@ Created Tuesday 02 June 2015
 	scroller.getCurrX()
 	配合：  View.onComputeScroll（）   View.inValidate()  View.getScrollX()  View.scrollTo() View.ScrollBy() 滚动一个View内容
 7. 获取手机的sdk版本: android.os.Build.VERSION.SDK_INT;
-8. 调地图: Intent.ACTION_VIEW Uri.parse("geo:" + position.lat + "," + position.lon + "?q=" + name);
-9. 在某个操作需要登录时,使用startActivityForResult(),然后在登录成功后设置result,最后在onActivityResult里更具result继续操作
-10. 打电话: Intent.ACTION_CALL    Uri.parse("tel:" + phoneNo) 
+8. 获取应用版本信息:getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_META_DATA).versionName;
+9. 调地图: Intent.ACTION_VIEW Uri.parse("geo:" + position.lat + "," + position.lon + "?q=" + name);
+10. 在某个操作需要登录时,使用startActivityForResult(),然后在登录成功后设置result,最后在onActivityResult里更具result继续操作
+11. 打电话: Intent.ACTION_CALL    Uri.parse("tel:" + phoneNo) 

@@ -258,4 +258,16 @@ w30
 		b. repo.git gpg签名
 		c. manifest.git
 		d. 要管理的仓库git 
+w31
+1. 一周的计划
+	a. 看完留孩子源码
+	b. kindle 连 树莓派
+	c. 全面了解熟悉beego
+2. 每天
 
+[*] 升级模块
+[ ] photo选择模块
+[ ] 城市列表控件
+[*] LiuhaiziApp
+
+[ ] Build.Version

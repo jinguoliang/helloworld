@@ -30,7 +30,7 @@ Created Friday 24 July 2015
 4. 刷新用户信息
 	a. 如果登录了则通过本地存的token来获取用户信息并更新本地数据
 5. 初始化推送
-	a. [[PushAgent]]  友盟的
+	a. [[PushAgent]]  友盟的 实际在LiuahziApp里初始化
 	b. 根据peference配置决定开启还是关闭
 	c. http://dev.umeng.com/push/android/integration
 
