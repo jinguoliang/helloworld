@@ -13,9 +13,12 @@ godoc安装:
 	golang-doc  文档html
 	golang-go.tools 工具包括godoc命令
 	
-go list -f '{{range .Imports}}{{.}}      
-> {{end}}'    #遍历显示依赖的包名，为了换行需要加换行，有因为在单引号里，所以在中断显示成这样
+go list -f '{{range .Imports}}{{.}} 
+> {{end}}'    __??好吧！与zim的格式冲突了__#遍历显示依赖的包名，为了换行需要加换行，有因为在单引号里，所以在中断显示成这样
 
+
+==== 这是go的执行， 让人恍然大悟 ====
+{{./pasted_image.png}}
 	
 
 ==== 包 ====

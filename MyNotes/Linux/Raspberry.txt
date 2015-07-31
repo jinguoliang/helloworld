@@ -8,3 +8,5 @@ Created 星期日 17 八月 2014
 [[+Start|Start]]
 
 [[+wifi|wifi]]
+
+[[+kindle做屏幕|kindle做屏幕]]

@@ -716,8 +716,8 @@ __│               │   ├── LoginActivity.java__   [[+登录|登录]
 │               │   ├── MyScoreActivity.java 
 │               │   ├── MyWalletActivity.java 
 │               │   ├── OrderDetailActivity.java
-__│               │   ├── OrdersActivity.java__ 订单
-__│               │   ├── PhotoPreviewActivity.java __[[+查看图片|查看图片]]
+│               │   ├── __OrdersActivity.java__ 订单
+│               │   ├── __PhotoPreviewActivity.java __[[+查看图片|查看图片]]
 │               │   ├── PhotoSelectorActivity.java
 │               │   ├── PurchaseSuccessActivity.java
 │               │   ├── RenameActivity.java
@@ -727,11 +727,11 @@ __│               │   ├── PhotoPreviewActivity.java __[[+查看图
 │               │   ├── SettingsActivity.java
 │               │   ├── SettingsForPushActivity.java
 │               │   ├── SplashActivity.java
-__│               │   ├── SubCategoryActivity.java__ [[+子分类|子分类]]
+│               │   ├── __SubCategoryActivity.java__ [[+子分类|子分类]]
 │               │   ├── TestWebActivity.java
 │               │   ├── UserCenterActivity.java
 │               │   ├── UserInfoActivity.java
-__│               │   ├── VerifyPhoneActivity.java __[[+验证手机|验证手机]]  __VerifyNewPhoneActivity.java__
+│               │   ├── __VerifyPhoneActivity.java __[[+验证手机|验证手机]]  __VerifyNewPhoneActivity.java__
 │               │   ├── WebActivity.java
 │               │   ├── WelcomeActivity.java
 │               │   └── WriteCommentActivity.java
@@ -745,7 +745,7 @@ __│               │   ├── VerifyPhoneActivity.java __[[+验证手�
 │               │   ├── CityAdapter.java
 │               │   ├── ComboAdapter.java
 │               │   ├── CommentAdapter.java
-│               │   ├── [[+ContactListAdapter|ContactListAdapter]].java
+│               │   ├── ContactListAdapter.java
 │               │   ├── CouponAdapter.java
 │               │   ├── FindAdapter.java
 │               │   ├── HomeCategoryAdapter.java
@@ -776,7 +776,7 @@ __│               │   ├── VerifyPhoneActivity.java __[[+验证手�
 │               ├── http
 │               │   └── RequestCallBackForJson.java
 │               ├── JSInterFace.java
-__│               ├── LiuhaiziApp.java__   [[+Application实例|Application实例]]
+│               ├── LiuhaiziApp.java
 │               ├── model
 │               │   ├── AlbumModel.java
 │               │   ├── Calendars.java
@@ -832,13 +832,13 @@ __│               ├── LiuhaiziApp.java__   [[+Application实例|Applic
 │               │   ├── UserInfo.java
 │               │   ├── User.java
 │               │   └── WxPrepayResult.java
-__│               ├── update  ok__
-__│               │   ├── DownloadTask.java	__[[+下载|下载]]
-__│               │   ├── UpdateInfo.java		__[[+一个下载任务的信息|一个下载任务的信息]]
-__│               │   ├── UpdateManager.java	__[[+管理器|管理器]]
-__│               │   ├── UpdateService.java	__[[+服务|服务]]
-__│               │   ├── UpdateState.java__
-__│               │   └── UpdateUtil.java		__[[+工具类|工具类]]
+│               ├── update
+│               │   ├── DownloadTask.java
+│               │   ├── UpdateInfo.java
+│               │   ├── UpdateManager.java
+│               │   ├── UpdateService.java
+│               │   ├── UpdateState.java
+│               │   └── UpdateUtil.java
 │               ├── UrlContainer.java
 │               ├── utils
 │               │   ├── AbToastUtil.java
@@ -872,16 +872,17 @@ __│               │   └── UpdateUtil.java		__[[+工具类|工具�
 │               ├── widget
 │               │   ├── AbInnerViewPager.java
 │               │   ├── AbSlidingPlayView.java
-__│               │   ├── citylist  ok__
-__│               │   │   ├── ContactItemComparator.java__
-__│               │   │   ├── ContactItemException.java__
-__│               │   │   ├── ContactItemInterface.java__
-__│               │   │   ├── ContactListViewImpl.java__
+│               │   ├── citylist
+│               │   │   ├── __ContactItemComparator__.java
+│               │   │   ├── __ContactItemException__.java
+│               │   │   ├── ContactItemInterface.java
+│               │   │   ├── ContactListView.java
+│               │   │   ├── ContactsSectionIndexer.java
 __│               │   │   ├── __[[+ContactListView|ContactListView]]__.java 通讯录列表__
 __│               │   │   ├── __[[+ContactsSectionIndexer|ContactsSectionIndexer]]__.java__
-__│               │   │   ├── HanziToPinyin3.java__
-__│               │   │   ├── IndexScroller.java__
-__│               │   │   └── PinYin.java__
+│               │   │   ├── [[+HanziToPinyin3|HanziToPinyin3]].java
+│               │   │   ├── IndexScroller.java
+│               │   │   └── PinYin.java
 │               │   ├── CustomScrollView.java
 │               │   ├── CustomWebview.java
 │               │   ├── LoadingView.java
@@ -889,32 +890,32 @@ __│               │   │   └── PinYin.java__
 │               │   ├── MyGridView.java
 │               │   ├── MyListView.java
 │               │   ├── MyRatingBar.java
-__│               │   ├── photoselector ok__
-__│               │   │   ├── AlbumItem.java__
-__│               │   │   ├── common__
-__│               │   │   │   ├── Animation.java__
-__│               │   │   │   ├── Animator.java__
-__│               │   │   │   ├── FlingAnimation.java__
-__│               │   │   │   ├── FlingAnimationListener.java__
-__│               │   │   │   ├── FlingListener.java__
-__│               │   │   │   ├── GestureImageViewListener.java__
-__│               │   │   │   ├── GestureImageViewTouchListener.java__
-__│               │   │   │   ├── MathUtils.java__
-__│               │   │   │   ├── MoveAnimation.java__
-__│               │   │   │   ├── MoveAnimationListener.java__
-__│               │   │   │   ├── VectorF.java__
-__│               │   │   │   ├── ZoomAnimation.java__
-__│               │   │   │   └── ZoomAnimationListener.java__
-__│               │   │   ├── GestureImageView.java__
-__│               │   │   ├── PhotoItem.java__
-__│               │   │   └── PhotoPreview.java__
+│               │   ├── photoselector
+│               │   │   ├── AlbumItem.java
+│               │   │   ├── common
+│               │   │   │   ├── Animation.java
+│               │   │   │   ├── Animator.java
+│               │   │   │   ├── FlingAnimation.java
+│               │   │   │   ├── FlingAnimationListener.java
+│               │   │   │   ├── FlingListener.java
+│               │   │   │   ├── GestureImageViewListener.java
+│               │   │   │   ├── GestureImageViewTouchListener.java
+│               │   │   │   ├── MathUtils.java
+│               │   │   │   ├── MoveAnimation.java
+│               │   │   │   ├── MoveAnimationListener.java
+│               │   │   │   ├── VectorF.java
+│               │   │   │   ├── ZoomAnimation.java
+│               │   │   │   └── ZoomAnimationListener.java
+│               │   │   ├── GestureImageView.java
+│               │   │   ├── PhotoItem.java
+│               │   │   └── PhotoPreview.java
 │               │   ├── PullToRefreshView.java
 │               │   ├── PullToRefreshViewWindMill.java
 │               │   ├── RoundedDrawable.java
 │               │   ├── RoundedImageView.java
 │               │   ├── TagGroup.java
 │               │   ├── TextViewRorateable.java
-│               │   └── UpdateDialog.java   [[+更新的dialog|更新的dialog]]
+│               │   └── UpdateDialog.java
 │               └── wxapi
 │                   ├── WXEntryActivity.java
 │                   └── WXPayEntryActivity.java

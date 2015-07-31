@@ -26,6 +26,7 @@ TODO:
 [ ] 大脑使用手册
 [ ] 怎样解题 How to Solve It
 [ ] 解题·成长·快乐——陶哲轩教你学数学
+[ ] [[+精通Android UI|精通Android UI]]
 
 重读:
 悟空传

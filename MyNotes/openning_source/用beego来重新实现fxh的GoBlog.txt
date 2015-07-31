@@ -17,5 +17,9 @@ controller
 model
 database
 
+<link rel="shortcut icon" href="static/img/site.png">   设置label里的icon
 首页
 Navigator
+1. 通过插入过滤器处理静态文件
+2. 导航排序
+
