@@ -23,4 +23,8 @@ beego [[+Project|Project]] 使用beego框架的项目
 
 [[+liuhaizi|liuhaizi]]
 
+[[+qiyuebook|qiyuebook]]
+
 [[+Zim|Zim]] 
+
+[[+AsyncTask|AsyncTask]]

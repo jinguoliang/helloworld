@@ -13,3 +13,4 @@ Created Monday 01 June 2015
 5. ViewAdapter里使用LayoutInflater,使用inflate（resid，parent,false)  这样可以保证生成正确的layoutparamater
 6. getView,要使用convertView并且要初始化,所有改变的属性都要初始化
 7. 页面缓存罗辑
+8. 对于第三方的依赖，尽量的抽象出接口，以便于解耦，比如，对网络请求的抽象，不直接依赖与xutils
