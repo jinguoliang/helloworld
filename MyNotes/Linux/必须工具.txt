@@ -65,3 +65,7 @@ nohup   cmd&
 3. docker run ---rm -ti codeskyblue/docker-goandroid bash
 4. sudo docker run -v ~/dockerDir:/gopath/src/golang.org/x/mobile/hostdir --rm -ti codeskyblue/docker-goandroid bash 共享目录
 5. 有什么不会的看命令,docker
+
+音频转换
+faad file.m4a   → file.wav  #这里的m4a可以是aac底层编码是一样的
+lame file.wav file.mp3
