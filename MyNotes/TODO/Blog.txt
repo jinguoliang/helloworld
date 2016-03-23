@@ -23,4 +23,6 @@ TODO:
 	[ ] 为了弄懂协程要去看本书,学个语言<Programming in Lua>
 	[ ] [[+repo|repo]]
 	[ ] 深入比较一下三种解析xml的方式
+	[ ] 总结悬浮框相关
+	[ ] 总结support-v7
 
